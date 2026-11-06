@@ -1,0 +1,64 @@
+<project>/gradle/wrapper/gradle-wrapper.properties:3: Warning: A newer version of Gradle than 8.13 is available: 8.14.6 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+<project>/app/src/main/AndroidManifest.xml:4: Warning: The attribute android:allowBackup is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute android:dataExtractionRules specifying an @xml resource which configures cloud backups and device transfers on Android 12 and higher. [DataExtractionRules]
+        android:allowBackup="false"
+                             ~~~~~
+
+   Explanation for issues of type "DataExtractionRules":
+   Before Android 12, the attributes android:allowBackup and
+   android:fullBackupContent were used to configure all forms of backup,
+   including cloud backups, device-to-device transfers and adb backup.
+
+   In Android 12 and higher, these attributes have been deprecated and will
+   only apply to cloud backups. You should instead use the attribute
+   android:dataExtractionRules, specifying an @xml resource that configures
+   which files to back up, for cloud backups and for device-to-device
+   transfers, separately. If your minSdkVersion supports older versions,
+   you'll still want to specify an android:fullBackupContent resource if the
+   default behavior is not right for your app.
+
+   https://developer.android.com/about/versions/12/backup-restore#xml-changes
+   https://goo.gle/DataExtractionRules
+
+<project>/app/src/main/java/dev/t865/portprobe/MainActivity.kt:48: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "T865 Port Probe"
+                    ~~~~~~~~~~~~~~~
+<project>/app/src/main/java/dev/t865/portprobe/MainActivity.kt:53: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "Metadata first. Optional probe opens and immediately closes devices; no device reads, writes, ioctl or serial configuration. Open/close itself may affect hardware."
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<project>/app/src/main/java/dev/t865/portprobe/MainActivity.kt:56: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "Inspect metadata"
+                    ~~~~~~~~~~~~~~~~
+<project>/app/src/main/java/dev/t865/portprobe/MainActivity.kt:60: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "Probe read-only opens…"
+                    ~~~~~~~~~~~~~~~~~~~~~~
+<project>/app/src/main/java/dev/t865/portprobe/MainActivity.kt:73: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            text = "Copy report"
+                    ~~~~~~~~~~~
+<project>/app/src/main/java/dev/t865/portprobe/MainActivity.kt:118: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+                    status.text = "Finished. Copy the report to retain it."
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+0 errors, 8 warnings
