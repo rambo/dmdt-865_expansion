@@ -126,7 +126,13 @@ static bool numeric_spidev(const char *name) {
 static bool allowed_device(const char *path) {
     if (strncmp(path, "/dev/ttysWK", 11) == 0 && strlen(path) == 12)
         return path[11] >= '0' && path[11] <= '3';
-    return strncmp(path, "/dev/", 5) == 0 && numeric_spidev(path + 5);
+    return strncmp(path, "/dev/", 5) == 0 && numeric_spidev(path + 5) &&
+           strcmp(path, "/dev/spidev0.0") != 0;
+}
+
+static bool explicit_spi_device(const char *path) {
+    return strlen(path) == 14 && strncmp(path, "/dev/spidev0.", 13) == 0 &&
+           path[13] >= '1' && path[13] <= '6';
 }
 
 static void device(Report *r, const char *path, bool probe) {
@@ -149,7 +155,9 @@ static void device(Report *r, const char *path, bool probe) {
     label(r, path);
     if (!probe) { append(r, "  device open: NOT REQUESTED (metadata only)\n"); return; }
     if (!allowed_device(path)) {
-        append(r, "  device open: SKIPPED (outside fixed device allowlist)\n"); return;
+        append(r, "  device open: SKIPPED (%s)\n", strcmp(path, "/dev/spidev0.0") == 0
+               ? "SPI-UART exclusion" : "outside fixed device allowlist");
+        return;
     }
     if (result == 0 && !S_ISCHR(st.st_mode)) {
         append(r, "  device open: SKIPPED (not a direct character device)\n"); return;
@@ -166,6 +174,7 @@ static void device(Report *r, const char *path, bool probe) {
 
 static void directory(Report *r, const char *path, bool dev_nodes, bool probe) {
     append(r, "\nDirectory: %s\n", path);
+    if (dev_nodes) append(r, "  Explicit SPI targets are reported above and omitted here.\n");
     DIR *dir = opendir(path);
     if (dir == NULL) { failure(r, "opendir", errno); return; }
     size_t count = 0;
@@ -178,14 +187,15 @@ static void directory(Report *r, const char *path, bool dev_nodes, bool probe) {
         }
         if (entry->d_name[0] == '.') continue;
         if (dev_nodes && strncmp(entry->d_name, "spidev", 6) != 0) continue;
-        if (count++ == ENTRY_LIMIT) {
-            append(r, "  [listing limited to %d matching entries]\n", ENTRY_LIMIT);
-            break;
-        }
         char item[1024];
         int n = snprintf(item, sizeof(item), "%s/%s", path, entry->d_name);
         if (n < 0 || (size_t)n >= sizeof(item)) {
             append(r, "  [entry path too long; skipped]\n"); continue;
+        }
+        if (dev_nodes && explicit_spi_device(item)) continue;
+        if (count++ == ENTRY_LIMIT) {
+            append(r, "  [listing limited to %d matching entries]\n", ENTRY_LIMIT);
+            break;
         }
         if (dev_nodes) device(r, item, probe);
         else {
@@ -223,6 +233,7 @@ static void collect_report(Report *r, bool probe) {
     }
     append(r, "Mode: %s\n", probe ? "READ-ONLY OPEN/CLOSE PROBE" : "METADATA ONLY");
     append(r, "Probe flags: O_RDONLY | O_NONBLOCK | O_NOCTTY | O_CLOEXEC | O_NOFOLLOW\n");
+    append(r, "Explicit SPI targets: /dev/spidev0.1 through /dev/spidev0.6; /dev/spidev0.0 excluded.\n");
     append(r, "No device read/write/ioctl/termios. Open/close may itself affect hardware.\n\n");
     read_metadata(r, "/proc/self/attr/current");
     read_metadata(r, "/sys/fs/selinux/enforce");
@@ -230,6 +241,12 @@ static void collect_report(Report *r, bool probe) {
     for (int i = 0; i < 4; i++) {
         char path[32];
         snprintf(path, sizeof(path), "/dev/ttysWK%d", i);
+        device(r, path, probe);
+    }
+    /* Known paths remain testable when SELinux denies directory enumeration. */
+    for (int i = 1; i <= 6; i++) {
+        char path[32];
+        snprintf(path, sizeof(path), "/dev/spidev0.%d", i);
         device(r, path, probe);
     }
     directory(r, "/dev", true, probe);

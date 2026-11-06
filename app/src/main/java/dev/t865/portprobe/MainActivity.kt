@@ -61,7 +61,7 @@ class MainActivity : Activity() {
             setOnClickListener {
                 AlertDialog.Builder(this@MainActivity)
                     .setTitle("Open device nodes?")
-                    .setMessage("This opens /dev/ttysWK0–3 and discovered numeric /dev/spidevB.C nodes using O_RDONLY | O_NONBLOCK | O_NOCTTY | O_CLOEXEC | O_NOFOLLOW, then closes them. No data is read or written. Vendor open/close handlers may change power or modem signals. Use metadata only if zero hardware interaction is required.")
+                    .setMessage("This opens /dev/ttysWK0–3, /dev/spidev0.1–0.6 and other discovered numeric SPI nodes, then closes them. /dev/spidev0.0 is excluded because it may serve the SPI-UART. Opens are read-only and nonblocking; no device data is read or written and no configuration calls are made. Vendor open/close handlers may change power or signals. Use metadata only if zero hardware interaction is required.")
                     .setNegativeButton("Cancel", null)
                     .setPositiveButton("Open and close") { _, _ -> runInspection(true) }
                     .show()
@@ -101,7 +101,7 @@ class MainActivity : Activity() {
         status.text = if (probe) "Probing… vendor drivers may ignore nonblocking opens." else "Inspecting…"
         worker.execute {
             val result = try {
-                "T865 Port Probe 1.0 — ${Instant.now()}\n" +
+                "T865 Port Probe 1.1 — ${Instant.now()}\n" +
                     "Model: ${Build.MANUFACTURER} ${Build.MODEL}\n" +
                     "Android: ${Build.VERSION.RELEASE}, API ${Build.VERSION.SDK_INT}\n" +
                     "ABIs: ${Build.SUPPORTED_ABIS.joinToString()}\n" +

@@ -1,11 +1,12 @@
-T865 Port Probe 1.0 — 2026-11-06T17:41:16.633880Z
+T865 Port Probe 1.1 — 2026-11-06T18:06:05.210908Z
 Model: Google sdk_gphone64_arm64
 Android: 14, API 34
 ABIs: arm64-v8a
-Process: pid=5528 uid=10193 euid=10193 gid=10193
+Process: pid=4933 uid=10193 euid=10193 gid=10193
 Supplementary gids: 9997 20193 50193
 Mode: METADATA ONLY
 Probe flags: O_RDONLY | O_NONBLOCK | O_NOCTTY | O_CLOEXEC | O_NOFOLLOW
+Explicit SPI targets: /dev/spidev0.1 through /dev/spidev0.6; /dev/spidev0.0 excluded.
 No device read/write/ioctl/termios. Open/close may itself affect hardware.
 
 /proc/self/attr/current
@@ -34,7 +35,38 @@ No device read/write/ioctl/termios. Open/close may itself affect hardware.
   SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
   device open: NOT REQUESTED (metadata only)
 
+/dev/spidev0.1
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: NOT REQUESTED (metadata only)
+
+/dev/spidev0.2
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: NOT REQUESTED (metadata only)
+
+/dev/spidev0.3
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: NOT REQUESTED (metadata only)
+
+/dev/spidev0.4
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: NOT REQUESTED (metadata only)
+
+/dev/spidev0.5
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: NOT REQUESTED (metadata only)
+
+/dev/spidev0.6
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: NOT REQUESTED (metadata only)
+
 Directory: /dev
+  Explicit SPI targets are reported above and omitted here.
   opendir: -1, errno=13 (EACCES: Permission denied)
 
 Directory: /sys/class/spi_master

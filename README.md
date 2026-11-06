@@ -9,7 +9,7 @@ Minimal Android Studio project: Kotlin platform UI plus a small C/JNI inspector.
 3. In **Tools → SDK Manager**, install Android SDK Platform **36**, Build Tools **35.0.0**, NDK (Side by side) **27.2.12479018**, and CMake **3.22.1**. Enable **Show Package Details** to select versions. Sync Gradle; accept SDK licenses if prompted. Initial sync/build needs internet access.
 4. Enable USB debugging on the tablet, connect it and accept its computer authorization. Select the tablet in Studio and run `app`.
 5. The app automatically performs **metadata inspection only**. Use **Copy report** to retain results. Reports are held in memory and reset on recreation/relaunch; copying places them on the Android clipboard.
-6. Only if opening devices is acceptable, choose **Probe read-only opens… → Open and close**. It repeats metadata inspection and attempts one open/close per allowed device. It never reads data from a device descriptor.
+6. Only if opening devices is acceptable, choose **Probe read-only opens… → Open and close**. It repeats metadata inspection and attempts one open/close per allowed device, including explicit `/dev/spidev0.1` through `/dev/spidev0.6` paths even when directory listing fails. `/dev/spidev0.0` is excluded from all device-open probes because it may serve the SPI-UART. It never reads data from a device descriptor.
 
 If you have the supplied debug APK, install it with `adb install -r T865PortProbe-debug.apk`, then launch **T865 Port Probe**. This is a locally signed development APK, not a production release.
 
@@ -36,7 +36,8 @@ Inspections run on one background worker. A stuck kernel open/close cannot be sa
 - `/proc/self/attr/current` for the **app's** SELinux context. This is different from the ADB shell context.
 - `/sys/fs/selinux/enforce`: `1` means globally enforcing; `0` means globally permissive. If access is denied, status is **unknown**, not inferred. Global enforcing status does not identify domain-specific exceptions.
 - `/dev/ttysWK0`, `/dev/ttysWK1`, `/dev/ttysWK2`, `/dev/ttysWK3`: `lstat`, type, octal mode, owner/group IDs, character device major:minor, and `security.selinux` label via `lgetxattr` when readable.
-- All visible `/dev/spidev*` entries with the same metadata. Actual opens are allowed only for exact `/dev/spidev<digits>.<digits>` names and the four serial paths. Known symlinks and non-character nodes are skipped; O_NOFOLLOW also rejects a final symlink at open time. No arbitrary path entry exists.
+- Explicit `/dev/spidev0.1` through `/dev/spidev0.6` metadata and optional open results, independent of whether `/dev` can be listed. These six targets are each reported/probed once and skipped during subsequent enumeration.
+- All additional visible `/dev/spidev*` entries with the same metadata. Actual opens are allowed only for exact `/dev/spidev<digits>.<digits>` names and the four serial paths, **excluding `/dev/spidev0.0`**. If discovered, 0.0 receives metadata inspection only and its open is marked `SKIPPED (SPI-UART exclusion)`. Known symlinks and non-character nodes are skipped; O_NOFOLLOW also rejects a final symlink at open time. No arbitrary path entry exists.
 - Nonrecursive listings of `/sys/class/spi_master`, `/sys/bus/spi/devices`, and `/sys/class/spidev`. For each visible entry: symlink target, `driver` link target, and read-only `modalias` and `dev` attributes. Attributes absent for that entry report ENOENT; this is normal.
 - Exact numeric errno and a symbolic name for common errors, together with `strerror`, for failed system calls. Device-open success reports errno=0 explicitly; it does not display stale errno left by another call.
 
@@ -85,7 +86,7 @@ On macOS or Linux with Clang/GCC and AddressSanitizer/UBSan support:
 ./tests/run-native-tests.sh
 ```
 
-This compiles the actual production C source with fake `open`, `read`, `close` and `lstat`. It checks the device allowlist, metadata-only behavior, exact read-only/nonblocking flags, errno preservation, close-once behavior, symlink/non-character rejection, metadata reads, absence of device reads, and buffer bounds. It does not open real hardware or establish vendor driver behavior. See `VALIDATION.md` for the actual build results delivered with this project.
+This compiles the actual production C source with fake I/O and directory calls. It checks the device allowlist, metadata-only behavior, exact read-only/nonblocking flags, errno preservation, close-once behavior, symlink/non-character rejection, metadata reads, absence of device reads, and buffer bounds. It also verifies all six explicit SPI probes when directory listing returns EACCES, prevents duplicate probes when listing succeeds, and rejects opening SPI 0.0 even when discovered. It does not open real hardware or establish vendor driver behavior. See `VALIDATION.md` for the actual build results delivered with this project.
 
 ## Git
 

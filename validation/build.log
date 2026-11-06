@@ -1,3 +1,4 @@
+Starting a Gradle Daemon, 1 stopped Daemon could not be reused, use --status for details
 > Task :app:preBuild UP-TO-DATE
 > Task :app:preDebugBuild UP-TO-DATE
 > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
@@ -11,7 +12,7 @@
 > Task :app:mergeDebugResources UP-TO-DATE
 > Task :app:packageDebugResources UP-TO-DATE
 > Task :app:parseDebugLocalResources UP-TO-DATE
-> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests
 > Task :app:extractDeepLinksDebug UP-TO-DATE
 > Task :app:processDebugMainManifest
 > Task :app:processDebugManifest
@@ -41,22 +42,22 @@
 > Task :app:mergeDebugNativeLibs
 > Task :app:stripDebugDebugSymbols
 > Task :app:processDebugResources
-> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:compileDebugKotlin
 > Task :app:compileDebugJavaWithJavac NO-SOURCE
-> Task :app:dexBuilderDebug UP-TO-DATE
+> Task :app:dexBuilderDebug
 > Task :app:mergeDebugGlobalSynthetics UP-TO-DATE
 > Task :app:processDebugJavaRes UP-TO-DATE
 > Task :app:mergeDebugJavaResource UP-TO-DATE
-> Task :app:mergeProjectDexDebug UP-TO-DATE
-> Task :app:bundleDebugClassesToCompileJar UP-TO-DATE
-> Task :app:generateDebugAndroidTestLintModel
+> Task :app:bundleDebugClassesToCompileJar
+> Task :app:mergeProjectDexDebug
 > Task :app:generateDebugLintReportModel
+> Task :app:generateDebugAndroidTestLintModel
 > Task :app:generateDebugUnitTestLintModel
 > Task :app:packageDebug
-> Task :app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :app:createDebugApkListingFileRedirect
 > Task :app:assembleDebug
-> Task :app:lintAnalyzeDebugAndroidTest
 > Task :app:lintAnalyzeDebugUnitTest
+> Task :app:lintAnalyzeDebugAndroidTest
 > Task :app:lintAnalyzeDebug
 
 > Task :app:lintReportDebug
@@ -64,5 +65,5 @@ Wrote HTML report to file://<project>/app/build/reports/lint-results-debug.html
 
 > Task :app:lintDebug
 
-BUILD SUCCESSFUL in 3s
-52 actionable tasks: 19 executed, 33 up-to-date
+BUILD SUCCESSFUL in 13s
+52 actionable tasks: 25 executed, 27 up-to-date
