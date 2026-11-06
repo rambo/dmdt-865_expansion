@@ -1,0 +1,222 @@
+DMD LoRa: installed-binary analysis
+Date: 2026-11-06
+Scope: static APK/DEX/native analysis and read-only package/device metadata.
+
+RESULT
+DMD uses a separate LoRa service app and Topicon's UART/expansion-control SDK.
+The examined LoRa path does not issue spidev transfers. On the tablet's observed
+ro.product.device=mdt865, its model-selection code chooses the RIGHT module:
+/dev/ttysWK2, 9600 baud, 8 data bits, no parity, 1 stop bit. /dev/expand controls
+module power and enable. The kernel owns the SPI-UART transport; earlier sysfs
+inspection found spi0.0 bound to wk2xxxspi. The tty-to-SPI physical association
+is consistent with those names and topology; a direct tty device-parent symlink
+was not available to independently prove that association.
+
+INPUTS AND METHOD
+Pulled installed base APKs through adb, without starting any DMD component:
+- com.thorkracing.dmdLora: versionName 1.0.14, versionCode 14, 3,030,950 bytes.
+  SHA-256 616a2c0be5960a9b7925dbd1eadd0006b3e26c37af8250cc7b6bdc5907d2c1cf
+- com.thorkracing.dmd2launcher: 44,863,209 bytes.
+  SHA-256 37c27f92cdba7616cb5d6b9208b9138f6e80e405dd3adad8889139170a34c3d7
+- com.thorkracing.dmdplayground: 67,105,159 bytes.
+  SHA-256 4fc0ba022e378beafbe7fb7f918c8fc44b73177fcdf27d998e3d30babfcf6473
+- com.thorkracing.wireddevices: 10,400,142 bytes, strings/native inventory only.
+  SHA-256 3252a1cb505184e49c92bdae5e17d51f9b097c9286cfc113e9e4a28e5072a45e
+
+Used JADX 1.5.6 for DEX and the installed Android NDK llvm-objdump for ARM64 ELF.
+JADX reported 14 LoRa, 110 DMD2 and 70 Playground decompilation errors; its output
+is reconstructed code, not original source. Critical LoRa model selection and
+UART framing were also examined in JADX simple instruction mode. Native flags,
+ioctl numbers and argument offsets below were read from ARM64 disassembly.
+Installed package metadata identifies LoRa as an updated SYSTEM/OEM/PRIVILEGED
+app, UID 10177, with the factory APK at /oem/priv-app/DMD-Lora.vendor.apk.
+The current APK lives under /data/app. The LoRa process was not running when
+queried; no live DMD file descriptors or wire traffic were observed.
+
+1. APPLICATION LAYERS
+DMD2 LoraGroupBridge builds SEND_GROUP_DATA and SET_FREQUENCY broadcasts and
+addresses com.thorkracing.dmdLora.receiver.Dmd2CommandReceiver explicitly.
+Group extras include group_id, group_name, riders_json and sender_user_id.
+Frequency extras include channel, power, lbt and region_desc.
+It listens for GROUP_DATA_RECEIVED and STATUS_UPDATE. The Playground build
+also uses SEND_CHAT_MESSAGE and starts the LoRa foreground service. Playground
+checks the installed LoRa APK and LORA_BRIDGE permission owner's signing
+certificate before using its DMD integration.
+
+The LoRa app owns LoraService, EByteRepository, ExpandManager, SerialConnection,
+libserial_port.so and libexpand_jni.so. Wired Devices references the separate
+LoRa app and status activity; its own serial path string is /dev/user_external_tty.
+The inspected DMD2/Playground native-library inventories contain no LoRa serial
+or expansion JNI implementation; the hardware implementation is in the LoRa APK.
+
+2. MODEL AND SERIAL SELECTION
+ExpandManager maps positions as follows:
+  position 1 / left     -> /dev/ttysWK3
+  position 2 / right    -> /dev/ttysWK2
+  position 3 / ttyS1    -> /dev/ttyS1
+  position 4 / external -> caller-supplied tty (SDK default /dev/ttyUSB0)
+These are SDK logical module positions, not SPI bus or chip-select numbers.
+ELora's SDK module-type ID is 38 (0x26); RFID's is 82 (0x52).
+
+resolvePosition handles mdt1060/mdt1065 with configurable left/right/auto,
+mdt860 as left, mdt661/mdt665 as ttyS1, and otherwise defaults to right.
+The tablet returns mdt865, which takes the right/default branch. EByteRepository
+connects using ELora and the default position. LoraService's coroutine explicitly
+calls connect(9600). SerialPort's default framing is 8N1.
+
+3. POWER, ENABLE, AND SERIAL OPEN
+GpioControl selects /dev/elora only for model mdt781, otherwise /dev/expand.
+On this tablet, /dev/expand exists with mode 0666, owner root:system, label
+u:object_r:gpio_ctrl_device:s0, character device 10:106; /dev/elora is absent.
+This metadata does not prove our ordinary app can perform its ioctl operations.
+
+libexpand_jni opens the selected control node with O_RDWR (flag 2).
+ExpandManager performs setPower(position,true), writeIo(position,1,true), waits
+100 ms, and opens the serial port. The current model therefore uses position 2.
+Release closes the serial port and turns power off for left/right positions.
+These are actual hardware-changing operations in DMD, not operations performed
+by the read-only probe project or by this investigation.
+
+libserial_port's nativeOpen ORs O_RDWR into the caller flags. The Java caller
+passes flags=0, so it opens read/write, without O_NONBLOCK. Native config uses
+TCGETS (0x5401), TCFLSH with argument 0 (0x540B), and TCSETS (0x5402), with
+9600/8N1 on this path and CLOCAL|CREAD. The final c_cc bytes set VTIME=150,
+VMIN=0 on the examined ARM64 ABI (150 deciseconds). SerialConnection checks
+available(), reads up to 1024 bytes, polls after 10 ms when empty, and aggregates
+chunks with a 22 ms idle delay before emitting a frame.
+
+4. RADIO MODE AND COMMAND PROTOCOL
+On mdt781, setMode can drive M0 using SDK I/O 3 and M1 using SDK I/O 2.
+That GPIO-mode branch is explicitly limited to mdt781. On mdt865, setMode
+returns false to the repository, which switches mode using UART command bytes:
+  transparent:  C0 C1 C2 C3 02 00
+  WOR send:     C0 C1 C2 C3 02 01
+  WOR receive:  C0 C1 C2 C3 02 02
+  sleep/config: C0 C1 C2 C3 02 03
+The repository waits up to 500 ms for a matching mode response.
+
+LoraService initialization connects the UART, enters sleep/config mode, and
+queries AT+FWCODE=? with a 2-second response timeout, up to three attempts.
+The initial wait is 200 ms, with another 200 ms between retries. AT commands
+are encoded as UTF-8 and terminated with CR LF if not already present.
+Register-read command: C1 00 09. Ambient RSSI command: C0 C1 C2 C3 00 02.
+
+In DMD mode, the config pass issues these settings (values are indices where
+applicable):
+  AT+ADDR=0       AT+RATE=2        AT+POWER=<selected index>
+  AT+PACKET=0     AT+LBT=<0 or 1> AT+DRSSI=0
+  AT+TRANS=0      AT+CHANNEL=<selected channel>  AT+KEY=0
+These settings are applied through the config helper; failed FWCODE response
+can cause the config pass to be skipped. The service then requests transparent
+mode and waits 200 ms. RATE index 2 is listed as 2.4k; packet index 0 is 200 bytes;
+power indices 0..3 are 30/27/24/21 dBm. These are software labels and selections,
+not measurements of the attached module or evidence of a particular RF chip.
+The SDK also contains AT+URXT=5 and AT+LBR=-55,2000 configuration commands.
+The app computes frequency from channel+850.125 MHz, but some display/API paths
+truncate that value to an integer. Actual module identity, RF calibration and
+currently programmed frequency were not read.
+
+For sendPacket, UTF-8 payload bytes are written without CR LF on the service
+path (the wrapper passes appendCRLF=false). If both destination address and
+channel are supplied, the SDK prepends address-high, address-low, channel.
+Without both values it sends the payload directly.
+
+5. DMD GROUP TRAFFIC ABOVE THE RADIO TRANSPORT
+DMD group and chat payloads are encoded into binary DMD frames and then sent
+as Base64 with NO_PADDING|NO_WRAP. The service wrapper adds no newline.
+Frame magic is D2; the codec implements versions 3 and 4, with a subsequent
+format byte 02. It includes sender hash, sequence and group CRC32 fields.
+Version 3 uses CRC16 (initial FFFF, polynomial 1021) and an XOR-transformed
+payload derived from SHA-256 of the group identifier. Version 4 uses AES-CTR
+and an 8-byte truncated HMAC-SHA256 tag when group key material is available.
+No user/group secrets were read from app storage. These findings establish
+that DMD group interoperability needs more than matching UART/radio settings.
+The codec and entire receive/relay state machine were not exhaustively verified.
+
+6. EXPORTED OPEN API: AN ALTERNATIVE TO OWNING THE HARDWARE
+Manifest component:
+  package: com.thorkracing.dmdLora
+  service: com.thorkracing.dmdLora.service.LoraOpenApiService
+  action:  com.thorkracing.dmdlora.OPEN_API
+  Binder interface token: com.thorkracing.dmdLora.ILoraOpenService
+
+LoraOpenApiService is exported and has no android:permission in this installed
+manifest. Its reviewed Binder onTransact has no caller UID/signature/permission
+check beyond enforcing the interface token. By contrast, the exported main
+LoraService declares com.thorkracing.dmdlora.permission.LORA_BRIDGE, whose
+protectionLevel is signature. The exported broadcast receiver has no manifest
+permission; its reviewed action handling uses open/DMD mode gates.
+
+Decoded Binder transactions below have descriptive names; original AIDL method
+names were not recovered. Each normal synchronous reply starts with writeNoException.
+  1  queryOpenMode() -> int boolean
+  2  setOpenMode(int boolean) -> int resulting-mode boolean
+  3  readConfig() -> JSON string, or {} when unavailable
+  4  writeSetting(String key, String value) -> int accepted boolean
+  5  sendMessage(String text, int address, int channel) -> int accepted boolean
+  6  registerListener(IBinder) -> void
+  7  unregisterListener(IBinder) -> void
+Negative address/channel arguments are converted independently to null; both
+must be supplied to generate the three-byte destination prefix.
+Callback token: com.thorkracing.dmdLora.ILoraEventListener.
+Callback transaction 1 carries String message followed by long timestamp and
+is sent one-way. This is the raw text receive route in Open Mode.
+
+readConfig, writeSetting and sendMessage require a live underlying LoraService;
+radio read/write operations also check Open Mode and connected/repository state.
+Binding this Open API service does not itself initialize the hardware service.
+A true send/write return indicates acceptance/queuing, not over-air delivery.
+readConfig itself enters radio config mode and issues hardware commands; it is
+not a passive metadata query. Reading it was therefore not attempted here.
+Supported write-setting keys include addr/address, packet/packetsize, airrate/
+rate, key, lbt, urxt, worcycle/wtime, drssi, fixed/trans, power and channel.
+The config JSON includes deviceType, address, channel, frequencyMhz, airRate,
+power, packetSize, fixedMode, appendRssi, worCycle, uartBaud and parity.
+
+Open Mode is the preference lora_mode=open, versus default dmd2. The settings UI
+explicitly says that Open Mode disables DMD2/DMD2-Next group location/chat
+features until switching back. A third-party client using this API is promising
+for rootless access in this installed build; it was not bound or invoked here.
+
+7. NATIVE CONTROL ABI (STATIC OBSERVATION, NOT AN EXECUTION RECIPE)
+libexpand_jni.so ARM64 exports these requests on the opened control descriptor:
+  nativeSetPower     0xC01C5301  bool state at byte offset 8, position at 12
+  nativeWriteIo      0xC01C5302  I/O index at 0, bool state at 8, position at 12
+  nativeReadIo       0xC01C5303  I/O index at 0, position at 12; reads state at 8
+  nativeGetPosition  0xC01C5309  module type at 4; result position at 12
+  nativeGetType      0xC01C530A  position at 12; result type at 4
+  nativeReset        0xC01C530B  wrapper supplies no explicit third argument
+Offsets above are relative to the argument buffer and refer to 32-bit fields.
+The ioctl numbers encode size 28, type 53 ('S') and read/write direction. No
+original driver header was available, so field names/full layout are inferred.
+Important: nativeReadIo returns true when the returned state field equals ZERO,
+not when it is nonzero. Do not substitute an ordinary nonzero-to-boolean cast.
+No ioctl was executed during this analysis, including the discovery-looking ones.
+
+Evidence locations in the recovered LoRa code (line numbers are JADX output):
+- driver/GpioControl.java:29,38: control-device selection/open.
+- driver/SerialPort.java:62 and synthetic constructor: native flags/default 8N1.
+- manager/ExpandManager.java:40,41,100,104,121,190,212,287,399:
+  serial mappings, initialization, power, model selection and GPIO mode guard.
+- model/Position.java:49,58; model/ModeType.java:17: IDs.
+- w1/a.java:66: explicit repository.connect(9600) coroutine.
+- repository/EByteRepository.java:897-907,1057-1098: connect/mode fallback.
+- protocol/EByteProtocol.java:28-66,95-109: AT constants and binary commands.
+- service/LoraService.java:299,307,367,491,625,700-856: API gates and init/config.
+- v1/f.java:24,57-181: Open API Binder interface and transactions.
+- v1/e.java: callback Parcel layout.
+- v1/j.java:165-185,328-396: group frame formats and protections.
+- v1/x.java:69-79, v1/y.java:83-87: Base64 UART payload construction.
+- DMD2 Map/GroupShare/Lora/LoraGroupBridge.java: application broadcasts.
+- Playground hub/lora/a.java: installed package/certificate checks.
+- ARM64 libexpand_jni.so: nativeOpen 0xE48, getPosition 0xFA8, reset 0x1088,
+  setPower 0x111C, getType 0x1228, writeIo 0x132C, readIo 0x1444.
+- ARM64 libserial_port.so: config 0x9C8, nativeOpen 0xED0, nativeClose 0x10D0.
+
+LIMITS
+No radio commands, GPIO ioctls, device opens, driver rebinding, app starts or
+settings changes were performed. Exact RF module identity and live responses
+remain unverified. Our earlier read-only WK2 open does not prove that our app
+can use O_RDWR, configure termios, or access gpio_ctrl_device ioctls. DMD's
+privileged OEM installation can have different policy access. The installed
+Open API is a candidate integration point, not a stable/public API guarantee.
