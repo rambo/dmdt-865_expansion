@@ -56,6 +56,8 @@ ExpandManager maps positions as follows:
   position 3 / ttyS1    -> /dev/ttyS1
   position 4 / external -> caller-supplied tty (SDK default /dev/ttyUSB0)
 These are SDK logical module positions, not SPI bus or chip-select numbers.
+The user reports one physical module bay with two pin columns in landscape
+orientation. Neither column has been mapped to these logical positions or UARTs.
 ELora's SDK module-type ID is 38 (0x26); RFID's is 82 (0x52).
 
 resolvePosition handles mdt1060/mdt1065 with configurable left/right/auto,

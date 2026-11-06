@@ -2,6 +2,9 @@ T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
 PURPOSE AND USER CONTEXT
+The user confirms one physical module bay, with two columns of pins when the
+tablet is in landscape orientation. Whether either column corresponds to the
+SDK's logical 'left'/'right' positions is unknown; do not infer two physical bays.
 Continue identifying the actual expansion-port contacts and using an independently
 chosen Meshtastic node through the tablet UART. The user DOES NOT OWN the Thork
 LoRa module. Do not assume any EByte radio is physically attached, or try to read
@@ -81,7 +84,8 @@ Scratch evidence under workspace work/:
 KNOWN SOFTWARE SIGNAL MAPPINGS; PHYSICAL CONTACT NUMBERS ARE UNKNOWN
 SDK Position 2 / right -> /dev/ttysWK2. This is the mdt865 model's default.
 SDK Position 1 / left  -> /dev/ttysWK3. Generic SDK mapping; physical availability
-on this particular tablet is unverified. Do not equate logical position IDs,
+at the bay's contacts is unverified. Neither UART has been mapped to a pin column.
+Do not equate logical position IDs,
 UART indices, SoC GPIO numbers, SPI chip selects, or connector contact numbers.
 WK1-3 are character devices, mode 0666, label user_tty_device. Our ordinary app
 successfully opened/closed them read-only. WK0 returns EACCES and has matching
@@ -243,10 +247,11 @@ Topicon general cradle manual lead, NOT verified expansion-pin mapping:
   https://www.manualslib.com/manual/3916170/Topicon-Mdt865.html
 
 NEXT SESSION: ORDERED WORK AND STOP CONDITIONS
-1. Identify the actual physical connector(s), orientation, keying, contact count,
-   and board/product revision from the user's device/photos or exact OEM drawing.
-   Cover both logical SDK positions as context; right/WK2 is the established T865
-   software path. Do not assume a second physical bay exists from the SDK alone.
+1. Document the single module bay's orientation, keying, contact count in each
+   of its two columns, and board/product revision from the user's device/photos
+   or exact OEM drawing. Fix a viewing orientation before numbering contacts.
+   Keep the SDK's logical left/right labels separate from physical column labels
+   until measured or documented; right/WK2 is the established T865 software path.
 2. Inspect the FCC tablet photos and obtain an expansion connector pin table,
    logic levels, power rails/current limits, power-switch polarity, GPIO index
    definitions, driver ioctl header and suitable SDK from Topicon/Thork if available.
