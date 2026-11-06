@@ -107,6 +107,13 @@ SELinux u:object_r:gpio_ctrl_device:s0.
 platform driver -> /sys/bus/platform/drivers/expand
 of_node -> /sys/firmware/devicetree/base/odm/expand@0
 /dev/elora does not exist on this tablet; the SDK selects that path only on mdt781.
+Follow-up driver investigation confirms CONFIG_EXPAND=y in /proc/config.gz:
+expand is a built-in platform driver, not a pullable expand.ko. Running kernel is
+4.14.186 #12, built 2026-05-29. Installed factory JNI adds EEPROM read/write and
+module-recognition operations to the earlier DMD interface. Kernel C source and
+binary implementation were not obtained; do not call JNI inspection a kernel
+driver decompilation. See EXPAND-DRIVER-ANALYSIS.txt, expand-driver-evidence.txt
+and expand-kernel.config for exact findings, provenance, gaps and OEM request.
 
 /system_ext/etc/selinux/system_ext_sepolicy.cil lines 942-943:
   (allow appdomain user_tty_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
@@ -141,6 +148,9 @@ Recovered ARM64 ioctl requests:
   0xC01C5301 nativeSetPower(position,bool)
   0xC01C5302 nativeWriteIo(position,io,bool)
   0xC01C5303 nativeReadIo(position,io)
+  0xC01C5304 writeEeprom(position,data) [factory JNI follow-up]
+  0xC01C5305 readEeprom(position) [factory JNI follow-up]
+  0xC01C5308 recognizeModule() [factory JNI follow-up]
   0xC01C5309 nativeGetPosition(moduleType)
   0xC01C530A nativeGetType(position)
   0xC01C530B nativeReset()
@@ -157,6 +167,11 @@ supplies no explicit third ioctl argument. Do not invent a reset payload or call
 unidentified request numbers. nativeReadIo returns Java true when its state field
 is ZERO; this is inverted relative to a naive nonzero-to-bool interpretation.
 Even discovery-looking _IOWR requests are driver operations, not proven inert.
+Factory JNI additionally uses bytes 16..23 for an 8-byte identity serial number,
+byte 24 for its length and byte 25 for version; bytes 26..27 remain unverified.
+Factory ExpandTest writes random identity data, version 1/type 112, then requests
+recognition and reads it back. Never launch that test as a read-only inspection.
+No factory test, expand ioctl or new device open was performed in the follow-up.
 
 DMD POWER SEQUENCE AND ITS LIMITS
 Direct host UART control does not require adding an external MCU between the
