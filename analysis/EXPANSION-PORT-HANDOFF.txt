@@ -159,6 +159,26 @@ is ZERO; this is inverted relative to a naive nonzero-to-bool interpretation.
 Even discovery-looking _IOWR requests are driver operations, not proven inert.
 
 DMD POWER SEQUENCE AND ITS LIMITS
+Direct host UART control does not require adding an external MCU between the
+tablet and an E220 UART module. It is a valid architecture to investigate.
+The user supplied E220-900T22D_UserManual_EN_v1.0.pdf (22 pages); reviewed pinout/
+wiring, operating modes and complete command/register table, pages 6-7, 11-16.
+It documents UART payload transfer and EByte configuration registers 00H-07H,
+including channel, air-rate presets, power, packet length, addressing and RSSI.
+These are module configuration registers, not arbitrary Semtech RF-chip access.
+Semtech specifies SPI for the LLCC68 itself; a UART control layer inside an E220
+module is distinct from a bare RF chip. The exact controller implementation in
+Topicon's assembly is still unknown; no extra carrier MCU has been established.
+The supplied old manual uses M0/M1 pins for mode selection and does not document
+DMD's C0 C1 C2 C3 02 xx mode commands or AT+FWCODE/AT+RATE/etc. Possible firmware
+revision/customization or intermediary logic remains unresolved. UART access
+alone does not prove arbitrary RF settings or Meshtastic over-air compatibility;
+the documented table has no independent SF/BW/CR/sync-word/preamble controls or
+generic SPI/register passthrough. A more capable firmware API could change that.
+Reference manual saved separately at ../reference-manuals/ relative to project root.
+Sources: https://www.semtech.com/products/wireless-rf/lora-connect/llcc68
+         https://meshtastic.org/docs/overview/radio-settings/
+
 ExpandManager.powerOn for position 2 calls:
   setPower(2,true)
   writeIo(2,1,true)
