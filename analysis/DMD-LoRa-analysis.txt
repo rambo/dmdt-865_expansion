@@ -236,3 +236,11 @@ Official names for the earlier descriptive Binder operations are isOpenMode,
 setOpenMode, readSettingsJson, writeSetting, sendMessage, registerListener and
 unregisterListener; callback onMessageReceived. This confirms the earlier wire
 map, rather than requiring an undocumented-client implementation.
+
+DOCK FOLLOW-UP
+The user identifies cradle-mating contacts as another expansion-interface lead;
+their Thork dock resembles Topicon BKT865-IP. Topicon advertises one RS232 channel
+for BKT865-IP and an 18-pin docking connector on MDT865. Neither source establishes
+which tty serves that channel or whether /dev/expand controls it. SDK left/right
+labels do not yet identify physical contact sets. See the handoff for sources,
+cable-revision caveats and the RS232-versus-logic-level UART distinction.

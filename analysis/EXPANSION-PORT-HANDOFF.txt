@@ -5,6 +5,10 @@ PURPOSE AND USER CONTEXT
 The user confirms one physical module bay, with two columns of pins when the
 tablet is in landscape orientation. Whether either column corresponds to the
 SDK's logical 'left'/'right' positions is unknown; do not infer two physical bays.
+The user also identifies the cradle-mating contacts as an expansion interface
+and reports their Thork dock looks essentially identical to Topicon BKT865-IP.
+Treat that resemblance as a lead, not confirmed electrical equivalence. Inventory
+physical contact sets explicitly; 'one bay' does not settle the dock wiring.
 Continue identifying the actual expansion-port contacts and using an independently
 chosen Meshtastic node through the tablet UART. The user DOES NOT OWN the Thork
 LoRa module. Do not assume any EByte radio is physically attached, or try to read
@@ -221,7 +225,28 @@ assumed MCU. Manufacturer evidence gives a more specific lead:
   include isOpenMode/readSettingsJson/onMessageReceived.
 - Generic cradle/M9/power-harness pin tables found online are not established as
   the LoRa expansion connector. Do not copy their power or RS232 pin assignments
-  to the expansion contacts.
+  to unidentified contacts. The BKT865-IP lead below makes dock documentation
+  relevant, but does not establish equivalence with the LoRa connection.
+
+DOCK / CRADLE LEAD (USER FOLLOW-UP, 2026-11-06)
+Topicon's BKT865-IP page specifies one RS232 channel, vehicle power/ignition,
+and the BKT865-BAS-02 waterproof cable. It warns pinouts and cable parts vary by
+batch. Its advertised input is 12-32 V; other sections/matrix list 12-36 V, so
+use the actual unit's rating and drawing rather than resolving that discrepancy
+by assumption. These ratings describe vehicle-power input, not module UART pins.
+Topicon's MDT865 specification lists an 18-pin docking connector with serial,
+GPIO, Ethernet, power/ignition and OTG capabilities across cradle options.
+The docking matrix explicitly says available interfaces depend on the cable kit.
+Neither source maps cradle RS232 to WK1/WK2/WK3, the SDK position labels, or
+/dev/expand power control. Do not assume the dock needs the LoRa power sequence.
+This is a second serial-access route to investigate: a verified dock RS232 cable
+could connect to a Meshtastic UART node using a suitable RS232-to-logic-level
+transceiver, with a separate verified node power supply. Do not connect RS232
+directly to a 3.3 V MCU UART. Whether level conversion lives in the tablet or dock,
+and what levels appear at the tablet's contact pads, are not established.
+Next evidence needed: exact Thork dock/cable revision and wiring, contact-set
+location/count/orientation, and the associated Android tty. No new hardware
+access, dock measurements or electrical-equivalence tests were performed.
 
 PUBLIC SOURCES
 Manufacturer catalog and E220 product:
@@ -245,11 +270,17 @@ Meshtastic serial PROTO configuration and framed client protocol:
   https://meshtastic.org/docs/development/device/client-api/
 Topicon general cradle manual lead, NOT verified expansion-pin mapping:
   https://www.manualslib.com/manual/3916170/Topicon-Mdt865.html
+Topicon BKT865-IP dock, docking matrix, and MDT865 18-pin docking specification:
+  https://www.topicon.hk/accessories-detail/bkt865-ip-docking-station.html
+  https://www.topicon.hk/docking-station-matrix.html
+  https://www.topicon.hk/products-detail/en/mdt865-rugged-android-tablet.html
 
 NEXT SESSION: ORDERED WORK AND STOP CONDITIONS
-1. Document the single module bay's orientation, keying, contact count in each
-   of its two columns, and board/product revision from the user's device/photos
-   or exact OEM drawing. Fix a viewing orientation before numbering contacts.
+1. Inventory the reported module contacts and cradle-mating contacts by physical
+   location; establish which contact set the two-column description refers to.
+   Document orientation, keying, contact count, board/product revision and dock/
+   cable revision from device/photos or exact OEM drawings. Fix a viewing
+   orientation before numbering contacts. Include the dock's external harness.
    Keep the SDK's logical left/right labels separate from physical column labels
    until measured or documented; right/WK2 is the established T865 software path.
 2. Inspect the FCC tablet photos and obtain an expansion connector pin table,
