@@ -50,4 +50,3 @@ Interpretation: EACCES/EPERM may be DAC, SELinux or another restriction.
 Use a matching AVC denial to identify SELinux; missing logs are inconclusive.
 An empty/denied SPI listing does not establish absence of SPI hardware.
 Open success proves only that this app could open at this instant, not transfers.
-
