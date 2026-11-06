@@ -220,3 +220,17 @@ remain unverified. Our earlier read-only WK2 open does not prove that our app
 can use O_RDWR, configure termios, or access gpio_ctrl_device ioctls. DMD's
 privileged OEM installation can have different policy access. The installed
 Open API is a candidate integration point, not a stable/public API guarantee.
+
+FOLLOW-UP 2026-11-06: EXPANSION PORTS
+See EXPANSION-PORT-HANDOFF.txt and expansion-port-evidence.txt in this directory.
+Installed system_ext policy explicitly grants appdomain gpio_ctrl_device open,
+read, write and ioctl access; appdomain includes untrusted_app. This improves
+the case for direct control on this firmware, although no control ioctl or
+read/write hardware open has been executed. The isolated vendor priv_app grant
+must not be mistaken for the whole policy. DMD shutdown calls the power-off path,
+and its documented Open API has no UART-release/retain-power operation.
+The Open API is now publicly documented at https://docs.dmdnavigation.com/dev/lora-api/.
+Official names for the earlier descriptive Binder operations are isOpenMode,
+setOpenMode, readSettingsJson, writeSetting, sendMessage, registerListener and
+unregisterListener; callback onMessageReceived. This confirms the earlier wire
+map, rather than requiring an undocumented-client implementation.

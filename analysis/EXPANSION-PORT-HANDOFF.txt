@@ -1,0 +1,289 @@
+T865 expansion-port investigation handoff
+Prepared 2026-11-06, Europe/Helsinki
+
+PURPOSE AND USER CONTEXT
+Continue identifying the actual expansion-port contacts and using an independently
+chosen Meshtastic node through the tablet UART. The user DOES NOT OWN the Thork
+LoRa module. Do not assume any EByte radio is physically attached, or try to read
+its firmware. A future external module can already run Meshtastic and expose its
+UART PROTO client API; Android need not implement the RF/mesh stack itself.
+The user reports Thork is friendly but has little control over OEM hardware or
+low-level firmware. Prefer direct userspace control if permitted; if assistance
+is needed, request existing pin/driver documentation or a small app-level broker.
+Use Git for test-project changes. No new chat/thread was created by this handoff.
+
+CURRENT CONCLUSION
+Direct expansion control looks viable on THIS firmware without DMD APIs or root:
+/dev/expand is 0666, and installed system_ext SELinux CIL explicitly grants
+appdomain open/read/write/ioctl access to its gpio_ctrl_device label. The same
+file grants appdomain access to user_tty_device, matching accessible WK1-3.
+This materially strengthens the earlier analysis, which only knew the DMD LoRa
+app was privileged. It is a policy-source finding, not an actual GPIO ioctl test.
+
+A clean 'DMD powers it, then our app takes over WK2' operation is NOT provided by
+the existing DMD LoRa API. Its live service retains a serial reader and its normal
+shutdown/disconnect path powers the expansion position off. Also, without an
+EByte-compatible module the DMD initialization mode handshake fails and the
+service shuts down. A custom Meshtastic module will not speak that EByte command
+protocol. Use direct control first, or a dedicated power-only broker if required.
+
+WHAT HAS AND HAS NOT BEEN DONE
+Completed: app-context read-only serial open probes; explicit SPI-node probes;
+static analysis of installed APK/DEX/native libraries; read-only sysfs, package,
+firmware and SELinux-source inspection; web research; handoff preparation.
+Not done: power-enable/reset/GPIO ioctls; read/write hardware-node opens by our
+app; termios changes on the tablet; UART traffic generation; connector electrical
+measurements; radio transmissions; bootloader or driver changes; DMD API calls.
+Do not silently perform any of those missing hardware operations as if validated.
+
+DEVICE AND REPOSITORY
+- Connected physical tablet: Topicon T865; user calls the product T865X.
+- ro.product.device=mdt865; Android 14, API 34; production user build, no root.
+- ro.build.display.id=mdt865_14_ngms_2.8.6; getenforce=Enforcing.
+- Fingerprint: Topicon/mdt750_gms_lite/mdt750:14/mdt865_14_ngms_2.8.6/99926cfa46d:user/dev-keys
+  OEM naming varies; do not infer the physical model from the fingerprint alone.
+- Project/Git:
+  /Users/rambo/Documents/Codex/2026-11-06/referenced-chatgpt-conversation-this-is-an/outputs/T865PortProbe
+- App package: dev.t865.portprobe; current APK version 1.1 / versionCode 2.
+  App UID observed 10192; SELinux untrusted_app:s0:c192,c256,c512,c768.
+- Existing commits: deaa2ed explicit SPI targets; 1643eb1 LoRa static analysis.
+- Normal USB ADB selector: adb -d. Installed adb binary:
+  /Users/rambo/Library/Android/sdk/platform-tools/adb
+- Build tools are isolated under the workspace work/ directory. JAVA_HOME:
+  work/jdk17/Contents/Home; ANDROID_HOME: work/android-sdk;
+  GRADLE_USER_HOME: work/gradle-home. Gradle wrapper is checked in.
+- Previously passed: assembleDebug, lintDebug (0 errors/8 warnings), native
+  ASan/UBSan self-check, Android 14 emulator UI/JNI smoke tests.
+- Existing APK remains metadata-only at startup, with an explicit open-probe
+  confirmation. It does not yet inspect/open /dev/expand or change power.
+
+READ THESE LOCAL ARTIFACTS FIRST
+Inside the repository:
+  analysis/expansion-port-evidence.txt  current metadata, policy excerpts, lifecycle
+  analysis/DMD-LoRa-analysis.txt       UART/protocol/JNI/Binder analysis
+  analysis/DMD-apk-inventory.json     pulled APK hashes and local locations
+  app/src/main/cpp/probe.c            bounded errno-reporting JNI probe
+  tests/native_test.c                 fake-I/O safety/regression checks
+  README.md and VALIDATION.md         build/test instructions and actual proof
+Sibling outputs:
+  T865-report-v1.1.txt                actual tablet probe report
+  T865-logcat-v1.1.txt                correlated tablet logcat
+  T865PortProbe-debug.apk             installable current debug APK
+Scratch evidence under workspace work/:
+  dmd-analysis/lora/sources           JADX output (some methods fail reconstruction)
+  dmd-analysis/expand-simple.java     simple-mode cross-check of model selection
+  dmd-analysis/repository-simple.java  simple-mode UART/AT framing cross-check
+  dmd-analysis/expand-arm64.asm       disassembled expansion-control JNI
+  dmd-analysis/serial-arm64.asm       disassembled serial-port JNI
+  dmd-analysis/apks/                 pulled APKs; do not unnecessarily redistribute
+  expansion-handoff/                 copied installed CIL sources and failed DT reads
+
+KNOWN SOFTWARE SIGNAL MAPPINGS; PHYSICAL CONTACT NUMBERS ARE UNKNOWN
+SDK Position 2 / right -> /dev/ttysWK2. This is the mdt865 model's default.
+SDK Position 1 / left  -> /dev/ttysWK3. Generic SDK mapping; physical availability
+on this particular tablet is unverified. Do not equate logical position IDs,
+UART indices, SoC GPIO numbers, SPI chip selects, or connector contact numbers.
+WK1-3 are character devices, mode 0666, label user_tty_device. Our ordinary app
+successfully opened/closed them read-only. WK0 returns EACCES and has matching
+SELinux getattr denials for ttyMT_device. Do not assume its role.
+Six SPI controllers exist, but only spi0.0 is registered as a peripheral, bound
+to wk2xxxspi. /sys/class/spidev is empty and shell finds no /dev/spidev* nodes.
+The app's direct /dev/spidev0.1-0.6 probes return ENOENT. Controller spi1 is NOT
+peripheral spi0.1. UART-to-SPI physical association is consistent with the bridge
+and tty names; no usable tty-parent link independently confirmed that mapping.
+
+CONTROL DEVICE AND POLICY EVIDENCE
+/dev/expand: character 10:106, root:system, mode 0666,
+SELinux u:object_r:gpio_ctrl_device:s0.
+/sys/class/misc/expand -> ../../devices/platform/odm/odm:expand@0/misc/expand
+platform driver -> /sys/bus/platform/drivers/expand
+of_node -> /sys/firmware/devicetree/base/odm/expand@0
+/dev/elora does not exist on this tablet; the SDK selects that path only on mdt781.
+
+/system_ext/etc/selinux/system_ext_sepolicy.cil lines 942-943:
+  (allow appdomain user_tty_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+  (allow appdomain gpio_ctrl_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+Both platform and system_ext CIL appdomain membership lists include untrusted_app.
+Vendor CIL separately has a narrower priv_app_31_0 grant; do NOT conclude from
+that isolated vendor rule that only privileged apps can use /dev/expand.
+Source-policy grants do not prove every ioctl succeeds: driver validation,
+extended ioctl permissions, loaded-policy differences and hardware state can
+still matter. Test in the actual untrusted_app process before claiming success.
+
+IMPORTANT: run-as dev.t865.portprobe /system/bin/id reported runas_app and inherited
+shell supplementary groups. A run-as test is NOT equivalent to our Activity/JNI
+process's SELinux context; do not report its success as ordinary app access proof.
+Also, adb exec-out can return host status zero while cat prints 'Permission denied'
+to stdout. The saved right_power/right_gpio/compatible files in work are error
+messages, NOT device-tree values. Validate command output before parsing it.
+
+OBSERVED DEVICE-TREE PROPERTY NAMES
+Node /sys/firmware/devicetree/base/odm/expand@0 contains:
+  #gpio-cells, compatible, i2c_bus, name, phandle, status,
+  right_gpio, right_power,
+  right_spi0_clk, right_spi0_csb, right_spi0_mi, right_spi0_mo
+Property contents and /sys/firmware/fdt are denied to ADB shell. Listing names
+was permitted. These names are leads, not evidence of pin numbers, voltage,
+exposed SPI availability or the meaning of a particular connector contact.
+Do not assume right_spi0_* names authorize bypassing the bound SPI-UART driver.
+
+WHAT THE RECOVERED /dev/expand WRAPPER CAN DO
+Native GpioControl opens the node O_RDWR; no DMD IPC is involved in these calls.
+Recovered ARM64 ioctl requests:
+  0xC01C5301 nativeSetPower(position,bool)
+  0xC01C5302 nativeWriteIo(position,io,bool)
+  0xC01C5303 nativeReadIo(position,io)
+  0xC01C5309 nativeGetPosition(moduleType)
+  0xC01C530A nativeGetType(position)
+  0xC01C530B nativeReset()
+ELora module-type ID = 38 / 0x26; RFID ID = 82 / 0x52.
+Known argument-buffer fields are 32-bit:
+  byte 0: I/O index for read/write-I/O requests
+  byte 4: module type for getPosition / returned type for getType
+  byte 8: state for setPower / writeIo / returned state for readIo
+  byte 12: position
+GetPosition reads the returned position at byte 12. GetType reads type at byte 4.
+The request encoding specifies 28 bytes, but no original driver header was found;
+full layout, valid I/O range and all remaining fields are unverified. nativeReset
+supplies no explicit third ioctl argument. Do not invent a reset payload or call
+unidentified request numbers. nativeReadIo returns Java true when its state field
+is ZERO; this is inverted relative to a naive nonzero-to-bool interpretation.
+Even discovery-looking _IOWR requests are driver operations, not proven inert.
+
+DMD POWER SEQUENCE AND ITS LIMITS
+ExpandManager.powerOn for position 2 calls:
+  setPower(2,true)
+  writeIo(2,1,true)
+  delay 100 ms
+It then opens WK2 O_RDWR and configures 9600/8N1. The physical function of logical
+I/O 1 is not proven; 'enable' is an interpretation of its use in powerOn, not a
+measured pin assignment. The model mdt781 uses other GPIOs for radio M0/M1;
+mdt865 uses UART mode commands instead, so do not copy its M0/M1 mapping blindly.
+The normal LoRa app enters EByte configuration mode and waits for a response.
+Without a compatible radio, failure triggers shutdown, not a persistent power lease.
+
+CAN DMD ENABLE POWER AND RELEASE ONLY THE UART?
+Not through any operation in the recovered/documented Open API. The official
+interface has isOpenMode, setOpenMode, readSettingsJson, writeSetting, sendMessage,
+registerListener and unregisterListener. No power-only/close-UART/FD-lease method.
+writeSetting("power",...) maps to AT+POWER (RF transmit power), not the expansion
+supply setPower ioctl. It cannot be used as a connector-power enable command.
+Open Mode means app-level radio messaging through DMD; SerialConnection keeps its
+read coroutine alive. The data API sends strings and receives trimmed UTF-8,
+which is not a binary-transparent Meshtastic transport.
+On normal stop:
+  LoraService.onDestroy -> EByteRepository.disconnect -> SerialConnection.close
+  and ExpandManager.release -> powerOff(currentPosition), serial close.
+The release helper itself powers off before closing its active SerialPort reference.
+Recovery paths also disconnect/power-cycle/reinitialize and send EByte commands.
+A second UART open may be allowed because the examined JNI code does not set
+TIOCEXCL, but that is not ownership: reads can consume each other's data, writes
+can interleave, termios state is shared, and DMD can remove power. Do not use this
+as a handoff design. Do not use force-kill-and-hope-power-stays-on as a solution;
+close/driver behavior and automatic restarts were not established.
+
+PREFERRED DESIGN
+First validate direct /dev/expand and WK2 access in the ordinary application.
+If successful, keep DMD LoRa disabled, own the required expansion power/GPIO
+sequence and raw UART in one process, and exchange Meshtastic protobuf bytes with
+a real Meshtastic MCU/node wired to the port. Avoid DMD Open Mode entirely for
+this architecture. Power acquisition/release must be explicit and measured.
+
+If direct access fails on the real app/firmware, the useful app-level request to
+Thork is a minimal expansion-power lease/broker that does NOT initialize an EByte
+radio, open WK2, run a UART reader, send AT commands, or power off mid-lease.
+A 'release UART but retain power' API would also have to stop every reader,
+health/recovery timer and queued command, and decouple close from powerOff.
+A power-only path before LoRa initialization is preferable because no Thork radio
+is present. That is an app/service change using the existing SDK, rather than a
+request for Thork to redesign OEM hardware or alter the radio chip firmware.
+If no helper is needed, Thork can still forward existing Topicon documents.
+
+TEARDOWN / MODULE IDENTIFICATION RESEARCH
+No verified Thork-branded LoRa-module PCB teardown or MCU marking was located in
+the indexed sources searched. Do not replace that negative search result with an
+assumed MCU. Manufacturer evidence gives a more specific lead:
+- Topicon's live catalog/product page lists MOD-LORA-E220 for MDT865/880/1065,
+  850.125-930.125 MHz. It is consistent with the EByte-style software, but not
+  proof that every Thork module revision uses the same board or MCU.
+- EByte's E220 evaluation kits mention STM32F103C8T6; that is the evaluation
+  board's MCU and MUST NOT be presented as a Thork-module identification.
+- Public manufacturer-submitted FCC internal photos exist for the MDT865 tablet,
+  FCC ID 2AHAF-MDT865, March 2023. These are useful potential connector/board
+  references, not a teardown of the add-on LoRa module, and may predate T865X.
+  PDF photos were identified but not visually reviewed in this handoff task.
+- The official DMD LoRa Open API is now publicly documented. The earlier static
+  report used descriptive names for some Binder transactions; official names
+  include isOpenMode/readSettingsJson/onMessageReceived.
+- Generic cradle/M9/power-harness pin tables found online are not established as
+  the LoRa expansion connector. Do not copy their power or RS232 pin assignments
+  to the expansion contacts.
+
+PUBLIC SOURCES
+Manufacturer catalog and E220 product:
+  https://www.topicon.hk/accessories/expansion-modules/
+  https://www.topicon.hk/accessories-detail/e220-lora-module.html
+Thork add-on product (external description, no MCU/pinout):
+  https://www.thorkracing.com/produto/dmd-t865-t880-lora-module/
+Official documented DMD API:
+  https://docs.dmdnavigation.com/dev/lora-api/
+DMD firmware changelog (reports expansion/LoRa/I2C-related changes; revision matters):
+  https://docs.dmdnavigation.com/changelog
+FCC tablet exhibits:
+  https://fccid.io/2AHAF-MDT865
+  https://fccid.io/2AHAF-MDT865/Internal-Photos/Internal-Photos-01-6401292
+  https://fccid.io/2AHAF-MDT865/Internal-Photos/Internal-Photos-02-6401295
+  Manufacturer-submitted documents mirrored by FCC-ID; not claims about this unit's PCB.
+EByte evaluation-kit example (not a Thork MCU identification):
+  https://www.cdebyte.com/products/E220-900MBL-SC/1
+Meshtastic serial PROTO configuration and framed client protocol:
+  https://meshtastic.org/docs/configuration/module/serial/
+  https://meshtastic.org/docs/development/device/client-api/
+Topicon general cradle manual lead, NOT verified expansion-pin mapping:
+  https://www.manualslib.com/manual/3916170/Topicon-Mdt865.html
+
+NEXT SESSION: ORDERED WORK AND STOP CONDITIONS
+1. Identify the actual physical connector(s), orientation, keying, contact count,
+   and board/product revision from the user's device/photos or exact OEM drawing.
+   Cover both logical SDK positions as context; right/WK2 is the established T865
+   software path. Do not assume a second physical bay exists from the SDK alone.
+2. Inspect the FCC tablet photos and obtain an expansion connector pin table,
+   logic levels, power rails/current limits, power-switch polarity, GPIO index
+   definitions, driver ioctl header and suitable SDK from Topicon/Thork if available.
+   A resistor/module-ID scheme may exist; getType/getPosition alone does not reveal
+   its circuitry. Device-tree property values need an authorized readable firmware
+   extract or OEM source, not an invented GPIO index.
+3. Add a narrow, separately triggered native access check in our existing app:
+   report UID/context, lstat/label and errno for /dev/expand O_RDWR open/close,
+   plus WK2 O_RDWR open/close, with NO ioctl, writes, serial config or power changes.
+   Do not auto-run it on launch. Open/close itself may have vendor side effects;
+   arrange the physical test setup accordingly. Validate through the Activity/JNI
+   process, not shell/run-as. Preserve the current safe probe behavior otherwise.
+4. If access passes, map ground and idle voltages using appropriate instruments.
+   Continuity/resistance checks require a genuinely unpowered circuit; a sleeping
+   tablet with an internal battery is not sufficient. Do not assume 3.3 V TTL,
+   connect a USB logic analyzer, or join power rails before levels are established.
+5. With known contact orientation, a safe measurement setup, and a defined initial
+   and restoration state, test ONLY the recovered position-2 power/IO1 sequence.
+   Measure which rail/contact changes, polarity, voltage, persistence across
+   control-FD close, and response to deliberate release. Avoid ioctl fuzzing,
+   global reset, driver rebinding and activity on the bound SPI-UART endpoint.
+6. Establish raw UART RX/TX contacts and binary loopback/known-node traffic at a
+   chosen matched baud. Do not reuse an unidentified harness pinout. Keep DMD LoRa
+   inactive and verify no other process owns the stream or toggles module power.
+7. Connect a self-powered known Meshtastic node first, with verified logic levels
+   and common ground; configure that node's UART PROTO API. Preserve binary buffers
+   and framed protobuf packets throughout the Android transport. Consider tablet
+   supply power only after rail/current/backfeed constraints are measured.
+8. Stop guessing once a needed driver/header or physical pin fact is missing.
+   Record the exact gap and request that narrow fact; do not broaden into rooting,
+   modem firmware flashing, power bypasses or speculative MCU replacement.
+
+SUGGESTED REQUEST TO THORK/TOPICON (DRAFT ONLY; NOT SENT)
+For T865X / mdt865 on mdt865_14_ngms_2.8.6, could you provide the actual expansion
+connector pin numbering/orientation, UART and GPIO logic levels, switched power
+rail/current rating, and the /dev/expand ioctl header or SDK? We traced right
+position 2 to WK2 and setPower(2,true)/writeIo(2,1,true). We plan to attach our own
+Meshtastic UART node, not alter your LoRa module. Existing pin/driver documents
+would be enough if direct app access works; otherwise a power-only lease API
+which leaves WK2 unopened would avoid requiring OEM firmware changes.
