@@ -1,5 +1,14 @@
 T865 expansion port: pin 12 confirmed WK2 TX — 2026-11-07
 
+FOLLOW-UP: IDLE DC MEASUREMENT
+T865UartTx v1.1 now holds WK2 open at 9600/8N1 without writes. User reports
+pin 12 measures 2.5 V against pin 1 and 2.464 V against a cradle GND pad.
+CH4 also read Vmax 3.44 V on pin 7 during the user's probe/channel check.
+The meter readings confirm TX idle around 2.5 V. The ~36 mV difference between
+references may be ground offset or measurement variation. Exact bridge supply
+and external-module RX thresholds remain unverified. Scope is now Auto sweep.
+The transmitting/live-trigger state described below records the earlier session.
+
 MAIN RESULT
 Backside pad 12 is the tablet's /dev/ttysWK2 transmit output, referenced to pad 1
 GND, using the user's local numbering. A separate ordinary Android app wrote

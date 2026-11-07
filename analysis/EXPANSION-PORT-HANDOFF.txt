@@ -2,7 +2,10 @@ T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
 LATEST STATE: UART HELD IDLE FOR MULTIMETER — 2026-11-07
-User reports CH4 reads Vmax 3.44 V on pin 7; awaiting pin-12 DC multimeter reading.
+User reports CH4 Vmax 3.44 V on pin 7. Pin-12 multimeter readings: 2.5 V
+against pin 1, 2.464 V against a cradle GND pad. This confirms idle TX around
+2.5 V; exact bridge supply and receiver VIH remain unverified. The ~36 mV
+reference difference may be ground offset or measurement variation.
 T865UartTx v1.1 is installed and holding WK2 open at 9600/8N1 with NO writes.
 ADB idle command: am start -n dev.t865.uarttx/.MainActivity --ez idle true
 UI/logs verify IDLE, and run-as fd readback confirms /dev/ttysWK2 held open.
