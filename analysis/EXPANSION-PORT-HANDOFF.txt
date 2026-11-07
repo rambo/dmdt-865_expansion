@@ -1,6 +1,19 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
+FOLLOW-UP 2026-11-07: PHYSICAL SETUP / PAUSED FOR USER'S SYSTEM UPDATE
+See EXPANSION-PIN-BASELINE-2026-11-07.txt and scope-2026-11-07/ in this directory.
+User numbering, viewed from tablet backside: rows (1,2), (3,4), (5,6), (7,8),
+(9,10), (11,12), with CH3->2, CH2->3, CH1->4, CH4->5. Probe grounds used pin 1;
+user measured pin 7 around 3.3 V relative to pin 1 and known cradle GND/power pads.
+Scope is Rigol DS1074Z at 192.168.220.72, raw SCPI port 5555. ADB reconnected.
+The user removed probes to enable USB debugging, so saved scope readouts have
+unverified contact status and MUST NOT be interpreted as measured pad voltages.
+User plans a system update before continuing; probing is paused. Do not initiate
+the update. On resumption, re-read firmware/kernel/policy and capture a fresh
+connected-probe baseline. The detailed driver findings below concern pre-update
+firmware mdt865_14_ngms_2.8.6. No active hardware experiment was performed.
+
 PURPOSE AND USER CONTEXT
 The user confirms one physical module bay, with two columns of pins when the
 tablet is in landscape orientation. Whether either column corresponds to the
