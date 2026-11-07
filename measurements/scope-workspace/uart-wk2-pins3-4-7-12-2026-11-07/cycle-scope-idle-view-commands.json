@@ -1,0 +1,35 @@
+[
+  {
+    "utc": "2026-11-07T11:19:44.817886+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T11:19:44.819538+00:00",
+    "command": ":TIM:MAIN:SCAL?",
+    "response": "5.0000000e-03"
+  },
+  {
+    "utc": "2026-11-07T11:19:44.820623+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T11:19:44.821744+00:00",
+    "command": ":TRIG:SWE AUTO"
+  },
+  {
+    "utc": "2026-11-07T11:19:44.821785+00:00",
+    "command": ":RUN"
+  },
+  {
+    "utc": "2026-11-07T11:19:44.821794+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T11:19:45.097957+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "AUTO"
+  }
+]

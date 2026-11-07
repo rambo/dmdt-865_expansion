@@ -1,0 +1,27 @@
+         1794043769.082  7305  7305 D LoraService: onStartCommand action=com.thorkracing.dmdlora.START connected=false txInProgress=false
+         1794043769.082  7305  9805 I LoraService: Restored radio config — ch=18 power=0 lbt=false region=EU 868MHz
+         1794043769.083  7305  9805 D control-jni: open fd = 134, path = /dev/expand
+         1794043769.086  9805  9805 I         : expand_fops_release
+         1794043769.086  9805  9805 I         : expand_fops_open,
+         1794043769.085  7305  7305 D LoraService: STATUS broadcast → connected=false ch=18 sinceTxMs=-1 sinceRxMs=-1 sent=0 recv=0 activeSenders=0 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+         1794043769.088  9447  9447 I expand_fops_ioctl, cmd: 3223081729, position: 2
+         1794043769.103  7305  9447 D control-jni: expand power fd: 134, state: 1, res: 0
+         1794043769.103  7305  9447 D control-jni: expand write io(1) fd: 134, state: 1, res: 0
+         1794043769.107  9447  9447 I expand_power_on, iface(right)->user: 1
+         1794043769.107  9447  9447 I expand_fops_ioctl, cmd: 3223081730, position: 2
+         1794043769.107  9447  9447 I         : expandio_set_gpio_value, iface(right) io = 1, state = 1
+         1794043769.107  9447  9447 I expandio: gpio(566) set to 1 SUCCESS
+         1794043769.205  7305  9447 D serial_port: Opening serial port /dev/ttysWK2, baudRate: 9600, flags: 0, dataBit: 8, parityBit: n, stopBit: 1
+         1794043769.268  7305  9447 D DMDLora : setMode: SleepConfig, currentPosition: right
+         1794043769.773  7305  9805 E LoraService: Failed to enter config mode (module attached?)
+         1794043769.773  7305  9805 W LoraService: Disabling LoraService: setWorkMode(SleepConfig) returned false
+         1794043769.773  7305  9805 D LoraService: Transient failure — count=4 everSucceeded=false. Will retry on next launch.
+         1794043769.794  7305  9805 D LoraService: STATUS broadcast → connected=false ch=18 sinceTxMs=-1 sinceRxMs=-1 sent=0 recv=0 activeSenders=0 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+         1794043769.811  7305  7305 D serial_port: Closing serial port fd = 136
+         1794043769.812  7305  7305 D control-jni: expand power fd: 134, state: 0, res: 0
+         1794043769.812  7305  7305 D serial_port: Closing serial port fd = 136
+         1794043769.815  7305  7305 I expand_fops_ioctl, cmd: 3223081729, position: 2
+         1794043769.815  7305  7305 I         : expandio_release_gpio, iface(right) release gpio
+         1794043769.815  7305  7305 I expand_power_off, iface(right)->user: 0
+         1794043782.778  7305  7305 W LoraService: LoRa disabled by user preference — refusing start
+         1794043782.781  7305  7305 D LoraService: STATUS broadcast → connected=false ch=18 sinceTxMs=-1 sinceRxMs=-1 sent=0 recv=0 activeSenders=0 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0

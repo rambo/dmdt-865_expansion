@@ -68,4 +68,4 @@ Open this directory. Use JDK 17 or 21, SDK Platform 36, Build Tools 35.0.0, NDK 
 
 Set `ANDROID_HOME` and `JAVA_HOME` for CLI builds. APK: `app/build/outputs/apk/debug/app-debug.apk`. The native check uses a real host pseudo-terminal, not tablet hardware. See `VALIDATION.md` for the actual build/device results.
 
-This directory and the ZIP contain a local Git repository; no remote is configured. Build outputs and SDK-specific paths are ignored.
+This project is part of `rambo/dmdt-865_expansion` under `android/T865UartTx`, with its original history retained. Build outputs and SDK-specific paths are ignored. The prebuilt APK is under `../../releases/`.

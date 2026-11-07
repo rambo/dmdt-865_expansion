@@ -1,0 +1,25 @@
+ls: /sys/kernel/notes: Permission denied
+brw------- 1 root root u:object_r:boot_block_device:s0  179,  24 2010-01-03 06:46 /dev/block/mmcblk0p24
+brw------- 1 root root u:object_r:boot_block_device:s0  259,   8 2010-01-03 06:46 /dev/block/mmcblk0p40
+dd: /dev/block/by-name/boot_a: Permission denied
+0+0 records in
+0+0 records out
+0 bytes (0 B) copied, 0.001 s, 0 B/s
+package:com.thorkracing.auto_off
+package:com.thorkracing.dmd2launcher
+package:hk.topicon.remotecontrol
+package:hk.topicon.utility.logservice
+package:hk.topicon.utility.packageinstallerproxy
+package:hk.topicon.updatemanager
+package:com.thorkracing.wireddevices
+package:com.thorkracing.advsos
+package:hk.topicon.injectinput
+package:com.thorkracing.dmdLora
+package:com.google.android.configupdater
+package:com.thorkracing.dmdplayground
+package:hk.topicon.locktp
+package:hk.topicon.camera
+total 2940
+-rwxrwx--- 1 u0_a149 media_rw    5916 2025-08-04 08:57 RamboTab.pfx
+-rwxrwx--- 1 u0_a149 media_rw   16542 2025-08-04 08:59 RamboTab_atak.zip
+-rwxrwx--- 1 u0_a149 media_rw 2980691 2025-08-16 12:34 ads1220.pdf

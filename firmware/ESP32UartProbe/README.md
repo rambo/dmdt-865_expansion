@@ -19,13 +19,13 @@ arduino-cli monitor --port /dev/tty.usbserial-21230 --config baudrate=115200
 
 On macOS `/dev/cu.usbserial-21230` is the callout alias of the same USB interface; it may be preferable for a monitor. Close the monitor before uploading.
 
-For the tablet RX search, connect GPIO26 through the proposed **3.3 kΩ / 10 kΩ divider plus 4.7 kΩ probe resistor** to candidate tablet pin 11. Connect ESP32 GND to tablet pin 1. Keep GPIO25 disconnected for the initial one-way test. See `../T865UartTx/RX-PROBE-WIRING.txt` for the full circuit and voltage checks. GPIO numbers here are ESP32 GPIOs, not tablet pad numbers.
+For the tablet RX search, connect GPIO26 through the proposed **3.3 kΩ / 10 kΩ divider plus 4.7 kΩ probe resistor** to candidate tablet pin 11. Connect ESP32 GND to tablet pin 1. Keep GPIO25 disconnected for the initial one-way test. See [RX-PROBE-WIRING.txt](../../android/T865UartTx/RX-PROBE-WIRING.txt) for the full circuit and voltage checks. GPIO numbers here are ESP32 GPIOs, not tablet pad numbers.
 
 GPIO25/26 avoid the GPIO12 flash-voltage strap from the earlier proposed mapping. The sketch does not alter GPIO12/13/15 or any eFuse. The completed bench test received five exact tablet frames on GPIO25; guaranteed voltage margins for permanent wiring remain unverified.
 
 Sources: [ESP32 Arduino Serial API](https://docs.espressif.com/projects/arduino-esp32/en/latest/api/serial.html), [PICO-KIT pin descriptions](https://docs.espressif.com/projects/esp-idf/en/v3.2.5/get-started/get-started-pico-kit.html#pin-descriptions).
 
-This directory is a separate local Git repository. Build output is ignored; actual validation logs are retained under `validation/`.
+This project is part of `rambo/dmdt-865_expansion` under `firmware/ESP32UartProbe`, with its original history retained. Build output is ignored; actual validation logs are retained under `validation/`.
 
 ## Verified wiring
 

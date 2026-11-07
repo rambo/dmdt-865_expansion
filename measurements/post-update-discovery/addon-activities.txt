@@ -1,0 +1,158 @@
+41 activities found:
+  Activity #0:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.android.chrome/com.google.android.apps.chrome.Main
+  Activity #1:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.android.dialer/.main.impl.MainActivity
+  Activity #2:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.android.settings/.Settings
+  Activity #3:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.android.vending/.AssetBrowserActivity
+  Activity #4:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.google.android.apps.maps/com.google.android.maps.MapsActivity
+  Activity #5:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.google.android.apps.messaging/.ui.ConversationListActivity
+  Activity #6:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.google.android.contacts/com.android.contacts.activities.PeopleActivity
+  Activity #7:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.dropbox.android/.activity.DropboxBrowser
+  Activity #8:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    com.pranavpandey.rotation/.activity.SplashActivity
+  Activity #9:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=true
+    de.danoeh.antennapod/.activity.SplashActivity
+  Activity #10:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.android.documentsui/.LauncherActivity
+  Activity #11:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.android.fmradio/.FmMainActivity
+  Activity #12:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.chartcross.gpstest/.MainActivity
+  Activity #13:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.google.android.apps.safetyhub/.LauncherActivity
+  Activity #14:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.google.android.googlequicksearchbox/.SearchActivity
+  Activity #15:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.simplemobiletools.gallery.pro/.activities.SplashActivity.Orange
+  Activity #16:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.thorkracing.dmd2launcher/com.thorkracing.dmdplayground.MainActivity
+  Activity #17:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.thorkracing.dmd2launcher/com.thorkracing.dmdplayground.HubLauncher
+  Activity #18:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.thorkracing.dmdplayground/.MainActivity
+  Activity #19:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.thorkracing.dmdplayground/.HubLauncher
+  Activity #20:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.thorkracing.wireddevices/.Main
+  Activity #21:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    hk.topicon.multicamera/.MainActivity
+  Activity #22:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.amazon.kindle/.UpgradePage
+  Activity #23:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.atakmap.app.civ/com.atakmap.app.ATAKActivityCiv
+  Activity #24:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.bandcamp.android/.view.SplashActivity
+  Activity #25:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.bookoo.mantis.lasertrainer/com.tns.NativeScriptActivity
+  Activity #26:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.ducati.ducatilinkapp/.app.activity.SplashLoginActivity
+  Activity #27:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.faultexception.reader/.MainActivity
+  Activity #28:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.ghisler.android.TotalCommander/.TotalCommander
+  Activity #29:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.riseupgames.proshotevaluator/.InitialScanHardwareRequestActivity
+  Activity #30:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.roberts.croberts.mantis/.activities.LauncherActivity
+  Activity #31:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.soundcloud.android/.launcher.LauncherActivity
+  Activity #32:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.teacapps.barcodescanner/net.qrbot.ui.main.MainActivity
+  Activity #33:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.thomas.lightmode/crc6475a4939ee3a97394.MainActivity
+  Activity #34:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.velocitylapse.velocitylapse/.MainActivity
+  Activity #35:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.waze/.FreeMapAppActivity
+  Activity #36:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.wireguard.android/.activity.MainActivity
+  Activity #37:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    com.x8bit.bitwarden/.MainActivity
+  Activity #38:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    de.markusfisch.android.binaryeye/.activity.SplashActivity
+  Activity #39:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    dev.t865.portprobe/.MainActivity
+  Activity #40:
+    priority=0 preferredOrder=0 match=0x108000 specificIndex=-1 isDefault=false
+    org.jellyfin.mobile/.MainActivity
+package:/product/priv-app/SettingsIntelligence/SettingsIntelligence.apk=com.android.settings.intelligence
+package:/data/app/~~N-4E6tV5hOaIrR3-A-Kh5g==/com.thorkracing.wireddevices-d0ObKJytwUIh_r2RtHy75Q==/base.apk=com.thorkracing.wireddevices
+package:/product/app/ModuleMetadata/ModuleMetadata.apk=com.android.modulemetadata
+package:/apex/com.android.ondevicepersonalization/app/FederatedCompute@mdt865_16_ngms_1.2.7/FederatedCompute.apk=com.android.federatedcompute.services
+package:/system_ext/priv-app/MtkSettingsProvider/MtkSettingsProvider.apk=com.android.providers.settings
+package:/product/overlay/MtkTeleService__device__auto_generated_characteristics_rro.apk=com.android.phone.auto_generated_characteristics_rro
+package:/vendor/overlay/SettingsProviderResOverlay/SettingsProviderResOverlay.apk=com.mediatek.SettingsProviderResOverlay
+package:/system/app/UpdateManager/UpdateManager.apk=hk.topicon.updatemanager
+package:/system/app/CompanionDeviceManager/CompanionDeviceManager.apk=com.android.companiondevicemanager
+package:/product/priv-app/FamilyLinkParentalControls/FamilyLinkParentalControls.apk=com.google.android.gms.supervision
+package:/apex/com.android.mediaprovider/priv-app/MediaProvider@mdt865_16_ngms_1.2.7/MediaProvider.apk=com.android.providers.media.module
+package:/product/overlay/MtkTelephonyProvider__device__auto_generated_characteristics_rro.apk=com.android.providers.telephony.auto_generated_characteristics_rro
+package:/apex/com.android.configinfrastructure/app/DeviceConfigServiceResources@mdt865_16_ngms_1.2.7/DeviceConfigServiceResources.apk=com.android.server.deviceconfig.resources
+package:/system_ext/priv-app/MtkSettings/MtkSettings.apk=com.android.settings
+package:/system/priv-app/InputDevices/InputDevices.apk=com.android.inputdevices
+package:/system/app/CameraExtensionsProxy/CameraExtensionsProxy.apk=com.android.cameraextensions
+package:/system/priv-app/DeviceDiagnostics/DeviceDiagnostics.apk=com.android.devicediagnostics
+package:/vendor/overlay/MtkSettingsResOverlay/MtkSettingsResOverlay.apk=com.mediatek.MtkSettingsResOverlay
+package:/product/overlay/framework-res__device__auto_generated_characteristics_rro.apk=android.auto_generated_characteristics_rro
+package:/apex/com.android.ondevicepersonalization/priv-app/OnDevicePersonalization@mdt865_16_ngms_1.2.7/OnDevicePersonalization.apk=com.android.ondevicepersonalization.services
+package:/oem/priv-app/InjectInputProxy.vendor.apk=hk.topicon.injectinput
+package:/system/priv-app/RemoteControl/RemoteControl.apk=hk.topicon.remotecontrol
+package:/system/app/PowerProxy/PowerProxy.apk=com.utility.powerproxy
+package:/oem/priv-app/LockTpProxy.vendor.apk=hk.topicon.locktp
+package:/apex/com.android.cellbroadcast/priv-app/CellBroadcastServiceModule@mdt865_16_ngms_1.2.7/CellBroadcastServiceModule.apk=com.android.cellbroadcastservice
+package:/apex/com.android.healthfitness/priv-app/HealthConnectController@mdt865_16_ngms_1.2.7/HealthConnectController.apk=com.android.healthconnect.controller
+package:/product/overlay/CompanionDeviceManager__device__auto_generated_characteristics_rro.apk=com.android.companiondevicemanager.auto_generated_characteristics_rro
+package:/apex/com.android.permission/priv-app/PermissionController@mdt865_16_ngms_1.2.7/PermissionController.apk=com.android.permissioncontroller
+package:/apex/com.android.devicelock/priv-app/DeviceLockController@mdt865_16_ngms_1.2.7/DeviceLockController.apk=com.android.devicelockcontroller
+package:/apex/com.android.cellbroadcast/priv-app/CellBroadcastApp@mdt865_16_ngms_1.2.7/CellBroadcastApp.apk=com.android.cellbroadcastreceiver.module
+package:/system_ext/priv-app/StorageManager/StorageManager.apk=com.android.storagemanager
+package:/system/priv-app/DeviceAsWebcam/DeviceAsWebcam.apk=com.android.DeviceAsWebcam
+package:/system_ext/priv-app/WapiCertManager/WapiCertManager.apk=com.wapi.wapicertmanager
+package:/system/priv-app/CredentialManager/CredentialManager.apk=com.android.credentialmanager

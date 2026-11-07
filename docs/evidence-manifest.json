@@ -1,0 +1,2298 @@
+[
+  {
+    "group": "published investigation outputs",
+    "source_name": "DMD-LoRa-analysis.txt",
+    "repository_path": "docs/reports/DMD-LoRa-analysis.txt",
+    "bytes": 15284,
+    "sha256": "6aabe8fda04882d062193a14d9fe02a3cee843ae424add9fdeaf5c5873782215"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "EXPAND-DRIVER-ANALYSIS.txt",
+    "repository_path": "docs/reports/EXPAND-DRIVER-ANALYSIS.txt",
+    "bytes": 9757,
+    "sha256": "a53256f47ef430e38aee27846bc88e29fd993be6721f3b3e3d227ae7fe27428f"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "EXPANSION-PIN-BASELINE-2026-11-07.txt",
+    "repository_path": "docs/reports/EXPANSION-PIN-BASELINE-2026-11-07.txt",
+    "bytes": 4448,
+    "sha256": "a83c5de668cd3f67b6d9eeb2ddbdd8fe3e79b4c94effa7c75b26b3f9115ba7cd"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "EXPANSION-PIN-MAP-2026-11-07.txt",
+    "repository_path": "docs/reports/EXPANSION-PIN-MAP-2026-11-07.txt",
+    "bytes": 2759,
+    "sha256": "34ea11e9d6c56db2c18c3a74af551d6b0b845c99156f86dda960055231284db1"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "EXPANSION-PORT-HANDOFF.txt",
+    "repository_path": "docs/reports/EXPANSION-PORT-HANDOFF.txt",
+    "bytes": 37230,
+    "sha256": "0892f21a364f3101ad756c8dcc7b95d3edb6ce413e0a588fa86dbfd1f5f4da22"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "PINS9-11-LORA-CYCLE-2026-11-07.txt",
+    "repository_path": "docs/reports/PINS9-11-LORA-CYCLE-2026-11-07.txt",
+    "bytes": 3520,
+    "sha256": "eee25c7fbce598506344aecb5689c2cb96393d209f7e632be0427e37315bcf45"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "POST-UPDATE-INVESTIGATION-2026-11-07.txt",
+    "repository_path": "docs/reports/POST-UPDATE-INVESTIGATION-2026-11-07.txt",
+    "bytes": 12430,
+    "sha256": "17dcee059eef4603d8a3d46046cf4ec90644d491cac0a11030fd9c03945c0cf3"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "REMAPPED-LORA-CYCLE-2026-11-07.txt",
+    "repository_path": "docs/reports/REMAPPED-LORA-CYCLE-2026-11-07.txt",
+    "bytes": 4341,
+    "sha256": "1280b6cd7502903b84f28076a3916a7e148a43fbda7d303de68195c53077c894"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "REMAPPED-PIN-BASELINE-2026-11-07.txt",
+    "repository_path": "docs/reports/REMAPPED-PIN-BASELINE-2026-11-07.txt",
+    "bytes": 1801,
+    "sha256": "86939632f578e85f7c482585e7f7772d47497520826a6ff66219fd2aaa666636"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "RX-PROBE-WIRING-2026-11-07.txt",
+    "repository_path": "docs/reports/RX-PROBE-WIRING-2026-11-07.txt",
+    "bytes": 4905,
+    "sha256": "9a76c9cd2985c9ce7f323b86d03f4693a5b9657ce16dc88e23846c09e86823e2"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-LoRa-enable-scope-2026-11-07.png",
+    "repository_path": "docs/reports/T865-LoRa-enable-scope-2026-11-07.png",
+    "bytes": 42777,
+    "sha256": "9bd179e0eeae3bc4fdcf3d6f1d47134d616d780fb0e4f3ca7bee56dd0916c5f1"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-LoRa-pins3-4-7-12-scope-2026-11-07.png",
+    "repository_path": "docs/reports/T865-LoRa-pins3-4-7-12-scope-2026-11-07.png",
+    "bytes": 44782,
+    "sha256": "5ac26101f9df115a7d1b7f4c87454c788145a4384e5665306fd679669f25bb88"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-LoRa-pins9-11-scope-2026-11-07.png",
+    "repository_path": "docs/reports/T865-LoRa-pins9-11-scope-2026-11-07.png",
+    "bytes": 43809,
+    "sha256": "bf8ec50432ea65cbbc375b11b28c6c6c1efb2fda82ce6deac40be81c9151d1ca"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-LoRa-remapped-cycle-scope-2026-11-07.png",
+    "repository_path": "docs/reports/T865-LoRa-remapped-cycle-scope-2026-11-07.png",
+    "bytes": 44268,
+    "sha256": "897cb4430ff5ff8523276d004d16428cb4a3acffd6902be95a2142bbf7024db7"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-WK2-pin12-TX-overview-2026-11-07.png",
+    "repository_path": "docs/reports/T865-WK2-pin12-TX-overview-2026-11-07.png",
+    "bytes": 46804,
+    "sha256": "8edcf3bc860953482cd47da0be56d1b75bcf7947b8549037face96ab28e58f28"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-WK2-pin12-live-scope-2026-11-07.png",
+    "repository_path": "docs/reports/T865-WK2-pin12-live-scope-2026-11-07.png",
+    "bytes": 53496,
+    "sha256": "e92ac3a1580505b3ca24ecdfa13289ca2f428a80d441500d26469d1a2fa26471"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-logcat-v1.1.txt",
+    "repository_path": "docs/reports/T865-logcat-v1.1.txt",
+    "bytes": 11727,
+    "sha256": "f4cbfdf547ade0a78e9ccad4f8bd5d7d356f01b88241a85f1328c64648dde810"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-report-v1.1.txt",
+    "repository_path": "docs/reports/T865-report-v1.1.txt",
+    "bytes": 3458,
+    "sha256": "31de74f96fe30e59cf35a33077185851575ebf039eae421e1a28704f584e827a"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "T865-report.txt",
+    "repository_path": "docs/reports/T865-report.txt",
+    "bytes": 2034,
+    "sha256": "6fde58a82190bdb67bfb100e65ffbb2adbe8bfb3aede1b4c7b95f01a2b494455"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "UART-END-TO-END-2026-11-07.txt",
+    "repository_path": "docs/reports/UART-END-TO-END-2026-11-07.txt",
+    "bytes": 2462,
+    "sha256": "4519f5032d6a93bf217e7ff73fadae58432e9946dd75f98d8f75215ae3b6950a"
+  },
+  {
+    "group": "published investigation outputs",
+    "source_name": "UART-PIN12-RESULT-2026-11-07.txt",
+    "repository_path": "docs/reports/UART-PIN12-RESULT-2026-11-07.txt",
+    "bytes": 6563,
+    "sha256": "0e93c59a962c9817091c09806ed43e7fb476f2d4b362785f83a51d4e4d38aee3"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "adb-baseline-2026-11-07.txt",
+    "repository_path": "measurements/scope-workspace/adb-baseline-2026-11-07.txt",
+    "bytes": 960,
+    "sha256": "28a2a40055847e14ee67d4e673f0a171024622d87f5e13a5f061d2507b0705a8"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "adb-post-update-2026-11-07.txt",
+    "repository_path": "measurements/scope-workspace/adb-post-update-2026-11-07.txt",
+    "bytes": 1585,
+    "sha256": "9d8ac683297200a5022ef17de3941f3380b01193ba392218f377ab4d2c8e5a12"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "baseline-2026-11-07.json",
+    "repository_path": "measurements/scope-workspace/baseline-2026-11-07.json",
+    "bytes": 7890,
+    "sha256": "bcd90063e696eac3c96bc89140b83e4b3deb662257de99bf8c150fcf91414c6b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "baseline-2026-11-07.png",
+    "repository_path": "measurements/scope-workspace/baseline-2026-11-07.png",
+    "bytes": 39097,
+    "sha256": "b088ec8e3842dd9eae7f813fa5303689fe6a0e12ec87fd2e3266dee624b5370c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "capture_scope.py",
+    "repository_path": "measurements/scope-workspace/capture_scope.py",
+    "bytes": 6665,
+    "sha256": "5ccb5c9f8774c70cd6845fe67e496b399829f77518e715ced346a6f8ce5c8583"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.bin",
+    "repository_path": "measurements/scope-workspace/cycle-CH1.bin",
+    "bytes": 3000000,
+    "sha256": "73166e395ae8b16a53f73f50b43b479a12a48aba1e471f2853c805eff0f2c33a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.json",
+    "repository_path": "measurements/scope-workspace/cycle-CH1.json",
+    "bytes": 290,
+    "sha256": "e42405c3b2dbf97b5fb827ededaa0e1c84fe55b43d17afc1fcf361ad4214fba2"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.bin",
+    "repository_path": "measurements/scope-workspace/cycle-CH2.bin",
+    "bytes": 3000000,
+    "sha256": "687fce3f2ab3605deeed712e132ef3191909234b3cf66809e74587b82dd379cb"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.json",
+    "repository_path": "measurements/scope-workspace/cycle-CH2.json",
+    "bytes": 292,
+    "sha256": "9663efa1eb860918b9da6a2d911a3520a0b20f75f1aa231e7c5550c4d42c8da1"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.bin",
+    "repository_path": "measurements/scope-workspace/cycle-CH3.bin",
+    "bytes": 3000000,
+    "sha256": "9da331435577b9c476a659f1d77acfacfaf83b7ac415de263e951037ac6daafb"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.json",
+    "repository_path": "measurements/scope-workspace/cycle-CH3.json",
+    "bytes": 292,
+    "sha256": "2c2ea3ddb66c2eecc03157c2cb950634a551b13324a5ca7a23c8de6ca4beb919"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.bin",
+    "repository_path": "measurements/scope-workspace/cycle-CH4.bin",
+    "bytes": 3000000,
+    "sha256": "a42fc2e7f84378b7f8788885a9836750eeb0515148f8dea6d4faffd6ed23defa"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.json",
+    "repository_path": "measurements/scope-workspace/cycle-CH4.json",
+    "bytes": 294,
+    "sha256": "406645c105d1b9492f783d5ac40531cd95b076bd767be9de8091a630320f7bf6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-arm-commands.json",
+    "repository_path": "measurements/scope-workspace/cycle-scope-arm-commands.json",
+    "bytes": 883,
+    "sha256": "62708a1e33ca93492a00bad03fd627bcf2a1762b751624fb9d089ba649a6f4bf"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-final-check-commands.json",
+    "repository_path": "measurements/scope-workspace/cycle-scope-final-check-commands.json",
+    "bytes": 1002,
+    "sha256": "1bc30ee94653dde2a43c485a9b04a5733d8e4f6faa37ef61cb924d9658002cc0"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-read-commands.json",
+    "repository_path": "measurements/scope-workspace/cycle-scope-read-commands.json",
+    "bytes": 16872,
+    "sha256": "7a976b2df3434c0478bd26811917d8d0eb0a9d460566149f5105194e53cff60a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-restore-commands.json",
+    "repository_path": "measurements/scope-workspace/cycle-scope-restore-commands.json",
+    "bytes": 811,
+    "sha256": "c99000960990b96149800e0eacd57a6b2323f755470cc75b7b33ac4feb8571b2"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-trigger-diagnosis-commands.json",
+    "repository_path": "measurements/scope-workspace/cycle-scope-trigger-diagnosis-commands.json",
+    "bytes": 886,
+    "sha256": "39eca02119a52f3a5896559e98b72aca177b03a6e22e6cdb804dfaeb3b14262c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-wait-commands.json",
+    "repository_path": "measurements/scope-workspace/cycle-scope-wait-commands.json",
+    "bytes": 861,
+    "sha256": "2dcbefe6049cdbdfb82a425f5e09cba4c1b3a8d4e7fb70c120773243c9d643d4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope.png",
+    "repository_path": "measurements/scope-workspace/cycle-scope.png",
+    "bytes": 42777,
+    "sha256": "9bd179e0eeae3bc4fdcf3d6f1d47134d616d780fb0e4f3ca7bee56dd0916c5f1"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle2-waveform-analysis.json",
+    "repository_path": "measurements/scope-workspace/cycle2-waveform-analysis.json",
+    "bytes": 1515,
+    "sha256": "d50aa870eedb0c3bda4653d5f7e696773927666f1eebea69c0da6eb7444d334e"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.bin",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH1.bin",
+    "bytes": 3000000,
+    "sha256": "2b1dca7fcdf40a3a10dfcebbf382dbfdca6ca5960933fd44cb3381f436fdfbc4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH1.json",
+    "bytes": 290,
+    "sha256": "c003ce9c059acba1d1f7e7bce9894cf8f95263a8d86d970f08ff68e44cb7caaf"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.bin",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH2.bin",
+    "bytes": 3000000,
+    "sha256": "aea455b3ea47d22f4e6b8ad4a379db7a99f0cb077a7a2849e1119c3b7b8a562d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH2.json",
+    "bytes": 292,
+    "sha256": "fff93ee61d6b03e175e54e9ea8b80280f7d9e7df174ce82996d94f363943fa8f"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.bin",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH3.bin",
+    "bytes": 3000000,
+    "sha256": "9da331435577b9c476a659f1d77acfacfaf83b7ac415de263e951037ac6daafb"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH3.json",
+    "bytes": 292,
+    "sha256": "deb0a54ce123d08b3c3fdc42ffd402000c2167e5733919775ceb121f36a847b3"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.bin",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH4.bin",
+    "bytes": 3000000,
+    "sha256": "d0fcae8d62405c12c2dadeac148370f58a2c714539f6d5ba1db297dc131fc97c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-CH4.json",
+    "bytes": 294,
+    "sha256": "51d51a90f2dae2edc3b12a3c421ec362cd01400424353f6c8181cd861a454b25"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-arm-commands.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-scope-arm-commands.json",
+    "bytes": 343,
+    "sha256": "33dc6b34646e58b3b2d3c088645558f173c3c8506bd729a2da9fba5b4f4f3ed2"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-read-commands.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-scope-read-commands.json",
+    "bytes": 16872,
+    "sha256": "87532c6b3ca46b89766ecac24a77359990397204f0f163c673e8ad8f11668a81"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-trigger-diagnosis-commands.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-scope-trigger-diagnosis-commands.json",
+    "bytes": 886,
+    "sha256": "39eca02119a52f3a5896559e98b72aca177b03a6e22e6cdb804dfaeb3b14262c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-wait-commands.json",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-scope-wait-commands.json",
+    "bytes": 2837,
+    "sha256": "ef6f4404c1d39359648432517c98a4420287cf2c7c15eb570d0ad9ed6e4d1c3d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope.png",
+    "repository_path": "measurements/scope-workspace/off-state-trigger-validation/cycle-scope.png",
+    "bytes": 40950,
+    "sha256": "6991b8977f4dbfcb278a2f7f51702fbb11c43dcca897903aa3247b46acbcd2e0"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "before-restore-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/before-restore-ui.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "capture_scope.py",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/capture_scope.py",
+    "bytes": 7097,
+    "sha256": "4c48060d9d7d8fa3c1a3741ae8169760a2e0d023e35f1a701d754cd75c70165c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "channel-settings.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/channel-settings.json",
+    "bytes": 598,
+    "sha256": "da2a15f634343b2bb2ebac306fcd2168c227bd37ace04c9d7f13c165dc9c74c4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.bin",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH1.bin",
+    "bytes": 3000000,
+    "sha256": "41d50f3127f216e04525a76b04dfa29cbaac0c8fd0e469547f757bcd4b7c8186"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH1.json",
+    "bytes": 290,
+    "sha256": "5ed28917fc180a2d18052349b82482b0a7e557df4f873c2e0b763ffe141a4def"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.bin",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH2.bin",
+    "bytes": 3000000,
+    "sha256": "038380d902999d4f1dc6de2b68287892b785b446e7d79c8efbc354cf0e4ede1b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH2.json",
+    "bytes": 292,
+    "sha256": "75234e0ea887c95a79c3af4e833567125fa364cae930367783754ff64f0f424a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.bin",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH3.bin",
+    "bytes": 3000000,
+    "sha256": "c732b52de4ca153c47202fc926808a63659d936869854732cd28b13f373489b0"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH3.json",
+    "bytes": 292,
+    "sha256": "fa20068ab383f8f46c01bf4a7c6de1d8b75493a4a05fa9997ecd17975e3aa6f0"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.bin",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH4.bin",
+    "bytes": 3000000,
+    "sha256": "720d728f950c0d7d9cb9c22b7a1dd93ce6b578b3b54be8703d34b14e19e4486c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH4.json",
+    "bytes": 294,
+    "sha256": "e0e11259eba454d4c1076b4de101332ba8fe1a73814b0f89d0cec696ce1b8399"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-arm-commands.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope-arm-commands.json",
+    "bytes": 1251,
+    "sha256": "83481ee5fc7dc63fb1c7c08d3a2132ddf17d6f7aef5aa8c45cf547096abe9d8a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-baseline-commands.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope-baseline-commands.json",
+    "bytes": 4424,
+    "sha256": "e8e45a257970e68e39f6803bcfc301723d67ab8f898a1cda6a035c5bacaa912b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-final-check-commands.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope-final-check-commands.json",
+    "bytes": 1568,
+    "sha256": "856f8275e99a049d14910fbada9f3a9eb8e654a7865ec98d7849ee18ee5b0987"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-final-restore-commands.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope-final-restore-commands.json",
+    "bytes": 1189,
+    "sha256": "44e7c7d147aae409f78f362ff35e28983a79089abc28bbb0e37d29d8497eb30d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-read-commands.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope-read-commands.json",
+    "bytes": 17250,
+    "sha256": "b197a15e5a60731f2e9baeba97734f5008412be1d8debd7133686c5de35fc32e"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-wait-commands.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope-wait-commands.json",
+    "bytes": 1824,
+    "sha256": "bdc2713478b8ee0189934933c9d6ae981fddecd60a8edf3dca330bdda463c18c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope.png",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-scope.png",
+    "bytes": 44782,
+    "sha256": "5ac26101f9df115a7d1b7f4c87454c788145a4384e5665306fd679669f25bb88"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "enabled-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/enabled-ui.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "events.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/events.json",
+    "bytes": 1030,
+    "sha256": "482a2dce2cf1e83733e18cbbef3054880c4c37326bec748d4fabe2eea3827435"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "lora-logcat.txt",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/lora-logcat.txt",
+    "bytes": 808720,
+    "sha256": "a651594bcd936350fd267f85d64237ff90e2b6bb74177c5d04a69080d1df4977"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "original-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/original-ui.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "pre-cycle-scope-settings.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/pre-cycle-scope-settings.json",
+    "bytes": 516,
+    "sha256": "40e6c9ee465ccb82e9c2042658b3fcc8fd94a15744b27df1816cde66882fea1f"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "relevant-logcat.txt",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/relevant-logcat.txt",
+    "bytes": 3041,
+    "sha256": "dd034ba29f84d7ba73747efa2638f5c7c9dfff38c629e2811f8ca6d0c3b42553"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "restored-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/restored-ui.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "run_cycle.py",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/run_cycle.py",
+    "bytes": 3976,
+    "sha256": "30987d5c945eaf07c58a980e318cca698855f23256591ff00002ba11ccc31307"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "setup.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/setup.json",
+    "bytes": 348,
+    "sha256": "300cd4f9f9bf4912175426f226ebb6e540525781bbfaa885ba2b0c1005419200"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "uart-decode.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/uart-decode.json",
+    "bytes": 271,
+    "sha256": "f14b7b7fb27fe9583ec960e22b89c9c60f1ea155c6ac08c670f9e050abf99786"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "waveform-analysis.json",
+    "repository_path": "measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/waveform-analysis.json",
+    "bytes": 884,
+    "sha256": "8497d57618f1318fa4c9f09f7561c54a9040f720d1c82a743ebeadbbd748b63d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "before-restore-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/before-restore-ui.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "capture_scope.py",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/capture_scope.py",
+    "bytes": 7097,
+    "sha256": "4c48060d9d7d8fa3c1a3741ae8169760a2e0d023e35f1a701d754cd75c70165c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "channel-settings.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/channel-settings.json",
+    "bytes": 598,
+    "sha256": "da2a15f634343b2bb2ebac306fcd2168c227bd37ace04c9d7f13c165dc9c74c4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.bin",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH1.bin",
+    "bytes": 3000000,
+    "sha256": "7fb1390e1962140a4d8fe123e795f261b180ed44178851e530c0a080523be88d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH1.json",
+    "bytes": 290,
+    "sha256": "572728297213a9f6bcabda25338397bc26740ef79d9e2acc20597f84b9a5cfde"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.bin",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH2.bin",
+    "bytes": 3000000,
+    "sha256": "ce81a12a138015d27eb3b386a011c69ecd6965b6b8c5415cf7cfb35d29d850b3"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH2.json",
+    "bytes": 292,
+    "sha256": "3135a5575419f7e10a1af913413cc6ee201cd83f9605076bd8e661bd6da467aa"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.bin",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH3.bin",
+    "bytes": 3000000,
+    "sha256": "9da331435577b9c476a659f1d77acfacfaf83b7ac415de263e951037ac6daafb"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH3.json",
+    "bytes": 292,
+    "sha256": "987e1d638311348b4cebf3540184ff8ed90d023042bdbb522c53f19ba4bfba02"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.bin",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH4.bin",
+    "bytes": 3000000,
+    "sha256": "bf26bc431f2ade82897e68e2088a83d81d6c3ae4ae6e51d2e02ef29e0e7b3e08"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH4.json",
+    "bytes": 294,
+    "sha256": "b221d321d37f34df730e5801072c82a2b7290ef34d204f68471f52c99a432231"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-arm-commands.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope-arm-commands.json",
+    "bytes": 1251,
+    "sha256": "0271ac489b2a996db68f7e472212d0daef32cfd802626946018a2221d84e3a54"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-baseline-commands.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope-baseline-commands.json",
+    "bytes": 4424,
+    "sha256": "cc8ef30146d3c69ab73d953db4b48bc26c90c3e7d80f0612f906a34a16c13d7b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-final-check-commands.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope-final-check-commands.json",
+    "bytes": 1568,
+    "sha256": "eb4b371b21f95b3e283b4403cd13f597d9dab067151dc6242a9764fd1754ffdf"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-final-restore-commands.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope-final-restore-commands.json",
+    "bytes": 1189,
+    "sha256": "a3953dfa7e3c05d4df193edaf510c56ae4a176fd29273b9882aeb9971d0508c4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-read-commands.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope-read-commands.json",
+    "bytes": 17250,
+    "sha256": "6e3129b3c20ff1eaca0a6b9e29a6269b9c7fada12761c2a29cdc3d86c59e97ab"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-wait-commands.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope-wait-commands.json",
+    "bytes": 1824,
+    "sha256": "411a6bbb55a67350de36b20cdb7d17051d574c5be68352dc769a2485c0e8cf14"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope.png",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-scope.png",
+    "bytes": 43809,
+    "sha256": "bf8ec50432ea65cbbc375b11b28c6c6c1efb2fda82ce6deac40be81c9151d1ca"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "enabled-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/enabled-ui.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "events.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/events.json",
+    "bytes": 1030,
+    "sha256": "902d3eede71393036bf7e10d573494f0d389f504a9983d5f268407cf7aaafe0b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "final-tablet-state.txt",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/final-tablet-state.txt",
+    "bytes": 68,
+    "sha256": "892dde4bff5f63a5a973166476678077eaefc6db947f572b61fb90844fc58369"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "lora-logcat.txt",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/lora-logcat.txt",
+    "bytes": 805981,
+    "sha256": "0eee49459ab729c4c9012ba48edeaea0b78a1d19a7b378e0a9e2801d4f764448"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "original-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/original-ui.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "pre-cycle-scope-settings.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/pre-cycle-scope-settings.json",
+    "bytes": 516,
+    "sha256": "19224e216cc87847a97ee3075ccf9f4f0ad8aba4f6de3a771b96e75270886d7e"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "relevant-logcat.txt",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/relevant-logcat.txt",
+    "bytes": 25829,
+    "sha256": "118d3d18d8416818e41d8043c10e2209a40d26bda609301f944dc31998720e74"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "restored-ui.xml",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/restored-ui.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "run_cycle.py",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/run_cycle.py",
+    "bytes": 3976,
+    "sha256": "30987d5c945eaf07c58a980e318cca698855f23256591ff00002ba11ccc31307"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "setup.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/setup.json",
+    "bytes": 367,
+    "sha256": "2db91b4e019226b88d0842a79dfbdfd3ba98ae1a9e0c3972ceaca1a7c63c2e34"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "waveform-analysis.json",
+    "repository_path": "measurements/scope-workspace/pins9-11-cycle-2026-11-07/waveform-analysis.json",
+    "bytes": 1104,
+    "sha256": "b528295467a4eb14c1a7393fb63b05df44d95d1d8b59ca4b5d7a4aeeda0777e9"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "post-update-baseline-2026-11-07.json",
+    "repository_path": "measurements/scope-workspace/post-update-baseline-2026-11-07.json",
+    "bytes": 7870,
+    "sha256": "7b0d823f52e4cd03773a1854cf3c0945b9a3c9579e01ea36e44b5164e700bcc0"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "post-update-baseline-2026-11-07.png",
+    "repository_path": "measurements/scope-workspace/post-update-baseline-2026-11-07.png",
+    "bytes": 41481,
+    "sha256": "38c11230b64a38785ea29c87c49da5344e7cb5d9446f0cfb4d99ca382b51879c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "post-update-screen-query.json",
+    "repository_path": "measurements/scope-workspace/post-update-screen-query.json",
+    "bytes": 105,
+    "sha256": "4eeb84a1897cfcdc2926b9316cd5c26135b76f7797150ed796b6f901a10d3105"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "pre-cycle-scope-settings.json",
+    "repository_path": "measurements/scope-workspace/pre-cycle-scope-settings.json",
+    "bytes": 490,
+    "sha256": "2f0181f291c7dbf429e751957208bf9008b14f5a58548b1588247e3c6fdfc39f"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "before-restore-ui.xml",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/before-restore-ui.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "capture_scope.py",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/capture_scope.py",
+    "bytes": 7099,
+    "sha256": "4dc07c8ede0f74534d67180de5ce5017d6ebc5a8a873a4778d9e65026162bd26"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.bin",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH1.bin",
+    "bytes": 3000000,
+    "sha256": "c6c697ea91940caceaad220712ba0c3a0bc4731c46c3f5195cb0a8ca18d4f34a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH1.json",
+    "bytes": 290,
+    "sha256": "e52bce359156755cb461aeb85dbd1527e201244a54b98501ec6b0a9ab0f2a076"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.bin",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH2.bin",
+    "bytes": 3000000,
+    "sha256": "06641d8cc7c591f321a11a4ac7de4dd2a2d2e2ac896df3d1d679db89d5fde0cd"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH2.json",
+    "bytes": 292,
+    "sha256": "36117706eec1134601b235e946e9a56633d7442e11d9c675b46ec8dee2eaa70b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.bin",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH3.bin",
+    "bytes": 3000000,
+    "sha256": "9da331435577b9c476a659f1d77acfacfaf83b7ac415de263e951037ac6daafb"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH3.json",
+    "bytes": 292,
+    "sha256": "11f46c77c5dda9f551f19c6843b2ceceb18965b5d0c84df601b844916e17f00c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.bin",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH4.bin",
+    "bytes": 3000000,
+    "sha256": "4f6d6a152c746744c62343c520c8b3aeeacdf4b1ad74d2c12bd87812c2515bff"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH4.json",
+    "bytes": 294,
+    "sha256": "4ff3f9ec254ea981d6d86f2f302260b97cae846e0931d113e3a2b111137901b1"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-arm-commands.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-scope-arm-commands.json",
+    "bytes": 1253,
+    "sha256": "953484b596caf2fd2553d61b42ae37014ad3d6041d7258bffb6d110ce2e1dad9"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-final-check-commands.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-scope-final-check-commands.json",
+    "bytes": 1460,
+    "sha256": "a7cf9edcd3fda9db73b150e2bb20ba8dfa2adfc3a22aa7eba6e04ec728c3e17a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-read-commands.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-scope-read-commands.json",
+    "bytes": 17250,
+    "sha256": "aecac1258280682b1c484712c6cfc7c60a2fb404300ad97775ac7ec654012149"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-wait-commands.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-scope-wait-commands.json",
+    "bytes": 861,
+    "sha256": "c3fe2bed7231d570d62c3017aaaf0b0dc843a54acbe7729cc517f9caf575fc54"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope.png",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-scope.png",
+    "bytes": 44268,
+    "sha256": "897cb4430ff5ff8523276d004d16428cb4a3acffd6902be95a2142bbf7024db7"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "enabled-screen.png",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/enabled-screen.png",
+    "bytes": 52402,
+    "sha256": "269ade80e42a10eb972430120e1b36a4732f343bc0731ea0f5a812a27e8e65c5"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "enabled-ui.xml",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/enabled-ui.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "events.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/events.json",
+    "bytes": 1435,
+    "sha256": "bb2a5caded620fd35f684c2a2ce05feb1cd0c9e3ca3eb4bb261b85ae2ba59b6b"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "final-tablet-state.txt",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/final-tablet-state.txt",
+    "bytes": 68,
+    "sha256": "892dde4bff5f63a5a973166476678077eaefc6db947f572b61fb90844fc58369"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "lora-logcat.txt",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/lora-logcat.txt",
+    "bytes": 29351,
+    "sha256": "9215323efbd86aa39c4b7e18acad84bca73f9c2b7988f945389db63517516c07"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "original-display-setting.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/original-display-setting.json",
+    "bytes": 64,
+    "sha256": "404bd885031aafe385525f10e3d5a202ceb83ed1ad8dc672e99b6ecb3d47d8f3"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "original-switch.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/original-switch.json",
+    "bytes": 518,
+    "sha256": "bbac88859952d49570f318d9edc6fc83c4ee897cccf71dd6a5cfecf265b56306"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "original-ui.xml",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/original-ui.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "pre-cycle-scope-settings.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/pre-cycle-scope-settings.json",
+    "bytes": 516,
+    "sha256": "78a8ea5c585a8c1ba42ae22d88123fcc616a50c78e46937846d204aa1ff7526c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "relevant-logcat.txt",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/relevant-logcat.txt",
+    "bytes": 2944,
+    "sha256": "4ad582f6421f15098ebedd90dc7b7d391b45e6ab9a5e706388a04d3b10147bf6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "restored-ui.xml",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/restored-ui.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "setup.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/setup.json",
+    "bytes": 309,
+    "sha256": "102f53cab4b330166c921ac4329ea6371ff6cc4c4a6dc113690ba9f778e83446"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "waveform-analysis.json",
+    "repository_path": "measurements/scope-workspace/remapped-cycle-2026-11-07/waveform-analysis.json",
+    "bytes": 1055,
+    "sha256": "2e2905db2b68e10a0f877e2690359630c95a1fa03f8b12a0ca2f4899647e7c65"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "remapped-ground-pin1-baseline-2026-11-07.json",
+    "repository_path": "measurements/scope-workspace/remapped-ground-pin1-baseline-2026-11-07.json",
+    "bytes": 6717,
+    "sha256": "08c06bef7fc45013871ff8e99513c94fed6521624cdc8e8ea65f7ebc7108421d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "remapped-ground-pin1-baseline-2026-11-07.png",
+    "repository_path": "measurements/scope-workspace/remapped-ground-pin1-baseline-2026-11-07.png",
+    "bytes": 42711,
+    "sha256": "25e3f49a1767568da5105b94ade73cacd9d2a3f19e3770f7b9eb65a5a1874ca9"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "remapped-settings-2026-11-07.json",
+    "repository_path": "measurements/scope-workspace/remapped-settings-2026-11-07.json",
+    "bytes": 2092,
+    "sha256": "2634327b34a37bd084540051b8566ae5134c8ccfc1ce50d5eaead98998104bee"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "remapped-tablet-state-2026-11-07.txt",
+    "repository_path": "measurements/scope-workspace/remapped-tablet-state-2026-11-07.txt",
+    "bytes": 68,
+    "sha256": "892dde4bff5f63a5a973166476678077eaefc6db947f572b61fb90844fc58369"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "scope-identification.xml",
+    "repository_path": "measurements/scope-workspace/scope-identification.xml",
+    "bytes": 1580,
+    "sha256": "f651cd3d30beb67ba728cb378530725c59c7963e13bf33f2cb05265d543279b4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "scope-index.html",
+    "repository_path": "measurements/scope-workspace/scope-index.html",
+    "bytes": 4402,
+    "sha256": "a72eda982dedb814ec0e05dfab90ee76c8f85e51aa60fb834d0bf90573cc1080"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "screen-query.json",
+    "repository_path": "measurements/scope-workspace/screen-query.json",
+    "bytes": 105,
+    "sha256": "4c750e3a54eafa7bd9f93835b757ccbde6711279a776019254d031c001795416"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "app-logcat.txt",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/app-logcat.txt",
+    "bytes": 23800,
+    "sha256": "ec4c8037c6b7ac07d93e849bf6a0207a80a0b5370caaa35774c8a572565c6e57"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "capture_scope.py",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/capture_scope.py",
+    "bytes": 7097,
+    "sha256": "4c48060d9d7d8fa3c1a3741ae8169760a2e0d023e35f1a701d754cd75c70165c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "channel-settings.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/channel-settings.json",
+    "bytes": 598,
+    "sha256": "da2a15f634343b2bb2ebac306fcd2168c227bd37ace04c9d7f13c165dc9c74c4"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.bin",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH1.bin",
+    "bytes": 3000000,
+    "sha256": "daf381faca716006aaf1142da10d86fed2996f434b764e888ffe9912fc905431"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH1.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH1.json",
+    "bytes": 290,
+    "sha256": "bb73478bae061f07ed8055d94ce6cc2c9037cc2bc6519cb502b056d43056b255"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.bin",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH2.bin",
+    "bytes": 3000000,
+    "sha256": "03bb60fb4384a4e149b202f26b88da83b7c97b4f3737b0269513af69c993398c"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH2.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH2.json",
+    "bytes": 292,
+    "sha256": "ef2b14403db6d9388ffa62c76f62417ff3564db7db34305fd41aa724c0885369"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.bin",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH3.bin",
+    "bytes": 3000000,
+    "sha256": "cadc1b9a5cd79ee6bc99c15ad6923c5801ef61cd9f4a6d306708d6a4119f2f29"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH3.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH3.json",
+    "bytes": 292,
+    "sha256": "24f362fd16d56662dfc1b5dc5ed518b0eae9fed60a56126ceaa395d769ebdb48"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.bin",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH4.bin",
+    "bytes": 3000000,
+    "sha256": "03f24c24f70b78fc4eb2953ee3849b4f19bade12f527fadaa08981e320c34cda"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-CH4.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH4.json",
+    "bytes": 294,
+    "sha256": "f316f53c98af9c48a207a1a660f566cf82d2fcb9925e9b96f6fc855466dda21e"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-arm-commands.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-scope-arm-commands.json",
+    "bytes": 1251,
+    "sha256": "bcac0c6a42405261eab6296667065121fc4108662b15bcf8fe7cf7f4a000ca66"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-idle-view-commands.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-scope-idle-view-commands.json",
+    "bytes": 725,
+    "sha256": "a010529b31ee08204b7676ac89218461b2dd74342e21a67fecf9b2543b0d09e2"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-live-screen-commands.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-scope-live-screen-commands.json",
+    "bytes": 702,
+    "sha256": "5b69247cbab11eb82053be76fa3cb717ddd83d41427b64419d11aa5cdd92ac04"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-live-view-commands.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-scope-live-view-commands.json",
+    "bytes": 1532,
+    "sha256": "8d23d6bacbb3a308ba389f53266cab2dc3ec42c9a9c28a23845d67b96ecccb36"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope-read-commands.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-scope-read-commands.json",
+    "bytes": 18106,
+    "sha256": "b0a9d7925d99d2b2cd4ef902b3cbd312d976543abcc30d6acf9b89e63a0b106d"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "cycle-scope.png",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-scope.png",
+    "bytes": 46804,
+    "sha256": "8edcf3bc860953482cd47da0be56d1b75bcf7947b8549037face96ab28e58f28"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "decode_uart.py",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/decode_uart.py",
+    "bytes": 2951,
+    "sha256": "ca5c045386a0d6e061d1f6d6da164a106afa6889f3766f7bc5fe8f3899e84ec0"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "device-state.txt",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/device-state.txt",
+    "bytes": 129,
+    "sha256": "687b4371fb2f71fc2df2cc99c0c939cc6a2e63e721b43c9660e8b5d784a86a75"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "live-view-final-settings.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/live-view-final-settings.json",
+    "bytes": 158,
+    "sha256": "7fb837013120f94916b7bb4d89d043d3f511f6a388ce4c2b0bf09a72698c9b30"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "live-view-settings.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/live-view-settings.json",
+    "bytes": 225,
+    "sha256": "bac37f07ecc563a7e052d4f9451cb94bbbe4866fc907b430d51b3ec4ed32df1a"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "live-view.png",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/live-view.png",
+    "bytes": 53496,
+    "sha256": "e92ac3a1580505b3ca24ecdfa13289ca2f428a80d441500d26469d1a2fa26471"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "pre-cycle-scope-settings.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/pre-cycle-scope-settings.json",
+    "bytes": 516,
+    "sha256": "40e6c9ee465ccb82e9c2042658b3fcc8fd94a15744b27df1816cde66882fea1f"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "setup.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/setup.json",
+    "bytes": 307,
+    "sha256": "ad81240f0458cd2275e978fc883ac77d0b3b3d7ffb3c14f83c495b5caf6c10d1"
+  },
+  {
+    "group": "scope workspace",
+    "source_name": "uart-decode.json",
+    "repository_path": "measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/uart-decode.json",
+    "bytes": 2173,
+    "sha256": "4d115bbcd33e45ec37376bf2b64a73203048022e041a4f9fd1594415bbeac1e4"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "31.0.cil",
+    "repository_path": "measurements/selinux/31.0.cil",
+    "bytes": 141721,
+    "sha256": "b3427009c183747eef6ccdf4c6f2590d9503003d72cfc3c00f4754cdfac0d6ac"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "compatible",
+    "repository_path": "measurements/selinux/compatible",
+    "bytes": 78,
+    "sha256": "c9e4052527b1c05d06725908703b89a604efa95cbb849101b6a76e1f9477d286"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "plat_pub_versioned.cil",
+    "repository_path": "measurements/selinux/plat_pub_versioned.cil",
+    "bytes": 930181,
+    "sha256": "faded98f2a282d6d53a8828abcbe2a784946066336be3d5ca2ca5f3d5d52a05b"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "plat_sepolicy.cil",
+    "repository_path": "measurements/selinux/plat_sepolicy.cil",
+    "bytes": 2131128,
+    "sha256": "9f4c43b42b6cb0b14a0e6a8b268cf56205bd2301ed78c635563518d68ae60a70"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "right_gpio",
+    "repository_path": "measurements/selinux/right_gpio",
+    "bytes": 78,
+    "sha256": "1215663634d629ff1a44f9a2013bbf9f57dee6579d0c10942fd0d9f6956430d1"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "right_power",
+    "repository_path": "measurements/selinux/right_power",
+    "bytes": 79,
+    "sha256": "b0c903c5d89eb216db94c3cb611eb7def0d172a5f221de2917fe894860a27cf0"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "system_ext_31.0.cil",
+    "repository_path": "measurements/selinux/system_ext_31.0.cil",
+    "bytes": 6329,
+    "sha256": "c1063becdbeaf74c611610650890e36c28a6770aa106cdedda574c21ebb7ad6e"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "system_ext_sepolicy.cil",
+    "repository_path": "measurements/selinux/system_ext_sepolicy.cil",
+    "bytes": 247552,
+    "sha256": "aee6d3b5d17d146fadb27bddef7d0b0b0a752541801f03f4c82ddd83a9867f6d"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "vendor_file_contexts",
+    "repository_path": "measurements/selinux/vendor_file_contexts",
+    "bytes": 82388,
+    "sha256": "abc6f996320454befdfacac91e8b34874d0ac4f3f170fdc6d88298a5e0a8939f"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "vendor_seapp_contexts",
+    "repository_path": "measurements/selinux/vendor_seapp_contexts",
+    "bytes": 329,
+    "sha256": "6b4bed2ca53fffbb9e177789abc61071457496ab9e54fd7db867725cd9c4cfb6"
+  },
+  {
+    "group": "SELinux and expansion metadata",
+    "source_name": "vendor_sepolicy.cil",
+    "repository_path": "measurements/selinux/vendor_sepolicy.cil",
+    "bytes": 945584,
+    "sha256": "a05a0baaffb53b3aafe7f827fab2146fa98d54dc3ff4af184d9a733b752a8486"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "additional-discovery.txt",
+    "repository_path": "measurements/driver-discovery/additional-discovery.txt",
+    "bytes": 2962,
+    "sha256": "bcca56ffd9a55808d4a4978c2736161a811b1a94ef352a82d50d7f515d4b45d8"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "config.gz",
+    "repository_path": "measurements/driver-discovery/config.gz",
+    "bytes": 32960,
+    "sha256": "45f939a4e9135f321e3586321d1acc54793c9ce71dfb8c7571c9f2e35bc95c6b"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "config.txt",
+    "repository_path": "measurements/driver-discovery/config.txt",
+    "bytes": 145894,
+    "sha256": "ebbcb81706b26256ec9fe917b3bd3d91fba6c874759fcbd2f7cdfc9d1f7ad7ae"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "driver-discovery.txt",
+    "repository_path": "measurements/driver-discovery/driver-discovery.txt",
+    "bytes": 3105,
+    "sha256": "479b359f3e179ade343e513bc795a8c382e5e8997f3fe3500603e77b07f8c4b5"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "firmware-access.txt",
+    "repository_path": "measurements/driver-discovery/firmware-access.txt",
+    "bytes": 1070,
+    "sha256": "90b921da1442e2501c00f726ee468f48e8b7558ebe8d4de1feab3e638ba18035"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "freeme-expand-arm64.asm",
+    "repository_path": "measurements/driver-discovery/freeme-expand-arm64.asm",
+    "bytes": 32940,
+    "sha256": "66eca050f1e49d49d282d15da96ea849cc8676321c4090126476389ab00ef50a"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "github-mdt865.json",
+    "repository_path": "measurements/driver-discovery/github-mdt865.json",
+    "bytes": 55,
+    "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "github-topicon.json",
+    "repository_path": "measurements/driver-discovery/github-topicon.json",
+    "bytes": 55,
+    "sha256": "4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "jadx-factory.log",
+    "repository_path": "measurements/driver-discovery/jadx-factory.log",
+    "bytes": 287,
+    "sha256": "97e85083eac2c9bbcca6aa7bd5f3610aaae8eef61a2a6a28bc29d512f3716d99"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "jadx-remote.log",
+    "repository_path": "measurements/driver-discovery/jadx-remote.log",
+    "bytes": 150,
+    "sha256": "e5b66ae28b228c57c3ef168767d70c0a3a4a59d76b6d05bb11203d338162a846"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "jadx-update.log",
+    "repository_path": "measurements/driver-discovery/jadx-update.log",
+    "bytes": 149,
+    "sha256": "433b081faeaf338bcd6c7945079ccc93fdbd47bb4c8a962d726dad08fd708403"
+  },
+  {
+    "group": "expand-driver",
+    "source_name": "kernel-access.txt",
+    "repository_path": "measurements/driver-discovery/kernel-access.txt",
+    "bytes": 1339,
+    "sha256": "9272ac6fcd443e020a99977dad9cc8a7207703b7123e3cbb84ca30e4443dd4df"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "addon-activities.txt",
+    "repository_path": "measurements/post-update-discovery/addon-activities.txt",
+    "bytes": 10073,
+    "sha256": "aa005faaa821d7e03a904418a6fba5661555f5bef54a432404cfd1b0d9cea4ba"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "addon-package-discovery.txt",
+    "repository_path": "measurements/post-update-discovery/addon-package-discovery.txt",
+    "bytes": 2284,
+    "sha256": "6f2c565407f31f0177f04cbb7d0a1d827cd0c8fb89799b948f26632055d459b8"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "config.gz",
+    "repository_path": "measurements/post-update-discovery/config.gz",
+    "bytes": 45721,
+    "sha256": "62c874876ffd3970fd9f231b24b48de6a514c0212ccffab7f57f5bb655f66715"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle-events.json",
+    "repository_path": "measurements/post-update-discovery/cycle-events.json",
+    "bytes": 1297,
+    "sha256": "5b37d007c5438696292a31be9e852e4cf42298f160726f3a55e64b3b99cb6e50"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle-lora.log",
+    "repository_path": "measurements/post-update-discovery/cycle-lora.log",
+    "bytes": 95879,
+    "sha256": "7af56b13c26f877135306d1c3123e64440c5174620e5f90160af33c51b40cfe5"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle-relevant-log.txt",
+    "repository_path": "measurements/post-update-discovery/cycle-relevant-log.txt",
+    "bytes": 3543,
+    "sha256": "5a1d230eac837ec350ad0d7c3f9e04c13017170d83182372b93b605ebffe9d27"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-before-restore.xml",
+    "repository_path": "measurements/post-update-discovery/cycle2-before-restore.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-enabled-screen.png",
+    "repository_path": "measurements/post-update-discovery/cycle2-enabled-screen.png",
+    "bytes": 52448,
+    "sha256": "4c4fbed0f0a44ec333c26f61ba73fda77eef66f1734513459fe880edbe1f9dca"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-enabled.xml",
+    "repository_path": "measurements/post-update-discovery/cycle2-enabled.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-events.json",
+    "repository_path": "measurements/post-update-discovery/cycle2-events.json",
+    "bytes": 1312,
+    "sha256": "d2143cea3531be4390aac1e08332b852d463be2a55197976f2ec2d9c7594b351"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-off-before.xml",
+    "repository_path": "measurements/post-update-discovery/cycle2-off-before.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-relevant-log.txt",
+    "repository_path": "measurements/post-update-discovery/cycle2-relevant-log.txt",
+    "bytes": 2951,
+    "sha256": "7771978f7b88777d8ede78718321be0c61ac90a2ca99cfd379c49aa43f4e26df"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "cycle2-restored.xml",
+    "repository_path": "measurements/post-update-discovery/cycle2-restored.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "discovery.txt",
+    "repository_path": "measurements/post-update-discovery/discovery.txt",
+    "bytes": 39729,
+    "sha256": "45fa709ed24714a14b78f3f1578fed927a353b9c855cf0c04baaa467f1026a8b"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "expand-module-runas.bin",
+    "repository_path": "measurements/post-update-discovery/expand-module-runas.bin",
+    "bytes": 66,
+    "sha256": "31b7968c0b8e9e8b5b9d5e9ac45d9ecd18dfb62cf82f2269acc0365cf7e9e3fb"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "final-tablet-state.txt",
+    "repository_path": "measurements/post-update-discovery/final-tablet-state.txt",
+    "bytes": 68,
+    "sha256": "15e7f96f560f2c9e501793a85fbbaf8c93706c141b8aa763674452133178c4a9"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "gpio-metadata.txt",
+    "repository_path": "measurements/post-update-discovery/gpio-metadata.txt",
+    "bytes": 5392,
+    "sha256": "09d89447877354d8236c02f8abc394ea8f65cb17af6025cbb3709688c64167dd"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "jadx-wired.log",
+    "repository_path": "measurements/post-update-discovery/jadx-wired.log",
+    "bytes": 474,
+    "sha256": "6a18fc7d2807e9750abeaf6995937b0dfc2aa050f245d602a7f387242c4c5b18"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "kernel.config",
+    "repository_path": "measurements/post-update-discovery/kernel.config",
+    "bytes": 211874,
+    "sha256": "bf8476c599d12adccebd0207781074aa420c149dc41d417ba70c97a5edd5a485"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-before-restore.xml",
+    "repository_path": "measurements/post-update-discovery/lora-before-restore.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-before.xml",
+    "repository_path": "measurements/post-update-discovery/lora-before.xml",
+    "bytes": 25131,
+    "sha256": "220339ab974057c594867f15a87d618a45f33b3456cefc3c3b76b98eb6f4e18b"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-enabled-during-cycle.xml",
+    "repository_path": "measurements/post-update-discovery/lora-enabled-during-cycle.xml",
+    "bytes": 15805,
+    "sha256": "c78770cff79ab12992a6b49bdb4fe8990133028b8993f247d81f049df5ac746b"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-enabled-screen.png",
+    "repository_path": "measurements/post-update-discovery/lora-enabled-screen.png",
+    "bytes": 52099,
+    "sha256": "e7d58b06407d835e5da69dbbcbee9066bca54e07a9565bef6f02e56017741f91"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-off-before-cycle.xml",
+    "repository_path": "measurements/post-update-discovery/lora-off-before-cycle.xml",
+    "bytes": 16626,
+    "sha256": "788a8ff70f2fe2488f78f56cae13ee0987dc0daf088168853e1bf9dd171439a8"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-open-ui.txt",
+    "repository_path": "measurements/post-update-discovery/lora-open-ui.txt",
+    "bytes": 126,
+    "sha256": "0ba67a0dc9d26b43a7f1d012364d57c1163c50ea97d9f22c5a32daf85b50c289"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-original-switch.json",
+    "repository_path": "measurements/post-update-discovery/lora-original-switch.json",
+    "bytes": 621,
+    "sha256": "9ffac736ede72de423bee081e67e87e7429ac2dc4ffcda1623c65941753f501f"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-original.xml",
+    "repository_path": "measurements/post-update-discovery/lora-original.xml",
+    "bytes": 16626,
+    "sha256": "788a8ff70f2fe2488f78f56cae13ee0987dc0daf088168853e1bf9dd171439a8"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-restored.xml",
+    "repository_path": "measurements/post-update-discovery/lora-restored.xml",
+    "bytes": 15806,
+    "sha256": "ea924922c63496d4f7dbb3a05f9e4b13d95af333b3f99663354c6bae5bbd70c6"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "lora-services.txt",
+    "repository_path": "measurements/post-update-discovery/lora-services.txt",
+    "bytes": 66,
+    "sha256": "e9990d2b9ce9e862271712ca1ecd0c280ac8cd7a2fd48fc18fb69623521c33b0"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "manage-ready.png",
+    "repository_path": "measurements/post-update-discovery/manage-ready.png",
+    "bytes": 6848,
+    "sha256": "7ed871aa16e9bbc5a30c49f2a0e4dc49da2fd7e70fa0121b7101437473bda49f"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "manage-screen.png",
+    "repository_path": "measurements/post-update-discovery/manage-screen.png",
+    "bytes": 466778,
+    "sha256": "a21d51982fd2ecccf47d8c528826a65c556c40d31168b469cf72c9dd8b377574"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "manage-start.txt",
+    "repository_path": "measurements/post-update-discovery/manage-start.txt",
+    "bytes": 60,
+    "sha256": "a78243ab2984c65d0cccb13c3e6b67145f46ef45204622460fcd0e066575ede4"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "manage-ui.xml",
+    "repository_path": "measurements/post-update-discovery/manage-ui.xml",
+    "bytes": 40457,
+    "sha256": "f150bb49b2c3b87ce884697ed106c900a1a19f6f99ab900657ccb51069e28051"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "manage-unlocked.png",
+    "repository_path": "measurements/post-update-discovery/manage-unlocked.png",
+    "bytes": 6848,
+    "sha256": "7ed871aa16e9bbc5a30c49f2a0e4dc49da2fd7e70fa0121b7101437473bda49f"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "policy-and-lora-log.txt",
+    "repository_path": "measurements/post-update-discovery/policy-and-lora-log.txt",
+    "bytes": 464,
+    "sha256": "9206d4f1cf3ae7d381b4a4ab0979ba0c76032bdcccc0027055f7b0bc445bbcb7"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "post-cycle-driver-state.txt",
+    "repository_path": "measurements/post-update-discovery/post-cycle-driver-state.txt",
+    "bytes": 447,
+    "sha256": "6084efd9f52e59bfe9f47ca1a677986b2c6d69fd80301b39911e302b6e5ecfc2"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "pull-module.log",
+    "repository_path": "measurements/post-update-discovery/pull-module.log",
+    "bytes": 104,
+    "sha256": "bd621166678dcc37d9033ac30c1e11b3c980ae6d9bddcc9e3965a8c277571dff"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "regulator-metadata.txt",
+    "repository_path": "measurements/post-update-discovery/regulator-metadata.txt",
+    "bytes": 1351,
+    "sha256": "baa15c63a163f019d26249de40280b58b4737cfcc24610df24dac631c3334cc7"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "tablet-current-screen.png",
+    "repository_path": "measurements/post-update-discovery/tablet-current-screen.png",
+    "bytes": 6848,
+    "sha256": "7ed871aa16e9bbc5a30c49f2a0e4dc49da2fd7e70fa0121b7101437473bda49f"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "ui-dump-status.txt",
+    "repository_path": "measurements/post-update-discovery/ui-dump-status.txt",
+    "bytes": 58,
+    "sha256": "08d17f837769507df101f70a36e2cd488c83c22d00e28950c7eed6222abed583"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "ui-stay-awake-original.json",
+    "repository_path": "measurements/post-update-discovery/ui-stay-awake-original.json",
+    "bytes": 105,
+    "sha256": "49737c772b5305939d59cc3452da54610e38b588f934023a2ba1d964daa3dfc0"
+  },
+  {
+    "group": "expand-driver-post-update",
+    "source_name": "unlocked-ui-status.txt",
+    "repository_path": "measurements/post-update-discovery/unlocked-ui-status.txt",
+    "bytes": 99,
+    "sha256": "fd53eead582a22630dd19e3fdad1397ed1f5c55272bd8538914bee3f2a9e6382"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "build-final.log",
+    "repository_path": "measurements/initial-app-validation/build-final.log",
+    "bytes": 2916,
+    "sha256": "2990fa5a2e799a65cc13657c565c034c91673794b084dcb8e56f305e41c8ca9d"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "build-spi.log",
+    "repository_path": "measurements/initial-app-validation/build-spi.log",
+    "bytes": 2940,
+    "sha256": "4636a4660c6071137a71d27ee187625775d2bac0ef1e2f682761dbf15cb67492"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "build.log",
+    "repository_path": "measurements/initial-app-validation/build.log",
+    "bytes": 4013,
+    "sha256": "d237376b78ba6d04d73dee8fbe47d52e4cde7a8440bd3f6d05066f705081d040"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "dialog-ui.xml",
+    "repository_path": "measurements/initial-app-validation/dialog-ui.xml",
+    "bytes": 5950,
+    "sha256": "ec4be4c267ec7e7b69890754c0d594a79cb34f6eb7eef22bea6818a9fd1da347"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "emulator-dialog.png",
+    "repository_path": "measurements/initial-app-validation/emulator-dialog.png",
+    "bytes": 283816,
+    "sha256": "c5accaaa85192b4b504669a30efa5a833114b90449e987c8fecdbf79c99061d1"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "emulator-metadata-report.txt",
+    "repository_path": "measurements/initial-app-validation/emulator-metadata-report.txt",
+    "bytes": 2000,
+    "sha256": "40405f01a40e295a432a584e7f50073da790fa095cb322983b1b2d88ffaeb635"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "emulator-probe-report.txt",
+    "repository_path": "measurements/initial-app-validation/emulator-probe-report.txt",
+    "bytes": 2085,
+    "sha256": "6e6d3cec206e2f724299f2c42c440ae165e1c291811ee0ffdcd8ef8058015c93"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "emulator-spi.log",
+    "repository_path": "measurements/initial-app-validation/emulator-spi.log",
+    "bytes": 8419,
+    "sha256": "f53e9bba74ea8be6c48e5dffa026af328ac3401422aba40349106460fddf5aaa"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "emulator.log",
+    "repository_path": "measurements/initial-app-validation/emulator.log",
+    "bytes": 8419,
+    "sha256": "1632e4d2a337e8932473fd70a48237470142c3e846f35b1e408ec27a257faefe"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "metadata-ui.xml",
+    "repository_path": "measurements/initial-app-validation/metadata-ui.xml",
+    "bytes": 7182,
+    "sha256": "6d72fd9b49ed061b51ebc00c94d9515ab940bffb88bd3a05a7f7ce4abe952b92"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "probe-ui.xml",
+    "repository_path": "measurements/initial-app-validation/probe-ui.xml",
+    "bytes": 7267,
+    "sha256": "a1204cd7e103b4954ecb32a2415b11178c9490cedccf697403e4140c0138d1da"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "spi-dialog-ui.xml",
+    "repository_path": "measurements/initial-app-validation/spi-dialog-ui.xml",
+    "bytes": 6039,
+    "sha256": "9e8862d57332ed53df5cdc47669def48046916b9efc225756c3c8204ee4654ad"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "spi-emulator-metadata.txt",
+    "repository_path": "measurements/initial-app-validation/spi-emulator-metadata.txt",
+    "bytes": 3316,
+    "sha256": "7c05aa57d9d4ab2b445a060b0dc426db758f0b20537a3ff6bcdea0c3dba6f98e"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "spi-metadata-ui.xml",
+    "repository_path": "measurements/initial-app-validation/spi-metadata-ui.xml",
+    "bytes": 8626,
+    "sha256": "8872d056453965135da6ec50b2a86accb3037728b9e59ac305a5122781b94d84"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "spi-probe-ui.xml",
+    "repository_path": "measurements/initial-app-validation/spi-probe-ui.xml",
+    "bytes": 8819,
+    "sha256": "d0a45b0ac6edc3c6ce922791b3f1ffdff8ee5b1fc12934ea7a7ab1804e9c66c7"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "tablet-latest-ui.xml",
+    "repository_path": "measurements/initial-app-validation/tablet-latest-ui.xml",
+    "bytes": 8766,
+    "sha256": "73887cf67a1e10a479fa27a4484059003eef50f7c7ef5f1490900de827944c4e"
+  },
+  {
+    "group": "initial Android app validation",
+    "source_name": "tablet-report-ui.xml",
+    "repository_path": "measurements/initial-app-validation/tablet-report-ui.xml",
+    "bytes": 7214,
+    "sha256": "e2dce874bb012ca0271cb8e5422a4b8eb666e73122c4fb9e44a9e2a32edcdcfd"
+  },
+  {
+    "group": "ConnectorDatasheets",
+    "source_name": "Harwin-P70-600.pdf",
+    "repository_path": "references/connector-datasheets/Harwin-P70-600.pdf",
+    "bytes": 65740,
+    "sha256": "38cb6f33b3c219c060a3af4e8361bd7dd0515431ecb67fc9fe3ff015128d88e3"
+  },
+  {
+    "group": "ConnectorDatasheets",
+    "source_name": "Mill-Max-discrete-pogo-pins.pdf",
+    "repository_path": "references/connector-datasheets/Mill-Max-discrete-pogo-pins.pdf",
+    "bytes": 10193986,
+    "sha256": "fb4c05618ff3e81ab1030eab7b90adc6797933565ab86f4dfed53cbf4c6a35a0"
+  },
+  {
+    "group": "FCC-photo-sources",
+    "source_name": "EByte-E220-400T30S-internal-4983216.pdf",
+    "repository_path": "references/fcc/EByte-E220-400T30S-internal-4983216.pdf",
+    "bytes": 649523,
+    "sha256": "43314c6d11cfb36a85e58e730b1f34d73f2a3e027f5b84f49c595dc417bbab7f"
+  },
+  {
+    "group": "FCC-photo-sources",
+    "source_name": "SOURCES.txt",
+    "repository_path": "references/fcc/SOURCES.txt",
+    "bytes": 1194,
+    "sha256": "d08f8a8e955d98cb48f9a6d1eecc2d361c29c0fa8865ac0b5dad7fdbcb0d4a45"
+  },
+  {
+    "group": "FCC-photo-sources",
+    "source_name": "Topicon-MDT865-internal-01-6401292.pdf",
+    "repository_path": "references/fcc/Topicon-MDT865-internal-01-6401292.pdf",
+    "bytes": 5645394,
+    "sha256": "05f91a671e476278785c18257021d6a596d394e336b628edc07daaa0d4611135"
+  },
+  {
+    "group": "FCC-photo-sources",
+    "source_name": "Topicon-MDT865-internal-02-6401295.pdf",
+    "repository_path": "references/fcc/Topicon-MDT865-internal-02-6401295.pdf",
+    "bytes": 2417588,
+    "sha256": "d5247d95b9333e15b3ec4a690ce241914ec09cd2e26f199c34677c270b64be69"
+  },
+  {
+    "group": "reference-manuals",
+    "source_name": "E220-900T22D_UserManual_EN_v1.0.pdf",
+    "repository_path": "references/radio-manuals/E220-900T22D_UserManual_EN_v1.0.pdf",
+    "bytes": 1940666,
+    "sha256": "ce051f4e264375654c5a39c183763f1bbd4068ab7091afd16ac5a491efd28b78"
+  },
+  {
+    "group": "connector sourcing drawings",
+    "source_name": "degson.pdf",
+    "repository_path": "references/connector-catalogues/degson.pdf",
+    "bytes": 9866410,
+    "sha256": "53117b987f5dccd02be62509225bd7b4bbc97646264e7a34591139e81b92e17e"
+  },
+  {
+    "group": "connector sourcing drawings",
+    "source_name": "euroconn-3mm.pdf",
+    "repository_path": "references/connector-catalogues/euroconn-3mm.pdf",
+    "bytes": 212250,
+    "sha256": "8b6a19329542fa6a188a36508a96936da898c7d498c5cd4d442da391aaa26176"
+  },
+  {
+    "group": "connector sourcing drawings",
+    "source_name": "neltron.pdf",
+    "repository_path": "references/connector-catalogues/neltron.pdf",
+    "bytes": 12134285,
+    "sha256": "946426428a0d06a6ee9a285b6cf5e0219ef87b5eabe9de37bcd7413217dddda4"
+  },
+  {
+    "group": "connector sourcing drawings",
+    "source_name": "uwe6.pdf",
+    "repository_path": "references/connector-catalogues/uwe6.pdf",
+    "bytes": 1377883,
+    "sha256": "1b1366dd5e756f5dbc39547f24823f8cd4d06880b8aadd23de52fa6578fc4eca"
+  },
+  {
+    "group": "connector sourcing drawings",
+    "source_name": "harwin20x.pdf",
+    "repository_path": "references/connector-datasheets/Harwin-P70-20X.pdf",
+    "bytes": 75461,
+    "sha256": "4f31085ca20ee492d5e8d983688c52b09d3ec9c1ab5989e3a9f89a4b8452aa3c"
+  },
+  {
+    "group": "possible UART bridge datasheet; silicon not confirmed",
+    "source_name": "WK2124.pdf",
+    "repository_path": "references/uart-bridge/WK2124.pdf",
+    "bytes": 1086373,
+    "sha256": "61ccd637c44923b326ad50b522bab91d59ae296db4c865b8e705278fb260b33f"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "ebyte-internal.png",
+    "repository_path": "references/fcc/inspection/ebyte-internal.png",
+    "bytes": 1661823,
+    "sha256": "ca8cf2bc5f16784a892864822c434d7734e74274db55b2f1c6416efa107e1d17"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "ebyte-photos-alt-overview.png",
+    "repository_path": "references/fcc/inspection/ebyte-photos-alt-overview.png",
+    "bytes": 190634,
+    "sha256": "64f12481cc8d58b698e5e287da9566115dbae3c9a1f71674a84d6a367da06d5c"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "ebyte-photos-alt-p1-image0-Im1.jpg",
+    "repository_path": "references/fcc/inspection/ebyte-photos-alt-p1-image0-Im1.jpg",
+    "bytes": 365726,
+    "sha256": "986fda4f394c0a7a3a6309340d6a4ee9cac73bd6ff68636959bfec65da14176f"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "ebyte-photos-alt-p1-image1-Im2.jpg",
+    "repository_path": "references/fcc/inspection/ebyte-photos-alt-p1-image1-Im2.jpg",
+    "bytes": 273069,
+    "sha256": "208509a77dcc893407faa315630f34fcfc9fa38a81be9d70d5c98b599ffda1fa"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "ebyte-photos-alt-page1.png",
+    "repository_path": "references/fcc/inspection/ebyte-photos-alt-page1.png",
+    "bytes": 988174,
+    "sha256": "4c2e2c141bd3ffd72e2107402d0017bea21dca859f19065cde555c64b7674b6f"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-overview.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-overview.png",
+    "bytes": 1077765,
+    "sha256": "83b69dad0c16066ac28f8602bbe810491187a76c74e28cee8dd54b462e41c94c"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image0-IM65.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image0-IM65.jpg",
+    "bytes": 85055,
+    "sha256": "0d97175ed42972d9ef7cc282f0bc75ad1033d9f1301c7f7d1303bed5f6d39b9f"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image1-IM66.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image1-IM66.jpg",
+    "bytes": 78942,
+    "sha256": "543852fd967fd778a4b1c34eca2328b1704a8f4cea8ce7d3877154b501cfa6f2"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image10-IM75.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image10-IM75.jpg",
+    "bytes": 69514,
+    "sha256": "47c7698bd85405312413a196c26629ec4c6e875c09298173293c9f377b93b7bd"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image11-IM76.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image11-IM76.jpg",
+    "bytes": 92545,
+    "sha256": "68ed63b6ebf0c20c79e6682f3a5ea39c40a0578768e294c079dbf6f416ee699f"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image2-IM67.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image2-IM67.jpg",
+    "bytes": 81497,
+    "sha256": "ed916fb2df6bd9920aa5c9ea146ecc81db9fc0b233aa8d7a2f5158dbbbdb4e25"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image3-IM68.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image3-IM68.jpg",
+    "bytes": 85107,
+    "sha256": "51243fcba4fad04e52a472cb98a66830ec3dd9fe285e8a6838f1941d81116be2"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image4-IM69.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image4-IM69.jpg",
+    "bytes": 67013,
+    "sha256": "8cd9abc3369c42effb95437a9e1862bc13a96b71cd53c16c634fc60f4e69b1e8"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image5-IM70.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image5-IM70.jpg",
+    "bytes": 91536,
+    "sha256": "0b2690c9f0f5cba7450835b9e44afbf0073f02f5891173e9d696aa2dec58d8ed"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image6-IM71.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image6-IM71.jpg",
+    "bytes": 84484,
+    "sha256": "55532fbd2b7d1c0f399ec43b78e9cf04c7a470dd625f101708452a8a377e8582"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image7-IM72.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image7-IM72.jpg",
+    "bytes": 79002,
+    "sha256": "8b9c10f8491b50a21848d7a8ef235271e4d291606171a3021a523b48784c020c"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image8-IM73.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image8-IM73.jpg",
+    "bytes": 83096,
+    "sha256": "562c46ea785d002a6e11713c8f273c1b5ddcaa12314978d91b49a7a0130a3a91"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-p4-image9-IM74.jpg",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-p4-image9-IM74.jpg",
+    "bytes": 84633,
+    "sha256": "c5576efae925b8c00c0c9e852e725816053035a6e4acbe1e71b6d6779770499e"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-page1.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-page1.png",
+    "bytes": 1188803,
+    "sha256": "0f4236db582bad108e21b11c840cc76da9a3b10a42479982d49e76b9ebe25f2b"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-page2.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-page2.png",
+    "bytes": 1053317,
+    "sha256": "9123e40b2801d60f3364c42d81440c521330c1aad68060851184dee966b173d1"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-page3.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-page3.png",
+    "bytes": 980690,
+    "sha256": "405e1fd99ca3e33c5eeb7d49ef845980911955ac0589a6dec2a6603377988bd9"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-page4.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-page4.png",
+    "bytes": 950431,
+    "sha256": "9b48af5a7aef57e32237fc3a9a99edd7809a358f374dc8b0bf9cf7407e89e878"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal01-page5.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal01-page5.png",
+    "bytes": 998055,
+    "sha256": "2e609b484ce8e462e681ab2b18c916a389f46f8508f1c95988f3b24cc793a529"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal02-overview.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal02-overview.png",
+    "bytes": 442658,
+    "sha256": "3d13b777a965071171433ac4a8114ba31eec4fede4e273d2bc57b08ca9799190"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal02-page1.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal02-page1.png",
+    "bytes": 1128624,
+    "sha256": "5d5eee6c95b49ad31e81f17c0c355e4fbaceb35c3f34dbb17e75f175eead7c11"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "mdt865-internal02-page2.png",
+    "repository_path": "references/fcc/inspection/mdt865-internal02-page2.png",
+    "bytes": 1135733,
+    "sha256": "c605f8d0ee33e9c21a6083cbc129cdb272d1a5a4f64d0ecc809ca98237f725ad"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "topicon-back.webp",
+    "repository_path": "references/fcc/inspection/topicon-back.webp",
+    "bytes": 771306,
+    "sha256": "7b89d273418d7dfe657546a8ea1424b39ee09feb5a24989a0476d8a5433e7b21"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "topicon-front.webp",
+    "repository_path": "references/fcc/inspection/topicon-front.webp",
+    "bytes": 256090,
+    "sha256": "97bc1d4b92a7ce447ef4c3266e6a2c2c2cfa7bee7d48960477dc7a46c6d19440"
+  },
+  {
+    "group": "FCC and Topicon inspection images",
+    "source_name": "topicon-third.webp",
+    "repository_path": "references/fcc/inspection/topicon-third.webp",
+    "bytes": 172050,
+    "sha256": "67eaf20dcdd89b617f370b1d68f28fb4976595b6ea4a192110dcb216ee8ccf71"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "manual.txt",
+    "repository_path": "references/radio-manuals/inspection/manual.txt",
+    "bytes": 36393,
+    "sha256": "b86f121479b06afb4c579893e7638633d5744c20772db5c4b13353810894241e"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page11.png",
+    "repository_path": "references/radio-manuals/inspection/page11.png",
+    "bytes": 277041,
+    "sha256": "d31473d9a8c2e73d359b00859f61793a40372ddf7cb7c75f7e428af66a4e1b78"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page13.png",
+    "repository_path": "references/radio-manuals/inspection/page13.png",
+    "bytes": 184691,
+    "sha256": "11569da15b6e31cca7d947b53c4a1566f50e8522f6ffad5f75b82ffedc70ccb7"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page14.png",
+    "repository_path": "references/radio-manuals/inspection/page14.png",
+    "bytes": 234816,
+    "sha256": "caee7a95fec88ec039bf8da654ae951b0c1a20b0625894d5c2e8fecb4d7beb28"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page15.png",
+    "repository_path": "references/radio-manuals/inspection/page15.png",
+    "bytes": 289985,
+    "sha256": "2d467edffa1b8f50005c42190e3b136b8353753a5675ed259e5ed8ae98cea5b1"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page16.png",
+    "repository_path": "references/radio-manuals/inspection/page16.png",
+    "bytes": 146836,
+    "sha256": "54aff808675d384a09c6161263e155360180878a273362cb19875b45a74e91fa"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page6.png",
+    "repository_path": "references/radio-manuals/inspection/page6.png",
+    "bytes": 184163,
+    "sha256": "70b25eebb0e99a9c32e7b7924d48e3952ac6890e9ad588bf116a5c19c64ba7a3"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "page7.png",
+    "repository_path": "references/radio-manuals/inspection/page7.png",
+    "bytes": 201740,
+    "sha256": "63c0b0452ff7a132ff47732dbbc168914cb08e3347e7afbbe07dbc1d5030ede0"
+  },
+  {
+    "group": "E220 manual inspection",
+    "source_name": "relevant-pages.png",
+    "repository_path": "references/radio-manuals/inspection/relevant-pages.png",
+    "bytes": 502428,
+    "sha256": "6dbc40a325ffedf282e2589882787ad673e4efd4542038c832a6dbe4a56bf48c"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107151205.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107151205.jpg",
+    "bytes": 2312194,
+    "sha256": "d14471ac2e010d1508f209d850beb357c5fef0e6524fa9b7fbea1a9a24f803aa"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107151205.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107151205.heic",
+    "bytes": 2732661,
+    "sha256": "0ab55f216546f254e27772ae6f1fde5333c7eb682cc5d49097a6c0f08f2c7952"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107151256.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107151256.jpg",
+    "bytes": 2706404,
+    "sha256": "3c1cbb81c7f85691c99361e227a4bc10b006f273d28281629bfd48c4dae02005"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107151256.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107151256.heic",
+    "bytes": 3169274,
+    "sha256": "dd62b7f6ba8e9a9bc694420812306c9b00c07aa9fe2b54c91778dad1f1e34091"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107151321.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107151321.jpg",
+    "bytes": 3158006,
+    "sha256": "c9d7421068f9f20ab52fc3f6c7d7c41fa39081fa7c36498f380623438bd64e58"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107151321.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107151321.heic",
+    "bytes": 3623334,
+    "sha256": "2c0b4f4fa90aa3610fd6314b8f6f367a5b89b704e9cb725beada7b8f8a108b05"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107164853.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107164853.jpg",
+    "bytes": 2331529,
+    "sha256": "3f14bc28429ae8aea6b15e2bbdaa4424afaa8f33518bc80c039dfd6ffa7dea5b"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107164853.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107164853.heic",
+    "bytes": 2623804,
+    "sha256": "e1be64a3d6b5e77a12c3ff23a22b6fcacc5b72e74dc969767266c885141f8db9"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107165024.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107165024.jpg",
+    "bytes": 1965458,
+    "sha256": "c5e8b179adff6b63f538807e3bca7fbe0ae95e9773343968821eb0acc24ff4b5"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107165024.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107165024.heic",
+    "bytes": 2291669,
+    "sha256": "05b2ab561198a4da8f7879e2df55b120e1913330a802b335d36dd0953c9e575c"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107134632.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107134632.jpg",
+    "bytes": 2275940,
+    "sha256": "0531f4d854f0a67b1f18fc5a5eba40802333cbb84b617c31138cfea76772a15e"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107134632.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107134632.heic",
+    "bytes": 2712762,
+    "sha256": "0ec19d55d78f5cf83c301c0b9a04572a19416b16cfb65884179c4828ee1bfaaa"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107134657.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107134657.jpg",
+    "bytes": 2666471,
+    "sha256": "e53dbd49056e768f3f0ec73f4045ae4f9687e96b4c74715e2da3f89fd493a470"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107134657.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107134657.heic",
+    "bytes": 3217060,
+    "sha256": "212f14806cc28b8b7d676ec0acb03f46d289850b2bb7f65fa185e003ce9878ac"
+  },
+  {
+    "group": "measurement photo JPEG preview",
+    "source_name": "IMG20261107134749.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107134749.jpg",
+    "bytes": 2508210,
+    "sha256": "6c5102279ee5ca511175ed3d8221d6c64c911ceca7dd4e7c14c747200a0397d6"
+  },
+  {
+    "group": "user supplied measurement photo original",
+    "source_name": "IMG20261107134749.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107134749.heic",
+    "bytes": 2899213,
+    "sha256": "a64755a94c023ca97005b14979c1f3a55216b325d124c677f1c6a49ba286943d"
+  },
+  {
+    "group": "validated debug APK",
+    "source_name": "T865PortProbe-debug.apk",
+    "repository_path": "releases/T865PortProbe-debug.apk",
+    "bytes": 903663,
+    "sha256": "a1dd2d0f691416ec62ea1f3f23d85448cc65cd2a4b80f9a38467650e86227adf"
+  },
+  {
+    "group": "validated debug APK",
+    "source_name": "T865UartTx-debug.apk",
+    "repository_path": "releases/T865UartTx-debug.apk",
+    "bytes": 897217,
+    "sha256": "21ae746d1b27e9f6b11b19aae88f101d208d12ec5a1dfe438e13dcf0dfff951e"
+  }
+]

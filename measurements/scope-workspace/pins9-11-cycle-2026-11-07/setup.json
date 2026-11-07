@@ -1,0 +1,13 @@
+{
+  "scope": "RIGOL TECHNOLOGIES,DS1074Z,DS1ZA162953663,00.04.05.SP2",
+  "ground_pin": 1,
+  "channels": {
+    "CH1": 10,
+    "CH2": 9,
+    "CH3": 3,
+    "CH4": 11
+  },
+  "authorization": "User requested another cycle with these pins",
+  "trigger": "CH2 at -4 V; force after WAIT (scope trigger only, no voltage applied)",
+  "original_stay_on_while_plugged_in": "0"
+}

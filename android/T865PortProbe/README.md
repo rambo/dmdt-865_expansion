@@ -90,7 +90,7 @@ This compiles the actual production C source with fake I/O and directory calls. 
 
 ## Git
 
-The delivered directory and ZIP include a local Git repository on branch `main` with the initial source and validation evidence committed. No remote is configured. Gradle caches, build outputs, IDE files and machine-specific SDK paths are ignored. The prebuilt APK is delivered separately.
+This project is part of the `rambo/dmdt-865_expansion` repository under `android/T865PortProbe`; its original history and validation evidence are retained. Gradle caches, build outputs, IDE files and machine-specific SDK paths are ignored. The prebuilt APK is under `../../releases/`.
 
 ```sh
 git status

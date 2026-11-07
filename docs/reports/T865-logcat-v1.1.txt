@@ -1,0 +1,66 @@
+--------- beginning of main
+11-06 20:12:52.037 22853 22853 I .t865.portprobe: Late-enabling -Xcheck:jni
+11-06 20:12:52.064 22853 22853 I .t865.portprobe: Using CollectorTypeCC GC.
+--------- beginning of kernel
+11-06 20:12:50.394 22853 22853 I (7)[22853:.t865.portprobe]binder: 22853:22853 ioctl 40046210 7fef3f4be0 returned -22
+11-06 20:12:52.111 22853 22853 W ziparchive: Unable to open '/data/app/~~A88XjjUCxrnU6JV9is5d7A==/dev.t865.portprobe-yQzseAuM6MIs9ZDgm3iLjw==/base.dm': No such file or directory
+11-06 20:12:52.111 22853 22853 W ziparchive: Unable to open '/data/app/~~A88XjjUCxrnU6JV9is5d7A==/dev.t865.portprobe-yQzseAuM6MIs9ZDgm3iLjw==/base.dm': No such file or directory
+11-06 20:12:52.187 22853 22875 E QT      : [QT]file does not exist
+11-06 20:12:52.257 22853 22853 I M-ProMotion: M-ProMotion is disabled
+--------- beginning of events
+11-06 20:12:52.278 22853 22853 I wm_on_create_called: [233215318,dev.t865.portprobe.MainActivity,performCreate,68]
+11-06 20:12:52.279 22853 22853 I wm_on_start_called: [233215318,dev.t865.portprobe.MainActivity,handleStartActivity,0]
+11-06 20:12:52.283 22853 22853 I wm_on_resume_called: [233215318,dev.t865.portprobe.MainActivity,RESUME_ACTIVITY,0]
+11-06 20:12:52.287 22853 22876 I PowerHalWrapper: PowerHalWrapper.getInstance 
+11-06 20:12:52.287 22853 22853 I SurfaceFactory: [static] sSurfaceFactory = com.mediatek.view.impl.SurfaceFactoryImpl@96fbdd6
+11-06 20:12:52.292 22853 22853 W OpenGLRenderer: Unknown dataspace 0
+11-06 20:12:52.307 22853 22853 I wm_on_top_resumed_gained_called: [233215318,dev.t865.portprobe.MainActivity,topStateChangedWhenResumed]
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223168): avc:  denied  { read } for  comm="pool-2-thread-1" name="enforce" dev="selinuxfs" ino=4 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:selinuxfs:s0 tclass=file permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223168): avc:  denied  { read } for  name="enforce" dev="selinuxfs" ino=4 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:selinuxfs:s0 tclass=file permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223169): avc:  denied  { getattr } for  comm="pool-2-thread-1" path="/dev/ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223169): avc:  denied  { getattr } for  path="/dev/ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223170): avc:  denied  { getattr } for  comm="pool-2-thread-1" name="ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223170): avc:  denied  { getattr } for  name="ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223171): avc:  denied  { read } for  comm="pool-2-thread-1" name="/" dev="tmpfs" ino=7987 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:device:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223171): avc:  denied  { read } for  name="/" dev="tmpfs" ino=7987 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:device:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223172): avc:  denied  { read } for  comm="pool-2-thread-1" name="spi_master" dev="sysfs" ino=5139 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223172): avc:  denied  { read } for  name="spi_master" dev="sysfs" ino=5139 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223173): avc:  denied  { read } for  comm="pool-2-thread-1" name="devices" dev="sysfs" ino=5135 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223173): avc:  denied  { read } for  name="devices" dev="sysfs" ino=5135 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 I auditd  : type=1400 audit(0.0:223174): avc:  denied  { read } for  comm="pool-2-thread-1" name="spidev" dev="sysfs" ino=27005 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.309 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223174): avc:  denied  { read } for  name="spidev" dev="sysfs" ino=27005 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:12:52.345 22853 22853 E FBI     : Can't load library: dlopen failed: library "libmagtsync.so" not found
+11-06 20:12:52.352 22853 22873 E OpenGLRenderer: Device claims wide gamut support, cannot find matching config, error = EGL_SUCCESS
+11-06 20:12:52.353 22853 22873 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+11-06 20:12:52.360 22853 22873 E OpenGLRenderer: Unable to match the desired swap behavior.
+11-06 20:12:52.364 22853 22893 E ion     : ioctl c0044901 failed with code -1: Invalid argument
+11-06 20:13:05.138 22853 22853 I ScrollIdentify: on fling
+11-06 20:13:08.166 22853 22853 D VRI[MainActivity]: hardware acceleration = true, forceHwAccelerated = false
+11-06 20:13:08.182 22853 22853 D InputTransport: Create ARC handle: 0xb400006fc2975810
+11-06 20:13:08.182 22853 22853 D InputEventReceiver: Input log is disabled in InputEventReceiver.
+11-06 20:13:08.182 22853 22853 D InputTransport: Input log is disabled in InputChannel.
+11-06 20:13:08.229 22853 22853 D BufferQueueConsumer: [](id:594500000001,api:0,p:-1,c:22853) connect: controlledByApp=false
+11-06 20:13:08.233 22853 22873 E OpenGLRenderer: Unable to match the desired swap behavior.
+11-06 20:13:08.259 22853 22873 D BLASTBufferQueue: [VRI[MainActivity]#1](f:0,a:1) acquireNextBufferLocked size=776x407 mFrameNumber=1 applyTransaction=true mTimestamp=8025803200836835(auto) mPendingTransactions.size=0 graphicBufferId=98152887615500 transform=7
+11-06 20:13:14.005 22853 22853 I auditd  : type=1400 audit(0.0:223176): avc:  denied  { read } for  comm="pool-2-thread-1" name="enforce" dev="selinuxfs" ino=4 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:selinuxfs:s0 tclass=file permissive=0 app=com.android.vending
+11-06 20:13:14.006 22853 22853 W WindowOnBackDispatcher: sendCancelIfRunning: isInProgress=falsecallback=android.view.ViewRootImpl$$ExternalSyntheticLambda17@24bef0f
+11-06 20:13:14.005 22853 22853 I auditd  : type=1400 audit(0.0:223177): avc:  denied  { getattr } for  comm="pool-2-thread-1" path="/dev/ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:13:14.005 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223177): avc:  denied  { getattr } for  path="/dev/ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:13:14.005 22853 22853 I auditd  : type=1400 audit(0.0:223178): avc:  denied  { getattr } for  comm="pool-2-thread-1" name="ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:13:14.005 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223178): avc:  denied  { getattr } for  name="ttysWK0" dev="tmpfs" ino=10319 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:ttyMT_device:s0 tclass=chr_file permissive=0 app=com.android.vending
+11-06 20:13:14.015 22853 22873 D OpenGLRenderer: endAllActiveAnimators on 0xb400006f6297de60 (RippleDrawable) with handle 0xb400006fc2963420
+11-06 20:13:14.017 22853 22853 D View    : [Warning] assignParent to null: this = DecorView@1c58b9c[MainActivity]
+11-06 20:13:14.017 22853 22853 D BLASTBufferQueue: [VRI[MainActivity]#1](f:0,a:1) destructor()
+11-06 20:13:14.017 22853 22853 D BufferQueueConsumer: [VRI[MainActivity]#1(BLAST Consumer)1](id:594500000001,api:0,p:-1,c:22853) disconnect
+11-06 20:13:14.031 22853 22853 D InputTransport: Destroy ARC handle: 0xb400006fc2975810
+11-06 20:13:14.185 22853 22853 I auditd  : type=1400 audit(0.0:223179): avc:  denied  { read } for  comm="pool-2-thread-1" name="/" dev="tmpfs" ino=7987 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:device:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223179): avc:  denied  { read } for  name="/" dev="tmpfs" ino=7987 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:device:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 I auditd  : type=1400 audit(0.0:223180): avc:  denied  { read } for  comm="pool-2-thread-1" name="spi_master" dev="sysfs" ino=5139 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223180): avc:  denied  { read } for  name="spi_master" dev="sysfs" ino=5139 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 I auditd  : type=1400 audit(0.0:223181): avc:  denied  { read } for  comm="pool-2-thread-1" name="devices" dev="sysfs" ino=5135 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223181): avc:  denied  { read } for  name="devices" dev="sysfs" ino=5135 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 I auditd  : type=1400 audit(0.0:223182): avc:  denied  { read } for  comm="pool-2-thread-1" name="spidev" dev="sysfs" ino=27005 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:14.185 22853 22853 W pool-2-thread-1: type=1400 audit(0.0:223182): avc:  denied  { read } for  name="spidev" dev="sysfs" ino=27005 scontext=u:r:untrusted_app:s0:c192,c256,c512,c768 tcontext=u:object_r:sysfs:s0 tclass=dir permissive=0 app=com.android.vending
+11-06 20:13:16.806 22853 22853 I ScrollIdentify: on fling
+11-06 20:13:17.575 22853 22853 I ScrollIdentify: on fling
+11-06 20:13:19.174 22853 22853 D CompatibilityChangeReporter: Compat change id reported: 147798919; UID 10192; state: ENABLED

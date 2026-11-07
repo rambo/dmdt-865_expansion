@@ -1,0 +1,53 @@
+{
+  "authorization": "User explicitly approved one additional capture cycle after first missed trigger",
+  "original_checked": false,
+  "coordinates": [
+    594,
+    125
+  ],
+  "events": [
+    {
+      "utc": "2026-11-07T09:29:29.110110+00:00",
+      "event": "scope_trigger_confirmed_TD"
+    },
+    {
+      "utc": "2026-11-07T09:29:29.113232+00:00",
+      "event": "tap_enable_begin"
+    },
+    {
+      "utc": "2026-11-07T09:29:29.218649+00:00",
+      "event": "tap_enable_end"
+    },
+    {
+      "utc": "2026-11-07T09:29:32.585455+00:00",
+      "event": "enabled_state_readback",
+      "checked": "true"
+    },
+    {
+      "utc": "2026-11-07T09:29:40.137653+00:00",
+      "event": "scope_capture_stopped"
+    },
+    {
+      "utc": "2026-11-07T09:29:42.819727+00:00",
+      "event": "tap_restore_off_begin"
+    },
+    {
+      "utc": "2026-11-07T09:29:42.930031+00:00",
+      "event": "tap_restore_off_end"
+    },
+    {
+      "utc": "2026-11-07T09:29:45.657098+00:00",
+      "event": "restored_state_readback",
+      "checked": "false"
+    },
+    {
+      "utc": "2026-11-07T09:30:16.031752+00:00",
+      "event": "scope_waveforms_saved_and_scope_settings_restored"
+    },
+    {
+      "utc": "2026-11-07T09:30:16.211807+00:00",
+      "event": "original_stay_awake_setting_restored",
+      "value": "0"
+    }
+  ]
+}

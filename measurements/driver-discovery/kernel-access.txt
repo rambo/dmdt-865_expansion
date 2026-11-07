@@ -1,0 +1,20 @@
+ls: /sys/bus/platform/drivers/expand/module: No such file or directory
+ls: /sys/module/expand: No such file or directory
+ls: /sys/kernel/btf/vmlinux: No such file or directory
+ls: /proc/kallsyms: Permission denied
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/boot_a -> /dev/block/mmcblk0p24
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/boot_b -> /dev/block/mmcblk0p40
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/boot_para -> /dev/block/mmcblk0p31
+lrwxrwxrwx 1 root root    22 2010-01-03 06:46 /dev/block/by-name/bootloader1 -> /dev/block/by-name/lk1
+lrwxrwxrwx 1 root root    22 2010-01-03 06:46 /dev/block/by-name/bootloader2 -> /dev/block/by-name/lk2
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/dtbo_a -> /dev/block/mmcblk0p26
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/dtbo_b -> /dev/block/mmcblk0p42
+-r--r--r-- 1 root root 32960 2026-11-06 21:45 /proc/config.gz
+cat: /sys/devices/platform/odm/odm:expand@0/modalias: Permission denied
+cat: /sys/firmware/devicetree/base/odm/expand@0/compatible: Permission denied
+_a
+mt6768
+mt6768
+lrwxrwxrwx 1 root root 0 2026-11-06 20:54 /sys/class/misc/expand/device -> ../../../odm:expand@0
+cat: /sys/class/misc/expand/dev: Permission denied
+cat: /sys/class/misc/expand/uevent: Permission denied

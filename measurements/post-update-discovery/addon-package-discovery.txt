@@ -1,0 +1,24 @@
+package:/data/app/~~dlYkH93UCNepkrL5G2UaVQ==/com.thorkracing.dmd2launcher-Kxx79hkBslE6fmQOkPWBFQ==/base.apk=com.thorkracing.dmd2launcher
+package:/data/app/~~N-4E6tV5hOaIrR3-A-Kh5g==/com.thorkracing.wireddevices-d0ObKJytwUIh_r2RtHy75Q==/base.apk=com.thorkracing.wireddevices
+package:/product/app/ModuleMetadata/ModuleMetadata.apk=com.android.modulemetadata
+package:/system/priv-app/PackageInstallerProxy/PackageInstallerProxy.apk=hk.topicon.utility.packageinstallerproxy
+package:/data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk=com.thorkracing.dmdLora
+package:/system/app/LogService/LogService.apk=hk.topicon.utility.logservice
+package:/data/app/~~GM_r0xw57WTd9GahQ8P3Qg==/com.thorkracing.dmdplayground-xIN2Fmf0zSTyAs9jbzTQIg==/base.apk=com.thorkracing.dmdplayground
+package:/system/app/UpdateManager/UpdateManager.apk=hk.topicon.updatemanager
+package:/apex/com.android.mediaprovider/priv-app/MediaProvider@mdt865_16_ngms_1.2.7/MediaProvider.apk=com.android.providers.media.module
+package:/oem/priv-app/InjectInputProxy.vendor.apk=hk.topicon.injectinput
+package:/system/priv-app/RemoteControl/RemoteControl.apk=hk.topicon.remotecontrol
+package:/system/app/MultiCamera/MultiCamera.apk=hk.topicon.multicamera
+package:/oem/priv-app/LockTpProxy.vendor.apk=hk.topicon.locktp
+package:/apex/com.android.cellbroadcast/priv-app/CellBroadcastServiceModule@mdt865_16_ngms_1.2.7/CellBroadcastServiceModule.apk=com.android.cellbroadcastservice
+package:/data/app/~~XwQd4IOY1QXjjSrsPh1jnQ==/com.thorkracing.auto_off-mAJCQ2DVzqsurN4SmB_RBg==/base.apk=com.thorkracing.auto_off
+package:/system/app/FreemeFactoryTest/FreemeFactoryTest.apk=com.freeme.factory
+package:/data/app/~~jbflip2zPbhva1hjLf0rFw==/com.thorkracing.advsos-S-gxdLVveECQrJr5UJk8jg==/base.apk=com.thorkracing.advsos
+package:/apex/com.android.cellbroadcast/priv-app/CellBroadcastApp@mdt865_16_ngms_1.2.7/CellBroadcastApp.apk=com.android.cellbroadcastreceiver.module
+    com.thorkracing.dmd2launcher/com.thorkracing.dmdplayground.MainActivity
+    com.thorkracing.dmd2launcher/com.thorkracing.dmdplayground.HubLauncher
+    com.thorkracing.dmdplayground/.MainActivity
+    com.thorkracing.dmdplayground/.HubLauncher
+    com.thorkracing.wireddevices/.Main
+    hk.topicon.multicamera/.MainActivity

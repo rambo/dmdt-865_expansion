@@ -1,0 +1,50 @@
+Linux localhost 4.14.186 #12 SMP PREEMPT Fri May 29 10:13:52 UTC 2026 aarch64 Toybox
+Linux version 4.14.186 (matthieu@build3) (Android (6443078 based on r383902) clang version 11.0.1 (https://android.googlesource.com/toolchain/llvm-project b397f81060ce6d701042b782172ed13bee898b79), LLD 11.0.1 (/buildbot/tmp/tmp6_m7QH b397f81060ce6d701042b782172ed13bee898b79)) #12 SMP PREEMPT Fri May 29 10:13:52 UTC 2026
+wlan_drv_gen4m 1474560 0 - Live 0x0000000000000000 (O)
+wmt_chrdev_wifi 36864 1 wlan_drv_gen4m, Live 0x0000000000000000 (O)
+gps_drv 57344 1 - Live 0x0000000000000000 (O)
+fmradio_drv_mt6631 208896 0 - Live 0x0000000000000000 (O)
+bt_drv_connac1x 49152 1 - Live 0x0000000000000000 (O)
+wmt_drv 1236992 6 wlan_drv_gen4m,wmt_chrdev_wifi,gps_drv,fmradio_drv_mt6631,bt_drv_connac1x, Live 0x0000000000000000 (O)
+connfem 45056 0 - Live 0x0000000000000000 (O)
+fpsgo 1150976 0 - Live 0x0000000000000000 (PO)
+udc_lib 45056 0 - Live 0x0000000000000000 (O)
+total 0
+drwxr-xr-x   2 root root 0 2026-11-06 21:45 .
+drwxr-xr-x 161 root root 0 2026-11-06 21:45 ..
+-?????????   ? ?    ?    ?                ? bind
+lrwxrwxrwx   1 root root 0 2026-11-06 21:45 odm:expand@0 -> ../../../../devices/platform/odm/odm:expand@0
+-?????????   ? ?    ?    ?                ? uevent
+-?????????   ? ?    ?    ?                ? unbind
+total 0
+drwxr-xr-x  4 root root 0 2026-11-06 20:54 .
+drwxr-xr-x 24 root root 0 2026-11-06 20:50 ..
+lrwxrwxrwx  1 root root 0 2026-11-06 20:54 driver -> ../../../../bus/platform/drivers/expand
+-?????????  ? ?    ?    ?                ? driver_override
+drwxr-xr-x  3 root root 0 2026-11-06 20:54 misc
+-?????????  ? ?    ?    ?                ? modalias
+lrwxrwxrwx  1 root root 0 2026-11-06 20:54 of_node -> ../../../../firmware/devicetree/base/odm/expand@0
+drwxr-xr-x  2 root root 0 2026-11-06 20:54 power
+lrwxrwxrwx  1 root root 0 2026-11-06 20:54 subsystem -> ../../../../bus/platform
+-?????????  ? ?    ?    ?                ? uevent
+ls: /odm/lib/modules: No such file or directory
+ls: /vendor_dlkm/lib/modules: No such file or directory
+ls: /odm_dlkm/lib/modules: No such file or directory
+ls: /system_dlkm/lib/modules: Permission denied
+total 16
+drwxr-xr-x 2 root shell  4096 2009-01-01 02:00 .
+drwxr-xr-x 9 root shell 12288 2009-01-01 02:00 ..
+-????????? ? ?    ?         ?                ? bt_drv_connac1x.ko
+-????????? ? ?    ?         ?                ? connfem.ko
+-????????? ? ?    ?         ?                ? fmradio_drv_mt6631.ko
+-????????? ? ?    ?         ?                ? fpsgo.ko
+-????????? ? ?    ?         ?                ? gps_drv.ko
+-????????? ? ?    ?         ?                ? met.ko
+-????????? ? ?    ?         ?                ? modules.alias
+-????????? ? ?    ?         ?                ? modules.dep
+-????????? ? ?    ?         ?                ? modules.load
+-????????? ? ?    ?         ?                ? modules.softdep
+-????????? ? ?    ?         ?                ? udc_lib.ko
+-????????? ? ?    ?         ?                ? wlan_drv_gen4m.ko
+-????????? ? ?    ?         ?                ? wmt_chrdev_wifi.ko
+-????????? ? ?    ?         ?                ? wmt_drv.ko

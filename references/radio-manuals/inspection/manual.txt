@@ -1,0 +1,730 @@
+PDF PAGE 1
+E220-900T22DUserManual
+868/915MHz22dBmLoRaWirelessModule
+
+PDF PAGE 2
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 2
+目录
+1.Overview.....................................................................................................................................................................3
+1.1Introduction...................................................................................................................................................... 4
+1.2Features.............................................................................................................................................................4
+1.3Application........................................................................................................................................................4
+2.SpecificationandParameter....................................................................................................................................... 5
+2.1LimitParameter................................................................................................................................................ 5
+2.2OperatingParameter.........................................................................................................................................5
+3.SizeandPinDefinition...............................................................................................................................................6
+4.RecommendedConnectionDiagram..........................................................................................................................7
+5.FunctionDescription.................................................................................................................................................. 8
+5.1FixedTransmission...........................................................................................................................................8
+5.2BroadcastingTransmission...............................................................................................................................8
+5.3BroadcastingAddress....................................................................................................................................... 9
+5.4MonitorAddress............................................................................................................................................... 9
+5.5Reset................................................................................................................................................................. 9
+5.6AUXDescription.............................................................................................................................................. 9
+6.OperatingMode........................................................................................................................................................11
+6.1ModeSwitching..............................................................................................................................................11
+6.2Normalmode（Mode0）..............................................................................................................................12
+6.3WORsendingmode(Mode1)....................................................................................................................... 12
+6.4WORreceivingmode(Mode2)..................................................................................................................... 12
+6.5DeepSleep(Configuration)Mode(Mode3)................................................................................................. 13
+7RegisterReadandWriteControl...............................................................................................................................13
+7.1CommandFormat...........................................................................................................................................13
+7.2RegisterDescription....................................................................................................................................... 14
+7.3FactoryDefaultParameter..............................................................................................................................16
+8.ConfigurationInstructiononComputer................................................................................................................... 17
+9.HardwareDesign...................................................................................................................................................... 18
+10.FAQ.........................................................................................................................................................................19
+10.1Communicationrangeistooshort............................................................................................................... 19
+10.2Moduleiseasytodamage............................................................................................................................ 19
+10.3BER(BitErrorRate)ishigh........................................................................................................................ 19
+11.SolderingOperationGuidance............................................................................................................................... 20
+11.1ReflowSolderingTemperature.....................................................................................................................20
+11.2ReflowSolderingCurve............................................................................................................................... 20
+12.RelatedModels....................................................................................................................................................... 21
+13.AntennaRecommendation......................................................................................................................................21
+13.1AntennaRecommendation........................................................................................................................... 21
+14.PackageforBulkOrder.......................................................................................................................................... 22
+RevisionHistory........................................................................................................................................................... 22
+Aboutus........................................................................................................................................................................22
+
+PDF PAGE 3
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 3
+Disclaimer and copyright notice
+The information in this article, including the URL for reference, is subject to change
+without notice. The document is provided "as is" without warranty of any kind, including
+any warranty of merchantability, fitness for a particular purpose or non-infringement, and
+any warranty of any proposal, specification or sample referred to elsewhere. This document
+does not bear any liability, including any infringement of any patent rights resulting from
+the use of the information contained in this document. No estoppel or other license, express
+or implied, is granted herein for the use of intellectual property.
+All the test data obtained in this paper are obtained by E-Baite laboratory, and the actual
+results may be slightly different.
+It is hereby declared that all trade names, trade marks and registered trade marks
+mentioned herein are the property of their respective owners.
+The right of final interpretation belongs to Chengdu Yibaite Electronic Technology Co.,
+LTD.
+The attention
+The contents of this manual may change due to product version upgrade or other reasons. E-baite
+Electronic Technology Co., Ltd. reserves the right to modify the contents of this manual
+without any notice or prompt. This manual is only used as a guide, and Chengdu Yibaite
+Electronic Technology Co., Ltd. makes every effort to provide accurate information in this
+manual, but Chengdu Yibaite Electronic Technology Co., Ltd. does not guarantee that the
+content of this manual is completely free of errors, and all statements, information and
+Suggestions in this manual do not constitute any express or implied warranty.
+
+PDF PAGE 4
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 4
+1.Overview
+1.1Introduction
+E220-900T22D adopts a new generation of LoRa spread spectrum technology and a
+wireless serial port module (UART) designed based on the LLCC68 chip scheme. It has a
+variety of transmission methods, works in the (850.125～930.125MHz) frequency band
+(default868.125MHz),TTLleveloutput,compatiblewith3.3Vand5VIOportvoltage.
+E220-900T22DadoptsanewgenerationofLoRaspreadspectrumtechnology,supports
+air wake-up, carrier monitoring, communication key and other functions, supports
+sub-packagelengthsetting,andEbyteprovidescustomizeddevelopmentservices.
+1.2Features
+ The newLoRaspread spectrummodulationtechnology developedbased onLLCC68, it brings alongercommunicationdistance
+andstrongeranti-interferenceability;
+ Support users to set the communication key by themselves, and it cannot be read, which greatly improves the confidentiality of
+userdata;
+ Support LBT function, monitor the channel environment noise before sending, which greatly improves the communication
+successrateofthemoduleinharshenvironments;
+ SupportRSSIsignalstrengthindicatorfunctionforevaluatingsignalquality,improvingcommunicationnetwork,andranging;
+ Supportairwakeup,thatis,ultra-lowpowerconsumptionfunction,suitableforbattery-poweredapplications;
+ Supportfixed-pointtransmission,broadcasttransmission,channelmonitoring;
+ Supportdeepsleep,thepowerconsumptionofthewholemachineisabout5uAinthismode;
+ Themodulehasbuilt-inPA+LNA,andthecommunicationdistancecanreach10kmunderidealconditions;
+ Theparametersaresavedafterpower-off,andthemodulewillworkaccordingtothesetparametersafterpower-on;
+ Efficientwatchdogdesign,onceanexceptionoccurs,themodulewillautomaticallyrestart andcontinuetoworkaccordingtothe
+previousparametersettings;
+ Supportthedatatransmissionrateof2.4k～62.5kbps;
+ Support3.0～5.5Vpowersupply,powersupplygreaterthan5Vcanguaranteethebestperformance;
+ Industrialstandarddesign,supportinglong-termuseat-40～+85℃;
+ SMAantennainterface.
+1.3Application
+ Homesecurityalarmandremotekeylessentry;
+ Smarthomeandindustrialsensors;
+ Wirelessalarmsecuritysystem;
+ Buildingautomationsolutions;
+ Wirelessindustrial-graderemotecontrol;
+ AdvancedMeterReadingArchitecture(AMI);
+ Automotiveindustryapplications.
+
+
+PDF PAGE 5
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 5
+2.SpecificationandParameter
+2.1LimitParameter
+Table2-1Limitparametertable
+MainParameter
+Performance
+Remark
+Min. Min.
+PowerSupply（V） 0 5.5
+Exceedingthemaximumvaluemayburnthe
+modulepermanently
+BlockingPower（dBm） - 10 -
+OperatingTemperature（℃） -40 +85 Industrialgrade
+2.2OperatingParameter
+Table2-2Workingparametertable
+MainParameter
+Performance
+Remark
+Min. Typ. Max.
+Operatingvoltage（V） 3.0 5 5.5 ≥5.0Vensuresoutputpower
+Communicationlevel（V） - 3.3 - For5VTTL,itmaybeburningdown
+Operatingtemperature（℃） -40 - +85 Industrialdesign
+Operatingfrequency（MHz） 850.125 - 930.125 SupportISMband
+Power
+consumption
+TXcurrent(mA) - 110 - Instantpowerconsumption@22dBm
+RXcurrent(mA) - 16.8 - 5VVoltage
+Sleepcurrent（μA） - 5 - Softwareshutdown
+MaxTxpower（dBm） 21.5 22.0 22.5 -
+Receivingsensitivity（dBm） -146 -147 -148 Airdatarate2.4kbps
+Airdatarate（bps） 2.4k 2.4k 62.5k Tocontrolviauser’sprogram
+Distanceforreference 5km
+Testcondition：clearandopenarea,antenna
+gain:5dBi，antennaheight:2.5m，airdatarate:
+2.4kbps
+TXlength 200Byte
+Canbeconfiguredviacommandas
+32/64/128/200bytesperpackettotransmit
+Buffer 400Byte -
+Modulation LoRa NewgenerationLoRamodulationtechnology
+Communicationinterface UARTSerialPort TTLLevel
+Package DIP -
+Size 21*36mm -
+Antenna SMA-K 50ohmimpedance
+
+PDF PAGE 6
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 6
+3.SizeandPinDefinition
+Figure3-1Mechanicalsizeandpindefinition
+Table3-1Pindefinitiontable
+No. Name Direction Function
+1 M0
+Input
+（weakpull-up）
+WorkwithM1todecide4workingmodesofmodule(notsuspended,ifnot
+used,couldbegrounded).
+2 M1
+Input
+（weakpull-up）
+WorkwithM0todecide4workingmodesofmodule(notsuspended,ifnot
+used,couldbegrounded).
+3 RXD Input TTLUARTinputs,connectstoexternalTXDoutputpin.
+4 TXD Output TTLUARToutputs,connectstoexternalRXDinputpin.
+5 AUX Output
+Usedtoindicatetheworkingstatusofthemodule;theuserwakesupthe
+externalMCU,andoutputslowlevelduringpower-onself-check
+initialization;(canbeleftfloating)
+6 VCC Input Voltagerange:3.0～5.5VDC
+7 GND Input Ground
+8 Fixedhole - Fixedhole
+9 Fixedhole - Fixedhole
+10 Fixedhole - Fixedhole
+
+PDF PAGE 7
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 7
+4.RecommendedConnectionDiagram
+Figure4-1Recommendedconnectiondiagram
+Table4-1Description
+No. BriefdescriptionoftheconnectionbetweenthemoduleandtheMCU(theabovefigureusestheSTM8LMCUasanexample)
+1 ThewirelessserialportmoduleisTTLlevel,pleaseconnectwithTTLlevelMCU.
+2 Forsome5VMCU,itmaybenecessarytoadd4-10Kpull-upresistorstotheTXDandAUXpinsofthemodule.
+
+PDF PAGE 8
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 8
+5.FunctionDescription
+5.1FixedTransmission
+Figure5-1FixedTransmission
+5.2BroadcastingTransmission
+Figure5-2BroadcastingTransmission
+
+PDF PAGE 9
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 9
+5.3BroadcastingAddress
+ Example:SettheaddressofmoduleAto0xFFFFandthechannelto0x04.
+ When module A is used as a transmitter (same mode, transparent transmission mode), all receiving modules under the 0x04
+channelcanreceivedatatoachievethepurposeofbroadcasting.
+5.4MonitorAddress
+ Forexample:SettheaddressofmoduleAas0xFFFFor0x0000,andthechannelas0x04;
+ When module A is the receiver, it can receive the data sent from all modules under channel 0x04, the purpose of monitor is
+realized.
+5.5Reset
+ After the module is powered on, AUX will immediately output low level, perform hardware self-check, and set the working
+mode according to user parameters; During this process, AUX keeps low level, and AUX outputs high level after completion,
+and starts to work normally according to the working mode formed by M1 and M0; Therefore, the user needs to wait for the
+risingedgeofAUXasthestartingpointforthemoduletoworknormally.
+5.6AUXDescription
+ AUXPincanbeusedasindicationforwirelesssend&receivebufferandself-check.
+ It can indicate whether there are data that are not sent yet via wireless way, or whether all wireless data has been sent through
+UART,orwhetherthemoduleisstillintheprocessofself-checkinitialization.
+5.6.1IndicationofUARTOutput
+ TowakeupexternalMCU
+Figure5-3TowakeupexternalMCU
+
+PDF PAGE 10
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 10
+5.6.2IndicationofWirelessTransmitting
+ Bufferempty:thedataintheinternal400-bytebufferiswrittentothewirelesschip(automaticsub-packaging);
+WhenAUX=1,theusercontinuouslyinitiatesdatalessthan400byteswithoutoverflow;
+WhenAUX=0,thebufferisnotempty:thedataintheinternal400-bytebufferhasnotbeenwrittentothewirelesschipandthe
+transmissionisturnedon.Atthistime,themodulemaybewaitingfortheendoftheuserdatatotimeout,orthewireless
+sub-packettransmissionisinprogress;
+[Note]:WhenAUX=1,itdoesnotmeanthatallserialportdataofthemodulehasbeentransmittedwirelessly,andthelastpacket
+ofdatamaybebeingtransmitted.
+Figure5-4Transmittingindication
+5.6.3ConfigurationProcedureofModule
+ Onlyhappenedwhenpower-onresettingorexitingsleepmode
+Figure5-5Configurationmode
+
+PDF PAGE 11
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 11
+5.6.4NotesforAUX
+Table5-1NotesforAUX
+No. Description
+1
+Forfunction1&function2mentionedabove,thepriorityshouldbegiventotheonewithlowleveloutput,whichmeansif
+itmeetseachofanylowleveloutputcondition,AUXoutputslowlevel,ifnoneofthelowlevelconditionismet,AUX
+outputshighlevel.
+2 WhenAUXoutputslowlevel,itmeansthemoduleisbusy&cannotconductoperatingmodechecking.Within1mssinceAUXoutputshighlevel,themodeswitchwillbecompleted.
+3 Afterswitchingtonewoperatingmode,itwillnotworkinthenewmodeimmediatelyuntilAUXrisingedgelastsfor2ms.IfAUXstaysonthehighlevel,theoperatingmodeswitchcanbeaffectedimmediately.
+4 Whentheuserswitchestootheroperatingmodesfrommode3(sleepmode)orit’sstillinresetprocess,themodulewillresetuserparameters,duringwhichAUXoutputslowlevel.
+5
+DuetothecharacteristicsoftheLoRamodulationmethod,theinformationtransmissiondelayismuchlongerthanFSK.It
+isrecommendedthatcustomersdonottransmitlargeamountsofdataatlowairspeedstoavoidcommunication
+abnormalitiescausedbydataaccumulationanddataloss.
+6.OperatingMode
+Therearefouroperatingmodes,whicharesetbyM1andM0,thedetailsareasfollows:
+Mode（0-3） M1 M0 Description Remark
+0Transmission
+Mode 0 0 UART and wireless channel are open, transparent transmission ison
+1WOR
+Transmitting
+Mode
+0 1 WORTransmitter
+2WOR
+ReceivingMode 1 0 WORReceiver Supportswakeupoverair
+3DeepSleep
+Mode 1 1 Module goes to sleep (automatically wake up when configuringparameters) Supportsconfiguration
+6.1ModeSwitching
+Table6-1ModeSwitching
+No. Remark
+1
+ Userscan combine M1andM0withhigh andlowlevels to determinetheoperatingmode.Two GPIOsoftheMCUcan
+beusedtocontrolmodeswitching;
+ AfterchangingM1andM0:Ifthemoduleisidle,after1ms,itcanstartworkingaccordingtothenewmode;
+ If the serial port data of the module has not been transmitted through the wireless, the new working mode can be
+switchedafterthetransmissioniscompleted;
+ If the module receives the wireless data and transmits the data through the serial port, it needs to finish transmission
+beforeswitchingthenewworkingmode;
+ Therefore,modeswitchingcanonlybevalidwhenAUXoutputis1,otherwiseitwilldelayswitching
+2
+ For example, users continuously inputs a large amount of data and simultaneously performs mode switching. At this
+time,theswitchingmodeoperationisinvalid;themodulewillprocessall theuserdatabeforeperformingthenewmode
+detection;
+ Therefore, the general recommendation is to detect the output state of the AUX pin and switch after 2ms when the
+outputishigh.
+
+PDF PAGE 12
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 12
+3
+ Whenthemoduleisswitchedfromothermodestosleepmode,ifthedatahasnotbeenprocessedyet;
+ The module will process these data (including receiving and sending) before entering sleep mode. This feature can be
+used for fast sleep, which saves power; for example, the transmitter module works in mode 0, the user transmits the
+serial port data "12345", and then does not have to wait for theAUX pin to beidle(high level), and can directly switch
+to sleep mode. And the user's main MCU immediately sleeps, the module will automatically transmit the user data
+throughthewireless,andautomaticallyenterssleepwithin1ms;
+ ThissavesMCU'sworkingtimeandreducespowerconsumption.
+4
+ Similarly, any mode switching can use this feature. After the module processes the current mode event, it will
+automatically enter the new mode within 1ms; thus, eliminating the need for the user to query AUX and achieve the
+purposeoffastswitching;
+ Forexample,switchingfromthetransmitmodetothereceivemode;theuserMCUcanalsoentersleepbeforethemode
+switch,andusetheexternalinterruptfunctiontoacquiretheAUXchange,therebyperformingmodeswitching.
+5
+ Thisoperationmodeisveryflexibleandefficient,andisdesignedaccordingtotheuser'sMCU'soperationconvenience,
+and can reduce the workload of the entire system as much as possible, improve system efficiency, and reduce power
+consumption.
+6.2Normalmode（Mode0）
+Table6-2Normalmode
+Type WhenM0=0,M1=0,themoduleworksinmode0
+Transmitting Userscaninputdatathroughtheserialportandthemodulewillstartwirelesstransmission.
+Receiving The module wireless receiving function is turned on, and after receiving the wireless data, it will be outputthroughtheserialportTXDpin.
+6.3WORsendingmode(Mode1)
+Table6-3WORsendingmode
+Type WhenM0=1,M1=1,themoduleworksinmode1
+Transmitting Whendefinedasatransmittingparty,apreambleisautomaticallyaddedbeforetransmitting.
+Receiving Itcanreceivedatanormally,thereceivingfunctionisthesameasmode0.
+6.4WORreceivingmode(Mode2)
+Table6-4WORreceivingmode
+Type WhenM0=0,M1=1,themoduleworksinmode2
+
+PDF PAGE 13
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 13
+Transmitting Wirelesstransmissionoff
+Receiving CanonlyreceivedatainWORtransmissionmode(mode1)
+6.5DeepSleep(Configuration)Mode(Mode3)
+Table6-5Sleepmode
+Type WhenM0=1,M1=1,themoduleworksinmode3
+Transmitting Unabletotransmitwirelessdata
+Receiving Unabletoreceivewirelessdata
+Note When from the sleep mode to other modes, the module will reconfigure the parameters. During the configuration process,AUXwillremainlow;Afterconfiguration,itoutputshighlevel,wesuggestthatusertestrisingedgeT_BUSY.
+7RegisterReadandWriteControl
+7.1CommandFormat
+In configuration mode (mode 3: M1=1, M0=1), the supported command list is as follows (when setting, only 9600, 8N1 format is
+supported):
+Table7-1Commandformat
+No CommandFormat Description
+1 SetRegister
+Command:C0+startingaddress+length+parameters
+Response:C1+startingaddress+length+parameters
+Example1:Channelis0x09
+command startingaddress length parameter
+Send： C0 04 01 09
+Return：C1 04 01 09
+Example2：Configuremoduleaddress(0x1234),serialport(96008N1),airspeed(2.4K)
+Send： C000031234 62
+Return：C100031234 62
+2 ReadRegister
+Command:C1+startingaddress+parameters
+Response:C1+startingaddress+length+parameters
+Example：Readchannel
+command startingaddress length parameter
+Send： C1 04 01
+Return： C1 04 01 09
+
+PDF PAGE 14
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 14
+Example2:Readmoduleaddress,serialport,andairspeedatthesametime
+Send： C10003
+Return：C10003123462
+3 SetTemporaryRegister
+Command:C2+startingaddress+parameters
+Response:C1+startingaddress+length+parameters
+Example1:Channelis0x09
+command startingaddress length parameter
+Send： C2 04 01 09
+Return： C1 04 01 09
+Example 2: Configure module address (0x1234), network address (0x00), serial port (9600 8N1)
+andairdatarate(2.4K)
+Send：C20003123462
+Return：C10003123462
+4 WrongFormat Wrongformatrespond:FFFFFF
+7.2RegisterDescription
+Table7-2Registerdescription
+Address
+Read
+or
+Write
+Name Description Remark
+00H Read/Write ADDH ADDH（default0） Highbyteandlowbyteofmoduleaddress;Note: When the module address is equal to FFFF,
+it can be used as the broadcast and monitor
+address, that is: the module will not perform
+addressfilteringatthistime
+01H Read/Write ADDL ADDL（default0）
+02H
+Read/
+Write
+REG0
+7 6 5 UARTSerialPortRate（bps）
+For the two modules that communicate with each
+other, the serial port baud rate can be different,
+andtheverificationmethodcanalsobedifferent;
+When continuously transmitting large data
+packets, users need to consider the data
+congestioncaused bythesame baudrate,andmay
+evenbelost;
+It is generally recommended that the baud rate of
+thetwocommunicationpartiesbethesame.
+0 0 0 UARTRateis1200
+0 0 1 UARTRateis2400
+0 1 0 UARTRateis4800
+0 1 1 UARTRateis9600（default）
+1 0 0 UARTRateis19200
+1 0 1 UARTRateis38400
+1 1 0 UARTRateis57600
+1 1 1 UARTRateis115200
+4 3 SerialParityBit
+Theserialportmodeofthecommunicationparties
+canbedifferent;
+0 0 8N1（default）
+0 1 8O1
+1 0 8E1
+1 1 8N1（equalto00）
+2 1 0 AirDataRate（bps） Theairrateofbothpartiesmustbethesame;
+
+PDF PAGE 15
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 15
+Thehighertheairrate,thesmallerthedelayand
+theshorterthetransmissiondistance.
+0 0 0 AirDataRate2.4k
+0 0 1 AirDataRate2.4k
+0 1 0 AirDataRate2.4k（default）
+0 1 1 AirDataRate4.8k
+1 0 0 AirDataRate9.6k
+1 0 1 AirDataRate19.2k
+1 1 0 AirDataRate38.4k
+1 1 1 AirDataRate62.5k
+03H
+Read/
+Write
+REG1
+7 6 Sub-PacketSetting Thedatasentbytheuserislessthanthe
+sub-packetlength,andtheserialportoutputofthe
+receivingendappearsasanuninterrupted
+continuousoutput;
+Thedatasentbytheuserislargerthanthepacket
+length,andtheserialportofthereceivingendwill
+beoutputinpackets.
+0 0 200bytes（default）
+0 1 128bytes
+1 0 64bytes
+1 1 32bytes
+5 RSSIAmbientnoiseenable After enabling, you can send commands C0 C1
+C2 C3 in transmission mode or WOR sending
+modetoreadregisters;
+Register0x00:CurrentenvironmentalnoiseRSSI;
+Register 0X01: RSSI when receiving data last
+time
+(The current channel noise is: dBm = -（256 -
+RSSI）);
+Instruction format: C0 C1 C2 C3+start
+address+readlength;
+Return: C1 + address + read length + read valid
+value;forexample:sendC0C1C2C30001
+Return C1 00 01 RSSI (address can only start
+from00)
+0 Disable（Default）
+1 Enable
+4 3 2 Reserve
+1 0 TransmittingPower The relationship between power and current is
+non-linear, and the power supply has the highest
+efficiencyatmaximumpower;
+Thecurrentwillnotdecreaseinthesame
+proportionasthepowerdecreases.
+0 0 22dBm（default）
+0 1 17dBm
+1 0 13dBm
+1 1 10dBm
+04H
+Read/
+Write
+REG2
+ChannelControl（CH）
+0-80representsatotalof81channels Actualfrequency=850.125+CH*1M
+05H
+Read/
+Write
+REG3
+7 EnableRSSIByte Afterbeingenabled,themodulereceiveswireless
+dataandoutputsitthroughtheserialportTXD,
+followedbyanRSSIstrengthbyte.
+0 Disable（Default）
+1 Enable
+6 TransmissionMethod Duringfixedtransmission,themodulewill
+recognizethefirstthreebytesofserialdataas:
+addresshigh+addresslow+channel,anduseit
+asawirelesstransmissiontarget.
+0 Transparenttransmissionmode（default）
+1 Fixedtransmissionmode
+5 Reserve
+4 LBTEnable Afterenabling,monitoringwillbeconducted
+beforewirelessdatatransmission,whichcan
+avoidinterferencetoacertainextent,butmay
+causedatadelay;
+ThemaximumstaytimeofLBTis2seconds,and
+0 Disable（default）
+1 Enable
+
+PDF PAGE 16
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 16
+itwillbeissuedforciblywhenitreaches2
+seconds.
+3 Reserve
+2 1 0 WORCycle
+Onlyvalidformode1;
+CycleT=(1+WOR)*500ms,themaximumis
+4000ms,theminimumis500ms;
+ThelongertheWORmonitoringintervalperiod,
+thelowertheaveragepowerconsumption,butthe
+greaterthedatadelay;
+Bothsenderandreceivermustagree(very
+important)
+0 0 0 500ms
+0 0 1 1000ms
+0 1 0 1500ms
+0 1 1 2000ms
+1 0 0 2500ms
+1 0 1 3000ms
+1 1 0 3500ms
+1 1 1 4000ms
+06H Write CRYPT_H Keyhighbyte（default0） Writeonly,readreturns0;Usedforencryptiontoavoidinterceptionofwirelessdataintheairbysimilarmodules;
+Themodulewillusethesetwobytesasa
+calculationfactortotransformandencrypttheair
+wirelesssignal.
+07H Write CRYPT_L Keylowbyte（default0）
+7.3FactoryDefaultParameter
+Table7-3Defaultparameters
+Model Factorydefaultparameter：c00000620017
+ModuleNo. Frequency ModuleNo. Frequency ModuleNo. Frequency ModuleNo. Frequency
+E220-900T22D 873.125MHz 0x0000 0x23 2.4kbps 9600 8N1 22dbm
+
+PDF PAGE 17
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 17
+8.ConfigurationInstructiononComputer
+ ThefollowingfigureshowsthedisplayinterfaceoftheE220-900T22Dconfigurationhostcomputer.Theusercanswitchtothe
+commandmodethroughM0andM1,andquicklyconfigureandreadtheparametersonthehostcomputer.
+ Intheconfigurationofthehostcomputer,themoduleaddress,frequencychannel,networkID,andkeyarealldisplayedin
+decimalmode;thevaluerangeofeachparameter:
+Networkaddress：0～65535
+Frequencychannel：0～83
+Key：0～65535
+
+PDF PAGE 18
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 18
+9.HardwareDesign
+ ItisrecommendedtouseaDCstabilizedpowersupplytosupplypowertothemodule.Thepowerripplecoefficientshouldbeas
+smallaspossible,andthemodulemustbereliablygrounded;
+ Please pay attention to the correct connection of the positive and negative poles of the power supply. Reverse connection may
+causepermanentdamagetothemodule;
+ Please check the power supply to ensure that it is within the recommended power supply voltage. If it exceeds the maximum
+value,itwillcausepermanentdamagetothemodule;
+ Pleasecheckthestabilityofthepowersupply,thevoltageshouldnotfluctuategreatlyandfrequently;
+ When designing the power supply circuit for the module, it is often recommended to reserve more than 30% of the margin, and
+thewholemachineisconducivetolong-termstableoperation;
+ The module should be as far away as possible from power supply,transformer, high frequency wiring and other parts with large
+electromagneticinterference;
+ High-frequency digital traces, high-frequency analog traces, and power traces must avoid under the module. If they really need
+topassunderthemodule,assumingthatthemoduleissolderedtotheTopLayer,laycopperontheTopLayerofthecontactpart
+ofthemodule(allcopperandGoodgrounding),mustbeclosetothedigitalpartofthemoduleandroutedintheBottomLayer;
+ Assuming that the module is soldered or placed on the Top Layer, it is also wrong to randomly route the wires on the Bottom
+Layerorotherlayers,whichwillaffectthestrayandreceivingsensitivityofthemoduletovaryingdegrees;
+ Assumingthattherearedeviceswithlargeelectromagneticinterference aroundthemodule,itwill greatlyaffect theperformance
+of the module.According to the intensity of the interference, it is recommended to stay away from the module. If the situation
+permits,properisolationandshieldingcanbedone;
+ Assuming that there are traces with large electromagnetic interference around the module (high-frequency digital,
+high-frequencyanalog, powerwiring),it will also greatlyaffect theperformanceofthemodule.Accordingtotheintensityofthe
+interference,itisrecommendedtostayawayfromthemodule.Isolationandshielding;
+ Trytostayawayfrompartofthephysicallayerthatisalso2.4GHzTTLprotocol,suchas:USB3.0;
+ The antennainstallationstructurehasa great influenceontheperformance ofthemodule. Makesurethat theantennaisexposed
+anditisbesttobeverticallyupward;
+ When the module is installed inside the case, a high-quality antenna extension cable can be used to extend the antenna to the
+outsideofthecase;
+ Theantennamustnotbeinstalledinsidethemetalshell,whichwillgreatlyreducethetransmissiondistance.
+
+PDF PAGE 19
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 19
+10.FAQ
+10.1Communicationrangeistooshort
+ Whenthereisastraight-linecommunicationobstacle,thecommunicationdistancewillbeattenuatedaccordingly;
+ Temperature,humidity,andco-frequencyinterferencewillincreasethecommunicationpacketlossrate;
+ Thegroundabsorbsandreflectsradiowaves,andthetestresultsnearthegroundarepoor;
+ Seawaterhasastrongabilitytoabsorbradiowaves,sotheseasidetestresultsarepoor;
+ Ifthereisametalobjectneartheantennaorplacedinametalshell,thesignalattenuationwillbeveryserious;
+ Thepowerregistersettingiswrong,theairspeedsettingistoohigh(thehighertheairspeed,thecloserthedistance);
+ Thelowvoltage ofthepowersupplyat roomtemperatureislower thantherecommendedvalue, thelower thevoltage, thelower
+thepoweroutput;
+ Thematchingdegreeoftheantennaandthemoduleispoororthequalityoftheantennaitselfisproblematic.
+10.2Moduleiseasytodamage
+ Please check the power supply to ensure that it is within the recommended power supply voltage. If it exceeds the maximum
+value,themodulewillbepermanentlydamaged;
+ Pleasecheckthestabilityofthepowersupply,andthevoltageshouldnotfluctuategreatlyandfrequently;
+ Pleaseensureanti-staticoperationduringinstallationanduse,andhigh-frequencycomponentsareelectrostaticallysensitive;
+ Please ensure that the humidity during installation and use should not be too high, and some components are humidity sensitive
+devices;
+ Ifthereisnospecialrequirement,itisnotrecommendedtouseitattoohighortoolowtemperature.
+10.3BER(BitErrorRate)ishigh
+ There is co-frequency signal interference nearby,stay away from theinterference sourceormodify thefrequency and channel to
+avoidinterference;
+ Unsatisfactorypowersupplymayalsocausegarbledcodes.Ensurethereliabilityofthepowersupply;
+ Poorortoolongextensioncablesandfeederscanalsocausehighbiterrorrates.
+
+PDF PAGE 20
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 20
+11.SolderingOperationGuidance
+11.1ReflowSolderingTemperature
+Table11-1Registerdescription
+ProfileFeature Sn-PbAssembly Pb-FreeAssembly
+SolderPaste Sn63/Pb37 Sn96.5/Ag3/Cu0.5
+PreheatTemperaturemin （Tsmin） 100℃ 150℃
+Preheattemperaturemax(Tsmax) 150℃ 200℃
+PreheatTime(TsmintoTsmax)(ts) 60-120sec 60-120sec
+Averageramp-uprate(TsmaxtoTp) 3℃/secondmax 3℃/secondmax
+LiquidousTemperature(TL) 183℃ 217℃
+Time（tL）MaintainedAbove（TL） 60-90sec 30-90sec
+Peaktemperature（Tp） 220-235℃ 230-250℃
+Aveageramp-downrate（TptoTsmax） 6℃/secondmax 6℃/secondmax
+Time25℃topeaktemperature 6minutes max 8minutes max
+11.2ReflowSolderingCurve
+
+
+PDF PAGE 21
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 21
+12.RelatedModels
+ModelNo. ChipScheme
+Frequency
+Hz
+Txpower
+dBm
+Distance
+km
+Package
+Size
+mm
+Interface
+E220-400T22S LLCC68 433/470M 22 5 SMD 16*26 TTL
+E220-400T30S LLCC68 433/470M 30 10 SMD 20*40.5 TTL
+E220-900T22S LLCC68 868/915M 22 5 SMD 16*26 TTL
+E220-900T30S LLCC68 868/915M 30 10 SMD 20*40.5 TTL
+E220-400T22D LLCC68 433/470M 22 5 DIP 21*36 TTL
+E220-400T30D LLCC68 433/470M 30 10 DIP 24*43 TTL
+E220-900T22D LLCC68 868/915M 22 5 DIP 21*36 TTL
+E220-900T30D LLCC68 868/915M 30 10 DIP 24*43 TTL
+13.AntennaRecommendation
+13.1AntennaRecommendation
+Antennas are an important role in the communication process, and often inferior antennas will have a great impact on the
+communication system. Therefore, our company recommends some antennas as supporting our company's wireless modules with
+excellentperformanceandreasonableprices.
+Table13-1Registerdescription
+ModelNo. Type
+Frequency
+Hz
+Interface
+Gain
+dBi
+Height
+mm
+Feeder
+cm
+Features
+TX868-JZ-5 RubberAntenna
+868M
+SMA-J 2.0 52 -
+Ultra-shortstraight,
+omnidirectionalantenna
+TX868-JK-20 RubberAntenna
+868M
+SMA-J 3.0 210 -
+Bendablerubber,
+omnidirectionalantenna
+TX868-XPL-100 SuctionAntenna 868M SMA-J 3.5 290 100
+Smallsuctionantenna,
+cost-effective
+TX915-JZ-5 RubberAntenna 915M SMA-J 2.0 52 -
+Ultra-shortstraight,
+omnidirectionalantenna
+TX915-JK-11 RubberAntenna
+915M SMA-J
+2.5 110 -
+Bendablerubber,
+omnidirectionalantenna
+TX915-JK-20 RubberAntenna
+915M SMA-J
+3.0 210 -
+Bendablerubber,
+omnidirectionalantenna
+TX915-XPL-100 SuctionAntenna
+915M
+SMA-J 3.5 290 100
+Smallsuctionantenna,
+cost-effective
+
+PDF PAGE 22
+ChengduEbyte ElectronicTechnologyCo.,Ltd. E220-900T22DUserManual
+Copyright©2012–2020，ChengduEbyte ElectronicTechnologyCo.,Ltd. 22
+14.PackageforBulkOrder
+RevisionHistory
+Version Date Description Issuedby
+1.0 2020-8-28 Originalversion
+Aboutus
+Technicalsupport:support@cdebyte.com
+DocumentsandRFSettingdownloadlink:www.ebyte.com
+ThankyouforusingEbyteproducts!Pleasecontactuswithanyquestionsorsuggestions:info@cdebyte.com
+-------------------------------------------------------------------------------------------------
+Officialhotline:028-61399028
+Web:www.ebyte.com
+Address:,BuildingB5,MouldIndustrialPark,199#XiquAve,High-techZone,Chengdu,611731,Sichuan,China

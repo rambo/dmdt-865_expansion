@@ -1,0 +1,280 @@
+--------- beginning of main
+         1794044826.509  7305  7305 D ViewRootImpl: Skipping stats log for color mode
+         1794044826.530  7305  7305 D AutofillManager: view not autofillable - not passing ime action check
+         1794044826.541  7305  7305 D BufferQueueConsumer: [](id:1c8900000002,api:0,p:-1,c:7305) connect: controlledByApp=false
+         1794044826.542  7305  7305 D BLASTBufferQueue: [VRI[StatusActivity]#2](f:0,a:0) constructor()
+         1794044826.542  7305  7305 D BLASTBufferQueue: [VRI[StatusActivity]#2](f:0,a:0) update width=800 height=1280 format=-1 mTransformHint=0
+         1794044826.545  7305  7305 D Surface : lockCanvas
+         1794044826.559  7305  7305 D BLASTBufferQueue: [VRI[StatusActivity]#2](f:0,a:1) acquireNextBufferLocked size=800x1280 mFrameNumber=1 applyTransaction=true mTimestamp=2788963895473(auto) mPendingTransactions.size=0 graphicBufferId=31374736097285 transform=0
+         1794044826.599  7305  7305 D InsetsController: hide(ime(), fromIme=false)
+         1794044826.600  7305  7305 I ImeTracker: com.thorkracing.dmdLora:1970e7a6: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+         1794044826.607  7305  7305 D Surface : lockCanvas
+         1794044826.624  7305  7305 D Surface : lockCanvas
+         1794044826.642  7305  7305 D Surface : lockCanvas
+         1794044826.658  7305  7305 D Surface : lockCanvas
+         1794044826.675  7305  7305 D Surface : lockCanvas
+         1794044826.692  7305  7305 D Surface : lockCanvas
+         1794044826.716  7305  7305 D Surface : lockCanvas
+         1794044827.550  7305  7305 D Surface : lockCanvas
+         1794044828.532  7305  7305 D Surface : lockCanvas
+         1794044829.540  7305  7305 D Surface : lockCanvas
+         1794044830.556  7305  7305 D Surface : lockCanvas
+         1794044831.385  7305  7305 D Surface : lockCanvas
+         1794044831.395  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.404  7305  7305 D Surface : lockCanvas
+         1794044831.407  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.420  7305  7305 D Surface : lockCanvas
+         1794044831.423  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.440  7305  7305 D LoraService: onStartCommand action=com.thorkracing.dmdlora.START connected=false txInProgress=false
+         1794044831.441  7305 10588 I LoraService: Restored radio config — ch=18 power=0 lbt=false region=EU 868MHz
+         1794044831.442  7305 10588 D control-jni: open fd = 134, path = /dev/expand
+         1794044831.442  7305  7305 D LoraService: STATUS broadcast → connected=false ch=18 sinceTxMs=-1 sinceRxMs=-1 sent=0 recv=0 activeSenders=0 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+         1794044831.442  7305  7305 I LoraService: LoRa health — connected=false ch=18 peers=0 slotMs=465 roster=[blind *3481] intervalMs=1500 gpsSlots=[off] sinceRxMs=-1 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+--------- beginning of kernel
+         1794044831.445 10588 10588 I         : expand_fops_release
+         1794044831.445 10588 10588 I         : expand_fops_open,
+         1794044831.444  7305  7305 D Surface : lockCanvas
+         1794044831.446  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.446  7305  9447 D DMDLora : Configuring module ELora at right (/dev/ttysWK2)
+         1794044831.450  9447  9447 I expand_fops_ioctl, cmd: 3223081729, position: 2
+         1794044831.451  7305  7305 D Surface : lockCanvas
+         1794044831.453  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.459  7305  9447 D control-jni: expand power fd: 134, state: 1, res: 0
+         1794044831.459  7305  9447 D control-jni: expand write io(1) fd: 134, state: 1, res: 0
+         1794044831.463  9447  9447 I expand_power_on, iface(right)->user: 1
+         1794044831.463  9447  9447 I expand_fops_ioctl, cmd: 3223081730, position: 2
+         1794044831.463  9447  9447 I         : expandio_set_gpio_value, iface(right) io = 1, state = 1
+         1794044831.463  9447  9447 I expandio: gpio(566) set to 1 SUCCESS
+         1794044831.468  7305  7305 D Surface : lockCanvas
+         1794044831.470  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.485  7305  7305 D Surface : lockCanvas
+         1794044831.487  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.503  7305  7305 D Surface : lockCanvas
+         1794044831.506  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.534  7305  7305 D Surface : lockCanvas
+         1794044831.537  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.558  7305  7305 D Surface : lockCanvas
+         1794044831.561  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.561  7305  9447 D serial_port: Opening serial port /dev/ttysWK2, baudRate: 9600, flags: 0, dataBit: 8, parityBit: n, stopBit: 1
+         1794044831.566  7305  7305 D Surface : lockCanvas
+         1794044831.568  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.591  7305  7305 D Surface : lockCanvas
+         1794044831.594  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.608  7305  7305 D Surface : lockCanvas
+         1794044831.612  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.623  7305  9448 D DMDLora : setMode: SleepConfig, currentPosition: right
+         1794044831.626  7305  7305 D Surface : lockCanvas
+         1794044831.629  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.643  7305  7305 D Surface : lockCanvas
+         1794044831.646  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.659  7305  7305 D Surface : lockCanvas
+         1794044831.662  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.677  7305  7305 D Surface : lockCanvas
+         1794044831.680  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.699  7305  7305 D Surface : lockCanvas
+         1794044831.702  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.718  7305  7305 D Surface : lockCanvas
+         1794044831.720  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.735  7305  7305 D Surface : lockCanvas
+         1794044831.738  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.753  7305  7305 D Surface : lockCanvas
+         1794044831.756  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.768  7305  7305 D Surface : lockCanvas
+         1794044831.771  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.785  7305  7305 D Surface : lockCanvas
+         1794044831.788  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.809  7305  7305 D Surface : lockCanvas
+         1794044831.812  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.827  7305  7305 D Surface : lockCanvas
+         1794044831.830  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.845  7305  7305 D Surface : lockCanvas
+         1794044831.848  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.860  7305  7305 D Surface : lockCanvas
+         1794044831.863  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.877  7305  7305 D Surface : lockCanvas
+         1794044831.880  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.894  7305  7305 D Surface : lockCanvas
+         1794044831.898  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.912  7305  7305 D Surface : lockCanvas
+         1794044831.917  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.942  7305  7305 D Surface : lockCanvas
+         1794044831.945  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.959  7305  7305 D Surface : lockCanvas
+         1794044831.961  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.976  7305  7305 D Surface : lockCanvas
+         1794044831.979  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044831.994  7305  7305 D Surface : lockCanvas
+         1794044831.998  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.008  7305  7305 D Surface : lockCanvas
+         1794044832.012  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.024  7305  7305 D Surface : lockCanvas
+         1794044832.027  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.041  7305  7305 D Surface : lockCanvas
+         1794044832.043  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.058  7305  7305 D Surface : lockCanvas
+         1794044832.060  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.076  7305  7305 D Surface : lockCanvas
+         1794044832.078  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.106  7305  7305 D Surface : lockCanvas
+         1794044832.110  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.122  7305  7305 D Surface : lockCanvas
+         1794044832.125  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.129  7305 10588 E LoraService: Failed to enter config mode (module attached?)
+         1794044832.129  7305 10588 W LoraService: Disabling LoraService: setWorkMode(SleepConfig) returned false
+         1794044832.130  7305 10588 W LoraService: Persistent disable — 5 consecutive init failures and never succeeded
+         1794044832.137  7305 10588 D LoraService: STATUS broadcast → connected=false ch=18 sinceTxMs=-1 sinceRxMs=-1 sent=0 recv=0 activeSenders=0 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+         1794044832.140  7305  7305 D Surface : lockCanvas
+         1794044832.143  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.151  7305  7305 D serial_port: Closing serial port fd = 136
+         1794044832.151  7305  7305 D control-jni: expand power fd: 134, state: 0, res: 0
+         1794044832.151  7305  7305 D serial_port: Closing serial port fd = 136
+         1794044832.155  7305  7305 I expand_fops_ioctl, cmd: 3223081729, position: 2
+         1794044832.155  7305  7305 I         : expandio_release_gpio, iface(right) release gpio
+         1794044832.155  7305  7305 I expand_power_off, iface(right)->user: 0
+         1794044832.163  7305  7305 D Surface : lockCanvas
+         1794044832.165  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.181  7305  7305 D Surface : lockCanvas
+         1794044832.184  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.198  7305  7305 D Surface : lockCanvas
+         1794044832.201  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.215  7305  7305 D Surface : lockCanvas
+         1794044832.218  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044832.232  7305  7305 D Surface : lockCanvas
+         1794044832.559  7305  7305 D Surface : lockCanvas
+         1794044833.565  7305  7305 D Surface : lockCanvas
+         1794044834.562  7305  7305 D Surface : lockCanvas
+         1794044835.562  7305  7305 D Surface : lockCanvas
+         1794044836.561  7305  7305 D Surface : lockCanvas
+         1794044837.563  7305  7305 D Surface : lockCanvas
+         1794044838.578  7305  7305 D Surface : lockCanvas
+         1794044840.573  7305  7305 D Surface : lockCanvas
+         1794044841.568  7305  7305 D Surface : lockCanvas
+         1794044842.589  7305  7305 D Surface : lockCanvas
+         1794044843.578  7305  7305 D Surface : lockCanvas
+         1794044844.580  7305  7305 D Surface : lockCanvas
+         1794044844.999  7305  7305 D Surface : lockCanvas
+         1794044845.007  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.022  7305  7305 D Surface : lockCanvas
+         1794044845.025  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.039  7305  7305 W LoraService: LoRa disabled by user preference — refusing start
+         1794044845.041  7305  7305 D LoraService: STATUS broadcast → connected=false ch=18 sinceTxMs=-1 sinceRxMs=-1 sent=0 recv=0 activeSenders=0 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+         1794044845.042  7305  7305 I LoraService: LoRa health — connected=false ch=18 peers=0 slotMs=741 roster=[blind *910d] intervalMs=1500 gpsSlots=[off] sinceRxMs=-1 | TX 0 · RX 0 · dup 0 · crc 0 · ver 0 · rly 0/0 · sec 0 · auth 0
+         1794044845.047  7305  7305 D Surface : lockCanvas
+         1794044845.050  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.055  7305  7305 D Surface : lockCanvas
+         1794044845.057  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.069  7305  7305 D Surface : lockCanvas
+         1794044845.071  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.088  7305  7305 D Surface : lockCanvas
+         1794044845.096  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.101  7305  7305 D Surface : lockCanvas
+         1794044845.111  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.117  7305  7305 D Surface : lockCanvas
+         1794044845.124  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.135  7305  7305 D Surface : lockCanvas
+         1794044845.139  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.152  7305  7305 D Surface : lockCanvas
+         1794044845.154  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.170  7305  7305 D Surface : lockCanvas
+         1794044845.179  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.186  7305  7305 D Surface : lockCanvas
+         1794044845.192  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.203  7305  7305 D Surface : lockCanvas
+         1794044845.207  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.220  7305  7305 D Surface : lockCanvas
+         1794044845.222  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.244  7305  7305 D Surface : lockCanvas
+         1794044845.247  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.261  7305  7305 D Surface : lockCanvas
+         1794044845.264  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.279  7305  7305 D Surface : lockCanvas
+         1794044845.288  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.295  7305  7305 D Surface : lockCanvas
+         1794044845.301  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.313  7305  7305 D Surface : lockCanvas
+         1794044845.316  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.329  7305  7305 D Surface : lockCanvas
+         1794044845.332  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.355  7305  7305 D Surface : lockCanvas
+         1794044845.358  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.371  7305  7305 D Surface : lockCanvas
+         1794044845.374  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.389  7305  7305 D Surface : lockCanvas
+         1794044845.398  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.405  7305  7305 D Surface : lockCanvas
+         1794044845.411  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.422  7305  7305 D Surface : lockCanvas
+         1794044845.425  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.443  7305  7305 D Surface : lockCanvas
+         1794044845.452  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.459  7305  7305 D Surface : lockCanvas
+         1794044845.479  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.483  7305  7305 D Surface : lockCanvas
+         1794044845.507  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.511  7305  7305 D Surface : lockCanvas
+         1794044845.521  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.525  7305  7305 D Surface : lockCanvas
+         1794044845.547  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.550  7305  7305 D Surface : lockCanvas
+         1794044845.561  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.566  7305  7305 D Surface : lockCanvas
+         1794044845.589  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.594  7305  7305 D Surface : lockCanvas
+         1794044845.602  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.606  7305  7305 D Surface : lockCanvas
+         1794044845.615  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.619  7305  7305 D Surface : lockCanvas
+         1794044845.642  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.646  7305  7305 D Surface : lockCanvas
+         1794044845.656  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.663  7305  7305 D Surface : lockCanvas
+         1794044845.684  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.688  7305  7305 D Surface : lockCanvas
+         1794044845.697  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.703  7305  7305 D Surface : lockCanvas
+         1794044845.725  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.729  7305  7305 D Surface : lockCanvas
+         1794044845.738  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.743  7305  7305 D Surface : lockCanvas
+         1794044845.766  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.772  7305  7305 D Surface : lockCanvas
+         1794044845.781  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.790  7305  7305 D Surface : lockCanvas
+         1794044845.794  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.806  7305  7305 D Surface : lockCanvas
+         1794044845.809  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.830  7305  7305 D Surface : lockCanvas
+         1794044845.836  7305  7305 E RippleDrawable: The RippleDrawable.STYLE_PATTERNED animation is not supported for a non-hardware accelerated Canvas. Skipping animation.
+         1794044845.848  7305  7305 D Surface : lockCanvas
+         1794044846.604  7305  7305 D Surface : lockCanvas
+         1794044847.602  7305  7305 D Surface : lockCanvas
+         1794044848.606  7305  7305 D Surface : lockCanvas
+         1794044849.609  7305  7305 D Surface : lockCanvas
+         1794044850.621  7305  7305 D Surface : lockCanvas
+         1794044851.609  7305  7305 D Surface : lockCanvas
+         1794044852.630  7305  7305 D Surface : lockCanvas
+         1794044853.620  7305  7305 D Surface : lockCanvas
+         1794044854.621  7305  7305 D Surface : lockCanvas
+         1794044855.623  7305  7305 D Surface : lockCanvas
+         1794044856.630  7305  7305 D Surface : lockCanvas
+         1794044857.623  7305  7305 D Surface : lockCanvas
+         1794044858.625  7305  7305 D Surface : lockCanvas
+         1794044859.645  7305  7305 D Surface : lockCanvas
+         1794044860.638  7305  7305 D Surface : lockCanvas
+         1794044861.651  7305  7305 D Surface : lockCanvas
+         1794044862.641  7305  7305 D Surface : lockCanvas
+         1794044863.645  7305  7305 D Surface : lockCanvas
+         1794044864.644  7305  7305 D Surface : lockCanvas
+         1794044865.656  7305  7305 D Surface : lockCanvas
+         1794044866.666  7305  7305 D Surface : lockCanvas
+         1794044867.662  7305  7305 D Surface : lockCanvas
+         1794044868.669  7305  7305 D Surface : lockCanvas
+         1794044869.658  7305  7305 D Surface : lockCanvas
+         1794044870.668  7305  7305 D Surface : lockCanvas
+         1794044871.681  7305  7305 D Surface : lockCanvas
+         1794044872.679  7305  7305 D Surface : lockCanvas
+         1794044873.675  7305  7305 D Surface : lockCanvas
+         1794044874.687  7305  7305 D Surface : lockCanvas
+         1794044875.690  7305  7305 D Surface : lockCanvas
+         1794044876.682  7305  7305 D Surface : lockCanvas
+         1794044877.686  7305  7305 D Surface : lockCanvas

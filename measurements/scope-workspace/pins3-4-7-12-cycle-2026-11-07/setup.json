@@ -1,0 +1,13 @@
+{
+  "scope": "RIGOL TECHNOLOGIES,DS1074Z,DS1ZA162953663,00.04.05.SP2",
+  "ground_pin": 1,
+  "channels": {
+    "CH1": 3,
+    "CH2": 7,
+    "CH3": 4,
+    "CH4": 12
+  },
+  "authorization": "User requested another LoRa cycle with this mapping",
+  "trigger": "Force after WAIT, CH2 level -4 V (scope only)",
+  "original_stay_on_while_plugged_in": "0"
+}

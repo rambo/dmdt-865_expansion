@@ -1,0 +1,1 @@
+adb: error: failed to stat remote object '/vendor_dlkm/lib/modules/expand_module.ko': Permission denied

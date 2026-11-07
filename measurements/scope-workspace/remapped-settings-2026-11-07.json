@@ -1,0 +1,108 @@
+{
+  "utc": "2026-11-07T09:40:08.048976+00:00",
+  "channel_to_pin": {
+    "CHAN1": 6,
+    "CHAN2": 7,
+    "CHAN3": 3,
+    "CHAN4": 8
+  },
+  "ground_reference": "Awaiting user clarification; no pin voltages may be inferred",
+  "queries": [
+    {
+      "command": "*IDN?",
+      "response": "RIGOL TECHNOLOGIES,DS1074Z,DS1ZA162953663,00.04.05.SP2"
+    },
+    {
+      "command": ":TRIG:STAT?",
+      "response": "AUTO"
+    },
+    {
+      "command": ":TIM:MAIN:SCAL?",
+      "response": "5.0000000e-03"
+    },
+    {
+      "command": ":TIM:MAIN:OFFS?",
+      "response": "0.0000000e+00"
+    },
+    {
+      "command": ":CHAN1:DISP?",
+      "response": "1"
+    },
+    {
+      "command": ":CHAN1:COUP?",
+      "response": "DC"
+    },
+    {
+      "command": ":CHAN1:PROB?",
+      "response": "1.000000e+01"
+    },
+    {
+      "command": ":CHAN1:SCAL?",
+      "response": "1.000000e+00"
+    },
+    {
+      "command": ":CHAN1:OFFS?",
+      "response": "1.000000e-01"
+    },
+    {
+      "command": ":CHAN2:DISP?",
+      "response": "1"
+    },
+    {
+      "command": ":CHAN2:COUP?",
+      "response": "DC"
+    },
+    {
+      "command": ":CHAN2:PROB?",
+      "response": "1.000000e+01"
+    },
+    {
+      "command": ":CHAN2:SCAL?",
+      "response": "1.000000e+00"
+    },
+    {
+      "command": ":CHAN2:OFFS?",
+      "response": "-1.200000e-01"
+    },
+    {
+      "command": ":CHAN3:DISP?",
+      "response": "1"
+    },
+    {
+      "command": ":CHAN3:COUP?",
+      "response": "DC"
+    },
+    {
+      "command": ":CHAN3:PROB?",
+      "response": "1.000000e+01"
+    },
+    {
+      "command": ":CHAN3:SCAL?",
+      "response": "1.000000e+00"
+    },
+    {
+      "command": ":CHAN3:OFFS?",
+      "response": "-3.200000e-01"
+    },
+    {
+      "command": ":CHAN4:DISP?",
+      "response": "1"
+    },
+    {
+      "command": ":CHAN4:COUP?",
+      "response": "DC"
+    },
+    {
+      "command": ":CHAN4:PROB?",
+      "response": "1.000000e+01"
+    },
+    {
+      "command": ":CHAN4:SCAL?",
+      "response": "1.000000e+00"
+    },
+    {
+      "command": ":CHAN4:OFFS?",
+      "response": "-5.200000e-01"
+    }
+  ]
+}

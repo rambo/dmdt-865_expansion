@@ -1,0 +1,107 @@
+T865 expansion port: pin 12 confirmed WK2 TX — 2026-11-07
+
+FOLLOW-UP: IDLE DC MEASUREMENT
+Full sequential meter map: EXPANSION-PIN-MAP-2026-11-07.txt. Latest readings
+add pin 8=1 mV, 7=3.3 V, 6=36 mV, 5=1.5 V, 4=1.79 V, 3=0 mV, and
+pin 2 initially 2.5 V but falling. Pin 2 settled voltage remains unknown.
+Additional user meter readings, relative to pin 1 with UART held idle:
+  pad 9: 3.3 V     pad 10: 39 mV     pad 11: 2.49 V
+Pad 9 is a supply candidate; pad 10 low does not establish ground. Pad 11 is
+an RX candidate adjacent to confirmed TX on pad 12, but direction/function
+remains unverified. No loopback or RX injection was performed. Pin 10's earlier
+scope ~0.24 V and current 39 mV were separate measurements with changed probes;
+contact/reference differences remain possible. Do not infer a state transition.
+T865UartTx v1.1 now holds WK2 open at 9600/8N1 without writes. User reports
+pin 12 measures 2.5 V against pin 1 and 2.464 V against a cradle GND pad.
+CH4 also read Vmax 3.44 V on pin 7 during the user's probe/channel check.
+The meter readings confirm TX idle around 2.5 V. The ~36 mV difference between
+references may be ground offset or measurement variation. Exact bridge supply
+and external-module RX thresholds remain unverified. Scope is now Auto sweep.
+The transmitting/live-trigger state described below records the earlier session.
+
+MAIN RESULT
+Backside pad 12 is the tablet's /dev/ttysWK2 transmit output, referenced to pad 1
+GND, using the user's local numbering. A separate ordinary Android app wrote
+20-byte ASCII frames once per second. Scope CH4 decoded eight exact copies:
+  UUUU T865 UART WK2<CR><LF>
+  55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a
+9600 baud, 8 data bits, no parity, one stop bit, noninverted, zero framing errors.
+This is an electrical identification of TX, not merely a successful write log.
+
+CURRENT MAPPING / REFERENCE
+Viewed from tablet backside, rows (1,2), (3,4), (5,6), (7,8), (9,10), (11,12).
+Ground clips: pad 1. CH1->pad 3, CH2->pad 7, CH3->pad 4, CH4->pad 12.
+Local numbering only; no OEM pinout has been obtained. Physical contacts and
+probe switches were not independently inspected; scope settings were DC/10x.
+
+THE NEWLY REQUESTED DMD LORA CYCLE (12:01 EET / 10:01 UTC)
+Exactly one requested enable/restore cycle was performed, original OFF restored.
+CH1/pad 3 reproduced the software-controlled high pulse: 684.312 ms at 1.65 V
+threshold, rising about +0.386936 s after scope trigger, falling at +1.071244 s.
+Peak was about 3.55 V with noise; off level about 0.10 V. This supports suspected
+CH3 contact misalignment as the explanation for the preceding flat pad-3 traces.
+It still does not distinguish switched supply from GPIO or uniquely assign
+kernel GPIO566 to pad 3, because both power and logical I/O1 changed together.
+Pad 7 remained about 3.29 V; pad 4 around 1.82 V. Pad 12 idled around 2.45 V,
+with a short burst that decoded as c0 c1 c2 c3 02 03 at 9600/8N1, zero framing
+errors. Its six-byte burst began +0.551432 s after the scope trigger.
+
+Driver logs again show /dev/expand power and I/O1 requests succeeding, GPIO566
+high, WK2 open at 9600/8N1, SleepConfig timeout without a module, then GPIO
+release/power-off (~684 ms apart). Seventh initialization failure again saved
+lora_enabled=false. No failure counters were cleared. No extra DMD cycle ran.
+Original scope settings and display setting 0 were restored after this cycle.
+The user then explicitly requested persistent keep-awake on all external power;
+stay_on_while_plugged_in is now 15. The tablet reports AC power, not USB power.
+
+OWN UART TEST APP AND SCOPE CAPTURE
+T865UartTx, package dev.t865.uarttx, is a separate Android Studio/Git project.
+Actual assembleDebug/lintDebug, native ASan/UBSan PTY tests, APK signature and
+ZIP alignment passed. It includes arm64-v8a/x86_64 and uses standard AGP 8.13.2,
+Gradle 8.13, Kotlin 2.2.21, SDK 36, NDK 27.2.12479018 and JDK17.
+
+Installed on this production tablet. Native open/configure and writes succeed
+as UID10204 / untrusted_app, with no root and no requested Android permissions.
+It sets raw 9600/8N1 with flow control off, sends the fixed 20-byte string about
+once per second, and logs each full write. Normal ADB Stop restored termios and
+closed the descriptor; subsequent Start resumed. A final build was reinstalled
+after normal Stop and is currently transmitting in the foreground.
+
+The own-app capture has 3,000,000 BYTE samples/channel at 4 us/sample (12 s).
+CH4 decoded 160 bytes in eight complete bursts, at approximately 1.001 s spacing.
+Threshold 1.2 V; each 0x55 bit is about 104 us. The decoder includes a synthetic
+UART self-check. Exact payload agreement and cadence identify this as WK2 TX.
+No expansion power/GPIO ioctl was sent by this app. DMD LoRa is off and its
+service absent. Thus WK2 TX works in the present state with pad 3 off, after the
+previous DMD cycles. This does NOT prove behavior from a cold boot.
+
+LIVE STATE / ADB COMMANDS
+The transmitter is left running for live probing. Scope is running in NORMAL
+trigger mode, CH4 falling edge 1.2 V, 5 ms/div, offset 0; it holds each captured
+burst until the next one. This scope setting is intentional, not an un-restored
+capture setting. Other probes remain on the mapping above.
+
+Install (if needed):
+  adb -d install -r T865UartTx-debug.apk
+Start:
+  adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez start true
+Stop normally / restore serial settings:
+  adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez stop true
+Logs:
+  adb -d logcat -v threadtime -s T865UartTx:I AndroidRuntime:E
+
+App also stops on leaving the foreground. A force-stop closes descriptors but
+cannot guarantee saved termios restoration; prefer the normal Stop command.
+Keep DMD and other WK2 users off: there is no cross-app serial lock.
+
+EVIDENCE / LIMITS
+pins3-4-7-12-cycle-2026-11-07/: DMD cycle raw data, UI, logcat, scripts, decoding.
+uart-wk2-pins3-4-7-12-2026-11-07/: own TX raw data, exact-frame decoder/result,
+app logs, live scope screen/settings, and device-state evidence. Each directory
+has SHA256SUMS.txt. T865UartTx/validation contains actual build/device evidence.
+Standalone PNGs in outputs show the DMD pulse, own TX overview and live waveform.
+
+Pad 12 high is observed near 2.45 V, not established as a nominal voltage rating.
+UART RX, input voltage tolerance, cold-boot enable sequencing, pad 8's role and
+radio/Meshtastic module interoperability remain untested. No external module is
+attached. Do not infer RX or safe external drive voltages from TX measurements.

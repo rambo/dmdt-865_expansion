@@ -1,0 +1,19 @@
+Sat Nov  7 09:10:55 UTC 2026
+T865
+mdt865
+mdt865_16_ngms_1.2.7 release-keys
+Topicon/mdt750_gms_lite/mdt750:16/mdt865_16_ngms_1.2.7/14ea5a25530:user/dev-keys
+Linux localhost 6.6.102-android15-8-4k #1 SMP PREEMPT Thu Jan  1 00:00:00 UTC 1970 aarch64 Toybox
+Linux version 6.6.102-android15-8-4k (kleaf@build-host) (Android (11368308, +pgo, +bolt, +lto, +mlgo, based on r510928) clang version 18.0.0 (https://android.googlesource.com/toolchain/llvm-project 477610d4d0d988e69dbc3fae4fe86bff3f07f2b5), LLD 18.0.0) #1 SMP PREEMPT Thu Jan  1 00:00:00 UTC 1970
+Enforcing
+uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0
+crw-rw-rw- 1 root system u:object_r:gpio_ctrl_device:s0   10, 107 2026-11-07 11:00 /dev/expand
+crw-rw---- 1 root system u:object_r:user_tty_device:s0   207,   5 2026-11-07 11:00 /dev/ttysWK0
+crw-rw-rw- 1 root system u:object_r:user_tty_device:s0   207,   6 2026-11-07 11:00 /dev/ttysWK1
+crw-rw-rw- 1 root system u:object_r:user_tty_device:s0   207,   7 2026-11-07 11:00 /dev/ttysWK2
+crw-rw-rw- 1 root system u:object_r:user_tty_device:s0   207,   8 2026-11-07 11:00 /dev/ttysWK3
+lrwxrwxrwx 1 root root 0 2026-11-07 11:10 /sys/devices/platform/odm/odm:expand@0/driver -> ../../../../bus/platform/drivers/expand
+10084  5998 com.thorkracing.dmd2launcher
+10177  7305 com.thorkracing.dmdLora
+    versionCode=2 minSdk=26 targetSdk=36
+    versionName=1.1

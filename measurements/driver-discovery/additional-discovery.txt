@@ -1,0 +1,34 @@
+
+
+package:com.freeme.factory
+ls: /sdcard/Android/data/hk.topicon.remotecontrol/cache: No such file or directory
+ls: /storage/emulated/0/Android/data/hk.topicon.remotecontrol/cache: No such file or directory
+total 0
+drwxr-xr-x 2 root root 0 2026-11-06 21:47 .
+drwxr-xr-x 4 root root 0 2026-11-06 21:47 ..
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 0-0014 -> ../../../devices/platform/11007000.i2c0/i2c-0/0-0014
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 2-000c -> ../../../devices/platform/11009000.i2c2/i2c-2/2-000c
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 2-0011 -> ../../../devices/platform/11009000.i2c2/i2c-2/2-0011
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 2-001a -> ../../../devices/platform/11009000.i2c2/i2c-2/2-001a
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 2-0050 -> ../../../devices/platform/11009000.i2c2/i2c-2/2-0050
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 2-0060 -> ../../../devices/platform/11009000.i2c2/i2c-2/2-0060
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 3-0008 -> ../../../devices/platform/1100f000.i2c3/i2c-3/3-0008
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 4-0012 -> ../../../devices/platform/11011000.i2c4/i2c-4/4-0012
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 4-0021 -> ../../../devices/platform/11011000.i2c4/i2c-4/4-0021
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 4-002d -> ../../../devices/platform/11011000.i2c4/i2c-4/4-002d
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 4-0050 -> ../../../devices/platform/11011000.i2c4/i2c-4/4-0050
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 4-0052 -> ../../../devices/platform/11011000.i2c4/i2c-4/4-0052
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 5-0034 -> ../../../devices/platform/11016000.i2c5/i2c-5/5-0034
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 6-004e -> ../../../devices/platform/1100d000.i2c6/i2c-6/6-004e
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 7-0034 -> ../../../devices/platform/11004000.i2c7/i2c-7/7-0034
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 7-004b -> ../../../devices/platform/11004000.i2c7/i2c-7/7-004b
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 7-0053 -> ../../../devices/platform/11004000.i2c7/i2c-7/7-0053
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-0 -> ../../../devices/platform/11007000.i2c0/i2c-0
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-1 -> ../../../devices/platform/11008000.i2c1/i2c-1
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-2 -> ../../../devices/platform/11009000.i2c2/i2c-2
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-3 -> ../../../devices/platform/1100f000.i2c3/i2c-3
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-4 -> ../../../devices/platform/11011000.i2c4/i2c-4
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-5 -> ../../../devices/platform/11016000.i2c5/i2c-5
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-6 -> ../../../devices/platform/1100d000.i2c6/i2c-6
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-7 -> ../../../devices/platform/11004000.i2c7/i2c-7
+lrwxrwxrwx 1 root root 0 2026-11-06 21:47 i2c-8 -> ../../../devices/platform/11005000.i2c8/i2c-8

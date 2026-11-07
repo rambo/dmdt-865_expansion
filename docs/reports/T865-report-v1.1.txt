@@ -1,0 +1,87 @@
+T865 Port Probe 1.1 — 2026-11-06T18:13:14.005446Z
+Model: Topicon T865
+Android: 14, API 34
+ABIs: arm64-v8a, armeabi-v7a, armeabi
+Process: pid=22853 uid=10192 euid=10192 gid=10192
+Supplementary gids: 9997 20192 50192
+Mode: READ-ONLY OPEN/CLOSE PROBE
+Probe flags: O_RDONLY | O_NONBLOCK | O_NOCTTY | O_CLOEXEC | O_NOFOLLOW
+Explicit SPI targets: /dev/spidev0.1 through /dev/spidev0.6; /dev/spidev0.0 excluded.
+No device read/write/ioctl/termios. Open/close may itself affect hardware.
+
+/proc/self/attr/current
+  value: u:r:untrusted_app:s0:c192,c256,c512,c768
+/sys/fs/selinux/enforce
+  metadata open: -1, errno=13 (EACCES: Permission denied)
+  enforce value 1=Enforcing, 0=Permissive; unreadable=unknown.
+
+/dev/ttysWK0
+  lstat: -1, errno=13 (EACCES: Permission denied)
+  SELinux label (lgetxattr): -1, errno=13 (EACCES: Permission denied)
+  device open: -1, errno=13 (EACCES: Permission denied)
+
+/dev/ttysWK1
+  type=character mode=0666 uid=0 gid=1000 rdev=207:6
+  SELinux label: u:object_r:user_tty_device:s0
+  device open: SUCCESS, errno=0 (no data/configuration calls)
+  device close: SUCCESS
+
+/dev/ttysWK2
+  type=character mode=0666 uid=0 gid=1000 rdev=207:7
+  SELinux label: u:object_r:user_tty_device:s0
+  device open: SUCCESS, errno=0 (no data/configuration calls)
+  device close: SUCCESS
+
+/dev/ttysWK3
+  type=character mode=0666 uid=0 gid=1000 rdev=207:8
+  SELinux label: u:object_r:user_tty_device:s0
+  device open: SUCCESS, errno=0 (no data/configuration calls)
+  device close: SUCCESS
+
+/dev/spidev0.1
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/spidev0.2
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/spidev0.3
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/spidev0.4
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/spidev0.5
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/spidev0.6
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+Directory: /dev
+  Explicit SPI targets are reported above and omitted here.
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Directory: /sys/class/spi_master
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Directory: /sys/bus/spi/devices
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Directory: /sys/class/spidev
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Interpretation: EACCES/EPERM may be DAC, SELinux or another restriction.
+Use a matching AVC denial to identify SELinux; missing logs are inconclusive.
+An empty/denied SPI listing does not establish absence of SPI hardware.
+Open success proves only that this app could open at this instant, not transfers.

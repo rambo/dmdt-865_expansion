@@ -1,0 +1,52 @@
+T865 Port Probe 1.0 — 2026-11-06T17:40:31.687669Z
+Model: Google sdk_gphone64_arm64
+Android: 14, API 34
+ABIs: arm64-v8a
+Process: pid=4407 uid=10193 euid=10193 gid=10193
+Supplementary gids: 9997 20193 50193
+Mode: READ-ONLY OPEN/CLOSE PROBE
+Probe flags: O_RDONLY | O_NONBLOCK | O_NOCTTY | O_CLOEXEC | O_NOFOLLOW
+No device read/write/ioctl/termios. Open/close may itself affect hardware.
+
+/proc/self/attr/current
+  value: u:r:untrusted_app:s0:c193,c256,c512,c768
+/sys/fs/selinux/enforce
+  metadata open: -1, errno=13 (EACCES: Permission denied)
+  enforce value 1=Enforcing, 0=Permissive; unreadable=unknown.
+
+/dev/ttysWK0
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/ttysWK1
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/ttysWK2
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+/dev/ttysWK3
+  lstat: -1, errno=2 (ENOENT: No such file or directory)
+  SELinux label (lgetxattr): -1, errno=2 (ENOENT: No such file or directory)
+  device open: -1, errno=2 (ENOENT: No such file or directory)
+
+Directory: /dev
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Directory: /sys/class/spi_master
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Directory: /sys/bus/spi/devices
+  opendir: -1, errno=13 (EACCES: Permission denied)
+
+Directory: /sys/class/spidev
+  opendir: -1, errno=2 (ENOENT: No such file or directory)
+
+Interpretation: EACCES/EPERM may be DAC, SELinux or another restriction.
+Use a matching AVC denial to identify SELinux; missing logs are inconclusive.
+An empty/denied SPI listing does not establish absence of SPI hardware.
+Open success proves only that this app could open at this instant, not transfers.

@@ -1,0 +1,69 @@
+[
+  {
+    "utc": "2026-11-07T10:12:46.563888+00:00",
+    "command": ":TIM:MAIN:SCAL 0.005"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564044+00:00",
+    "command": ":TIM:MAIN:OFFS 0"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564051+00:00",
+    "command": ":TRIG:MODE EDGE"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564056+00:00",
+    "command": ":TRIG:EDGE:SOUR CHAN4"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564060+00:00",
+    "command": ":TRIG:EDGE:SLOP NEG"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564065+00:00",
+    "command": ":TRIG:EDGE:LEV 1.2"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564068+00:00",
+    "command": ":TRIG:SWE NORM"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564071+00:00",
+    "command": ":RUN"
+  },
+  {
+    "utc": "2026-11-07T10:12:46.564075+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T10:12:47.261228+00:00",
+    "command": ":TIM:MAIN:SCAL?",
+    "response": "5.0000000e-03"
+  },
+  {
+    "utc": "2026-11-07T10:12:47.262532+00:00",
+    "command": ":TIM:MAIN:OFFS?",
+    "response": "0.0000000e+00"
+  },
+  {
+    "utc": "2026-11-07T10:12:47.263723+00:00",
+    "command": ":TRIG:EDGE:SOUR?",
+    "response": "CHAN4"
+  },
+  {
+    "utc": "2026-11-07T10:12:47.264916+00:00",
+    "command": ":TRIG:EDGE:SLOP?",
+    "response": "NEG"
+  },
+  {
+    "utc": "2026-11-07T10:12:47.266121+00:00",
+    "command": ":TRIG:EDGE:LEV?",
+    "response": "1.200000e+00"
+  },
+  {
+    "utc": "2026-11-07T10:12:47.267321+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "NORM"
+  }
+]

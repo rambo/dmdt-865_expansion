@@ -1,0 +1,7 @@
+1165:(allow appdomain user_tty_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+1166:(allow appdomain gpio_ctrl_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+package:/data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk
+    versionCode=14 minSdk=24 targetSdk=36
+    versionName=1.0.14
+    versionCode=5 minSdk=24 targetSdk=36
+    versionName=1.0.5

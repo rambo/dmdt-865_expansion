@@ -1,3 +1,15 @@
+* text=auto
+*.bin binary
+*.stl binary
+*.heic binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.pdf binary
+*.apk binary
+docs/reports/** -text
+measurements/** -text
+references/** -text
 /analysis/post-update-2026-11-07/off-state-trigger-validation/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
 /analysis/post-update-2026-11-07/off-state-trigger-validation/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
 /analysis/post-update-2026-11-07/off-state-trigger-validation/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
@@ -46,3 +58,58 @@
 /android/T865PortProbe/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
 /android/T865PortProbe/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
 /android/T865PortProbe/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107134632.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107134657.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107134749.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107151205.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107151256.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107151321.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107164853.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/originals/IMG20261107165024.heic filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107134632.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107134657.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107134749.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107151205.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107151256.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107151321.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107164853.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/photos/previews/IMG20261107165024.jpg filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/off-state-trigger-validation/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/off-state-trigger-validation/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/off-state-trigger-validation/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/off-state-trigger-validation/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins3-4-7-12-cycle-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/pins9-11-cycle-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/remapped-cycle-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/scope-workspace/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/measurements/selinux/plat_sepolicy.cil filter=lfs diff=lfs merge=lfs -text
+/references/connector-catalogues/degson.pdf filter=lfs diff=lfs merge=lfs -text
+/references/connector-catalogues/neltron.pdf filter=lfs diff=lfs merge=lfs -text
+/references/connector-catalogues/uwe6.pdf filter=lfs diff=lfs merge=lfs -text
+/references/connector-datasheets/Mill-Max-discrete-pogo-pins.pdf filter=lfs diff=lfs merge=lfs -text
+/references/fcc/Topicon-MDT865-internal-01-6401292.pdf filter=lfs diff=lfs merge=lfs -text
+/references/fcc/Topicon-MDT865-internal-02-6401295.pdf filter=lfs diff=lfs merge=lfs -text
+/references/fcc/inspection/ebyte-internal.png filter=lfs diff=lfs merge=lfs -text
+/references/fcc/inspection/mdt865-internal01-overview.png filter=lfs diff=lfs merge=lfs -text
+/references/fcc/inspection/mdt865-internal01-page1.png filter=lfs diff=lfs merge=lfs -text
+/references/fcc/inspection/mdt865-internal01-page2.png filter=lfs diff=lfs merge=lfs -text
+/references/fcc/inspection/mdt865-internal02-page1.png filter=lfs diff=lfs merge=lfs -text
+/references/fcc/inspection/mdt865-internal02-page2.png filter=lfs diff=lfs merge=lfs -text
+/references/radio-manuals/E220-900T22D_UserManual_EN_v1.0.pdf filter=lfs diff=lfs merge=lfs -text
+/references/uart-bridge/WK2124.pdf filter=lfs diff=lfs merge=lfs -text

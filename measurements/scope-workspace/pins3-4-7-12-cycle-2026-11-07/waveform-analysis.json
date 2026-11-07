@@ -1,0 +1,40 @@
+{
+  "ground_pin": 1,
+  "channels": {
+    "CH1": {
+      "pin": 3,
+      "min_V": 0.0,
+      "median_V": 0.09585938,
+      "max_V": 3.54679706,
+      "points": 3000000,
+      "sample_interval_s": 4e-06,
+      "pulse_first_s": 0.38693599999999995,
+      "pulse_last_s": 1.0712439999999999,
+      "pulse_width_s": 0.6843119999999999
+    },
+    "CH2": {
+      "pin": 7,
+      "min_V": 3.15046908,
+      "median_V": 3.29367222,
+      "max_V": 3.43687536,
+      "points": 3000000,
+      "sample_interval_s": 4e-06
+    },
+    "CH3": {
+      "pin": 4,
+      "min_V": 1.7748437499999998,
+      "median_V": 1.8228125,
+      "max_V": 1.8228125,
+      "points": 3000000,
+      "sample_interval_s": 4e-06
+    },
+    "CH4": {
+      "pin": 12,
+      "min_V": -0.09617188,
+      "median_V": 2.45238294,
+      "max_V": 2.54855482,
+      "points": 3000000,
+      "sample_interval_s": 4e-06
+    }
+  }
+}

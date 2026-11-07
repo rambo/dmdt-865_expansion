@@ -1,0 +1,46 @@
+lrwxrwxrwx 1 root root 0 2026-11-07 11:23 /sys/bus/gpio/devices/gpiochip0 -> ../../../devices/platform/10005000.pinctrl/gpiochip0
+
+/sys/devices/platform/10005000.pinctrl:
+total 0
+drwxr-xr-x   4 root root 0 2026-11-07 11:27 .
+drwxr-xr-x 416 root root 0 2026-11-07 11:00 ..
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:i2c:0-005d -> ../../virtual/devlink/platform:10005000.pinctrl--i2c:0-005d
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:i2c:3-0008 -> ../../virtual/devlink/platform:10005000.pinctrl--i2c:3-0008
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:i2c:6-004e -> ../../virtual/devlink/platform:10005000.pinctrl--i2c:6-004e
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:i2c:7-0053 -> ../../virtual/devlink/platform:10005000.pinctrl--i2c:7-0053
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:1000d000.pwrap:mt6358-pmic -> ../../virtual/devlink/platform:10005000.pinctrl--platform:1000d000.pwrap:mt6358-pmic
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:11003000.serial -> ../../virtual/devlink/platform:10005000.pinctrl--platform:11003000.serial
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:11007000.i2c -> ../../virtual/devlink/platform:10005000.pinctrl--platform:11007000.i2c
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:11220000.mt6768-afe-pcm -> ../../virtual/devlink/platform:10005000.pinctrl--platform:11220000.mt6768-afe-pcm
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:11230000.mmc -> ../../virtual/devlink/platform:10005000.pinctrl--platform:11230000.mmc
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:11240000.mmc -> ../../virtual/devlink/platform:10005000.pinctrl--platform:11240000.mmc
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:14000000.dispsys_config -> ../../virtual/devlink/platform:10005000.pinctrl--platform:14000000.dispsys_config
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:1a040000.kd_camera_hw1 -> ../../virtual/devlink/platform:10005000.pinctrl--platform:1a040000.kd_camera_hw1
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:droi_ldo -> ../../virtual/devlink/platform:10005000.pinctrl--platform:droi_ldo
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:fingerprint -> ../../virtual/devlink/platform:10005000.pinctrl--platform:fingerprint
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:flashlights_gpio -> ../../virtual/devlink/platform:10005000.pinctrl--platform:flashlights_gpio
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:mrdump_ext_rst -> ../../virtual/devlink/platform:10005000.pinctrl--platform:mrdump_ext_rst
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:mtkfb@0 -> ../../virtual/devlink/platform:10005000.pinctrl--platform:mtkfb@0
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:dc12v_input -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:dc12v_input
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:dc5v_input -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:dc5v_input
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:dock_gpio -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:dock_gpio
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:fixed_otg_en -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:fixed_otg_en
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:fixed_vdd_33v -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:fixed_vdd_33v
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:fixed_wk_33v@0 -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:fixed_wk_33v@0
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:ignition_gpio -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:ignition_gpio
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:odm:video_trigger_gpio -> ../../virtual/devlink/platform:10005000.pinctrl--platform:odm:video_trigger_gpio
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:rt9465_slave_chr -> ../../virtual/devlink/platform:10005000.pinctrl--platform:rt9465_slave_chr
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:soc:dsi_te -> ../../virtual/devlink/platform:10005000.pinctrl--platform:soc:dsi_te
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:sound -> ../../virtual/devlink/platform:10005000.pinctrl--platform:sound
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 consumer:platform:touch -> ../../virtual/devlink/platform:10005000.pinctrl--platform:touch
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 driver -> ../../../bus/platform/drivers/mt6768-pinctrl
+-?????????   ? ?    ?    ?                ? driver_override
+drwxr-xr-x   3 root root 0 2026-11-07 11:27 gpiochip0
+-?????????   ? ?    ?    ?                ? modalias
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 of_node -> ../../../firmware/devicetree/base/pinctrl
+drwxr-xr-x   2 root root 0 2026-11-07 11:27 power
+lrwxrwxrwx   1 root root 0 2026-11-07 11:27 subsystem -> ../../../bus/platform
+-?????????   ? ?    ?    ?                ? uevent
+ls: /sys/bus/gpio/devices/gpiochip0/base: No such file or directory
+ls: /sys/bus/gpio/devices/gpiochip0/label: No such file or directory
+ls: /sys/bus/gpio/devices/gpiochip0/ngpio: No such file or directory
