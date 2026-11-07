@@ -1,0 +1,5 @@
+Starting: Intent { cmp=dev.t865.uarttx/.MainActivity (has extras) }
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+Starting: Intent { cmp=dev.t865.uarttx/.MainActivity (has extras) }
+Warning: Activity not started, intent has been delivered to currently running top-most instance.
+PASS: ESP32 GPIO25 received 5 exact tablet UART frames (100 bytes)

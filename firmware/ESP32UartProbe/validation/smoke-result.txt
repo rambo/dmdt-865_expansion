@@ -1,0 +1,1 @@
+PASS: sequential 24-byte frames near 1 Hz, pause suppresses TX, resume restarts TX
