@@ -2,6 +2,11 @@ T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
 LATEST STATE: UART HELD IDLE FOR MULTIMETER — 2026-11-07
+Full sequential meter map now in EXPANSION-PIN-MAP-2026-11-07.txt:
+pin 2 initially 2.5 V, falling (settled value unknown); 3=0 mV; 4=1.79 V;
+5=1.5 V; 6=36 mV; 7=3.3 V; 8=1 mV; 9=3.3 V; 10=39 mV; 11=2.49 V;
+12=2.5 V. All relative to pin 1. Do not label low pads as ground: pin 3 is
+already known to pulse high. Pin 2's falling reading remains unclassified.
 User's additional meter readings against pin 1: pin 9=3.3 V, pin 10=39 mV,
 pin 11=2.49 V. Pin 11 is an RX candidate beside confirmed TX/pin 12; no RX
 injection/loopback has established it. Pin 10 low does NOT establish ground.

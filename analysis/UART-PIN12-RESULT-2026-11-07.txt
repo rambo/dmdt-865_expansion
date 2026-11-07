@@ -1,6 +1,9 @@
 T865 expansion port: pin 12 confirmed WK2 TX — 2026-11-07
 
 FOLLOW-UP: IDLE DC MEASUREMENT
+Full sequential meter map: EXPANSION-PIN-MAP-2026-11-07.txt. Latest readings
+add pin 8=1 mV, 7=3.3 V, 6=36 mV, 5=1.5 V, 4=1.79 V, 3=0 mV, and
+pin 2 initially 2.5 V but falling. Pin 2 settled voltage remains unknown.
 Additional user meter readings, relative to pin 1 with UART held idle:
   pad 9: 3.3 V     pad 10: 39 mV     pad 11: 2.49 V
 Pad 9 is a supply candidate; pad 10 low does not establish ground. Pad 11 is
