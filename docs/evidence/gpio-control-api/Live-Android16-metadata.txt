@@ -68,4 +68,3 @@ package:/data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1Pm
 
 $ adb -d shell sha256sum /data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk
 616a2c0be5960a9b7925dbd1eadd0006b3e26c37af8250cc7b6bdc5907d2c1cf  /data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk
-

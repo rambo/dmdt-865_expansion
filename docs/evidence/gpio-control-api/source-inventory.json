@@ -30,14 +30,14 @@
       "evidence": "docs/evidence/gpio-control-api/ExpandManager-call-sites.txt",
       "source_name": "ExpandManager.java",
       "source_sha256": "503d3618dd094012ee77f7c866f4b82d6818287020cd0f73d81be6cb111be52a",
-      "evidence_sha256": "421ab5ff9ab7eb80ce40e03de15f9f511de2f63f414a53cd8ca9911c7c526638",
+      "evidence_sha256": "880676e755b94bf898a8e0fa67a1872efab646934b7b08820a3ae84ff4d945be",
       "description": "Power/mode methods including MDT781-only M0/M1 guard."
     },
     {
       "evidence": "docs/evidence/gpio-control-api/Factory-GPIO-test-DEX-fallback.txt",
       "source_name": "ExpandTest-fallback.java",
       "source_sha256": "a5cad6ef593410dcee579dc96f5336c07c101dbb575ccb8cabeaf29b345d4635",
-      "evidence_sha256": "c1be6b8e4a0585fe05cc944e3c215ed7dc0ff8c1b1d7dd5d7cd82cbae0c01078",
+      "evidence_sha256": "0df9c10058e984370539b59312231ca8e473dc8cd37cc7628df560d3277bbe54",
       "description": "DEX instruction fallback recovers list {2,3,4,5} and write-to-1/read-from-list test sequence."
     },
     {
@@ -58,7 +58,7 @@
       "evidence": "docs/evidence/gpio-control-api/Factory16-GPIO-test-DEX-fallback.txt",
       "source_name": "Factory16-ExpandTest-fallback.java",
       "source_sha256": "9722b361749d04090c6e4366f5d90218a5c609d1e50ae496c01a34ec58c63e49",
-      "evidence_sha256": "b3d1effb4979b2c971737fab700b60de33ea4a07280fae3717422968c5ce15ef",
+      "evidence_sha256": "8a4ba81a939b5443b5331db7bc17ab26447f2e8339252f7483eb578211b64a0e",
       "description": "Android 16 factory constructor list and complete testGpioOpt fallback DEX argument flow."
     },
     {
@@ -72,7 +72,7 @@
       "evidence": "docs/evidence/gpio-control-api/Live-Android16-metadata.txt",
       "source_name": "Live-Android16-metadata.txt",
       "source_sha256": "ef92a9bc041c707eb13865e1198b8db205286a0bde06f49b2a5eded28bef36dc",
-      "evidence_sha256": "ef92a9bc041c707eb13865e1198b8db205286a0bde06f49b2a5eded28bef36dc",
+      "evidence_sha256": "3151590fba9e868c613984677fe9f8b8ce23d51cb631cbffdcb9ae47d1691bad",
       "description": "Read-only ADB metadata and access failures on current production firmware."
     }
   ],

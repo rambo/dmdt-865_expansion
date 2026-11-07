@@ -2,13 +2,13 @@ Decompiled ExpandManager: power and mode call sites. Line numbers refer to origi
 
 Lines 203-218:
 203:     }
-204: 
+204:
 205:     private final void powerOff(Position position) {
 206:         if ((Intrinsics.areEqual(position, Position.Left.INSTANCE) || Intrinsics.areEqual(position, Position.Right.INSTANCE)) && this.gpioControl.getIsExist()) {
 207:             this.gpioControl.setPower(position.getId(), false);
 208:         }
 209:     }
-210: 
+210:
 211:     /* JADX INFO: Access modifiers changed from: private */
 212:     public final void powerOn(Position position) {
 213:         if (Intrinsics.areEqual(position, Position.TtyS1.INSTANCE) || !this.gpioControl.getIsExist()) {

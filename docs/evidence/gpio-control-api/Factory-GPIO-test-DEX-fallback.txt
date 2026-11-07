@@ -169,4 +169,3 @@ Full testGpioOpt method:
             java.lang.Boolean r12 = kotlin.coroutines.jvm.internal.Boxing.boxBoolean(r9)
             return r12
     }
-
