@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(uarttx C)
+add_library(uarttx SHARED uart.c)
+target_compile_features(uarttx PRIVATE c_std_11)
+target_compile_options(uarttx PRIVATE -Wall -Wextra -Werror)
