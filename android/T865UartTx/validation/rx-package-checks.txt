@@ -1,0 +1,2 @@
+PASS: apksigner verify --verbose (v2 signature)
+PASS: zipalign -c -P 16 4

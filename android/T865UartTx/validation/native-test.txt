@@ -1,0 +1,1 @@
+PASS: real PTY bytes, raw 9600/8N1, errors, timeout, and termios restoration

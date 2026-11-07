@@ -1,0 +1,1 @@
+         1794050372.764 14314 14347 I T865UartTx: UART IDLE: WK2 open at 9600/8N1; no writes.

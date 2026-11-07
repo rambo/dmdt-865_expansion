@@ -1,0 +1,1 @@
+PASS: real PTY TX/RX bytes, empty nonblocking RX, raw 9600/8N1, errors, timeout, termios restoration

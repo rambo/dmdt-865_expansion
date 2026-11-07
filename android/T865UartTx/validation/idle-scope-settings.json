@@ -1,0 +1,12 @@
+{
+  "before": {
+    ":TRIG:SWE?": "AUTO",
+    ":TIM:MAIN:SCAL?": "5.0000000e-03",
+    ":TRIG:STAT?": "AUTO"
+  },
+  "after": {
+    ":TRIG:SWE?": "AUTO",
+    ":TRIG:STAT?": "AUTO"
+  },
+  "CH4_pin": "7 per user; no new pin mapping inferred"
+}
