@@ -1,7 +1,22 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-LATEST STATE: UART HELD IDLE FOR MULTIMETER — 2026-11-07
+LATEST STATE: RX PROBE PREPARATION, TX STILL IDLE — 2026-11-07
+User will use a 3.3 V MCU, likely ESP32, to identify RX. Start with candidate
+pin 11 only. Proposed bench network: MCU TX -> 3.3k -> divider node -> 4.7k
+probe resistor -> pin 11; node -> 10k -> common ground/pin 1. Nominal high
+2.481 V; current limiting reduces contention but does not establish pad safety.
+Verify the waveform at the actual pad before interpreting missing RX bytes.
+Full circuit, procedure, assumptions and sources in ../T865UartTx/RX-PROBE-WIRING.txt
+and the standalone outputs/RX-PROBE-WIRING-2026-11-07.txt.
+T865UartTx v1.2 installed; idle mode now polls/logs WK2 RX bytes with NO writes.
+Native PTY TX/RX tests and Android build/lint passed; normal Stop/reopen verified
+on tablet. One WK2 descriptor held open; no RX errors or TX frames in new process.
+No external MCU signal, loopback or power/GPIO command has been applied in this
+preparation. Pin 11 remains an unconfirmed RX candidate pending exact payload
+reception in Android. Keep the transmitter idle until requested.
+
+EARLIER STATE: UART HELD IDLE FOR MULTIMETER — 2026-11-07
 Full sequential meter map now in EXPANSION-PIN-MAP-2026-11-07.txt:
 pin 2 initially 2.5 V, falling (settled value unknown); 3=0 mV; 4=1.79 V;
 5=1.5 V; 6=36 mV; 7=3.3 V; 8=1 mV; 9=3.3 V; 10=39 mV; 11=2.49 V;

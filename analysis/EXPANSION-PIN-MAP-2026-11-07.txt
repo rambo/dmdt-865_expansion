@@ -1,6 +1,8 @@
 T865 expansion-pad DC map — user measurements, 2026-11-07
 
-UART state: WK2 held open at 9600/8N1; repeating writes stopped. DMD LoRa off.
+UART state: WK2 held open at 9600/8N1; TX idle. DMD LoRa off.
+T865UartTx v1.2 now polls/logs received bytes for the planned external-MCU test;
+no external signal has yet confirmed pin 11. See ../T865UartTx/RX-PROBE-WIRING.txt.
 Reference: pin 1. Backside rowwise numbering: (1,2)..(11,12).
 These are user-reported sequential multimeter readings, not simultaneous samples.
 
