@@ -21,6 +21,7 @@ class MainActivity : Activity() {
 
     // Only the worker accesses the native session and scheduled task.
     private var task: ScheduledFuture<*>? = null
+    private var opened = false
     private var count = 0L
     private lateinit var status: TextView
     private lateinit var start: Button
@@ -63,7 +64,28 @@ class MainActivity : Activity() {
 
     private fun handle(intent: Intent) {
         if (intent.getBooleanExtra("stop", false)) halt()
+        else if (intent.getBooleanExtra("idle", false)) holdIdle()
         else if (intent.getBooleanExtra("start", false)) begin()
+    }
+
+    private fun holdIdle() {
+        start.isEnabled = false
+        stop.isEnabled = true
+        window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
+        worker.execute {
+            task?.cancel(false)
+            task = null
+            try {
+                if (!opened) { openUart(); opened = true }
+                val message = "UART IDLE: WK2 open at 9600/8N1; no writes."
+                Log.i(TAG, message)
+                runOnUiThread {
+                    if (!isDestroyed) { status.text = message; start.isEnabled = true }
+                }
+            } catch (error: Exception) {
+                finishSession("Idle open failed: $error")
+            }
+        }
     }
 
     private fun idle(message: String) {
@@ -82,7 +104,7 @@ class MainActivity : Activity() {
         status.text = "Opening WK2…"
         worker.execute {
             try {
-                openUart()
+                if (!opened) { openUart(); opened = true }
                 count = 0
                 Log.i(TAG, "OPEN /dev/ttysWK2 9600/8N1 raw, flow control off; app UID=${android.os.Process.myUid()}")
                 task = worker.scheduleWithFixedDelay({
@@ -106,6 +128,7 @@ class MainActivity : Activity() {
         task = null
         var result = message
         try { closeUart() } catch (error: Exception) { result += "\nRestore/close failed: $error" }
+        opened = false
         Log.i(TAG, result)
         runOnUiThread { idle(result) }
     }

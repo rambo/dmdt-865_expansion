@@ -8,4 +8,12 @@
 - ADB normal Stop succeeded, no frames continued after Stop, and Start resumed. Final build was reinstalled after normal Stop. Device UI and filtered app logcat are retained.
 - Scope: pin 12 / CH4 decoded eight exact copies of `UUUU T865 UART WK2\r\n`, 160 bytes, 9600/8N1 noninverted, zero framing errors. Ground pin 1. Separate raw capture and decoder are retained in T865PortProbe/analysis/uart-wk2-pins3-4-7-12-2026-11-07/.
 
-No UART RX, external module compatibility, voltage tolerance, cold-boot power sequencing, other UARTs, or Meshtastic traffic was tested. The app is left transmitting in the foreground for live probing. Scope identification relies on the user's stated physical pad placement.
+No UART RX, external module compatibility, voltage tolerance, cold-boot power sequencing, other UARTs, or Meshtastic traffic was tested. That initial session transmitted in the foreground for live probing; current state is recorded below. Scope identification relies on the user's stated physical pad placement.
+
+## Version 1.1: UART idle hold
+
+Actual `assembleDebug lintDebug` PASS. Added ADB `--ez idle true`: cancels periodic writes and keeps WK2 open/configured, or opens it without sending if initially stopped. Start resumes using that open session; Stop restores/closes as before. Native code is unchanged.
+
+Installed on the tablet after normal Stop. UI and logcat show UART IDLE, with no TX frames from the new process. ADB `run-as` descriptor readback confirms fd 111 points to `/dev/ttysWK2`. It remains open in the foreground, with no repeating writes, for the user's multimeter measurement. Active-TX-to-idle cancellation was not exercised on hardware in this update, to avoid sending new frames during the requested idle measurement. Existing source closes the session on leaving the foreground.
+
+User reports CH4 Vmax 3.44 V on pin 7. The scope is now in Auto sweep for current DC levels. Pin 12's multimeter reading is pending. All-external-power keep-awake remains 15.

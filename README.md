@@ -20,6 +20,14 @@ Stop normally and restore the original serial settings:
 adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez stop true
 ```
 
+Hold TX idle for DC measurements, keeping the descriptor open at 9600/8N1 while cancelling all repeating writes (version 1.1):
+
+```sh
+adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez idle true
+```
+
+Start resumes transmission from idle hold. Stop restores termios and closes the descriptor. Idle hold also ends when the activity leaves the foreground.
+
 The screen also has Start and Stop buttons. Launching from the launcher does not start a new transmission automatically. Returning Home, locking the device, or otherwise leaving the foreground stops transmission and closes the descriptor. The activity keeps the screen awake during transmission. There is no background service or automatic boot start.
 
 Emergency process stop:
