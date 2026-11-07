@@ -1,0 +1,20 @@
+{
+  "units": "mm",
+  "mount_spacing": [32.0, 40.0],
+  "mount_outside_thread_opening_spans": [33.55, 41.37],
+  "thread_opening_diameter": 1.75,
+  "insert_outside_diameter": 3.3,
+  "contact_opening_diameter": 1.6,
+  "pin11_outside_edge_spans": [8.58, 15.01],
+  "pin11_shortest_thread_to_contact_edge_gap": 11.86,
+  "pin11_repeat_diagonal_edge_gaps": [11.75, 12.0],
+  "approx_measurement_error": 0.1,
+  "variant_pin11_x": [5.5, 6.0, 6.5, 7.0],
+  "contact_pitch": 3.0,
+  "mount_clearance_diameter": 2.4,
+  "inspection_hole_diameter": 1.6,
+  "plate_thickness": 1.2,
+  "label_height": 0.6,
+  "print_gap": 6.0,
+  "edge_margin": 4.0
+}

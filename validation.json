@@ -1,0 +1,165 @@
+{
+  "result": "PASS",
+  "plates": [
+    {
+      "result": "PASS",
+      "plate": "P1",
+      "units": "mm",
+      "mount_spacing": [
+        32.0,
+        40.0
+      ],
+      "calculated_mount_spacing": [
+        31.799999999999997,
+        39.62
+      ],
+      "pin11": [
+        5.5,
+        12.367
+      ],
+      "holes": 16,
+      "photo_only_pin11": [
+        6.13,
+        12.56
+      ],
+      "pin11_centre_diagonal": 13.535,
+      "reconstructed_shortest_edge_gap": 11.86,
+      "vertical_photo_span_residual_mm": -0.1928570397201259,
+      "contact_angle_status": "approximate; horizontal photo offset has no hard stop",
+      "mesh_watertight": true,
+      "mesh_bodies": 1,
+      "mesh_euler_number": -30,
+      "mesh_extents": [
+        40.0,
+        48.0,
+        1.7999999523162842
+      ],
+      "mesh_volume_mm3": 2266.2247673128572,
+      "dxf_audit_errors": 0,
+      "dxf_circles": 16,
+      "raised_labels_unioned_to_plate": true
+    },
+    {
+      "result": "PASS",
+      "plate": "P2",
+      "units": "mm",
+      "mount_spacing": [
+        32.0,
+        40.0
+      ],
+      "calculated_mount_spacing": [
+        31.799999999999997,
+        39.62
+      ],
+      "pin11": [
+        6.0,
+        12.132
+      ],
+      "holes": 16,
+      "photo_only_pin11": [
+        6.13,
+        12.56
+      ],
+      "pin11_centre_diagonal": 13.535,
+      "reconstructed_shortest_edge_gap": 11.86,
+      "vertical_photo_span_residual_mm": -0.427554863095402,
+      "contact_angle_status": "approximate; horizontal photo offset has no hard stop",
+      "mesh_watertight": true,
+      "mesh_bodies": 1,
+      "mesh_euler_number": -30,
+      "mesh_extents": [
+        40.0,
+        48.0,
+        1.7999999523162842
+      ],
+      "mesh_volume_mm3": 2267.0677881721217,
+      "dxf_audit_errors": 0,
+      "dxf_circles": 16,
+      "raised_labels_unioned_to_plate": true
+    },
+    {
+      "result": "PASS",
+      "plate": "P3",
+      "units": "mm",
+      "mount_spacing": [
+        32.0,
+        40.0
+      ],
+      "calculated_mount_spacing": [
+        31.799999999999997,
+        39.62
+      ],
+      "pin11": [
+        6.5,
+        11.872
+      ],
+      "holes": 16,
+      "photo_only_pin11": [
+        6.13,
+        12.56
+      ],
+      "pin11_centre_diagonal": 13.535,
+      "reconstructed_shortest_edge_gap": 11.86,
+      "vertical_photo_span_residual_mm": -0.6879224648758289,
+      "contact_angle_status": "approximate; horizontal photo offset has no hard stop",
+      "mesh_watertight": true,
+      "mesh_bodies": 1,
+      "mesh_euler_number": -30,
+      "mesh_extents": [
+        40.0,
+        48.0,
+        1.7999999523162842
+      ],
+      "mesh_volume_mm3": 2267.0469735635816,
+      "dxf_audit_errors": 0,
+      "dxf_circles": 16,
+      "raised_labels_unioned_to_plate": true
+    },
+    {
+      "result": "PASS",
+      "plate": "P4",
+      "units": "mm",
+      "mount_spacing": [
+        32.0,
+        40.0
+      ],
+      "calculated_mount_spacing": [
+        31.799999999999997,
+        39.62
+      ],
+      "pin11": [
+        7.0,
+        11.584
+      ],
+      "holes": 16,
+      "photo_only_pin11": [
+        6.13,
+        12.56
+      ],
+      "pin11_centre_diagonal": 13.535,
+      "reconstructed_shortest_edge_gap": 11.86,
+      "vertical_photo_span_residual_mm": -0.9756905687045787,
+      "contact_angle_status": "approximate; horizontal photo offset has no hard stop",
+      "mesh_watertight": true,
+      "mesh_bodies": 1,
+      "mesh_euler_number": -30,
+      "mesh_extents": [
+        40.0,
+        48.0,
+        1.7999999523162842
+      ],
+      "mesh_volume_mm3": 2267.2228632680185,
+      "dxf_audit_errors": 0,
+      "dxf_circles": 16,
+      "raised_labels_unioned_to_plate": true
+    }
+  ],
+  "combined_watertight": true,
+  "combined_bodies": 4,
+  "combined_dxf_circles": 64,
+  "combined_extents": [
+    86.0,
+    102.0,
+    1.7999999523162842
+  ]
+}
