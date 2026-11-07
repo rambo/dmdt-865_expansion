@@ -1,7 +1,18 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-LATEST: PIN 12 CONFIRMED /dev/ttysWK2 TX — 2026-11-07
+LATEST STATE: UART HELD IDLE FOR MULTIMETER — 2026-11-07
+User reports CH4 reads Vmax 3.44 V on pin 7; awaiting pin-12 DC multimeter reading.
+T865UartTx v1.1 is installed and holding WK2 open at 9600/8N1 with NO writes.
+ADB idle command: am start -n dev.t865.uarttx/.MainActivity --ez idle true
+UI/logs verify IDLE, and run-as fd readback confirms /dev/ttysWK2 held open.
+Do not resume sending until requested. App leaving foreground restores/closes.
+Scope intentionally changed to AUTO sweep to show present DC levels after
+user moved CH4 to pin 7. Keep-awake on all external power remains 15.
+Earlier TX mapping/electrical captures below are historical, not current probe
+contact readbacks. Pin 12 remains electrically verified WK2 TX.
+
+EARLIER: PIN 12 CONFIRMED /dev/ttysWK2 TX — 2026-11-07
 Current probes: CH1->pin 3, CH2->pin 7, CH3->pin 4, CH4->pin 12; ground pin 1.
 One additional requested DMD cycle reproduced pin 3 high for 684.312 ms, and
 pin 12 decoded DMD's c0 c1 c2 c3 02 03 bytes at 9600/8N1. OFF restored afterward.
