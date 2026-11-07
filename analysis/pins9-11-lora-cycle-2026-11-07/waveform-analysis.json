@@ -1,0 +1,49 @@
+{
+  "ground_pin": 1,
+  "channels": {
+    "CH1": {
+      "pin": 10,
+      "min_V": 0.14378907,
+      "median_V": 0.23964844999999999,
+      "max_V": 0.33550782999999995,
+      "distinct_ADC_codes": 5,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "start_s": -1.2,
+      "end_s": 10.799996
+    },
+    "CH2": {
+      "pin": 9,
+      "min_V": 3.1982034599999998,
+      "median_V": 3.3414066,
+      "max_V": 3.43687536,
+      "distinct_ADC_codes": 6,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "start_s": -1.2,
+      "end_s": 10.799996
+    },
+    "CH3": {
+      "pin": 3,
+      "min_V": 0.0,
+      "median_V": 0.0,
+      "max_V": 0.0,
+      "distinct_ADC_codes": 1,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "start_s": -1.2,
+      "end_s": 10.799996
+    },
+    "CH4": {
+      "pin": 11,
+      "min_V": 2.35621106,
+      "median_V": 2.45238294,
+      "max_V": 2.59664076,
+      "distinct_ADC_codes": 6,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "start_s": -1.2,
+      "end_s": 10.799996
+    }
+  }
+}

@@ -1,7 +1,19 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-LATEST REMAPPED ENABLE CYCLE 2026-11-07 11:47 EET
+LATEST PINS 9–11 CYCLE 2026-11-07 11:54 EET
+User requested another cycle after remapping: CH1->pin 10, CH2->pin 9,
+CH3->pin 3, CH4->pin 11; ground pin 1. Cycle completed and OFF/display setting 0/
+original scope settings restored/verified. Pin 9 stayed ~3.34 V, pin 11 ~2.45 V,
+pin 10 ~0.24 V, with no full logic-level UART transitions captured. CH3 remained
+one constant code near 0 V; physical contact still unverified after the user's
+possible-misalignment report. Do not overturn the earlier CH2/pin-3 pulse.
+Driver again logged power/GPIO success, WK2 9600/8N1, then missing-module timeout
+and shutdown (~691 ms). Sixth init failure again saved lora_enabled=false.
+See PINS9-11-LORA-CYCLE-2026-11-07.txt and pins9-11-lora-cycle-2026-11-07/.
+Pin functions remain unassigned; pin 8 is not confirmed GND. No extra retry run.
+
+EARLIER REMAPPED ENABLE CYCLE 2026-11-07 11:47 EET
 One newly requested cycle completed; OFF, display setting 0 and scope setup
 restored/verified. New mapping: CH1->6, CH2->7, CH3->3, CH4->8; ground pin 1.
 Pin 7 stayed about 3.3 V; pins 6/8 showed no UART-like full-level transitions.
