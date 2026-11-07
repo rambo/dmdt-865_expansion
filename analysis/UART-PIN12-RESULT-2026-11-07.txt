@@ -1,6 +1,13 @@
 T865 expansion port: pin 12 confirmed WK2 TX — 2026-11-07
 
 FOLLOW-UP: IDLE DC MEASUREMENT
+Additional user meter readings, relative to pin 1 with UART held idle:
+  pad 9: 3.3 V     pad 10: 39 mV     pad 11: 2.49 V
+Pad 9 is a supply candidate; pad 10 low does not establish ground. Pad 11 is
+an RX candidate adjacent to confirmed TX on pad 12, but direction/function
+remains unverified. No loopback or RX injection was performed. Pin 10's earlier
+scope ~0.24 V and current 39 mV were separate measurements with changed probes;
+contact/reference differences remain possible. Do not infer a state transition.
 T865UartTx v1.1 now holds WK2 open at 9600/8N1 without writes. User reports
 pin 12 measures 2.5 V against pin 1 and 2.464 V against a cradle GND pad.
 CH4 also read Vmax 3.44 V on pin 7 during the user's probe/channel check.
