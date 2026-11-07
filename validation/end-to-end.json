@@ -1,0 +1,38 @@
+{
+  "ESP32": {
+    "TX_GPIO": 26,
+    "RX_GPIO": 25,
+    "board": "ESP32-PICO-D4 revision v1.0",
+    "UART": 1,
+    "baud": 9600,
+    "format": "8N1"
+  },
+  "tablet": {
+    "RX_pad": 11,
+    "TX_pad": 12,
+    "ground_pad": 1,
+    "UART": "/dev/ttysWK2",
+    "app": "dev.t865.uarttx"
+  },
+  "wiring_confirmed_by_user": true,
+  "ESP32_to_tablet": {
+    "USB_smoke_counters": [
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "all_seen_in_tablet_RX": true
+  },
+  "tablet_to_ESP32": {
+    "exact_frames": 5,
+    "total_bytes": 100
+  },
+  "final_state": {
+    "ESP32_TX": "running at about 1 Hz",
+    "tablet_TX": "idle; RX monitor active"
+  },
+  "limits": "No loaded voltage-margin, cold-boot tablet, or radio/Meshtastic interoperability test."
+}
