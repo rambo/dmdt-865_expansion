@@ -17,3 +17,16 @@ Actual `assembleDebug lintDebug` PASS. Added ADB `--ez idle true`: cancels perio
 Installed on the tablet after normal Stop. UI and logcat show UART IDLE, with no TX frames from the new process. ADB `run-as` descriptor readback confirms fd 111 points to `/dev/ttysWK2`. It remains open in the foreground, with no repeating writes, for the user's multimeter measurement. Active-TX-to-idle cancellation was not exercised on hardware in this update, to avoid sending new frames during the requested idle measurement. Existing source closes the session on leaving the foreground.
 
 User reports CH4 Vmax 3.44 V on pin 7. The scope is now in Auto sweep for current DC levels. The user then measured pin 12 at 2.5 V against pin 1 and 2.464 V against a cradle GND pad. These are user-reported meter readings, not remotely acquired samples. The approximately 36 mV difference may reflect ground offset or measurement variation; the UART bridge supply itself remains unmeasured. All-external-power keep-awake remains 15.
+
+### Additional user-reported DC measurements (UART held idle)
+
+All relative to pin 1 unless specified:
+
+| Backside pad | Meter reading | Interpretation |
+| --- | --- | --- |
+| 9 | 3.3 V | Supply candidate; function unconfirmed |
+| 10 | 39 mV | Low level; does not establish GND |
+| 11 | 2.49 V | RX candidate beside confirmed TX; DC alone cannot establish direction/function |
+| 12 | 2.5 V | Confirmed WK2 TX held idle; 2.464 V relative to cradle GND |
+
+The low pin-10 reading differs from the earlier scope's ~0.24 V. These were separate measurements with remapped probes; do not infer a hardware-state change without verifying contacts and references. No RX injection, loopback, UART write or expansion command was performed for these measurements. The bridge supply voltage remains unmeasured.
