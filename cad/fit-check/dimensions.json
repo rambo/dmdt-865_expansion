@@ -1,6 +1,7 @@
 {
   "units": "mm",
   "revision_label": "R2",
+  "preferred_variant": "P1",
   "mount_spacing": [32.0, 40.0],
   "mount_outside_thread_opening_spans": [33.55, 41.37],
   "thread_opening_diameter": 1.75,

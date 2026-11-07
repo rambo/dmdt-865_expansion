@@ -1,10 +1,18 @@
 # Four labelled T865 expansion connector fit gauges
 
+**Selected working baseline: P1 R2.** On 2026-11-07 the user reports P1 alignment
+as "just about perfect", P2 visibly misaligned, and P3/P4 very badly aligned.
+The comparison photos support that progression. Use `T865-P1.stl` / `T865-P1.dxf`
+for this selected geometry: pin 11 at **X=5.500, Y=12.367 mm** relative to mount A,
+with the unchanged 3 mm contact grid. These are model coordinates, not a measured
+positional tolerance. The larger inspection windows and uncalibrated photos do
+not establish exact pad centring or pogo-pin compression/recess depth.
+
 **R2: contact inspection holes enlarged from 1.6 to 2.4 mm**, leaving 0.6 mm
 webs between adjacent holes. Raised R2 labels identify this revision. The mounting
 hole pattern, contact centres, plate thickness and four offset variants are unchanged.
 
-**Print `T865-four-plates.stl` to test all four offsets in one batch.** It contains
+`T865-four-plates.stl` retains all four tested offsets for comparison. It contains
 four separate, watertight plates arranged 2 x 2 with a 6 mm gap. The combined
 footprint is **86 x 102 mm**. Units are millimetres; print at **100% scale**.
 
@@ -86,10 +94,26 @@ well aligned there. Original and R2 P1-P4 all have the same mounting centres, so
 this observation alone does not establish a CAD mounting-pattern correction.
 Placement, printing and seating differences are not isolated. The original 1.6 mm
 inspection holes made the contact alignment hard to judge. R2 retains all four
-offsets and enlarges the windows; no best contact offset has been established.
+offsets and enlarges the windows; that first-print feedback did not select a
+contact offset. The later R2 comparison below selects P1.
 Photos IMG20261107175954 and IMG20261107180655 are retained under
 `../../measurements/photos/`. These are observations of the earlier prints, not
 validation of the R2 prints. Physical corner/pose differences were not calibrated.
+
+Subsequent R2 fit comparison, 2026-11-07:
+
+| Variant | Photo | User assessment / visible result |
+| --- | --- | --- |
+| P1 | IMG20261107221537.heic | "Just about perfect"; all twelve pads visible through the windows. Selected working baseline. |
+| P2 | IMG20261107221707.heic | Visibly misaligned; rejected offset. |
+| P3 | IMG20261107221817.heic | Very bad alignment; only parts of pads visible. Rejected offset. |
+| P4 | IMG20261107221926.heic | Very bad alignment; windows largely miss the pads. Rejected offset. |
+
+Originals and JPEG previews are under `../../measurements/photos/`. All four
+CAD models are retained; this selection changes no hole centres or geometry.
+The mounting pattern remains provisional rather than an independently measured
+OEM drawing. P1 is the best of the four tested offsets; values beyond the tested
+range were not assessed.
 
 There is no established OEM mounting drawing, thread depth or final electrical
 connector fit here. This remains a positioning experiment.

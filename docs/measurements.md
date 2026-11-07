@@ -79,6 +79,17 @@ X offset from 5.5 to 7.0 mm and derive Y to preserve that diagonal. Original
 [HEIC photos](../measurements/photos/originals/) and
 [JPEG previews](../measurements/photos/previews/) document the measurements.
 
+**Selected fit baseline: P1 R2**, based on the later physical comparison on
+2026-11-07. User reports P1 alignment "just about perfect", P2 visibly misaligned,
+and P3/P4 very badly aligned. The photographs show the same progression. Pin 11
+is **(5.500, 12.367) mm** relative to lower-left mounting centre A; pin 12 is
+**(8.500, 12.367) mm**, and pin 1 is **(5.500, 27.367) mm** in the model's rear-view
+coordinate system. Keep the existing 32 x 40 mm mount pattern and 3 mm grid for
+the selected prototype. The CAD values do not establish sub-millimetre accuracy:
+2.4 mm inspection windows, seating and photograph perspective limit that claim.
+Recess depth, working compression and an electrical pogo-pin contact fit remain
+unmeasured. The other offsets are retained as rejected test variants.
+
 See [reference index](../references/README.md) for individual pogo-pin candidates
 and the earlier connector sourcing leads. No off-the-shelf 2x6/3 mm EU-stock
 connector or final mechanical fit was established in that search.
@@ -91,7 +102,9 @@ Their CAD mounting-hole coordinates are identical; printing, placement and seati
 differences have not been isolated. The original contact inspection holes were too
 small to judge alignment reliably. R2 enlarges those holes from 1.6 to 2.4 mm and
 adds a raised revision label, while retaining all centres and offset variants.
-The new R2 prints and the best contact-grid offset remain unverified.
+This was the earlier first-print observation. The subsequent R2 comparison selects
+P1: IMG20261107221537 (P1), IMG20261107221707 (P2), IMG20261107221817 (P3) and
+IMG20261107221926 (P4). See the CAD README for the comparison table.
 
 Original versioned captures are under
 [the port-probe analysis directory](../android/T865PortProbe/analysis/).

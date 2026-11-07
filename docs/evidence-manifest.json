@@ -2322,5 +2322,61 @@
     "repository_path": "measurements/photos/previews/IMG20261107180655.jpg",
     "bytes": 2831828,
     "sha256": "b2b2fb59d69940cd9d6617e19ca1583b6b02b10355d863b929938b4576cc6648"
+  },
+  {
+    "group": "R2 fit comparison - P1",
+    "source_name": "IMG20261107221537.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107221537.heic",
+    "bytes": 3201859,
+    "sha256": "5f6a66649d3c38a1eb1c0206f15f94cb423b061c1814b338bad4aacfc4e22970"
+  },
+  {
+    "group": "R2 fit comparison - P1",
+    "source_name": "IMG20261107221537.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107221537.jpg",
+    "bytes": 2915689,
+    "sha256": "d9672cc9e5129c23a96a8672ac459beb8f64598bec83fee9937aade57609fe7c"
+  },
+  {
+    "group": "R2 fit comparison - P2",
+    "source_name": "IMG20261107221707.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107221707.heic",
+    "bytes": 3112338,
+    "sha256": "18887a5bf71384e793c2c0d3d09106aa526c3786888d051899b9f1a85f42147b"
+  },
+  {
+    "group": "R2 fit comparison - P2",
+    "source_name": "IMG20261107221707.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107221707.jpg",
+    "bytes": 2933302,
+    "sha256": "dbab08cb7f4bd691aa5bacd9040a2df8000bbbde52b6758e97b3fe70515f100e"
+  },
+  {
+    "group": "R2 fit comparison - P3",
+    "source_name": "IMG20261107221817.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107221817.heic",
+    "bytes": 3070461,
+    "sha256": "8caf5c8021013a4efe01a91d28f074660e990c72d3ac07cbf5b379b4d7faa1fa"
+  },
+  {
+    "group": "R2 fit comparison - P3",
+    "source_name": "IMG20261107221817.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107221817.jpg",
+    "bytes": 2862808,
+    "sha256": "408d7c413f957de12ed932ba004efc9da9665cba86304a912d4e3537c7a533cf"
+  },
+  {
+    "group": "R2 fit comparison - P4",
+    "source_name": "IMG20261107221926.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107221926.heic",
+    "bytes": 2727772,
+    "sha256": "24857648332363341c29bfa6001ab25a1ff9620e2edcd3b1df2663a1f4e59438"
+  },
+  {
+    "group": "R2 fit comparison - P4",
+    "source_name": "IMG20261107221926.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107221926.jpg",
+    "bytes": 2567362,
+    "sha256": "4d0c5a4b1ef3e8989abbe4643eaa54d9eb3c3ee5be7d2d68aa9e193742f3c42f"
   }
 ]

@@ -60,9 +60,11 @@ android/T865PortProbe/tests/run-native-tests.sh
 android/T865UartTx/tests/run-native-tests.sh
 ```
 
-For the fit test, print [all four plates](cad/fit-check/T865-four-plates.stl) at
-100% scale in millimetres. The [CAD README](cad/fit-check/README.md) explains the
-32 x 40 mm provisional mounting pattern, offset variants and raised labels.
+The selected physical fit baseline is [P1 R2](cad/fit-check/T865-P1.stl), with
+pin 11 at X=5.50, Y approximately 12.37 mm from mounting hole A. P2 is visibly
+misaligned and P3/P4 are much worse in the comparison photos. Print at 100%
+scale in millimetres. The [CAD README](cad/fit-check/README.md) retains all four
+variants and explains the provisional mounting pattern, labels and fit evidence.
 
 The three application histories were imported without squashing. The original
 CAD history is also retained. Commit IDs affected by the large-file conversion

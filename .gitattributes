@@ -117,3 +117,11 @@ measurements/photos/originals/IMG20261107175954.heic filter=lfs diff=lfs merge=l
 measurements/photos/previews/IMG20261107175954.jpg filter=lfs diff=lfs merge=lfs -text
 measurements/photos/originals/IMG20261107180655.heic filter=lfs diff=lfs merge=lfs -text
 measurements/photos/previews/IMG20261107180655.jpg filter=lfs diff=lfs merge=lfs -text
+measurements/photos/originals/IMG20261107221537.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/previews/IMG20261107221537.jpg filter=lfs diff=lfs merge=lfs -text
+measurements/photos/originals/IMG20261107221707.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/previews/IMG20261107221707.jpg filter=lfs diff=lfs merge=lfs -text
+measurements/photos/originals/IMG20261107221817.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/previews/IMG20261107221817.jpg filter=lfs diff=lfs merge=lfs -text
+measurements/photos/originals/IMG20261107221926.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/previews/IMG20261107221926.jpg filter=lfs diff=lfs merge=lfs -text
