@@ -1,0 +1,11 @@
+{
+  "validity": "Steady OFF-state capture only; the original tablet enable attempt was not triggered/captured. Do not decode these files as that attempt.",
+  "pin_mapping": {
+    "CH1": 4,
+    "CH2": 3,
+    "CH3": 2,
+    "CH4": 5
+  },
+  "sample_count_per_channel": 3000000,
+  "sample_interval_seconds": 4e-06
+}

@@ -1,0 +1,42 @@
+{
+  "authorization": "User approved one controlled cycle and restoration",
+  "original_checked": false,
+  "coordinates": [
+    594,
+    125
+  ],
+  "events": [
+    {
+      "utc": "2026-11-07T09:21:28.460556+00:00",
+      "event": "scope_armed_and_forced"
+    },
+    {
+      "utc": "2026-11-07T09:21:28.463159+00:00",
+      "event": "tap_enable_begin"
+    },
+    {
+      "utc": "2026-11-07T09:21:28.575271+00:00",
+      "event": "tap_enable_end"
+    },
+    {
+      "utc": "2026-11-07T09:21:32.345221+00:00",
+      "event": "enabled_state_readback",
+      "checked": "true"
+    },
+    {
+      "utc": "2026-11-07T09:22:00.633349+00:00",
+      "event": "tap_restore_off_begin"
+    },
+    {
+      "utc": "2026-11-07T09:22:00.730733+00:00",
+      "event": "tap_restore_off_end"
+    },
+    {
+      "utc": "2026-11-07T09:22:03.425946+00:00",
+      "event": "restored_state_readback",
+      "checked": "false"
+    }
+  ],
+  "scope_capture_validity": "Original forced trigger did not start acquisition; scope remained WAIT throughout the authorized enable attempt. Later force-trigger diagnosis captures only steady off state, not the cycle. Do not attribute later raw waveforms to the enable/disable event.",
+  "user_pin8_observation": "User reports pin 8 also looks like GND; not independently verified."
+}

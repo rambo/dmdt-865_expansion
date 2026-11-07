@@ -1,6 +1,10 @@
 T865 /dev/expand driver investigation
 2026-11-06, Europe/Helsinki
 
+HISTORICAL BUILD: user upgraded to Android 16 on 2026-11-07. See
+POST-UPDATE-INVESTIGATION-2026-11-07.txt for kernel 6.6.102 and the newly loaded
+expand_module.ko driver. The built-in 4.14 driver below describes the old build.
+
 RESULT AND CONFIDENCE
 The live kernel driver is named expand, a platform driver built into this
 tablet's kernel with CONFIG_EXPAND=y. It exposes /dev/expand as a misc character

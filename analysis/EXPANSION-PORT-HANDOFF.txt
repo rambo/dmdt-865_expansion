@@ -1,7 +1,32 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-FOLLOW-UP 2026-11-07: PHYSICAL SETUP / PAUSED FOR USER'S SYSTEM UPDATE
+RESUMED 2026-11-07: ANDROID 16 / CONNECTED SCOPE / MANAGE SWITCH
+User updated firmware and reconnected probes. See
+POST-UPDATE-INVESTIGATION-2026-11-07.txt and post-update-2026-11-07/ first.
+Firmware is now mdt865_16_ngms_1.2.7, kernel 6.6.102-android15-8-4k. The bound
+expand driver is now supplied by loaded expand_module.ko, but pulling/reading
+that module is denied. /dev/expand is now 10:107; old built-in-driver details
+below are historical. Current policy still grants appdomain device-node access.
+User also reports pin 8 looks like ground and pin 7 remains around +3.3 V.
+Connected baseline: pin 4 around 1.8 V, pin 5 around 1.53 V, pins 2/3 near 0 V.
+Manage's LoRa switch controls DMD LoraService, not an independent power-only API.
+User approved one GUI-controlled cycle; original state was OFF, and OFF was
+restored. Driver logs confirm setPower success, writeIo(2,1,true) -> kernel GPIO
+566 high, WK2 open at 9600/8N1, followed by config-mode timeout and GPIO release/
+power-off. GPIO 566 is not a physical pad assignment. No custom ioctl was sent.
+The scope missed that first cycle because FORCE preceded pretrigger readiness;
+later steady-off waveforms must not be presented as its transition capture.
+Corrected scope arming waits for WAIT then verifies TD. User separately approved
+one additional cycle: it captured pin 3 / CH2 rising to about 3.3 V for 708 ms,
+then falling during automatic shutdown. Other probed pads showed no UART-like
+transitions. Pin 3 is software controlled, but supply-vs-GPIO and a unique GPIO
+566 pad mapping remain unproved because both power and I/O 1 changed together.
+Original LoRa OFF, scope setup and stay-awake setting 0 were restored/verified.
+Device-tree node fixed_wk_33v@0 has always-on/boot-on property names; connection
+to physical pin 7 remains unverified. Pin 8 is still a user-reported GND candidate.
+
+EARLIER FOLLOW-UP 2026-11-07: PHYSICAL SETUP / PAUSED FOR USER'S SYSTEM UPDATE
 See EXPANSION-PIN-BASELINE-2026-11-07.txt and scope-2026-11-07/ in this directory.
 User numbering, viewed from tablet backside: rows (1,2), (3,4), (5,6), (7,8),
 (9,10), (11,12), with CH3->2, CH2->3, CH1->4, CH4->5. Probe grounds used pin 1;

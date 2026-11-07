@@ -1,0 +1,332 @@
+{
+  "scope_host": "192.168.220.72",
+  "port": 5555,
+  "started_utc": "2026-11-07T09:11:25.701791+00:00",
+  "orientation": "Viewed from tablet backside",
+  "pin_rows": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      11,
+      12
+    ]
+  ],
+  "channel_to_pin": {
+    "CHAN1": 4,
+    "CHAN2": 3,
+    "CHAN3": 2,
+    "CHAN4": 5
+  },
+  "probe_status": "User confirmed probes reconnected before capture",
+  "ground_reference": "User reports grounds on pin 1; cross-checked with cradle ground pads",
+  "queries": [
+    {
+      "command": "*IDN?",
+      "value": "RIGOL TECHNOLOGIES,DS1074Z,DS1ZA162953663,00.04.05.SP2",
+      "utc": "2026-11-07T09:11:25.722730+00:00"
+    },
+    {
+      "command": ":TRIG:STAT?",
+      "value": "AUTO",
+      "utc": "2026-11-07T09:11:25.723928+00:00"
+    },
+    {
+      "command": ":TIM:MAIN:SCAL?",
+      "value": "5.0000000e-03",
+      "utc": "2026-11-07T09:11:25.725164+00:00"
+    },
+    {
+      "command": ":TIM:MAIN:OFFS?",
+      "value": "0.0000000e+00",
+      "utc": "2026-11-07T09:11:25.726356+00:00"
+    },
+    {
+      "command": ":ACQ:TYPE?",
+      "value": "NORM",
+      "utc": "2026-11-07T09:11:25.727472+00:00"
+    },
+    {
+      "command": ":ACQ:SRAT?",
+      "value": "5.000000e+07",
+      "utc": "2026-11-07T09:11:25.728631+00:00"
+    },
+    {
+      "command": ":ACQ:MDEP?",
+      "value": "AUTO",
+      "utc": "2026-11-07T09:11:25.729610+00:00"
+    },
+    {
+      "command": ":WAV:SOUR?",
+      "value": "CHAN1",
+      "utc": "2026-11-07T09:11:25.730666+00:00"
+    },
+    {
+      "command": ":WAV:MODE?",
+      "value": "NORM",
+      "utc": "2026-11-07T09:11:25.731658+00:00"
+    },
+    {
+      "command": ":WAV:FORM?",
+      "value": "BYTE",
+      "utc": "2026-11-07T09:11:25.732611+00:00"
+    },
+    {
+      "command": ":CHAN1:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T09:11:25.733586+00:00"
+    },
+    {
+      "command": ":CHAN1:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T09:11:25.734550+00:00"
+    },
+    {
+      "command": ":CHAN1:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T09:11:25.735546+00:00"
+    },
+    {
+      "command": ":CHAN1:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T09:11:25.736544+00:00"
+    },
+    {
+      "command": ":CHAN1:OFFS?",
+      "value": "1.000000e-01",
+      "utc": "2026-11-07T09:11:25.737595+00:00"
+    },
+    {
+      "command": ":CHAN1:INV?",
+      "value": "0",
+      "utc": "2026-11-07T09:11:25.738581+00:00"
+    },
+    {
+      "command": ":CHAN1:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T09:11:25.739581+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN1",
+      "value": "1.680000e+00",
+      "utc": "2026-11-07T09:11:26.158876+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN1",
+      "value": "1.920000e+00",
+      "utc": "2026-11-07T09:11:26.560705+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN1",
+      "value": "1.798428e+00",
+      "utc": "2026-11-07T09:11:26.968663+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN1",
+      "value": "1.999999e-01",
+      "utc": "2026-11-07T09:11:27.381434+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN1",
+      "value": "9.9E37",
+      "utc": "2026-11-07T09:11:27.782656+00:00"
+    },
+    {
+      "command": ":CHAN2:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T09:11:27.783804+00:00"
+    },
+    {
+      "command": ":CHAN2:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T09:11:27.784751+00:00"
+    },
+    {
+      "command": ":CHAN2:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T09:11:27.785764+00:00"
+    },
+    {
+      "command": ":CHAN2:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T09:11:27.786745+00:00"
+    },
+    {
+      "command": ":CHAN2:OFFS?",
+      "value": "-1.200000e-01",
+      "utc": "2026-11-07T09:11:27.787760+00:00"
+    },
+    {
+      "command": ":CHAN2:INV?",
+      "value": "0",
+      "utc": "2026-11-07T09:11:27.788886+00:00"
+    },
+    {
+      "command": ":CHAN2:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T09:11:27.789941+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN2",
+      "value": "-1.200000e-01",
+      "utc": "2026-11-07T09:11:28.218599+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN2",
+      "value": "8.000000e-02",
+      "utc": "2026-11-07T09:11:28.626694+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN2",
+      "value": "-2.260864e-02",
+      "utc": "2026-11-07T09:11:29.037807+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN2",
+      "value": "2.000000e-01",
+      "utc": "2026-11-07T09:11:29.439525+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN2",
+      "value": "9.9E37",
+      "utc": "2026-11-07T09:11:29.847608+00:00"
+    },
+    {
+      "command": ":CHAN3:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T09:11:29.848694+00:00"
+    },
+    {
+      "command": ":CHAN3:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T09:11:29.849724+00:00"
+    },
+    {
+      "command": ":CHAN3:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T09:11:29.850744+00:00"
+    },
+    {
+      "command": ":CHAN3:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T09:11:29.851770+00:00"
+    },
+    {
+      "command": ":CHAN3:OFFS?",
+      "value": "-3.200000e-01",
+      "utc": "2026-11-07T09:11:29.852754+00:00"
+    },
+    {
+      "command": ":CHAN3:INV?",
+      "value": "0",
+      "utc": "2026-11-07T09:11:29.853707+00:00"
+    },
+    {
+      "command": ":CHAN3:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T09:11:29.854675+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN3",
+      "value": "-4.000000e-02",
+      "utc": "2026-11-07T09:11:30.261096+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN3",
+      "value": "0.000000e+00",
+      "utc": "2026-11-07T09:11:30.662534+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN3",
+      "value": "-2.000000e-02",
+      "utc": "2026-11-07T09:11:31.069625+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN3",
+      "value": "4.000000e-02",
+      "utc": "2026-11-07T09:11:31.480707+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN3",
+      "value": "9.9E37",
+      "utc": "2026-11-07T09:11:31.882672+00:00"
+    },
+    {
+      "command": ":CHAN4:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T09:11:31.883883+00:00"
+    },
+    {
+      "command": ":CHAN4:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T09:11:31.884934+00:00"
+    },
+    {
+      "command": ":CHAN4:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T09:11:31.885954+00:00"
+    },
+    {
+      "command": ":CHAN4:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T09:11:31.886956+00:00"
+    },
+    {
+      "command": ":CHAN4:OFFS?",
+      "value": "-5.200000e-01",
+      "utc": "2026-11-07T09:11:31.887925+00:00"
+    },
+    {
+      "command": ":CHAN4:INV?",
+      "value": "0",
+      "utc": "2026-11-07T09:11:31.888843+00:00"
+    },
+    {
+      "command": ":CHAN4:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T09:11:31.889714+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN4",
+      "value": "1.440000e+00",
+      "utc": "2026-11-07T09:11:32.316632+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN4",
+      "value": "1.680000e+00",
+      "utc": "2026-11-07T09:11:32.726628+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN4",
+      "value": "1.529900e+00",
+      "utc": "2026-11-07T09:11:33.138244+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN4",
+      "value": "1.999999e-01",
+      "utc": "2026-11-07T09:11:33.539404+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN4",
+      "value": "9.9E37",
+      "utc": "2026-11-07T09:11:33.948623+00:00"
+    }
+  ]
+}

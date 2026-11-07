@@ -1,0 +1,12 @@
+{
+  "validity": "VALID second explicitly authorized enable-attempt capture; frozen scope STOP verified before readout.",
+  "channels": {
+    "CH1": 4,
+    "CH2": 3,
+    "CH3": 2,
+    "CH4": 5
+  },
+  "probe_ground": "User pin 1",
+  "result": "Pin 3 approximately 3.3 V high for 708.136 ms; UART pad mapping remains unknown.",
+  "restoration": "LoRa OFF, stay_on_while_plugged_in=0, scope AUTO at 5 ms/div; verified."
+}

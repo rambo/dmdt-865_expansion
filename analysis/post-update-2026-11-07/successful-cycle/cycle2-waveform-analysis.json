@@ -1,0 +1,61 @@
+{
+  "capture": "Second explicitly authorized LoRa enable attempt",
+  "ground": "user pin 1",
+  "pin_mapping": {
+    "CH1": 4,
+    "CH2": 3,
+    "CH3": 2,
+    "CH4": 5
+  },
+  "channels": {
+    "CH1": {
+      "pin": 4,
+      "min_V": 1.77339853,
+      "max_V": 1.9651172899999998,
+      "median_V": 1.86925791,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "capture_start_s": -1.2,
+      "capture_end_s": 10.799996,
+      "logic_scale_transitions_detected": false
+    },
+    "CH2": {
+      "pin": 3,
+      "min_V": -0.09546876,
+      "max_V": 3.43687536,
+      "median_V": -0.04773438,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "capture_start_s": -1.2,
+      "capture_end_s": 10.799996,
+      "threshold_V": 1.65,
+      "rise_s": 0.4444999999999999,
+      "fall_s": 1.152636,
+      "pulse_width_s": 0.708136,
+      "high_median_V": 3.3414066,
+      "low_median_V": -0.04773438
+    },
+    "CH3": {
+      "pin": 2,
+      "min_V": 0.0,
+      "max_V": 0.0,
+      "median_V": 0.0,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "capture_start_s": -1.2,
+      "capture_end_s": 10.799996,
+      "logic_scale_transitions_detected": false
+    },
+    "CH4": {
+      "pin": 5,
+      "min_V": 1.4425782,
+      "max_V": 1.63492196,
+      "median_V": 1.53875008,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "capture_start_s": -1.2,
+      "capture_end_s": 10.799996,
+      "logic_scale_transitions_detected": false
+    }
+  }
+}
