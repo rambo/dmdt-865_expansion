@@ -1,7 +1,18 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-LATEST STATE: RX PROBE PREPARATION, TX STILL IDLE — 2026-11-07
+LATEST: WK2 RX PIN 11 AND TX PIN 12 VERIFIED BOTH DIRECTIONS — 2026-11-07
+ESP32-PICO-D4 sketch uploaded with final mapping GPIO26 TX / GPIO25 RX, 9600/8N1.
+Exact numbered ESP32 payloads arrive at Android WK2 RX. User confirms GPIO26
+connects to tablet pad 11. Pin 11 is now confirmed RX, not merely a candidate.
+User then connected GPIO25 to tablet pad 12; one brief tablet TX test delivered
+five exact tablet strings (100 bytes) to the MCU. Tablet TX restored to IDLE.
+Current: ESP32 sends once/second; tablet remains open receiving with its TX idle.
+No new expansion power/GPIO command or DMD enable cycle was used. Cold boot
+without previous cycles still untested. See UART-END-TO-END-2026-11-07.txt and
+../ESP32UartProbe/validation/. Both apps/test projects are versioned separately.
+
+EARLIER LATEST STATE: RX PROBE PREPARATION, TX STILL IDLE — 2026-11-07
 User will use a 3.3 V MCU, likely ESP32, to identify RX. Start with candidate
 pin 11 only. Proposed bench network: MCU TX -> 3.3k -> divider node -> 4.7k
 probe resistor -> pin 11; node -> 10k -> common ground/pin 1. Nominal high
