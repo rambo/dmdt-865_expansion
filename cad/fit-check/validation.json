@@ -4,11 +4,14 @@
     {
       "result": "PASS",
       "plate": "P1",
+      "revision": "R2",
       "units": "mm",
       "mount_spacing": [
         32.0,
         40.0
       ],
+      "inspection_hole_diameter": 2.4,
+      "contact_grid_web_mm": 0.6000000000000001,
       "calculated_mount_spacing": [
         31.799999999999997,
         39.62
@@ -34,7 +37,7 @@
         48.0,
         1.7999999523162842
       ],
-      "mesh_volume_mm3": 2266.2247673128572,
+      "mesh_volume_mm3": 2233.3500922802064,
       "dxf_audit_errors": 0,
       "dxf_circles": 16,
       "raised_labels_unioned_to_plate": true
@@ -42,11 +45,14 @@
     {
       "result": "PASS",
       "plate": "P2",
+      "revision": "R2",
       "units": "mm",
       "mount_spacing": [
         32.0,
         40.0
       ],
+      "inspection_hole_diameter": 2.4,
+      "contact_grid_web_mm": 0.6000000000000001,
       "calculated_mount_spacing": [
         31.799999999999997,
         39.62
@@ -72,7 +78,7 @@
         48.0,
         1.7999999523162842
       ],
-      "mesh_volume_mm3": 2267.0677881721217,
+      "mesh_volume_mm3": 2234.1931128687306,
       "dxf_audit_errors": 0,
       "dxf_circles": 16,
       "raised_labels_unioned_to_plate": true
@@ -80,11 +86,14 @@
     {
       "result": "PASS",
       "plate": "P3",
+      "revision": "R2",
       "units": "mm",
       "mount_spacing": [
         32.0,
         40.0
       ],
+      "inspection_hole_diameter": 2.4,
+      "contact_grid_web_mm": 0.6000000000000001,
       "calculated_mount_spacing": [
         31.799999999999997,
         39.62
@@ -110,7 +119,7 @@
         48.0,
         1.7999999523162842
       ],
-      "mesh_volume_mm3": 2267.0469735635816,
+      "mesh_volume_mm3": 2234.1722850113065,
       "dxf_audit_errors": 0,
       "dxf_circles": 16,
       "raised_labels_unioned_to_plate": true
@@ -118,11 +127,14 @@
     {
       "result": "PASS",
       "plate": "P4",
+      "revision": "R2",
       "units": "mm",
       "mount_spacing": [
         32.0,
         40.0
       ],
+      "inspection_hole_diameter": 2.4,
+      "contact_grid_web_mm": 0.6000000000000001,
       "calculated_mount_spacing": [
         31.799999999999997,
         39.62
@@ -148,7 +160,7 @@
         48.0,
         1.7999999523162842
       ],
-      "mesh_volume_mm3": 2267.2228632680185,
+      "mesh_volume_mm3": 2234.348187116955,
       "dxf_audit_errors": 0,
       "dxf_circles": 16,
       "raised_labels_unioned_to_plate": true

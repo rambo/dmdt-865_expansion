@@ -2294,5 +2294,33 @@
     "repository_path": "releases/T865UartTx-debug.apk",
     "bytes": 897217,
     "sha256": "21ae746d1b27e9f6b11b19aae88f101d208d12ec5a1dfe438e13dcf0dfff951e"
+  },
+  {
+    "group": "first printed fit-gauge feedback",
+    "source_name": "IMG20261107175954.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107175954.heic",
+    "bytes": 2356782,
+    "sha256": "b5fe9017d7774d11f788f93600e80ce53a3611ce5fbd553b95c43492045abfba"
+  },
+  {
+    "group": "first printed fit-gauge feedback",
+    "source_name": "IMG20261107175954.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107175954.jpg",
+    "bytes": 2238964,
+    "sha256": "8b379e217bbe9916e5c8f01e625e9656d9809658349a200b4adb9510d46db7d2"
+  },
+  {
+    "group": "first printed fit-gauge feedback",
+    "source_name": "IMG20261107180655.heic",
+    "repository_path": "measurements/photos/originals/IMG20261107180655.heic",
+    "bytes": 3028192,
+    "sha256": "0e94753809796c29820af15a14be2476df715654038e7592cc52c37e9e459042"
+  },
+  {
+    "group": "first printed fit-gauge feedback",
+    "source_name": "IMG20261107180655.jpg",
+    "repository_path": "measurements/photos/previews/IMG20261107180655.jpg",
+    "bytes": 2831828,
+    "sha256": "b2b2fb59d69940cd9d6617e19ca1583b6b02b10355d863b929938b4576cc6648"
   }
 ]

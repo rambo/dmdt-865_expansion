@@ -27,11 +27,11 @@ def polygons(shape):
     return [shape] if shape.geom_type == "Polygon" else list(shape.geoms)
 
 
-def make_labels(name, x11, y11):
+def make_labels(name, x11, y11, revision):
     shape = Polygon()
     font = FontProperties(family="DejaVu Sans", weight="bold")
     for text, x, y, size in [(name,15,27,5), (f"X {x11:.2f}",15,21,3.2),
-                              (f"Y {y11:.2f}",15,16,3.2)]:
+                              (f"Y {y11:.2f}",15,16,3.2), (revision,15,10,3.2)]:
         for ring in TextPath((x,y), text, size=size, prop=font).to_polygons():
             contour = Polygon(ring)
             if contour.area > 1e-10:
@@ -77,7 +77,7 @@ def build_variant(p, plate_name, x11):
     assert all(not a.intersects(b) for i, a in enumerate(cutouts) for b in cutouts[i+1:])
     profile = orient(Polygon(outer, [list(c.exterior.coords) for c in cutouts]), sign=1)
     assert profile.is_valid and len(profile.interiors) == 16
-    labels = make_labels(plate_name,x11,y11)
+    labels = make_labels(plate_name,x11,y11,p["revision_label"])
     assert all(profile.contains(poly) for poly in labels)
 
     doc = ezdxf.new("R2010", units=ezdxf.units.MM)
@@ -149,12 +149,16 @@ def build_variant(p, plate_name, x11):
            title="T865 fit check - rear view, USB exits right\n"
                  f"Pin 11 = ({x11:.3f}, {y11:.3f}) mm; contact pitch 3 mm")
     ax.grid(alpha=.2)
-    fig.text(.5,.015, "1.2 mm plate + 0.6 mm raised labels | mount holes Ø2.4 | inspection holes Ø1.6\n"
+    fig.text(.5,.015, f"{thickness:g} mm plate + {p['label_height']:g} mm raised labels | "
+             f"mount holes Ø{p['mount_clearance_diameter']:g} | inspection holes Ø{p['inspection_hole_diameter']:g}\n"
              "Large corner chamfer identifies A. Diagram is not a print-to-scale template.",
              ha="center", fontsize=9)
     fig.savefig(ROOT / f"layout-{plate_name}.png", dpi=150, bbox_inches="tight")
     plt.close(fig)
-    report = {"result":"PASS", "plate":plate_name, "units":"mm", "mount_spacing":p["mount_spacing"],
+    report = {"result":"PASS", "plate":plate_name, "revision":p["revision_label"],
+              "units":"mm", "mount_spacing":p["mount_spacing"],
+              "inspection_hole_diameter":p["inspection_hole_diameter"],
+              "contact_grid_web_mm":p["contact_pitch"]-p["inspection_hole_diameter"],
               "calculated_mount_spacing":[v-p["thread_opening_diameter"]
                                           for v in p["mount_outside_thread_opening_spans"]],
               "pin11":[round(x11,3),round(y11,3)], "holes":len(holes),
@@ -217,7 +221,7 @@ def main():
     assert np.allclose(checked.bounds,[[-margin,-margin,0],
         [2*width+3*margin+p["print_gap"],2*height+3*margin+p["print_gap"],
          p["plate_thickness"]+p["label_height"]]],atol=1e-5)
-    fig.suptitle("Four labelled T865 fit gauges - raised labels shown in blue\n"
+    fig.suptitle(f"Four labelled T865 fit gauges {p['revision_label']} - raised labels shown in blue\n"
                  "All preserve the 11.86 mm diagonal edge gap; contact angle varies",fontsize=15)
     fig.tight_layout(rect=(0,0,1,.96))
     fig.savefig(ROOT/"four-plates-preview.png",dpi=150)

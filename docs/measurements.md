@@ -85,6 +85,14 @@ connector or final mechanical fit was established in that search.
 
 ## Evidence organization
 
+First fit-check photos (IMG20261107175954 and IMG20261107180655): the user reports
+slight top mounting-hole misalignment for P1 and good top-hole alignment for P2.
+Their CAD mounting-hole coordinates are identical; printing, placement and seating
+differences have not been isolated. The original contact inspection holes were too
+small to judge alignment reliably. R2 enlarges those holes from 1.6 to 2.4 mm and
+adds a raised revision label, while retaining all centres and offset variants.
+The new R2 prints and the best contact-grid offset remain unverified.
+
 Original versioned captures are under
 [the port-probe analysis directory](../android/T865PortProbe/analysis/).
 [measurements/scope-workspace](../measurements/scope-workspace/) preserves the
