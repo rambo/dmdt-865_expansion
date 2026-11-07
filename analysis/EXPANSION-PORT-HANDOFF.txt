@@ -1,6 +1,16 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
+LATEST REMAPPING / REFERENCE CLARIFICATION 2026-11-07
+Current grounds are on pin 1; CH1->pin 6, CH2->pin 7, CH3->pin 3, CH4->pin 8.
+User clarified that the fluctuating measurement was pin 7 REFERENCED TO PIN 8;
+pin 7 reads around 3.3 V referenced to pin 1. It was never referenced to pin 3;
+the assistant's earlier statement to that effect was incorrect. Pin 8 is not
+established as GND. The fresh read-only baseline shows pin 7 about 3.32 V; other
+probed pads are currently near 0 V. No new enable cycle was performed. See
+REMAPPED-PIN-BASELINE-2026-11-07.txt and remapped-pins-2026-11-07/. Keep the older
+capture's channel mapping separate: the validated 708 ms pulse was pin 3 on CH2.
+
 RESUMED 2026-11-07: ANDROID 16 / CONNECTED SCOPE / MANAGE SWITCH
 User updated firmware and reconnected probes. See
 POST-UPDATE-INVESTIGATION-2026-11-07.txt and post-update-2026-11-07/ first.
