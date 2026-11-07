@@ -4,27 +4,31 @@
     "directory": "android/T865PortProbe",
     "source_head": "0d773dee0b79044e554897533673756cfd99714e",
     "source_commit_count": 22,
-    "import": "complete unsquashed history; LFS conversion may change commit IDs"
+    "import": "complete unsquashed history; LFS conversion may change commit IDs",
+    "consolidated_source_head": "20ce358ab6b4197fa879193bfc46743005adddcd"
   },
   {
     "project": "T865UartTx",
     "directory": "android/T865UartTx",
     "source_head": "f66fef17e0d904a262ab3dc6f06263b718c9935e",
     "source_commit_count": 7,
-    "import": "complete unsquashed history; LFS conversion may change commit IDs"
+    "import": "complete unsquashed history; LFS conversion may change commit IDs",
+    "consolidated_source_head": "58f608998ad1f37a4c9e8148c96e6f8a053f6cf7"
   },
   {
     "project": "ESP32UartProbe",
     "directory": "firmware/ESP32UartProbe",
     "source_head": "ce6771347c2aaa8fed8391c5e7bc2e3e3e73a1da",
     "source_commit_count": 2,
-    "import": "complete unsquashed history; LFS conversion may change commit IDs"
+    "import": "complete unsquashed history; LFS conversion may change commit IDs",
+    "consolidated_source_head": "8e5141310f484f69ac1ed3505eef6a7f6dfc395e"
   },
   {
     "project": "T865ExpansionFitCheck",
     "directory": "cad/fit-check",
     "source_head": "29cee679a44d19a353e4080b82de8cbc4942b879",
     "source_commit_count": 2,
-    "import": "complete unsquashed history; LFS conversion may change commit IDs"
+    "import": "complete unsquashed history; LFS conversion may change commit IDs",
+    "consolidated_source_head": "29cee679a44d19a353e4080b82de8cbc4942b879"
   }
 ]

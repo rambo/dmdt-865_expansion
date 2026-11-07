@@ -11,3 +11,8 @@ PASS: real PTY TX/RX bytes, empty nonblocking RX, raw 9600/8N1, errors, timeout,
 
 Supplementary evidence manifest: 328 files verified by size and SHA-256.
 Full Android builds and physical hardware tests were not repeated; existing build/lint/device validation logs were preserved.
+
+History conversion: all four mapped source heads are ancestors of main.
+LFS integrity: 53 unique objects checked against every reachable historical pointer by SHA-256 and size.
+No reachable regular Git blobs exceed 1,000,000 bytes. All non-attribute working files preserved byte-for-byte during migration.
+Single Git root and no submodule/gitlink entries: PASS.
