@@ -1,8 +1,13 @@
+FOLLOW-UP: pin 11 is now confirmed WK2 RX by exact ESP32 GPIO26 payloads.
+The GPIO25 return path from tablet TX/pin 12 also received five exact frames.
+See ../ESP32UartProbe/validation/ and the end-to-end report. Actual fitted
+resistor values and loaded voltage margins were not captured by these tests.
+
 T865 WK2 RX candidate probe with a 3.3 V ESP32 — 2026-11-07
 
 PURPOSE
 Confirm which expansion pad reaches /dev/ttysWK2 RX by receiving a unique known
-string in Android. Start with pad 11 (2.49 V idle), which remains a candidate.
+string in Android. The initial candidate was pad 11 (2.49 V idle), now confirmed WK2 RX.
 Pad 12 is confirmed tablet TX; leave it disconnected for this one-way test.
 Use the user's backside rowwise numbering, ground reference pad 1.
 
@@ -70,7 +75,7 @@ https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/periph
 
 STATUS
 App build/lint and native PTY TX/RX self-check passed. The app's receive-only
-mode is installed for the external test. No external MCU has yet been connected
-or detected by this investigation. The resistor network has not been assembled
+mode is installed for the external test. An external ESP32 has now been connected and exact payloads received in both
+directions; see the follow-up above. The resistor network has not been assembled
 or electrically tested by the assistant. No tablet UART transmission, loopback,
 power/GPIO command or voltage injection was performed for this RX preparation.

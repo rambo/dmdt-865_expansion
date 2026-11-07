@@ -2,7 +2,7 @@
 
 A separate bench app for identifying `/dev/ttysWK2` TX/RX on the T865/T865X. Package `dev.t865.uarttx`. The read-only T865PortProbe app is unchanged.
 
-**Confirmed on this tablet: backside pin 12 is WK2 TX relative to pin 1 ground.** Scope CH4 decoded eight exact 20-byte frames at 9600/8N1 with zero framing errors. Scope idle level was about 2.45 V. The user subsequently measured pin 12 at 2.5 V relative to pin 1 and 2.464 V relative to a cradle GND pad, confirming an idle level around 2.5 V; this is not a 5 V interface rating. RX and input voltage tolerance remain unknown.
+**Confirmed on this tablet: backside pin 11 is WK2 RX, pin 12 is WK2 TX, and pin 1 is the ground reference.** Scope CH4 decoded eight exact 20-byte frames at 9600/8N1 with zero framing errors. Scope idle level was about 2.45 V. The user subsequently measured pin 12 at 2.5 V relative to pin 1 and 2.464 V relative to a cradle GND pad, confirming an idle level around 2.5 V; this is not a 5 V interface rating. RX location is now confirmed by exact numbered ESP32 payloads; guaranteed input voltage tolerance remains unknown.
 
 ## Install and run through ADB
 
@@ -26,7 +26,7 @@ Hold TX idle, keeping the descriptor open at 9600/8N1 while cancelling all repea
 adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez idle true
 ```
 
-RX logs contain byte counts, hex and escaped ASCII. Chunks may split a received string. The screen has a Receive only / TX idle button. See [RX-PROBE-WIRING.txt](RX-PROBE-WIRING.txt) for the ESP32 probe circuit and procedure; pin 11 is still unconfirmed.
+RX logs contain byte counts, hex and escaped ASCII. Chunks may split a received string. The screen has a Receive only / TX idle button. See [RX-PROBE-WIRING.txt](RX-PROBE-WIRING.txt) for the ESP32 probe circuit and procedure; pin 11 is now confirmed RX by the ESP32 GPIO26 test.
 
 Start resumes transmission from idle hold. Stop restores termios and closes the descriptor. Idle hold also ends when the activity leaves the foreground.
 
