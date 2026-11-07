@@ -107,5 +107,7 @@ Each labelled plate must be **one connected solid**, and the combined STL must
 contain **four** connected solids. The combined DXF must contain **64 circles**.
 `validation.json` records the checks; they do not establish physical fit.
 
-Source and deliverables are versioned in this local Git repository. No remote
-repository is configured.
+Source and deliverables are versioned at
+`git@github.com:rambo/dmdt-865_expansion.git`. Files over 1 MB use Git LFS;
+the combined STL is LFS-managed. Install Git LFS and run `git lfs install`
+before cloning. In an existing clone, `git lfs pull` downloads the full files.
