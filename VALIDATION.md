@@ -24,9 +24,19 @@ All relative to pin 1 unless specified:
 
 | Backside pad | Meter reading | Interpretation |
 | --- | --- | --- |
+| 1 | Reference | Ground reference for these readings |
+| 2 | Initially 2.5 V, falling | Unknown; final voltage/rate not supplied |
+| 3 | 0 mV | Known software-controlled pulse pad, currently low |
+| 4 | 1.79 V | Unknown |
+| 5 | 1.5 V | Unknown |
+| 6 | 36 mV | Unknown; does not establish GND |
+| 7 | 3.3 V | Supply/high-level candidate; function unconfirmed |
+| 8 | 1 mV | Ground unconfirmed |
 | 9 | 3.3 V | Supply candidate; function unconfirmed |
 | 10 | 39 mV | Low level; does not establish GND |
 | 11 | 2.49 V | RX candidate beside confirmed TX; DC alone cannot establish direction/function |
 | 12 | 2.5 V | Confirmed WK2 TX held idle; 2.464 V relative to cradle GND |
 
 The low pin-10 reading differs from the earlier scope's ~0.24 V. These were separate measurements with remapped probes; do not infer a hardware-state change without verifying contacts and references. No RX injection, loopback, UART write or expansion command was performed for these measurements. The bridge supply voltage remains unmeasured.
+
+Pin 2's falling level could reflect a weakly biased/un-driven node or stored charge; the cause and final value are unverified. These are sequential readings. Near-zero voltage does not establish ground; pin 3 provides a known counterexample. No new UART write or expansion command was sent. Full map: T865PortProbe/analysis/EXPANSION-PIN-MAP-2026-11-07.txt.
