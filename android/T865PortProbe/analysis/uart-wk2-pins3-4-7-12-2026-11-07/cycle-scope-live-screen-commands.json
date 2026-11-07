@@ -1,0 +1,32 @@
+[
+  {
+    "utc": "2026-11-07T10:13:24.770454+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T10:13:24.772072+00:00",
+    "command": ":TIM:MAIN:SCAL?",
+    "response": "5.0000000e-03"
+  },
+  {
+    "utc": "2026-11-07T10:13:24.773112+00:00",
+    "command": ":TRIG:EDGE:SOUR?",
+    "response": "CHAN4"
+  },
+  {
+    "utc": "2026-11-07T10:13:24.774149+00:00",
+    "command": ":TRIG:EDGE:LEV?",
+    "response": "1.200000e+00"
+  },
+  {
+    "utc": "2026-11-07T10:13:24.775268+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "NORM"
+  },
+  {
+    "utc": "2026-11-07T10:13:24.777251+00:00",
+    "command": ":DISP:DATA? ON,OFF,PNG",
+    "payload_bytes": 53496
+  }
+]

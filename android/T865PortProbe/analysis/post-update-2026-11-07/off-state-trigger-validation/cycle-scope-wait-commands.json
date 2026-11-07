@@ -1,0 +1,132 @@
+[
+  {
+    "utc": "2026-11-07T09:21:32.838472+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:33.844774+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:34.851149+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:35.856550+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:36.859573+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:37.863458+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:38.865542+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:39.870513+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:40.874531+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:41.877545+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:42.880224+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:43.886532+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:44.892782+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:45.895535+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:46.898530+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:47.900520+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:48.903506+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:49.905630+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:50.912151+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:51.918504+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:52.924268+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:53.930080+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:54.932574+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:55.938854+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:56.942889+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:21:57.948628+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  }
+]

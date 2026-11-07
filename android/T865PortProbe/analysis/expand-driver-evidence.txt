@@ -1,0 +1,166 @@
+/dev/expand driver evidence collected 2026-11-06
+
+Hashes of exact inspected inputs:
+45f939a4e9135f321e3586321d1acc54793c9ce71dfb8c7571c9f2e35bc95c6b  config.gz  (32960 bytes)
+ebbcb81706b26256ec9fe917b3bd3d91fba6c874759fcbd2f7cdfc9d1f7ad7ae  config.txt  (145894 bytes)
+072c644d3833bfd24a0a51a7f48afc893641e7fad462e4ed05140f231a6432b9  libjni_freeme_expand.so  (10832 bytes)
+33dc86551e8ae605b168b2cc2236ed7d95f914e94bbfccef50eda093f459059d  factory-0.apk  (11866792 bytes)
+3ec0c770673415c0eb17859412f9ba40d1af6e53c6716f3bbdba40a5c5f02a55  remotecontrol.apk  (361468 bytes)
+0a711c333f0d391dbfd589bcbd91a987958db3135cb96a56721ab58243373a79  updatemanager-0.apk  (49699 bytes)
+
+READ-ONLY DRIVER DISCOVERY
+Linux localhost 4.14.186 #12 SMP PREEMPT Fri May 29 10:13:52 UTC 2026 aarch64 Toybox
+Linux version 4.14.186 (matthieu@build3) (Android (6443078 based on r383902) clang version 11.0.1 (https://android.googlesource.com/toolchain/llvm-project b397f81060ce6d701042b782172ed13bee898b79), LLD 11.0.1 (/buildbot/tmp/tmp6_m7QH b397f81060ce6d701042b782172ed13bee898b79)) #12 SMP PREEMPT Fri May 29 10:13:52 UTC 2026
+wlan_drv_gen4m 1474560 0 - Live 0x0000000000000000 (O)
+wmt_chrdev_wifi 36864 1 wlan_drv_gen4m, Live 0x0000000000000000 (O)
+gps_drv 57344 1 - Live 0x0000000000000000 (O)
+fmradio_drv_mt6631 208896 0 - Live 0x0000000000000000 (O)
+bt_drv_connac1x 49152 1 - Live 0x0000000000000000 (O)
+wmt_drv 1236992 6 wlan_drv_gen4m,wmt_chrdev_wifi,gps_drv,fmradio_drv_mt6631,bt_drv_connac1x, Live 0x0000000000000000 (O)
+connfem 45056 0 - Live 0x0000000000000000 (O)
+fpsgo 1150976 0 - Live 0x0000000000000000 (PO)
+udc_lib 45056 0 - Live 0x0000000000000000 (O)
+total 0
+drwxr-xr-x   2 root root 0 2026-11-06 21:45 .
+drwxr-xr-x 161 root root 0 2026-11-06 21:45 ..
+-?????????   ? ?    ?    ?                ? bind
+lrwxrwxrwx   1 root root 0 2026-11-06 21:45 odm:expand@0 -> ../../../../devices/platform/odm/odm:expand@0
+-?????????   ? ?    ?    ?                ? uevent
+-?????????   ? ?    ?    ?                ? unbind
+total 0
+drwxr-xr-x  4 root root 0 2026-11-06 20:54 .
+drwxr-xr-x 24 root root 0 2026-11-06 20:50 ..
+lrwxrwxrwx  1 root root 0 2026-11-06 20:54 driver -> ../../../../bus/platform/drivers/expand
+-?????????  ? ?    ?    ?                ? driver_override
+drwxr-xr-x  3 root root 0 2026-11-06 20:54 misc
+-?????????  ? ?    ?    ?                ? modalias
+lrwxrwxrwx  1 root root 0 2026-11-06 20:54 of_node -> ../../../../firmware/devicetree/base/odm/expand@0
+drwxr-xr-x  2 root root 0 2026-11-06 20:54 power
+lrwxrwxrwx  1 root root 0 2026-11-06 20:54 subsystem -> ../../../../bus/platform
+-?????????  ? ?    ?    ?                ? uevent
+ls: /odm/lib/modules: No such file or directory
+ls: /vendor_dlkm/lib/modules: No such file or directory
+ls: /odm_dlkm/lib/modules: No such file or directory
+ls: /system_dlkm/lib/modules: Permission denied
+total 16
+drwxr-xr-x 2 root shell  4096 2009-01-01 02:00 .
+drwxr-xr-x 9 root shell 12288 2009-01-01 02:00 ..
+-????????? ? ?    ?         ?                ? bt_drv_connac1x.ko
+-????????? ? ?    ?         ?                ? connfem.ko
+-????????? ? ?    ?         ?                ? fmradio_drv_mt6631.ko
+-????????? ? ?    ?         ?                ? fpsgo.ko
+-????????? ? ?    ?         ?                ? gps_drv.ko
+-????????? ? ?    ?         ?                ? met.ko
+-????????? ? ?    ?         ?                ? modules.alias
+-????????? ? ?    ?         ?                ? modules.dep
+-????????? ? ?    ?         ?                ? modules.load
+-????????? ? ?    ?         ?                ? modules.softdep
+-????????? ? ?    ?         ?                ? udc_lib.ko
+-????????? ? ?    ?         ?                ? wlan_drv_gen4m.ko
+-????????? ? ?    ?         ?                ? wmt_chrdev_wifi.ko
+-????????? ? ?    ?         ?                ? wmt_drv.ko
+
+READ-ONLY KERNEL ACCESS CHECKS
+ls: /sys/bus/platform/drivers/expand/module: No such file or directory
+ls: /sys/module/expand: No such file or directory
+ls: /sys/kernel/btf/vmlinux: No such file or directory
+ls: /proc/kallsyms: Permission denied
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/boot_a -> /dev/block/mmcblk0p24
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/boot_b -> /dev/block/mmcblk0p40
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/boot_para -> /dev/block/mmcblk0p31
+lrwxrwxrwx 1 root root    22 2010-01-03 06:46 /dev/block/by-name/bootloader1 -> /dev/block/by-name/lk1
+lrwxrwxrwx 1 root root    22 2010-01-03 06:46 /dev/block/by-name/bootloader2 -> /dev/block/by-name/lk2
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/dtbo_a -> /dev/block/mmcblk0p26
+lrwxrwxrwx 1 root root    21 2010-01-03 06:46 /dev/block/by-name/dtbo_b -> /dev/block/mmcblk0p42
+-r--r--r-- 1 root root 32960 2026-11-06 21:45 /proc/config.gz
+cat: /sys/devices/platform/odm/odm:expand@0/modalias: Permission denied
+cat: /sys/firmware/devicetree/base/odm/expand@0/compatible: Permission denied
+_a
+mt6768
+mt6768
+lrwxrwxrwx 1 root root 0 2026-11-06 20:54 /sys/class/misc/expand/device -> ../../../odm:expand@0
+cat: /sys/class/misc/expand/dev: Permission denied
+cat: /sys/class/misc/expand/uevent: Permission denied
+
+CONFIG EXCERPTS
+200: CONFIG_KALLSYMS=y
+201: # CONFIG_KALLSYMS_ALL is not set
+202: # CONFIG_KALLSYMS_ABSOLUTE_PERCPU is not set
+203: # CONFIG_KALLSYMS_BASE_RELATIVE is not set
+1374: CONFIG_EXPAND=y
+1375: # CONFIG_ONBOARD_ELORA is not set
+1377: CONFIG_MTK_PLATFORM="mt6768"
+1378: CONFIG_ARCH_MTK_PROJECT="mdt865"
+1555: CONFIG_EXPAND_BAROMETER=y
+2521: CONFIG_SERIAL_WK21XX=y
+3621: CONFIG_CRADLE_RS232_RS485_SUPPORT=y
+
+FACTORY NATIVE FUNCTION / IOCTL INSTRUCTIONS
+0000000000001040 <Java_com_freeme_factory_cradle_ExpandGpio_open>:
+0000000000001130 <Java_com_freeme_factory_cradle_ExpandGpio_close>:
+0000000000001190 <Java_com_freeme_factory_cradle_ExpandGpio_getPosition>:
+    11b0: 528a6121     	mov	w1, #0x5309             // =21257
+    11b8: 72b80381     	movk	w1, #0xc01c, lsl #16
+0000000000001250 <Java_com_freeme_factory_cradle_ExpandGpio_setPower>:
+    1268: 528a6021     	mov	w1, #0x5301             // =21249
+    1278: 72b80381     	movk	w1, #0xc01c, lsl #16
+0000000000001320 <Java_com_freeme_factory_cradle_ExpandGpio_getType>:
+    1340: 528a6141     	mov	w1, #0x530a             // =21258
+    1348: 72b80381     	movk	w1, #0xc01c, lsl #16
+00000000000013e0 <Java_com_freeme_factory_cradle_ExpandGpio_writeIo>:
+    13f8: 528a6041     	mov	w1, #0x5302             // =21250
+    1408: 72b80381     	movk	w1, #0xc01c, lsl #16
+00000000000014b0 <Java_com_freeme_factory_cradle_ExpandGpio_readIo>:
+    14d0: 528a6061     	mov	w1, #0x5303             // =21251
+    14d4: 72b80381     	movk	w1, #0xc01c, lsl #16
+0000000000001580 <Java_com_freeme_factory_cradle_ExpandGpio_readEeprom>:
+    15a8: 528a60a1     	mov	w1, #0x5305             // =21253
+    15b4: 72b80381     	movk	w1, #0xc01c, lsl #16
+0000000000001770 <Java_com_freeme_factory_cradle_ExpandGpio_writeEeprom>:
+    18f0: 528a6094     	mov	w20, #0x5304            // =21252
+    18f4: 72b80394     	movk	w20, #0xc01c, lsl #16
+00000000000019b0 <Java_com_freeme_factory_cradle_ExpandGpio_recognizeModule>:
+    19d0: 528a6114     	mov	w20, #0x5308            // =21256
+    19d4: 72b80394     	movk	w20, #0xc01c, lsl #16
+
+FACTORY TEST EVIDENCE: decompiled com.freeme.factory.cradle.ExpandTest
+Only readable method excerpts; other methods had JADX errors.
+48:     private final List<Integer> allGpio;
+49:     private final ArrayList<TestItemRes> items;
+50:     private Button startTest;
+51:     private ExpandGpio expandGpio = new ExpandGpio();
+52:     private final String leftSerialPath = "/dev/ttysWK3";
+53:     private final String rightSerialPath = "/dev/ttysWK2";
+54:
+121:     public ExpandTest() {
+122:         ArrayList<TestItemRes> arrayList = new ArrayList<>();
+123:         this.items = arrayList;
+124:         this.allGpio = CollectionsKt__CollectionsKt.listOf((Object[]) new Integer[]{2, 3, 4, 5});
+125:         arrayList.add(new TestItemRes(R.id.leftGpio, "lGpio", R.string.leftGpio, 1, new AnonymousClass1(this)));
+126:         arrayList.add(new TestItemRes(R.id.leftSerialPort, "lSerial", R.string.leftSerialPort, 1, new AnonymousClass2(this)));
+127:         arrayList.add(new TestItemRes(R.id.leftI2c, "lI2c", R.string.leftI2c, 1, new AnonymousClass3(this)));
+128:         arrayList.add(new TestItemRes(R.id.rightGpio, "rGpio", R.string.rightGpio, 2, new AnonymousClass4(this)));
+129:         arrayList.add(new TestItemRes(R.id.rightSerialPort, "rSerial", R.string.rightSerialPort, 2, new AnonymousClass5(this)));
+130:         arrayList.add(new TestItemRes(R.id.rightI2c, "rI2c", R.string.rightI2c, 2, new AnonymousClass6(this)));
+131:     }
+132:
+133:     /* JADX INFO: compiled from: ExpandTest.kt */
+539:     private final boolean testEepromOpt(int i) {
+540:         byte[] bArrGenerateRandomBytes = generateRandomBytes();
+541:         if (!this.expandGpio.writeEeprom(i, new ExpandGpio.EepromData(bArrGenerateRandomBytes, 1, 112))) {
+542:             Log.d("ExpandTest", "testEepromOpt, write eeprom failed");
+543:             return false;
+544:         }
+545:         if (!this.expandGpio.recognizeModule()) {
+546:             Log.d("ExpandTest", "testEepromOpt, recognizeModule failed");
+547:             return false;
+548:         }
+549:         ExpandGpio.EepromData eeprom = this.expandGpio.readEeprom(i);
+550:         if (eeprom == null) {
+551:             return false;
+552:         }
+553:         Log.d("ExpandTest", "testEepromOpt, random: " + ArraysKt___ArraysKt.toHashSet(bArrGenerateRandomBytes) + ", eepromData: " + ArraysKt___ArraysKt.toHashSet(eeprom.getSn()));
+554:         return Arrays.equals(eeprom.getSn(), bArrGenerateRandomBytes);
+555:     }
+
+No driver open or ioctl was executed. No factory Activity was started.

@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(portprobe C)
+add_library(portprobe SHARED probe.c)
+target_compile_features(portprobe PRIVATE c_std_11)
+target_compile_options(portprobe PRIVATE -Wall -Wextra -Werror)

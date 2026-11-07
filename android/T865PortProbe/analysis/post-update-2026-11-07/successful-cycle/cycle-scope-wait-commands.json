@@ -1,0 +1,42 @@
+[
+  {
+    "utc": "2026-11-07T09:29:33.079370+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:34.085308+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:35.089378+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:36.100030+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:37.111275+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:38.115350+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:39.126979+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  },
+  {
+    "utc": "2026-11-07T09:29:40.135286+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "STOP"
+  }
+]

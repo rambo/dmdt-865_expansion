@@ -1,0 +1,197 @@
+[
+  {
+    "utc": "2026-11-07T09:54:03.413672+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.415264+00:00",
+    "command": ":TIM:MAIN:SCAL?",
+    "response": "5.0000000e-03"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.416291+00:00",
+    "command": ":TIM:MAIN:OFFS?",
+    "response": "0.0000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.417287+00:00",
+    "command": ":TRIG:MODE?",
+    "response": "EDGE"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.418272+00:00",
+    "command": ":TRIG:EDGE:SOUR?",
+    "response": "CHAN1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.419265+00:00",
+    "command": ":TRIG:EDGE:SLOP?",
+    "response": "POS"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.420259+00:00",
+    "command": ":TRIG:EDGE:LEV?",
+    "response": "0.000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.421290+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.422248+00:00",
+    "command": ":ACQ:MDEP?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.423203+00:00",
+    "command": ":WAV:SOUR?",
+    "response": "CHAN1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.424205+00:00",
+    "command": ":WAV:MODE?",
+    "response": "NORM"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.425211+00:00",
+    "command": ":WAV:FORM?",
+    "response": "BYTE"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.426391+00:00",
+    "command": ":WAV:STAR?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.427463+00:00",
+    "command": ":WAV:STOP?",
+    "response": "1200"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.456062+00:00",
+    "command": ":CHAN1:DISP?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.457216+00:00",
+    "command": ":CHAN1:COUP?",
+    "response": "DC"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.458398+00:00",
+    "command": ":CHAN1:PROB?",
+    "response": "1.000000e+01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.459629+00:00",
+    "command": ":CHAN1:SCAL?",
+    "response": "1.000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.460839+00:00",
+    "command": ":CHAN1:OFFS?",
+    "response": "1.000000e-01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.461954+00:00",
+    "command": ":CHAN1:INV?",
+    "response": "0"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.462953+00:00",
+    "command": ":CHAN2:DISP?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.463939+00:00",
+    "command": ":CHAN2:COUP?",
+    "response": "DC"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.464907+00:00",
+    "command": ":CHAN2:PROB?",
+    "response": "1.000000e+01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.465931+00:00",
+    "command": ":CHAN2:SCAL?",
+    "response": "1.000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.466937+00:00",
+    "command": ":CHAN2:OFFS?",
+    "response": "-1.200000e-01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.467938+00:00",
+    "command": ":CHAN2:INV?",
+    "response": "0"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.468910+00:00",
+    "command": ":CHAN3:DISP?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.469879+00:00",
+    "command": ":CHAN3:COUP?",
+    "response": "DC"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.470834+00:00",
+    "command": ":CHAN3:PROB?",
+    "response": "1.000000e+01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.471843+00:00",
+    "command": ":CHAN3:SCAL?",
+    "response": "1.000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.472872+00:00",
+    "command": ":CHAN3:OFFS?",
+    "response": "-3.200000e-01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.474049+00:00",
+    "command": ":CHAN3:INV?",
+    "response": "0"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.475215+00:00",
+    "command": ":CHAN4:DISP?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.476342+00:00",
+    "command": ":CHAN4:COUP?",
+    "response": "DC"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.477428+00:00",
+    "command": ":CHAN4:PROB?",
+    "response": "1.000000e+01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.478624+00:00",
+    "command": ":CHAN4:SCAL?",
+    "response": "1.000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.479642+00:00",
+    "command": ":CHAN4:OFFS?",
+    "response": "-5.200000e-01"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.480710+00:00",
+    "command": ":CHAN4:INV?",
+    "response": "0"
+  },
+  {
+    "utc": "2026-11-07T09:54:03.482282+00:00",
+    "command": "*IDN?",
+    "response": "RIGOL TECHNOLOGIES,DS1074Z,DS1ZA162953663,00.04.05.SP2"
+  }
+]

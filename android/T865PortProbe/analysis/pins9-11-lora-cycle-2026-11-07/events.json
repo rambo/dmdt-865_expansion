@@ -1,0 +1,46 @@
+[
+  {
+    "utc": "2026-11-07T09:54:36.845470+00:00",
+    "event": "original_switch_readback",
+    "checked": false
+  },
+  {
+    "utc": "2026-11-07T09:54:39.235403+00:00",
+    "event": "scope_trigger_confirmed_TD"
+  },
+  {
+    "utc": "2026-11-07T09:54:39.238190+00:00",
+    "event": "tap_enable_begin"
+  },
+  {
+    "utc": "2026-11-07T09:54:39.343773+00:00",
+    "event": "tap_enable_end"
+  },
+  {
+    "utc": "2026-11-07T09:54:42.053834+00:00",
+    "event": "enabled_view_readback",
+    "checked": true
+  },
+  {
+    "utc": "2026-11-07T09:54:50.150859+00:00",
+    "event": "scope_capture_stopped"
+  },
+  {
+    "utc": "2026-11-07T09:54:52.867269+00:00",
+    "event": "tap_restore_off_begin"
+  },
+  {
+    "utc": "2026-11-07T09:54:55.645502+00:00",
+    "event": "restored_state_readback",
+    "checked": false
+  },
+  {
+    "utc": "2026-11-07T09:55:26.520908+00:00",
+    "event": "waveforms_saved_and_scope_restored"
+  },
+  {
+    "utc": "2026-11-07T09:55:26.718693+00:00",
+    "event": "display_setting_restored",
+    "value": "0"
+  }
+]

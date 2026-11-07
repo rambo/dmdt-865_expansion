@@ -1,0 +1,20 @@
+{
+  "utc": "2026-11-07T09:54:03.455369+00:00",
+  "settings": {
+    ":TRIG:STAT?": "AUTO",
+    ":TIM:MAIN:SCAL?": "5.0000000e-03",
+    ":TIM:MAIN:OFFS?": "0.0000000e+00",
+    ":TRIG:MODE?": "EDGE",
+    ":TRIG:EDGE:SOUR?": "CHAN1",
+    ":TRIG:EDGE:SLOP?": "POS",
+    ":TRIG:EDGE:LEV?": "0.000000e+00",
+    ":TRIG:SWE?": "AUTO",
+    ":ACQ:MDEP?": "AUTO",
+    ":WAV:SOUR?": "CHAN1",
+    ":WAV:MODE?": "NORM",
+    ":WAV:FORM?": "BYTE",
+    ":WAV:STAR?": "1",
+    ":WAV:STOP?": "1200",
+    ":TRIG:EDGE:SWE?": "AUTO"
+  }
+}

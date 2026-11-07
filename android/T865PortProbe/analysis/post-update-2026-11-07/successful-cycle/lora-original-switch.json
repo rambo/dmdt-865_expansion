@@ -1,0 +1,25 @@
+{
+  "utc": "2026-11-07T09:19:54.151190+00:00",
+  "switch": {
+    "NAF": "true",
+    "index": "1",
+    "text": "",
+    "resource-id": "com.thorkracing.dmdLora:id/switchLoraEnabled",
+    "class": "android.widget.Switch",
+    "package": "com.thorkracing.dmdLora",
+    "content-desc": "",
+    "checkable": "true",
+    "checked": "false",
+    "clickable": "true",
+    "enabled": "true",
+    "focusable": "true",
+    "focused": "false",
+    "scrollable": "false",
+    "long-clickable": "false",
+    "password": "false",
+    "selected": "false",
+    "bounds": "[565,98][624,152]",
+    "drawing-order": "2",
+    "hint": ""
+  }
+}

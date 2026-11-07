@@ -1,0 +1,15 @@
+Sat Nov  7 08:40:08 UTC 2026
+T865
+mdt865
+mdt865_14_ngms_2.8.6
+Enforcing
+uid=2000(shell) gid=2000(shell) groups=2000(shell),1004(input),1007(log),1011(adb),1015(sdcard_rw),1028(sdcard_r),1078(ext_data_rw),1079(ext_obb_rw),3001(net_bt_admin),3002(net_bt),3003(inet),3006(net_bw_stats),3009(readproc),3011(uhid),3012(readtracefs) context=u:r:shell:s0
+crw-rw-rw- 1 root system u:object_r:gpio_ctrl_device:s0   10, 106 2010-01-03 06:46 /dev/expand
+crw-rw---- 1 root system u:object_r:ttyMT_device:s0      207,   5 2010-01-03 06:46 /dev/ttysWK0
+crw-rw-rw- 1 root system u:object_r:user_tty_device:s0   207,   6 2010-01-03 06:46 /dev/ttysWK1
+crw-rw-rw- 1 root system u:object_r:user_tty_device:s0   207,   7 2010-01-03 06:46 /dev/ttysWK2
+crw-rw-rw- 1 root system u:object_r:user_tty_device:s0   207,   8 2010-01-03 06:46 /dev/ttysWK3
+10084 11545 com.thorkracing.dmd2launcher
+10192 22853 dev.t865.portprobe
+    versionCode=2 minSdk=26 targetSdk=36
+    versionName=1.1

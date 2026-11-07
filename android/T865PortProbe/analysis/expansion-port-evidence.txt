@@ -1,0 +1,156 @@
+T865 expansion-port evidence, 2026-11-06
+Read-only metadata and static source extraction; no power/GPIO ioctl executed.
+
+Firmware and device
+$ adb -d shell getprop ro.product.model; getprop ro.product.device; getprop ro.build.display.id; getprop ro.build.fingerprint; getenforce
+T865
+mdt865
+mdt865_14_ngms_2.8.6
+Topicon/mdt750_gms_lite/mdt750:14/mdt865_14_ngms_2.8.6/99926cfa46d:user/dev-keys
+Enforcing
+
+Expansion node and driver
+$ adb -d shell ls -lZ /dev/expand; readlink /sys/class/misc/expand; readlink /sys/class/misc/expand/device/driver; readlink /sys/class/misc/expand/device/of_node
+crw-rw-rw- 1 root system u:object_r:gpio_ctrl_device:s0  10, 106 2010-01-03 06:46 /dev/expand
+../../devices/platform/odm/odm:expand@0/misc/expand
+../../../../bus/platform/drivers/expand
+../../../../firmware/devicetree/base/odm/expand@0
+
+Device-tree property names only
+$ adb -d shell ls /sys/firmware/devicetree/base/odm/expand@0/
+#gpio-cells
+compatible
+i2c_bus
+name
+phandle
+right_gpio
+right_power
+right_spi0_clk
+right_spi0_csb
+right_spi0_mi
+right_spi0_mo
+status
+
+DMD current process
+$ adb -d shell pidof com.thorkracing.dmdLora
+
+CIL source evidence (installed firmware files; not a query of loaded binary policy)
+system_ext_sepolicy.cil SHA256 aee6d3b5d17d146fadb27bddef7d0b0b0a752541801f03f4c82ddd83a9867f6d
+system_ext_sepolicy.cil:222: appdomain explicitly contains untrusted_app (long membership list omitted).
+system_ext_sepolicy.cil:942: (allow appdomain user_tty_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+system_ext_sepolicy.cil:943: (allow appdomain gpio_ctrl_device (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+plat_sepolicy.cil SHA256 9f4c43b42b6cb0b14a0e6a8b268cf56205bd2301ed78c635563518d68ae60a70
+plat_sepolicy.cil:868: appdomain explicitly contains untrusted_app (long membership list omitted).
+vendor_sepolicy.cil SHA256 a05a0baaffb53b3aafe7f827fab2146fa98d54dc3ff4af184d9a733b752a8486
+vendor_sepolicy.cil:8270: (allow vendor_init_31_0 user_tty_device_31_0 (lnk_file (setattr)))
+vendor_sepolicy.cil:9919: (allow priv_app_31_0 gpio_ctrl_device_31_0 (chr_file (ioctl read write open)))
+vendor_sepolicy.cil:9920: (allow priv_app_31_0 user_tty_device_31_0 (chr_file (ioctl read write getattr open)))
+vendor_sepolicy.cil:10179: (allow shell_31_0 user_tty_device_31_0 (chr_file (ioctl read write getattr lock append map open watch watch_reads)))
+
+Property reads denied
+cat: /sys/firmware/devicetree/base/odm/expand@0/right_power: Permission denied
+cat: /sys/firmware/devicetree/base/odm/expand@0/right_gpio: Permission denied
+cat: /sys/firmware/devicetree/base/odm/expand@0/compatible: Permission denied
+
+run-as caveat
+The earlier run-as identity check showed runas_app, with inherited shell supplementary groups; it is NOT an ordinary untrusted_app-context permission test. No hardware-node open was attempted with run-as.
+
+Static lifecycle anchors (JADX output lines)
+
+hk/topicon/control/manager/ExpandManager.java
+381:     public final void release() {
+382:         Position position = this.currentPosition;
+383:         if (position != null) {
+384:             powerOff(position);
+385:         }
+386:         SerialPort serialPort = this.activeSerialPort;
+387:         if (serialPort != null) {
+388:             serialPort.close();
+389:         }
+390:         this.activeSerialPort = null;
+
+hk/topicon/control/repository/EByteRepository.java
+959:     public final void disconnect() {
+960:         SerialConnection serialConnection = this.connection;
+961:         if (serialConnection != null) {
+962:             serialConnection.close();
+963:         }
+964:         this.connection = null;
+965:         this.expandManager.release();
+966:     }
+
+com/thorkracing/dmdLora/service/LoraService.java
+928:     public final void onDestroy() {
+929:         f1000x0 = null;
+930:         k kVar = this.f1011f0;
+931:         if (kVar != null) {
+932:             kVar.a("service_destroy", "sent", Long.valueOf(this.H.get()), "recv", Long.valueOf(this.I.get()), "wedges", Long.valueOf(this.f1012g0.get()));
+933:             k kVar2 = this.f1011f0;
+934:             if (!kVar2.g) {
+935:                 kVar2.g = true;
+936:                 kVar2.f2939c.post(new i(kVar2, 1));
+937:             }
+938:         }
+939:         Handler handler = this.f1029p;
+940:         if (handler != null) {
+941:             handler.removeCallbacksAndMessages(null);
+942:         }
+943:         HandlerThread handlerThread = this.f1027o;
+944:         if (handlerThread != null) {
+945:             handlerThread.quitSafely();
+946:             this.f1027o = null;
+947:             this.f1029p = null;
+948:         }
+949:         this.f1031q.clear();
+950:         m1 m1Var = this.f1005c;
+951:         if (m1Var != null) {
+952:             m1Var.b(null);
+953:             this.f1005c = null;
+954:         }
+955:         EByteRepository eByteRepository = this.b;
+956:         if (eByteRepository != null) {
+957:             eByteRepository.disconnect();
+958:         }
+959:         this.f1007d.shutdownNow();
+960:         z1.w.b(w1.d.f2927a);
+961:         n1 n1Var = new n1();
+962:         g2.e eVar = i0.f3153a;
+963:         w1.d.f2927a = z1.w.a(CoroutineContext.Element.DefaultImpls.plus(n1Var, g2.d.b));
+964:         super.onDestroy();
+965:     }
+966:
+
+com/thorkracing/dmdLora/service/LoraService.java
+805:             EByteRepository repo2 = new EByteRepository(new ExpandManager(new GpioControl(systemProperties2), systemProperties2));
+806:             this.b = repo2;
+807:             e2.c cVar2 = w1.d.f2927a;
+808:             Intrinsics.checkNotNullParameter(repo2, "repo");
+809:             Intrinsics.checkNotNullParameter(repo2, "repo");
+810:             g2.e eVar2 = i0.f3153a;
+811:             z1.z.d(g2.d.b, new a(repo2, continuation, i3));
+812:             h flow2 = this.b.getDeviceEvents();
+813:             q callback2 = new q(this);
+814:             Intrinsics.checkNotNullParameter(flow2, "flow");
+815:             Intrinsics.checkNotNullParameter(callback2, "callback");
+816:             this.f1005c = z1.z.c(w1.d.f2927a, null, new d2.e(flow2, callback2, continuation, i2), 3);
+817:             if (!w1.d.d(this.b, LoraMode.SleepConfig.INSTANCE)) {
+818:                 Log.e("LoraService", "Failed to enter config mode (module attached?)");
+819:                 j("setWorkMode(SleepConfig) returned false", false);
+820:                 return;
+821:             }
+822:             strH = h();
+823:             if (strH != null) {
+824:                 this.f1043z = strH;
+
+com/thorkracing/dmdLora/service/LoraService.java
+1141:     public final void x(boolean z2) {
+1142:         w.l(this, z2);
+1143:         synchronized (this.f1004b0) {
+1144:             this.f1004b0.clear();
+1145:         }
+1146:         this.f1006c0++;
+1147:         if (z2) {
+1148:             f(true);
+1149:         } else {
+1150:             this.f1007d.execute(new l(this, 0));
+1151:         }

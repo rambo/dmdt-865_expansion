@@ -1,0 +1,43 @@
+[
+  {
+    "utc": "2026-11-07T09:29:26.851475+00:00",
+    "command": ":TIM:MAIN:SCAL 1"
+  },
+  {
+    "utc": "2026-11-07T09:29:26.851672+00:00",
+    "command": ":TIM:MAIN:OFFS 4.8"
+  },
+  {
+    "utc": "2026-11-07T09:29:26.851682+00:00",
+    "command": ":SING"
+  },
+  {
+    "utc": "2026-11-07T09:29:26.851693+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "RUN"
+  },
+  {
+    "utc": "2026-11-07T09:29:27.824692+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "RUN"
+  },
+  {
+    "utc": "2026-11-07T09:29:28.331434+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "RUN"
+  },
+  {
+    "utc": "2026-11-07T09:29:28.833007+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T09:29:28.834394+00:00",
+    "command": ":TFOR"
+  },
+  {
+    "utc": "2026-11-07T09:29:28.834457+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  }
+]

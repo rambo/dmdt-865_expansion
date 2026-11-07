@@ -1,0 +1,47 @@
+[
+  {
+    "utc": "2026-11-07T09:30:39.957601+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.958859+00:00",
+    "command": ":TIM:MAIN:SCAL?",
+    "response": "5.0000000e-03"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.959866+00:00",
+    "command": ":TIM:MAIN:OFFS?",
+    "response": "0.0000000e+00"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.960854+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.961851+00:00",
+    "command": ":WAV:SOUR?",
+    "response": "CHAN1"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.962823+00:00",
+    "command": ":WAV:MODE?",
+    "response": "NORM"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.963774+00:00",
+    "command": ":WAV:FORM?",
+    "response": "BYTE"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.964743+00:00",
+    "command": ":WAV:STAR?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T09:30:39.965936+00:00",
+    "command": ":WAV:STOP?",
+    "response": "1200"
+  }
+]

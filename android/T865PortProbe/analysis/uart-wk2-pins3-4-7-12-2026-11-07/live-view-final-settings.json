@@ -1,0 +1,7 @@
+{
+  ":TRIG:STAT?": "WAIT",
+  ":TIM:MAIN:SCAL?": "5.0000000e-03",
+  ":TRIG:EDGE:SOUR?": "CHAN4",
+  ":TRIG:EDGE:LEV?": "1.200000e+00",
+  ":TRIG:SWE?": "NORM"
+}

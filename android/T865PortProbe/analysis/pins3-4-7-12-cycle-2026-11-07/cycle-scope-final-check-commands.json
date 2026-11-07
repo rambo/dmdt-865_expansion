@@ -1,0 +1,72 @@
+[
+  {
+    "utc": "2026-11-07T10:07:40.516111+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.517564+00:00",
+    "command": ":TIM:MAIN:SCAL?",
+    "response": "5.0000000e-03"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.518789+00:00",
+    "command": ":TIM:MAIN:OFFS?",
+    "response": "0.0000000e+00"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.519943+00:00",
+    "command": ":TRIG:MODE?",
+    "response": "EDGE"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.521039+00:00",
+    "command": ":TRIG:EDGE:SOUR?",
+    "response": "CHAN1"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.522058+00:00",
+    "command": ":TRIG:EDGE:SLOP?",
+    "response": "POS"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.552472+00:00",
+    "command": ":TRIG:EDGE:LEV?",
+    "response": "0.000000e+00"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.553759+00:00",
+    "command": ":TRIG:SWE?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.554946+00:00",
+    "command": ":ACQ:MDEP?",
+    "response": "AUTO"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.556130+00:00",
+    "command": ":WAV:SOUR?",
+    "response": "CHAN1"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.557321+00:00",
+    "command": ":WAV:MODE?",
+    "response": "NORM"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.558472+00:00",
+    "command": ":WAV:FORM?",
+    "response": "BYTE"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.559521+00:00",
+    "command": ":WAV:STAR?",
+    "response": "1"
+  },
+  {
+    "utc": "2026-11-07T10:07:40.560527+00:00",
+    "command": ":WAV:STOP?",
+    "response": "1200"
+  }
+]

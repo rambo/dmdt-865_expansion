@@ -1,0 +1,59 @@
+[
+  {
+    "utc": "2026-11-07T10:01:49.809727+00:00",
+    "command": ":TIM:MAIN:SCAL 1"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809921+00:00",
+    "command": ":TIM:MAIN:OFFS 4.8"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809930+00:00",
+    "command": ":TRIG:MODE EDGE"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809937+00:00",
+    "command": ":TRIG:EDGE:SOUR CHAN2"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809943+00:00",
+    "command": ":TRIG:EDGE:SLOP POS"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809948+00:00",
+    "command": ":TRIG:EDGE:LEV -4"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809954+00:00",
+    "command": ":SING"
+  },
+  {
+    "utc": "2026-11-07T10:01:49.809961+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "RUN"
+  },
+  {
+    "utc": "2026-11-07T10:01:50.941210+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "RUN"
+  },
+  {
+    "utc": "2026-11-07T10:01:51.444159+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "RUN"
+  },
+  {
+    "utc": "2026-11-07T10:01:51.947675+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "WAIT"
+  },
+  {
+    "utc": "2026-11-07T10:01:51.949098+00:00",
+    "command": ":TFOR"
+  },
+  {
+    "utc": "2026-11-07T10:01:51.949159+00:00",
+    "command": ":TRIG:STAT?",
+    "response": "TD"
+  }
+]

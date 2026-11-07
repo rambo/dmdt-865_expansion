@@ -1,0 +1,26 @@
+[
+  {
+    "package": "com.thorkracing.dmdLora",
+    "file": "work/dmd-analysis/apks/com.thorkracing.dmdLora/base.apk",
+    "bytes": 3030950,
+    "sha256": "616a2c0be5960a9b7925dbd1eadd0006b3e26c37af8250cc7b6bdc5907d2c1cf"
+  },
+  {
+    "package": "com.thorkracing.wireddevices",
+    "file": "work/dmd-analysis/apks/com.thorkracing.wireddevices/base.apk",
+    "bytes": 10400142,
+    "sha256": "3252a1cb505184e49c92bdae5e17d51f9b097c9286cfc113e9e4a28e5072a45e"
+  },
+  {
+    "package": "com.thorkracing.dmd2launcher",
+    "file": "work/dmd-analysis/apks/com.thorkracing.dmd2launcher/base.apk",
+    "bytes": 44863209,
+    "sha256": "37c27f92cdba7616cb5d6b9208b9138f6e80e405dd3adad8889139170a34c3d7"
+  },
+  {
+    "package": "com.thorkracing.dmdplayground",
+    "file": "work/dmd-analysis/apks/com.thorkracing.dmdplayground/base.apk",
+    "bytes": 67105159,
+    "sha256": "4fc0ba022e378beafbe7fb7f918c8fc44b73177fcdf27d998e3d30babfcf6473"
+  }
+]

@@ -1,0 +1,335 @@
+{
+  "scope_host": "192.168.220.72",
+  "port": 5555,
+  "started_utc": "2026-11-07T08:38:43.362385+00:00",
+  "orientation": "Viewed from tablet backside; user rear-view numbering",
+  "pin_rows": [
+    [
+      1,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      11,
+      12
+    ]
+  ],
+  "channel_to_pin": {
+    "CHAN1": 4,
+    "CHAN2": 3,
+    "CHAN3": 2,
+    "CHAN4": 5
+  },
+  "user_observations": {
+    "pin1": "likely GND, unconfirmed",
+    "pin7": "looks +3.3V, unconfirmed"
+  },
+  "queries": [
+    {
+      "command": "*IDN?",
+      "value": "RIGOL TECHNOLOGIES,DS1074Z,DS1ZA162953663,00.04.05.SP2",
+      "utc": "2026-11-07T08:38:43.369505+00:00"
+    },
+    {
+      "command": ":TRIG:STAT?",
+      "value": "AUTO",
+      "utc": "2026-11-07T08:38:43.370565+00:00"
+    },
+    {
+      "command": ":TIM:MAIN:SCAL?",
+      "value": "5.0000000e-03",
+      "utc": "2026-11-07T08:38:43.371796+00:00"
+    },
+    {
+      "command": ":TIM:MAIN:OFFS?",
+      "value": "0.0000000e+00",
+      "utc": "2026-11-07T08:38:43.372884+00:00"
+    },
+    {
+      "command": ":ACQ:TYPE?",
+      "value": "NORM",
+      "utc": "2026-11-07T08:38:43.373923+00:00"
+    },
+    {
+      "command": ":ACQ:SRAT?",
+      "value": "5.000000e+07",
+      "utc": "2026-11-07T08:38:43.375068+00:00"
+    },
+    {
+      "command": ":ACQ:MDEP?",
+      "value": "AUTO",
+      "utc": "2026-11-07T08:38:43.376126+00:00"
+    },
+    {
+      "command": ":WAV:SOUR?",
+      "value": "CHAN1",
+      "utc": "2026-11-07T08:38:43.377149+00:00"
+    },
+    {
+      "command": ":WAV:MODE?",
+      "value": "NORM",
+      "utc": "2026-11-07T08:38:43.378156+00:00"
+    },
+    {
+      "command": ":WAV:FORM?",
+      "value": "BYTE",
+      "utc": "2026-11-07T08:38:43.379153+00:00"
+    },
+    {
+      "command": ":CHAN1:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T08:38:43.380149+00:00"
+    },
+    {
+      "command": ":CHAN1:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T08:38:43.381108+00:00"
+    },
+    {
+      "command": ":CHAN1:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T08:38:43.382118+00:00"
+    },
+    {
+      "command": ":CHAN1:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T08:38:43.383174+00:00"
+    },
+    {
+      "command": ":CHAN1:OFFS?",
+      "value": "1.000000e-01",
+      "utc": "2026-11-07T08:38:43.384200+00:00"
+    },
+    {
+      "command": ":CHAN1:INV?",
+      "value": "0",
+      "utc": "2026-11-07T08:38:43.385174+00:00"
+    },
+    {
+      "command": ":CHAN1:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T08:38:43.386421+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN1",
+      "value": "9.9E37",
+      "utc": "2026-11-07T08:38:43.388796+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN1",
+      "value": "8.000000e-02",
+      "utc": "2026-11-07T08:38:43.799446+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN1",
+      "value": "4.414673e-03",
+      "utc": "2026-11-07T08:38:44.200862+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN1",
+      "value": "1.600000e-01",
+      "utc": "2026-11-07T08:38:44.606767+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN1",
+      "value": "9.9E37",
+      "utc": "2026-11-07T08:38:45.019455+00:00"
+    },
+    {
+      "command": ":CHAN2:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T08:38:45.020729+00:00"
+    },
+    {
+      "command": ":CHAN2:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T08:38:45.021821+00:00"
+    },
+    {
+      "command": ":CHAN2:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T08:38:45.022943+00:00"
+    },
+    {
+      "command": ":CHAN2:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T08:38:45.024189+00:00"
+    },
+    {
+      "command": ":CHAN2:OFFS?",
+      "value": "-1.200000e-01",
+      "utc": "2026-11-07T08:38:45.025425+00:00"
+    },
+    {
+      "command": ":CHAN2:INV?",
+      "value": "0",
+      "utc": "2026-11-07T08:38:45.026391+00:00"
+    },
+    {
+      "command": ":CHAN2:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T08:38:45.027322+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN2",
+      "value": "-8.000000e-02",
+      "utc": "2026-11-07T08:38:45.453067+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN2",
+      "value": "4.000000e-02",
+      "utc": "2026-11-07T08:38:45.854460+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN2",
+      "value": "-2.521729e-02",
+      "utc": "2026-11-07T08:38:46.262598+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN2",
+      "value": "1.200000e-01",
+      "utc": "2026-11-07T08:38:46.672499+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN2",
+      "value": "9.9E37",
+      "utc": "2026-11-07T08:38:47.073475+00:00"
+    },
+    {
+      "command": ":CHAN3:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T08:38:47.074759+00:00"
+    },
+    {
+      "command": ":CHAN3:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T08:38:47.075745+00:00"
+    },
+    {
+      "command": ":CHAN3:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T08:38:47.076758+00:00"
+    },
+    {
+      "command": ":CHAN3:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T08:38:47.077733+00:00"
+    },
+    {
+      "command": ":CHAN3:OFFS?",
+      "value": "-3.200000e-01",
+      "utc": "2026-11-07T08:38:47.078723+00:00"
+    },
+    {
+      "command": ":CHAN3:INV?",
+      "value": "0",
+      "utc": "2026-11-07T08:38:47.079641+00:00"
+    },
+    {
+      "command": ":CHAN3:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T08:38:47.080637+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN3",
+      "value": "-4.000000e-02",
+      "utc": "2026-11-07T08:38:47.508725+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN3",
+      "value": "4.000000e-02",
+      "utc": "2026-11-07T08:38:47.917579+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN3",
+      "value": "-1.996643e-02",
+      "utc": "2026-11-07T08:38:48.327925+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN3",
+      "value": "8.000000e-02",
+      "utc": "2026-11-07T08:38:48.729678+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN3",
+      "value": "9.9E37",
+      "utc": "2026-11-07T08:38:49.137553+00:00"
+    },
+    {
+      "command": ":CHAN4:DISP?",
+      "value": "1",
+      "utc": "2026-11-07T08:38:49.138733+00:00"
+    },
+    {
+      "command": ":CHAN4:COUP?",
+      "value": "DC",
+      "utc": "2026-11-07T08:38:49.139680+00:00"
+    },
+    {
+      "command": ":CHAN4:PROB?",
+      "value": "1.000000e+01",
+      "utc": "2026-11-07T08:38:49.140779+00:00"
+    },
+    {
+      "command": ":CHAN4:SCAL?",
+      "value": "1.000000e+00",
+      "utc": "2026-11-07T08:38:49.141780+00:00"
+    },
+    {
+      "command": ":CHAN4:OFFS?",
+      "value": "-5.200000e-01",
+      "utc": "2026-11-07T08:38:49.142786+00:00"
+    },
+    {
+      "command": ":CHAN4:INV?",
+      "value": "0",
+      "utc": "2026-11-07T08:38:49.143706+00:00"
+    },
+    {
+      "command": ":CHAN4:BWL?",
+      "value": "OFF",
+      "utc": "2026-11-07T08:38:49.144602+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMIN,CHAN4",
+      "value": "-1.600000e-01",
+      "utc": "2026-11-07T08:38:49.547383+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VMAX,CHAN4",
+      "value": "8.000000e-02",
+      "utc": "2026-11-07T08:38:49.949427+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VAVG,CHAN4",
+      "value": "-3.461548e-02",
+      "utc": "2026-11-07T08:38:50.356358+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? VPP,CHAN4",
+      "value": "2.400000e-01",
+      "utc": "2026-11-07T08:38:50.768359+00:00"
+    },
+    {
+      "command": ":MEAS:ITEM? FREQ,CHAN4",
+      "value": "9.9E37",
+      "utc": "2026-11-07T08:38:51.169635+00:00"
+    }
+  ],
+  "finished_utc": "2026-11-07T08:38:51.169766+00:00"
+}
