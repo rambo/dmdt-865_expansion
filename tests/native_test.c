@@ -4,6 +4,8 @@
 #include <stdlib.h>
 
 int main(void) {
+    unsigned char input[256];
+    assert(read_available(input, sizeof(input)) == -1 && errno == EBADF);
     assert(send_frame() == -1 && errno == EBADF);
     assert(open_uart("/does-not-exist/t865-uart") == -1 && errno == ENOENT);
     char file[] = "/tmp/t865-uart-XXXXXX";
@@ -49,6 +51,19 @@ int main(void) {
         used += (size_t)n;
     }
     assert(memcmp(frame, received, sizeof(frame) - 1) == 0);
+    assert(read_available(input, sizeof(input)) == 0);
+    const char rx[] = "UUUU RX-PROBE 0123456789\r\n";
+    assert(write(master, rx, sizeof(rx) - 1) == (ssize_t)sizeof(rx) - 1);
+    struct pollfd rx_ready = { .fd = active_fd, .events = POLLIN };
+    assert(poll(&rx_ready, 1, 1000) == 1);
+    size_t rx_used = 0;
+    while (rx_used < sizeof(rx) - 1) {
+        ssize_t n = read_available(input + rx_used, sizeof(input) - rx_used);
+        assert(n > 0);
+        rx_used += (size_t)n;
+    }
+    assert(rx_used == sizeof(rx) - 1 && memcmp(input, rx, rx_used) == 0);
+    assert(read_available(input, sizeof(input)) == 0);
     // A stalled receiver must time out rather than hang Stop indefinitely.
     char fill[4096];
     memset(fill, 'U', sizeof(fill));
@@ -75,5 +90,5 @@ int main(void) {
     assert(close_uart() == 0);
     close(observer);
     close(master);
-    puts("PASS: real PTY bytes, raw 9600/8N1, errors, timeout, and termios restoration");
+    puts("PASS: real PTY TX/RX bytes, empty nonblocking RX, raw 9600/8N1, errors, timeout, termios restoration");
 }

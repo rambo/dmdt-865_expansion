@@ -17,10 +17,12 @@ import java.util.concurrent.TimeUnit
 class MainActivity : Activity() {
     private external fun openUart()
     private external fun sendFrame(): Int
+    private external fun readUart(): ByteArray
     private external fun closeUart()
 
     // Only the worker accesses the native session and scheduled task.
     private var task: ScheduledFuture<*>? = null
+    private var receiver: ScheduledFuture<*>? = null
     private var opened = false
     private var count = 0L
     private lateinit var status: TextView
@@ -45,11 +47,16 @@ class MainActivity : Activity() {
         root.addView(TextView(this).apply {
             text = "/dev/ttysWK2 · 9600 baud · 8N1 · no flow control\n" +
                 "Sends ASCII UUUU T865 UART WK2 + CR/LF once per second.\n" +
+                "Idle mode sends nothing and logs received bytes.\n" +
                 "Writes to hardware. Keep DMD LoRa off. Stops when this app leaves the foreground."
         })
         start = Button(this).apply { text = "Start transmitting"; setOnClickListener { begin() } }
         stop = Button(this).apply { text = "Stop and restore UART"; setOnClickListener { halt() } }
         root.addView(start); root.addView(stop)
+        root.addView(Button(this).apply {
+            text = "Receive only / TX idle"
+            setOnClickListener { holdIdle() }
+        })
         status = TextView(this)
         root.addView(status)
         setContentView(root)
@@ -77,7 +84,8 @@ class MainActivity : Activity() {
             task = null
             try {
                 if (!opened) { openUart(); opened = true }
-                val message = "UART IDLE: WK2 open at 9600/8N1; no writes."
+                monitorRx()
+                val message = "UART IDLE: WK2 open at 9600/8N1; no writes; RX monitor active."
                 Log.i(TAG, message)
                 runOnUiThread {
                     if (!isDestroyed) { status.text = message; start.isEnabled = true }
@@ -86,6 +94,28 @@ class MainActivity : Activity() {
                 finishSession("Idle open failed: $error")
             }
         }
+    }
+
+    private fun monitorRx() {
+        if (receiver != null) return
+        receiver = worker.scheduleWithFixedDelay({
+            try {
+                val bytes = readUart()
+                if (bytes.isNotEmpty()) {
+                    val hex = bytes.joinToString(" ") { "%02X".format(it.toInt() and 255) }
+                    val text = bytes.joinToString("") {
+                        val value = it.toInt() and 255
+                        if (value in 32..126 && value != 92) value.toChar().toString()
+                        else "\\x%02X".format(value)
+                    }
+                    val message = "RX ${bytes.size} bytes hex=[$hex] ascii=[$text]"
+                    Log.i(TAG, message)
+                    runOnUiThread { if (!isDestroyed) status.text = message }
+                }
+            } catch (error: Exception) {
+                finishSession("RX failed: $error")
+            }
+        }, 0, 50, TimeUnit.MILLISECONDS)
     }
 
     private fun idle(message: String) {
@@ -105,6 +135,7 @@ class MainActivity : Activity() {
         worker.execute {
             try {
                 if (!opened) { openUart(); opened = true }
+                monitorRx()
                 count = 0
                 Log.i(TAG, "OPEN /dev/ttysWK2 9600/8N1 raw, flow control off; app UID=${android.os.Process.myUid()}")
                 task = worker.scheduleWithFixedDelay({
@@ -126,6 +157,8 @@ class MainActivity : Activity() {
     private fun finishSession(message: String) {
         task?.cancel(false)
         task = null
+        receiver?.cancel(false)
+        receiver = null
         var result = message
         try { closeUart() } catch (error: Exception) { result += "\nRestore/close failed: $error" }
         opened = false

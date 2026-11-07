@@ -40,3 +40,11 @@ All relative to pin 1 unless specified:
 The low pin-10 reading differs from the earlier scope's ~0.24 V. These were separate measurements with remapped probes; do not infer a hardware-state change without verifying contacts and references. No RX injection, loopback, UART write or expansion command was performed for these measurements. The bridge supply voltage remains unmeasured.
 
 Pin 2's falling level could reflect a weakly biased/un-driven node or stored charge; the cause and final value are unverified. These are sequential readings. Near-zero voltage does not establish ground; pin 3 provides a known counterexample. No new UART write or expansion command was sent. Full map: T865PortProbe/analysis/EXPANSION-PIN-MAP-2026-11-07.txt.
+
+## Version 1.2: receive-only monitoring for external RX identification
+
+- Actual `assembleDebug lintDebug` PASS; lint 0 errors, 21 warnings (English-only UI strings and existing metadata/version warnings).
+- Native ASan/UBSan PTY test PASS including exact injected RX bytes, empty nonblocking reads and the existing TX/configuration/timeout/restoration checks.
+- Installed after normal Stop; receive-only Idle opens WK2 and polls available bytes without transmitting. Device UI/logcat and one-descriptor readback retained. Normal Stop cancels RX and restores/closes; reopening Idle succeeds without RX errors. A Home-key attempt did not produce a verified background transition, so receiver cancellation was checked with explicit ADB Stop instead.
+- APK v2 signature and 16 KiB ZIP alignment verified. Native code compiled for both supported ABIs with warnings treated as errors.
+- Receiver is left active at 9600/8N1 with TX idle. No external-MCU RX signal or loopback has been injected. Host PTY reception is not proof of a physical tablet RX pin. See RX-PROBE-WIRING.txt; the resistor circuit is a proposed bench setup, not an electrically tested assembly.

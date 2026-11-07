@@ -1,0 +1,4 @@
+         1794051889.952 15114 15148 I T865UartTx: UART IDLE: WK2 open at 9600/8N1; no writes; RX monitor active.
+         1794051963.058 15114 15148 I T865UartTx: UART IDLE: WK2 open at 9600/8N1; no writes; RX monitor active.
+         1794052024.432 15114 15148 I T865UartTx: STOP: original termios restored and descriptor closed unless an error is shown.
+         1794052027.228 15114 15148 I T865UartTx: UART IDLE: WK2 open at 9600/8N1; no writes; RX monitor active.

@@ -78,6 +78,13 @@ static int send_frame(void) {
     return (int)sent;
 }
 
+static ssize_t read_available(unsigned char *buffer, size_t capacity) {
+    if (active_fd < 0) { errno = EBADF; return -1; }
+    ssize_t n = read(active_fd, buffer, capacity);
+    if (n < 0 && (errno == EAGAIN || errno == EWOULDBLOCK || errno == EINTR)) return 0;
+    return n;
+}
+
 static int close_uart(void) {
     if (active_fd < 0) return 0;
     int fd = active_fd;
@@ -106,6 +113,16 @@ JNIEXPORT jint JNICALL Java_dev_t865_uarttx_MainActivity_sendFrame(JNIEnv *env, 
     (void)self;
     int result = send_frame();
     if (result < 0) throw_io(env, "write /dev/ttysWK2");
+    return result;
+}
+
+JNIEXPORT jbyteArray JNICALL Java_dev_t865_uarttx_MainActivity_readUart(JNIEnv *env, jobject self) {
+    (void)self;
+    unsigned char buffer[256];
+    ssize_t n = read_available(buffer, sizeof(buffer));
+    if (n < 0) { throw_io(env, "read /dev/ttysWK2"); return NULL; }
+    jbyteArray result = (*env)->NewByteArray(env, (jsize)n);
+    if (result && n > 0) (*env)->SetByteArrayRegion(env, result, 0, (jsize)n, (const jbyte *)buffer);
     return result;
 }
 
