@@ -1,0 +1,13 @@
+{
+  "experiment": "Own ordinary app UART WK2 transmission, DMD LoRa OFF; no expansion power/GPIO ioctls",
+  "ground_pin": 1,
+  "channels": {
+    "CH1": 3,
+    "CH2": 7,
+    "CH3": 4,
+    "CH4": 12
+  },
+  "UART": "9600/8N1 raw no flow control",
+  "frame_ascii": "UUUU T865 UART WK2\\r\\n",
+  "period_s": 1
+}

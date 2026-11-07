@@ -1,0 +1,68 @@
+{
+  "channel": "CH4",
+  "pin": 12,
+  "ground_pin": 1,
+  "baud": 9600,
+  "format": "8N1 LSB first, noninverted",
+  "threshold_V": 1.2,
+  "framing_errors": 0,
+  "decoded_bytes": 160,
+  "bursts": [
+    {
+      "first_byte_start_s": 3.6101399999999995,
+      "last_byte_start_s": 3.6299399999999995,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 4.6109279999999995,
+      "last_byte_start_s": 4.6307279999999995,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 5.612136,
+      "last_byte_start_s": 5.631932,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 6.613595999999999,
+      "last_byte_start_s": 6.633395999999999,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 7.614684,
+      "last_byte_start_s": 7.634479999999999,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 8.617872,
+      "last_byte_start_s": 8.637672,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 9.617088,
+      "last_byte_start_s": 9.636888,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    },
+    {
+      "first_byte_start_s": 10.618372,
+      "last_byte_start_s": 10.638172,
+      "ascii": "UUUU T865 UART WK2\r\n",
+      "hex": "55 55 55 55 20 54 38 36 35 20 55 41 52 54 20 57 4b 32 0d 0a",
+      "matches_sent_frame": true
+    }
+  ]
+}

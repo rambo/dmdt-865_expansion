@@ -1,0 +1,9 @@
+{
+  ":TRIG:STAT?": "AUTO",
+  ":TIM:MAIN:SCAL?": "5.0000000e-03",
+  ":TIM:MAIN:OFFS?": "0.0000000e+00",
+  ":TRIG:EDGE:SOUR?": "CHAN4",
+  ":TRIG:EDGE:SLOP?": "NEG",
+  ":TRIG:EDGE:LEV?": "1.200000e+00",
+  ":TRIG:SWE?": "NORM"
+}

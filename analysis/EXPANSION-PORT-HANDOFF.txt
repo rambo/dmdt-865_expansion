@@ -1,7 +1,24 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-LATEST PINS 9–11 CYCLE 2026-11-07 11:54 EET
+LATEST: PIN 12 CONFIRMED /dev/ttysWK2 TX — 2026-11-07
+Current probes: CH1->pin 3, CH2->pin 7, CH3->pin 4, CH4->pin 12; ground pin 1.
+One additional requested DMD cycle reproduced pin 3 high for 684.312 ms, and
+pin 12 decoded DMD's c0 c1 c2 c3 02 03 bytes at 9600/8N1. OFF restored afterward.
+Built/installed separate T865UartTx app (dev.t865.uarttx), ordinary UID10204 /
+untrusted_app. It sends UUUU T865 UART WK2 + CR/LF every ~1 s at 9600/8N1.
+CH4/pin 12 decoded eight exact 20-byte frames, zero framing errors: TX confirmed.
+Own app issued no expansion power/GPIO commands; DMD remains off. Pin 3 stays
+off while TX works, after earlier DMD cycles; cold-boot state still untested.
+App currently transmitting in foreground. Stop via:
+  adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez stop true
+Scope intentionally left CH4 FALL 1.2 V, NORM, 5 ms/div for live probing.
+User requested persistent keep-awake on all external power: setting now 15.
+Pin 12 idle observed ~2.45 V; RX and voltage tolerance remain unconfirmed.
+See UART-PIN12-RESULT-2026-11-07.txt and both pins3-4-7-12/uart-wk2 captures.
+Separate Git project and delivered APK/ZIP: ../T865UartTx*.
+
+EARLIER PINS 9–11 CYCLE 2026-11-07 11:54 EET
 User requested another cycle after remapping: CH1->pin 10, CH2->pin 9,
 CH3->pin 3, CH4->pin 11; ground pin 1. Cycle completed and OFF/display setting 0/
 original scope settings restored/verified. Pin 9 stayed ~3.34 V, pin 11 ~2.45 V,

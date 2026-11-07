@@ -19,3 +19,11 @@ analysis/**/*.bin binary
 /analysis/pins9-11-lora-cycle-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
 /analysis/pins9-11-lora-cycle-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
 /analysis/pins9-11-lora-cycle-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/pins3-4-7-12-cycle-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/pins3-4-7-12-cycle-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/pins3-4-7-12-cycle-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/pins3-4-7-12-cycle-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/uart-wk2-pins3-4-7-12-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
