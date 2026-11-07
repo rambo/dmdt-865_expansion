@@ -1,0 +1,12 @@
+{
+  "scope": "192.168.220.72:5555",
+  "ground_pin": 1,
+  "channels": {
+    "CH1": 6,
+    "CH2": 7,
+    "CH3": 3,
+    "CH4": 8
+  },
+  "authorization": "User: do new lora cycle",
+  "pin7_reference_clarification": "Pin 7 fluctuated relative to pin 8, not pin 3; pin 7 is steady about 3.3 V relative to pin 1."
+}

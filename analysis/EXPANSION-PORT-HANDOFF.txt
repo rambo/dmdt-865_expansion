@@ -1,13 +1,28 @@
 T865 expansion-port investigation handoff
 Prepared 2026-11-06, Europe/Helsinki
 
-LATEST REMAPPING / REFERENCE CLARIFICATION 2026-11-07
+LATEST REMAPPED ENABLE CYCLE 2026-11-07 11:47 EET
+One newly requested cycle completed; OFF, display setting 0 and scope setup
+restored/verified. New mapping: CH1->6, CH2->7, CH3->3, CH4->8; ground pin 1.
+Pin 7 stayed about 3.3 V; pins 6/8 showed no UART-like full-level transitions.
+New CH3 was exactly flat near 0 V despite matching power/GPIO success logs.
+User subsequently reports CH3 probe may have become misaligned: its pad contact
+is suspect. Do NOT treat this as proof pin 3 is ground or that the earlier 708 ms
+pulse disappeared. Verify CH3 contact/location before any further experiment.
+The earlier CH2/pin-3 pulse remains stronger evidence. No further cycle run.
+DMD reached its fifth consecutive initialization failure without prior success,
+and automatically wrote lora_enabled=false; no failure counters were cleared.
+See REMAPPED-LORA-CYCLE-2026-11-07.txt and remapped-lora-cycle-2026-11-07/.
+Pin 8 remains unconfirmed; fluctuating user measurement was pin 7 relative to
+pin 8, never pin 3. No UART contact has yet been identified.
+
+EARLIER REMAPPING / REFERENCE CLARIFICATION 2026-11-07
 Current grounds are on pin 1; CH1->pin 6, CH2->pin 7, CH3->pin 3, CH4->pin 8.
 User clarified that the fluctuating measurement was pin 7 REFERENCED TO PIN 8;
 pin 7 reads around 3.3 V referenced to pin 1. It was never referenced to pin 3;
 the assistant's earlier statement to that effect was incorrect. Pin 8 is not
 established as GND. The fresh read-only baseline shows pin 7 about 3.32 V; other
-probed pads are currently near 0 V. No new enable cycle was performed. See
+probed pads were near 0 V. That baseline itself performed no enable cycle. See
 REMAPPED-PIN-BASELINE-2026-11-07.txt and remapped-pins-2026-11-07/. Keep the older
 capture's channel mapping separate: the validated 708 ms pulse was pin 3 on CH2.
 
@@ -18,7 +33,8 @@ Firmware is now mdt865_16_ngms_1.2.7, kernel 6.6.102-android15-8-4k. The bound
 expand driver is now supplied by loaded expand_module.ko, but pulling/reading
 that module is denied. /dev/expand is now 10:107; old built-in-driver details
 below are historical. Current policy still grants appdomain device-node access.
-User also reports pin 8 looks like ground and pin 7 remains around +3.3 V.
+At that stage user suspected pin 8 was ground; later measurements withdrew that
+assumption. Pin 7 remains around +3.3 V referenced to pin 1.
 Connected baseline: pin 4 around 1.8 V, pin 5 around 1.53 V, pins 2/3 near 0 V.
 Manage's LoRa switch controls DMD LoraService, not an independent power-only API.
 User approved one GUI-controlled cycle; original state was OFF, and OFF was
@@ -34,7 +50,7 @@ transitions. Pin 3 is software controlled, but supply-vs-GPIO and a unique GPIO
 566 pad mapping remain unproved because both power and I/O 1 changed together.
 Original LoRa OFF, scope setup and stay-awake setting 0 were restored/verified.
 Device-tree node fixed_wk_33v@0 has always-on/boot-on property names; connection
-to physical pin 7 remains unverified. Pin 8 is still a user-reported GND candidate.
+to physical pin 7 remains unverified. Later evidence leaves pin 8 unconfirmed.
 
 EARLIER FOLLOW-UP 2026-11-07: PHYSICAL SETUP / PAUSED FOR USER'S SYSTEM UPDATE
 See EXPANSION-PIN-BASELINE-2026-11-07.txt and scope-2026-11-07/ in this directory.
@@ -82,7 +98,7 @@ EByte-compatible module the DMD initialization mode handshake fails and the
 service shuts down. A custom Meshtastic module will not speak that EByte command
 protocol. Use direct control first, or a dedicated power-only broker if required.
 
-WHAT HAS AND HAS NOT BEEN DONE
+HISTORICAL PRE-SCOPE STATUS (superseded by controlled cycles above)
 Completed: app-context read-only serial open probes; explicit SPI-node probes;
 static analysis of installed APK/DEX/native libraries; read-only sysfs, package,
 firmware and SELinux-source inspection; web research; handoff preparation.

@@ -1,0 +1,47 @@
+{
+  "ground_pin": 1,
+  "channel_to_pin": {
+    "CH1": 6,
+    "CH2": 7,
+    "CH3": 3,
+    "CH4": 8
+  },
+  "channels": {
+    "CH1": {
+      "pin": 6,
+      "min_V": 0.14378907,
+      "max_V": 0.33550782999999995,
+      "median_V": 0.23964844999999999,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "logic_scale_transitions_detected": false
+    },
+    "CH2": {
+      "pin": 7,
+      "min_V": 3.15046908,
+      "max_V": 3.43687536,
+      "median_V": 3.29367222,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "logic_scale_transitions_detected": false
+    },
+    "CH3": {
+      "pin": 3,
+      "min_V": 0.0,
+      "max_V": 0.0,
+      "median_V": 0.0,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "logic_scale_transitions_detected": false
+    },
+    "CH4": {
+      "pin": 8,
+      "min_V": -0.14425782,
+      "max_V": 0.04808594,
+      "median_V": -0.04808594,
+      "sample_count": 3000000,
+      "sample_interval_s": 4e-06,
+      "logic_scale_transitions_detected": false
+    }
+  }
+}

@@ -11,3 +11,7 @@ analysis/**/*.bin binary
 /analysis/post-update-2026-11-07/successful-cycle/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
 /analysis/post-update-2026-11-07/successful-cycle/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
 /analysis/post-update-2026-11-07/successful-cycle/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/remapped-lora-cycle-2026-11-07/cycle-CH1.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/remapped-lora-cycle-2026-11-07/cycle-CH2.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/remapped-lora-cycle-2026-11-07/cycle-CH3.bin filter=lfs diff=lfs merge=lfs -text
+/analysis/remapped-lora-cycle-2026-11-07/cycle-CH4.bin filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,60 @@
+{
+  "authorization": "User explicitly requested do new lora cycle",
+  "ground_pin": 1,
+  "channel_to_pin": {
+    "CHAN1": 6,
+    "CHAN2": 7,
+    "CHAN3": 3,
+    "CHAN4": 8
+  },
+  "events": [
+    {
+      "utc": "2026-11-07T09:47:09.254123+00:00",
+      "event": "original_switch_readback",
+      "checked": "false"
+    },
+    {
+      "utc": "2026-11-07T09:47:11.475417+00:00",
+      "event": "scope_trigger_confirmed_TD"
+    },
+    {
+      "utc": "2026-11-07T09:47:11.477311+00:00",
+      "event": "tap_enable_begin"
+    },
+    {
+      "utc": "2026-11-07T09:47:11.605384+00:00",
+      "event": "tap_enable_end"
+    },
+    {
+      "utc": "2026-11-07T09:47:14.890347+00:00",
+      "event": "enabled_state_readback",
+      "checked": "true"
+    },
+    {
+      "utc": "2026-11-07T09:47:22.441822+00:00",
+      "event": "scope_capture_stopped"
+    },
+    {
+      "utc": "2026-11-07T09:47:25.093053+00:00",
+      "event": "tap_restore_off_begin"
+    },
+    {
+      "utc": "2026-11-07T09:47:25.185126+00:00",
+      "event": "tap_restore_off_end"
+    },
+    {
+      "utc": "2026-11-07T09:47:27.882850+00:00",
+      "event": "restored_state_readback",
+      "checked": "false"
+    },
+    {
+      "utc": "2026-11-07T09:47:58.187074+00:00",
+      "event": "scope_waveforms_saved_and_settings_restored"
+    },
+    {
+      "utc": "2026-11-07T09:47:58.366685+00:00",
+      "event": "original_display_setting_restored",
+      "value": "0"
+    }
+  ]
+}

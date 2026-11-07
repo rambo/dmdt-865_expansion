@@ -1,0 +1,16 @@
+Decompiled installed DMD LoRa 1.0.14; service/LoraService.java lines 546-558.
+APK SHA256: 616a2c0be5960a9b7925dbd1eadd0006b3e26c37af8250cc7b6bdc5907d2c1cf
+
+546:                 SharedPreferences sharedPreferences = getSharedPreferences("dmdlora_prefs", 0);
+547:                 int i2 = sharedPreferences.getInt("lora_consecutive_init_failures", 0) + 1;
+548:                 boolean z5 = sharedPreferences.getBoolean("lora_init_ever_succeeded", false);
+549:                 SharedPreferences.Editor editorPutInt = sharedPreferences.edit().putInt("lora_consecutive_init_failures", i2);
+550:                 if (z5 || i2 < 5) {
+551:                     Log.d("LoraService", "Transient failure — count=" + i2 + " everSucceeded=" + z5 + ". Will retry on next launch.");
+552:                     z3 = false;
+553:                 } else {
+554:                     editorPutInt.putBoolean("lora_enabled", false);
+555:                     try {
+556:                         Log.w("LoraService", "Persistent disable — " + i2 + " consecutive init failures and never succeeded");
+557:                         z3 = true;
+558:                     } catch (Exception e4) {
