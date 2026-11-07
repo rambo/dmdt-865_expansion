@@ -20,6 +20,7 @@ This repository has one Git root; the project directories are not submodules.
 | [firmware/ESP32UartProbe](firmware/ESP32UartProbe/) | ESP32-PICO-D4 sketch, GPIO26 TX / GPIO25 RX, plus serial validation scripts and logs. |
 | [cad/fit-check](cad/fit-check/) | Four raised-label STL/DXF fit gauges, dimensions, generator and CAD validation. |
 | [docs/measurements.md](docs/measurements.md) | Current electrical and mechanical findings, assumptions and measurement references. |
+| [docs/gpio-control-api.md](docs/gpio-control-api.md) | GpioControl methods, ioctl trace, factory I/O indices, return semantics and mapping limits. |
 | [docs/reports](docs/reports/) | Driver/LoRa analysis, handoff, pin maps, scope summaries and app reports. |
 | [android/T865PortProbe/analysis](android/T865PortProbe/analysis/) | Versioned original measurement bundles, raw scope channels, capture/decoding scripts, logcat, UI snapshots and earlier investigation evidence. |
 | [measurements](measurements/) | Additional original scope workspace, SELinux/driver discovery, validation captures and measurement photos. |

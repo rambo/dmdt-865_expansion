@@ -1,0 +1,82 @@
+// Decompiled evidence; Kotlin metadata annotations omitted for readability.
+package hk.topicon.control.model;
+
+import kotlin.Metadata;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+
+/* JADX INFO: loaded from: classes.dex */
+public abstract class Position {
+
+    /* JADX INFO: renamed from: Companion, reason: from kotlin metadata */
+    public static final Companion INSTANCE = new Companion(null);
+    private final int id;
+    private final String name;
+
+    public static final class Companion {
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+
+        public final Position fromId(int id) {
+            if (id == 1) {
+                return Left.INSTANCE;
+            }
+            if (id != 2) {
+                return id != 3 ? External.INSTANCE : TtyS1.INSTANCE;
+            }
+            return Right.INSTANCE;
+        }
+
+        private Companion() {
+        }
+    }
+
+    public static final class External extends Position {
+        public static final External INSTANCE = new External();
+
+        private External() {
+            super(4, "external", null);
+        }
+    }
+
+    public static final class Left extends Position {
+        public static final Left INSTANCE = new Left();
+
+        private Left() {
+            super(1, "left", null);
+        }
+    }
+
+    public static final class Right extends Position {
+        public static final Right INSTANCE = new Right();
+
+        private Right() {
+            super(2, "right", null);
+        }
+    }
+
+    public static final class TtyS1 extends Position {
+        public static final TtyS1 INSTANCE = new TtyS1();
+
+        private TtyS1() {
+            super(3, "ttyS1", null);
+        }
+    }
+
+    public /* synthetic */ Position(int i2, String str, DefaultConstructorMarker defaultConstructorMarker) {
+        this(i2, str);
+    }
+
+    public final int getId() {
+        return this.id;
+    }
+
+    public final String getName() {
+        return this.name;
+    }
+
+    private Position(int i2, String str) {
+        this.id = i2;
+        this.name = str;
+    }
+}

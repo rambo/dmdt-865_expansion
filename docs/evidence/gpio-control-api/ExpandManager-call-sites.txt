@@ -1,0 +1,35 @@
+Decompiled ExpandManager: power and mode call sites. Line numbers refer to original JADX output.
+
+Lines 203-218:
+203:     }
+204: 
+205:     private final void powerOff(Position position) {
+206:         if ((Intrinsics.areEqual(position, Position.Left.INSTANCE) || Intrinsics.areEqual(position, Position.Right.INSTANCE)) && this.gpioControl.getIsExist()) {
+207:             this.gpioControl.setPower(position.getId(), false);
+208:         }
+209:     }
+210: 
+211:     /* JADX INFO: Access modifiers changed from: private */
+212:     public final void powerOn(Position position) {
+213:         if (Intrinsics.areEqual(position, Position.TtyS1.INSTANCE) || !this.gpioControl.getIsExist()) {
+214:             return;
+215:         }
+216:         this.gpioControl.setPower(position.getId(), true);
+217:         this.gpioControl.writeIo(position.getId(), 1, true);
+218:     }
+
+Lines 399-412:
+399:     public final boolean setMode(LoraMode mode) {
+400:         Intrinsics.checkNotNullParameter(mode, "mode");
+401:         this.loraMode = mode;
+402:         LogDelegate logDelegate = LogDelegate.INSTANCE;
+403:         Position position = this.currentPosition;
+404:         logDelegate.log("setMode: " + mode + ", currentPosition: " + (position != null ? position.getName() : null));
+405:         Position position2 = this.currentPosition;
+406:         if ((!Intrinsics.areEqual(position2, Position.Left.INSTANCE) && !Intrinsics.areEqual(position2, Position.Right.INSTANCE)) || !this.gpioControl.getIsExist() || !Intrinsics.areEqual(SystemProperties.get$default(this.systemProperties, "ro.product.device", null, 2, null), "mdt781")) {
+407:             return false;
+408:         }
+409:         this.gpioControl.writeIo(position2.getId(), 3, mode.getM0());
+410:         this.gpioControl.writeIo(position2.getId(), 2, mode.getM1());
+411:         return true;
+412:     }

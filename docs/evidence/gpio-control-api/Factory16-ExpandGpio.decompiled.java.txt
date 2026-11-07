@@ -1,0 +1,124 @@
+package com.freeme.factory.cradle;
+
+import androidx.savedstate.serialization.ClassDiscriminatorModeKt;
+import java.util.Arrays;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: ExpandGpio.kt */
+/* JADX INFO: loaded from: classes.dex */
+public final class ExpandGpio {
+    private static final String PATH = "/dev/expand";
+    private boolean isExist;
+
+    private final native int open(String path);
+
+    public final native void close();
+
+    public final native int getPosition(int type);
+
+    public final native int getType(int position);
+
+    public final native EepromData readEeprom(int position);
+
+    public final native boolean readIo(int position, int io);
+
+    public final native boolean recognizeModule();
+
+    public final native boolean setPower(int position, boolean state);
+
+    public final native boolean writeEeprom(int position, EepromData eeprom);
+
+    public final native boolean writeIo(int position, int io, boolean state);
+
+    public ExpandGpio() {
+        System.loadLibrary("jni_freeme_expand");
+        if (open(PATH) >= 0) {
+            this.isExist = true;
+        }
+    }
+
+    /* JADX INFO: compiled from: ExpandGpio.kt */
+    public static final /* data */ class EepromData {
+        private final byte[] sn;
+        private final int type;
+        private final int version;
+
+        public static /* synthetic */ EepromData copy$default(EepromData eepromData, byte[] bArr, int i, int i2, int i3, Object obj) {
+            if ((i3 & 1) != 0) {
+                bArr = eepromData.sn;
+            }
+            if ((i3 & 2) != 0) {
+                i = eepromData.version;
+            }
+            if ((i3 & 4) != 0) {
+                i2 = eepromData.type;
+            }
+            return eepromData.copy(bArr, i, i2);
+        }
+
+        /* JADX INFO: renamed from: component1, reason: from getter */
+        public final byte[] getSn() {
+            return this.sn;
+        }
+
+        /* JADX INFO: renamed from: component2, reason: from getter */
+        public final int getVersion() {
+            return this.version;
+        }
+
+        /* JADX INFO: renamed from: component3, reason: from getter */
+        public final int getType() {
+            return this.type;
+        }
+
+        public final EepromData copy(byte[] sn, int version, int type) {
+            Intrinsics.checkNotNullParameter(sn, "sn");
+            return new EepromData(sn, version, type);
+        }
+
+        public String toString() {
+            return "EepromData(sn=" + Arrays.toString(this.sn) + ", version=" + this.version + ", type=" + this.type + ")";
+        }
+
+        public EepromData(byte[] sn, int i, int i2) {
+            Intrinsics.checkNotNullParameter(sn, "sn");
+            this.sn = sn;
+            this.version = i;
+            this.type = i2;
+        }
+
+        public final byte[] getSn() {
+            return this.sn;
+        }
+
+        public final int getType() {
+            return this.type;
+        }
+
+        public final int getVersion() {
+            return this.version;
+        }
+
+        public boolean equals(Object other) {
+            if (this == other) {
+                return true;
+            }
+            if (!Intrinsics.areEqual(getClass(), other != null ? other.getClass() : null)) {
+                return false;
+            }
+            Intrinsics.checkNotNull(other, "null cannot be cast to non-null type com.freeme.factory.cradle.ExpandGpio.EepromData");
+            EepromData eepromData = (EepromData) other;
+            return Arrays.equals(this.sn, eepromData.sn) && this.version == eepromData.version && this.type == eepromData.type;
+        }
+
+        public int hashCode() {
+            return (((Arrays.hashCode(this.sn) * 31) + this.version) * 31) + this.type;
+        }
+    }
+
+    /* JADX INFO: renamed from: isExist, reason: from getter */
+    public final boolean getIsExist() {
+        return this.isExist;
+    }
+}

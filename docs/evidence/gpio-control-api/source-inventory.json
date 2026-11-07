@@ -1,0 +1,84 @@
+{
+  "scope": "Cached DMD SDK and historical Android 14 factory trace, supplemented by freshly pulled Android 16 factory APK/JNI and read-only live metadata; no GPIO read/write, power, recognition, EEPROM or factory test invoked.",
+  "lora_apk_sha256": "616a2c0be5960a9b7925dbd1eadd0006b3e26c37af8250cc7b6bdc5907d2c1cf",
+  "post_update_cached_apk_matches": true,
+  "sdk_native_sha256": "b89aca9b577faaa4220a3e592fc77984cc93df826fe841034b15c7ee956f96fb",
+  "adb_check": "Device connected; mdt865_16_ngms_1.2.7 release-keys, Android 16, kernel 6.6.102-android15-8-4k. Current factory APK and JNI pulled for static analysis. GPIO chip, device-tree values and kernel module inaccessible.",
+  "files": [
+    {
+      "evidence": "docs/evidence/gpio-control-api/GpioControl.decompiled.java.txt",
+      "source_name": "GpioControl.java",
+      "source_sha256": "c575ce2efccf72bd59b4eaa03a22918f4c28fc5a9779b25355a5bf4b9feb3ac5",
+      "evidence_sha256": "0b011ec63901504e182ba3bf1ef33ba596b9e01b86ce964d5b9fabd6c79407b6",
+      "description": "Decompiled class; only annotation metadata lines omitted, no code executed."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Position.decompiled.java.txt",
+      "source_name": "Position.java",
+      "source_sha256": "68a03f0f085c7c46aad806a677352fa1a1c556904093a5fce85633635e28c6d7",
+      "evidence_sha256": "c9079dee7a2ce52808b73a1c824a55229000e84b9cae07256e29b9161ed991fc",
+      "description": "Decompiled class; only annotation metadata lines omitted, no code executed."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Factory-ExpandGpio.decompiled.java.txt",
+      "source_name": "ExpandGpio.java",
+      "source_sha256": "e0f2cdcd265293f288347962faf01de34a5b701423d3260588c1a230b11fdf8a",
+      "evidence_sha256": "f8818df7049679962cd1d7c91b751ad0f3c27190da222058686542ca1cc83db9",
+      "description": "Decompiled class; only annotation metadata lines omitted, no code executed."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/ExpandManager-call-sites.txt",
+      "source_name": "ExpandManager.java",
+      "source_sha256": "503d3618dd094012ee77f7c866f4b82d6818287020cd0f73d81be6cb111be52a",
+      "evidence_sha256": "421ab5ff9ab7eb80ce40e03de15f9f511de2f63f414a53cd8ca9911c7c526638",
+      "description": "Power/mode methods including MDT781-only M0/M1 guard."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Factory-GPIO-test-DEX-fallback.txt",
+      "source_name": "ExpandTest-fallback.java",
+      "source_sha256": "a5cad6ef593410dcee579dc96f5336c07c101dbb575ccb8cabeaf29b345d4635",
+      "evidence_sha256": "c1be6b8e4a0585fe05cc944e3c215ed7dc0ff8c1b1d7dd5d7cd82cbae0c01078",
+      "description": "DEX instruction fallback recovers list {2,3,4,5} and write-to-1/read-from-list test sequence."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/GpioControl-native-arm64.asm",
+      "source_name": "expand-arm64.asm",
+      "source_sha256": "ac4542619a444f037c53bbe3a409133e9cb98f2b60acd49fd93f2f37fd993d8c",
+      "evidence_sha256": "ac4542619a444f037c53bbe3a409133e9cb98f2b60acd49fd93f2f37fd993d8c",
+      "description": "Full cached ARM64 disassembly of matching libexpand_jni.so; no library execution."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Factory16-ExpandGpio.decompiled.java.txt",
+      "source_name": "Factory16-ExpandGpio.java",
+      "source_sha256": "f752fcef8e35191f45ed453832226b6630f840a12e6cc98af3e95c5513315445",
+      "evidence_sha256": "cecabcc3918b02f7d04690bea1a9f682823a72d8e3d9d9c9358f587f74f5163c",
+      "description": "Current Android 16 factory wrapper, annotation metadata omitted; no wrapper instantiated."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Factory16-GPIO-test-DEX-fallback.txt",
+      "source_name": "Factory16-ExpandTest-fallback.java",
+      "source_sha256": "9722b361749d04090c6e4366f5d90218a5c609d1e50ae496c01a34ec58c63e49",
+      "evidence_sha256": "b3d1effb4979b2c971737fab700b60de33ea4a07280fae3717422968c5ce15ef",
+      "description": "Android 16 factory constructor list and complete testGpioOpt fallback DEX argument flow."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Factory16-native-arm64.asm",
+      "source_name": "factory16-arm64.asm",
+      "source_sha256": "9d7d9c35482c2e79c96368fe6106424a1155c11407b3d838b56a008e21d90c02",
+      "evidence_sha256": "9d7d9c35482c2e79c96368fe6106424a1155c11407b3d838b56a008e21d90c02",
+      "description": "Full static ARM64 disassembly of current /system/lib64/libjni_freeme_expand.so; no native function executed."
+    },
+    {
+      "evidence": "docs/evidence/gpio-control-api/Live-Android16-metadata.txt",
+      "source_name": "Live-Android16-metadata.txt",
+      "source_sha256": "ef92a9bc041c707eb13865e1198b8db205286a0bde06f49b2a5eded28bef36dc",
+      "evidence_sha256": "ef92a9bc041c707eb13865e1198b8db205286a0bde06f49b2a5eded28bef36dc",
+      "description": "Read-only ADB metadata and access failures on current production firmware."
+    }
+  ],
+  "historical_android14_factory_apk_sha256": "33dc86551e8ae605b168b2cc2236ed7d95f914e94bbfccef50eda093f459059d",
+  "historical_android14_factory_native_sha256": "072c644d3833bfd24a0a51a7f48afc893641e7fad462e4ed05140f231a6432b9",
+  "android16_factory_apk_sha256": "41ed352a7c8765e5ac3762657ce632af7ca32aed859ad90bbebabad573324b97",
+  "android16_factory_native_sha256": "9d7bced189aa7373a348a39eeafc5be4d4a36ea15b8259d385ef7ab84e841526",
+  "live_lora_apk_matches_cached": true
+}

@@ -1,0 +1,92 @@
+// Decompiled evidence; Kotlin metadata annotations omitted for readability.
+package hk.topicon.control.driver;
+
+import hk.topicon.control.util.LogDelegate;
+import hk.topicon.control.util.SystemProperties;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import kotlin.Metadata;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: loaded from: classes.dex */
+@Singleton
+public final class GpioControl {
+    private boolean isExist;
+    private final SystemProperties systemProperties;
+
+    static {
+        try {
+            System.loadLibrary("expand_jni");
+        } catch (UnsatisfiedLinkError e3) {
+            LogDelegate.INSTANCE.log("Failed to load expand_jni library", e3);
+        }
+    }
+
+    @Inject
+    public GpioControl(SystemProperties systemProperties) {
+        Intrinsics.checkNotNullParameter(systemProperties, "systemProperties");
+        this.systemProperties = systemProperties;
+        String deviceName = getDeviceName();
+        if (nativeOpen(deviceName) != -1) {
+            this.isExist = true;
+            return;
+        }
+        LogDelegate.INSTANCE.log("Failed to open GPIO driver at " + deviceName);
+    }
+
+    private final String getDeviceName() {
+        return Intrinsics.areEqual(SystemProperties.get$default(this.systemProperties, "ro.product.device", null, 2, null), "mdt781") ? "/dev/elora" : "/dev/expand";
+    }
+
+    private final native void nativeClose();
+
+    private final native int nativeGetPosition(int type);
+
+    private final native int nativeGetType(int position);
+
+    private final native int nativeOpen(String path);
+
+    private final native boolean nativeReadIo(int position, int io);
+
+    private final native int nativeReset();
+
+    private final native boolean nativeSetPower(int position, boolean state);
+
+    private final native boolean nativeWriteIo(int position, int io, boolean state);
+
+    public final void close() {
+        if (this.isExist) {
+            nativeClose();
+            this.isExist = false;
+        }
+    }
+
+    public final int getPosition(int typeId) {
+        return nativeGetPosition(typeId);
+    }
+
+    public final int getType(int positionId) {
+        return nativeGetType(positionId);
+    }
+
+    /* JADX INFO: renamed from: isExist, reason: from getter */
+    public final boolean getIsExist() {
+        return this.isExist;
+    }
+
+    public final boolean readIo(int positionId, int io) {
+        return nativeReadIo(positionId, io);
+    }
+
+    public final int reset() {
+        return nativeReset();
+    }
+
+    public final boolean setPower(int positionId, boolean state) {
+        return nativeSetPower(positionId, state);
+    }
+
+    public final boolean writeIo(int positionId, int io, boolean state) {
+        return nativeWriteIo(positionId, io, state);
+    }
+}

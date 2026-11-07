@@ -1,0 +1,172 @@
+JADX raw-instruction fallback, not compilable Java. This method failed structured decompilation.
+
+Constructor list initialization:
+            r14.leftSerialPath = r0
+            java.lang.String r0 = "/dev/ttysWK2"
+            r14.rightSerialPath = r0
+            java.util.ArrayList r0 = new java.util.ArrayList
+            r0.<init>()
+            r14.items = r0
+            r1 = 2
+            java.lang.Integer r1 = java.lang.Integer.valueOf(r1)
+            r2 = 3
+            java.lang.Integer r2 = java.lang.Integer.valueOf(r2)
+            r3 = 4
+            java.lang.Integer r3 = java.lang.Integer.valueOf(r3)
+            r4 = 5
+            java.lang.Integer r4 = java.lang.Integer.valueOf(r4)
+            java.lang.Integer[] r1 = new java.lang.Integer[]{r1, r2, r3, r4}
+            java.util.List r1 = kotlin.collections.CollectionsKt.listOf(r1)
+            r14.allGpio = r1
+
+Full testGpioOpt method:
+    private final java.lang.Object testGpioOpt(int r13, com.freeme.factory.cradle.ExpandGpio r14, kotlin.coroutines.Continuation<? super java.lang.Boolean> r15) {
+            r12 = this;
+            boolean r0 = r15 instanceof com.freeme.factory.cradle.ExpandTest.C00081
+            if (r0 == 0) goto L13
+            r0 = r15
+            com.freeme.factory.cradle.ExpandTest$testGpioOpt$1 r0 = (com.freeme.factory.cradle.ExpandTest.C00081) r0
+            int r1 = r0.label
+            r2 = -2147483648(0xffffffff80000000, float:-0.0)
+            r3 = r1 & r2
+            if (r3 == 0) goto L13
+            int r1 = r1 - r2
+            r0.label = r1
+            goto L18
+        L13:
+            com.freeme.factory.cradle.ExpandTest$testGpioOpt$1 r0 = new com.freeme.factory.cradle.ExpandTest$testGpioOpt$1
+            r0.<init>(r12, r15)
+        L18:
+            java.lang.Object r15 = r0.result
+            java.lang.Object r1 = kotlin.coroutines.intrinsics.IntrinsicsKt.getCOROUTINE_SUSPENDED()
+            int r2 = r0.label
+            r3 = 100
+            r5 = 2
+            r6 = 0
+            java.lang.String r7 = "test gpio, "
+            java.lang.String r8 = "ExpandTest"
+            r9 = 1
+            if (r2 == 0) goto L61
+            if (r2 == r9) goto L4d
+            if (r2 != r5) goto L45
+            int r12 = r0.I$1
+            int r13 = r0.I$0
+            java.lang.Object r14 = r0.L$2
+            java.util.Iterator r14 = (java.util.Iterator) r14
+            java.lang.Object r2 = r0.L$1
+            java.lang.String r2 = (java.lang.String) r2
+            java.lang.Object r10 = r0.L$0
+            com.freeme.factory.cradle.ExpandGpio r10 = (com.freeme.factory.cradle.ExpandGpio) r10
+            kotlin.ResultKt.throwOnFailure(r15)
+        L42:
+            r15 = r2
+            goto Lce
+        L45:
+            java.lang.IllegalStateException r12 = new java.lang.IllegalStateException
+            java.lang.String r13 = "call to 'resume' before 'invoke' with coroutine"
+            r12.<init>(r13)
+            throw r12
+        L4d:
+            int r12 = r0.I$1
+            int r13 = r0.I$0
+            java.lang.Object r14 = r0.L$2
+            java.util.Iterator r14 = (java.util.Iterator) r14
+            java.lang.Object r2 = r0.L$1
+            java.lang.String r2 = (java.lang.String) r2
+            java.lang.Object r10 = r0.L$0
+            com.freeme.factory.cradle.ExpandGpio r10 = (com.freeme.factory.cradle.ExpandGpio) r10
+            kotlin.ResultKt.throwOnFailure(r15)
+            goto L9b
+        L61:
+            kotlin.ResultKt.throwOnFailure(r15)
+            if (r13 != r9) goto L69
+            java.lang.String r15 = "left"
+            goto L6b
+        L69:
+            java.lang.String r15 = "right"
+        L6b:
+            java.util.List<java.lang.Integer> r12 = r12.allGpio
+            java.util.Iterator r12 = r12.iterator()
+        L71:
+            boolean r2 = r12.hasNext()
+            if (r2 == 0) goto L126
+            java.lang.Object r2 = r12.next()
+            java.lang.Number r2 = (java.lang.Number) r2
+            int r2 = r2.intValue()
+            r14.writeIo(r13, r9, r6)
+            r0.L$0 = r14
+            r0.L$1 = r15
+            r0.L$2 = r12
+            r0.I$0 = r13
+            r0.I$1 = r2
+            r0.label = r9
+            java.lang.Object r10 = kotlinx.coroutines.DelayKt.delay(r3, r0)
+            if (r10 != r1) goto L97
+            return r1
+        L97:
+            r10 = r14
+            r14 = r12
+            r12 = r2
+            r2 = r15
+        L9b:
+            boolean r15 = r10.readIo(r13, r12)
+            if (r15 != 0) goto L10a
+            java.lang.StringBuilder r15 = new java.lang.StringBuilder
+            r15.<init>()
+            r15.append(r7)
+            r15.append(r2)
+            java.lang.String r11 = ", gpio low test pass"
+            r15.append(r11)
+            java.lang.String r15 = r15.toString()
+            android.util.Log.d(r8, r15)
+            r10.writeIo(r13, r9, r9)
+            r0.L$0 = r10
+            r0.L$1 = r2
+            r0.L$2 = r14
+            r0.I$0 = r13
+            r0.I$1 = r12
+            r0.label = r5
+            java.lang.Object r15 = kotlinx.coroutines.DelayKt.delay(r3, r0)
+            if (r15 != r1) goto L42
+            return r1
+        Lce:
+            boolean r12 = r10.readIo(r13, r12)
+            if (r12 == 0) goto Lee
+            java.lang.StringBuilder r12 = new java.lang.StringBuilder
+            r12.<init>()
+            r12.append(r7)
+            r12.append(r15)
+            java.lang.String r2 = ", gpio high test pass"
+            r12.append(r2)
+            java.lang.String r12 = r12.toString()
+            android.util.Log.d(r8, r12)
+            r12 = r14
+            r14 = r10
+            goto L71
+        Lee:
+            java.lang.StringBuilder r12 = new java.lang.StringBuilder
+            r12.<init>()
+            r12.append(r7)
+            r12.append(r15)
+            java.lang.String r13 = ", gpio high test failed"
+            r12.append(r13)
+            java.lang.String r12 = r12.toString()
+            android.util.Log.d(r8, r12)
+            java.lang.Boolean r12 = kotlin.coroutines.jvm.internal.Boxing.boxBoolean(r6)
+            return r12
+        L10a:
+            java.lang.StringBuilder r12 = new java.lang.StringBuilder
+            r12.<init>()
+            r12.append(r7)
+            r12.append(r2)
+            java.lang.String r13 = ", gpio low test failed"
+            r12.append(r13)
+            java.lang.String r12 = r12.toString()
+            android.util.Log.d(r8, r12)
+            java.lang.Boolean r12 = kotlin.coroutines.jvm.internal.Boxing.boxBoolean(r6)
+            return r12
+        L126:
+            java.lang.Boolean r12 = kotlin.coroutines.jvm.internal.Boxing.boxBoolean(r9)
+            return r12
+    }
+

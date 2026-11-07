@@ -1,0 +1,71 @@
+Read-only metadata capture, 2026-11-07. No GPIO ioctl, gpioget, factory test, UART, power or pin-state operation requested.
+
+$ adb -d get-state
+device
+[exit 0]
+
+$ adb -d shell getprop ro.build.display.id
+mdt865_16_ngms_1.2.7 release-keys
+[exit 0]
+
+$ adb -d shell getprop ro.build.version.release
+16
+[exit 0]
+
+$ adb -d shell getprop ro.product.device
+mdt865
+[exit 0]
+
+$ adb -d shell uname -r
+6.6.102-android15-8-4k
+[exit 0]
+
+$ adb -d shell pm list packages -f factory
+package:/system/app/FreemeFactoryTest/FreemeFactoryTest.apk=com.freeme.factory
+[exit 0]
+
+$ adb -d shell dumpsys package com.freeme.factory | toybox grep -E "versionCode=|versionName=|minSdk=|targetSdk="
+    versionCode=36 minSdk=36 targetSdk=36
+    versionName=16
+[exit 0]
+
+$ adb -d shell ls -lZ /dev/expand /dev/gpiochip0 /sys/class/gpio
+ls: crw-rw-rw- 1 root system u:object_r:gpio_ctrl_device:s0   10, 107 2026-11-07 11:00 /dev/expand
+crw------- 1 root root   u:object_r:device:s0            254,   0 2026-11-07 11:00 /dev/gpiochip0
+/sys/class/gpio: No such file or directory
+[exit 1]
+
+$ adb -d shell gpioinfo
+gpioinfo: /dev/event-log-tags: Permission denied
+gpioinfo: /dev/gpiochip0: Permission denied
+[exit 1]
+
+$ adb -d shell ls /sys/firmware/devicetree/base/odm/expand@0
+#gpio-cells
+compatible
+i2c_bus
+name
+phandle
+right_gpio
+right_power
+right_spi0_clk
+right_spi0_csb
+right_spi0_mi
+right_spi0_mo
+status
+[exit 0]
+
+$ adb -d shell cat /sys/firmware/devicetree/base/odm/expand@0/right_gpio /sys/firmware/devicetree/base/odm/expand@0/right_power
+cat: /sys/firmware/devicetree/base/odm/expand@0/right_gpio: Permission denied
+cat: /sys/firmware/devicetree/base/odm/expand@0/right_power: Permission denied
+[exit 1]
+
+$ adb -d shell ls -l /vendor/lib/modules/expand_module.ko
+ls: /vendor/lib/modules/expand_module.ko: Permission denied
+[exit 1]
+$ adb -d shell pm path com.thorkracing.dmdLora
+package:/data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk
+
+$ adb -d shell sha256sum /data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk
+616a2c0be5960a9b7925dbd1eadd0006b3e26c37af8250cc7b6bdc5907d2c1cf  /data/app/~~AfWKSkl77x6L-ZswfX1yVg==/com.thorkracing.dmdLora-MAdoVeYF1PmYsKL4QL6Gtg==/base.apk
+

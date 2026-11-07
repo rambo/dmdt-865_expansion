@@ -48,6 +48,13 @@ See [pin map](reports/EXPANSION-PIN-MAP-2026-11-07.txt),
 [driver analysis](reports/EXPAND-DRIVER-ANALYSIS.txt) and
 [full handoff](reports/EXPANSION-PORT-HANDOFF.txt).
 
+The [GpioControl API trace](gpio-control-api.md) identifies logical I/O indices
+used by the SDK/factory client. Position 2 / I/O 1 maps to kernel GPIO 566 in the
+recorded log. Factory indices 2..5 are readback inputs in its test sequence;
+their current-kernel validity, direction capabilities and contact mapping remain
+unverified. Connector numbering, logical I/O indices and kernel GPIO numbers are
+separate namespaces.
+
 ## Connector and mounting geometry
 
 Contact openings are approximately 1.6 mm diameter. Measured outside spans

@@ -1,0 +1,82 @@
+// Decompiled evidence; Kotlin metadata annotations omitted for readability.
+package com.freeme.factory.cradle;
+
+import java.util.Arrays;
+import kotlin.jvm.internal.DefaultConstructorMarker;
+import kotlin.jvm.internal.Intrinsics;
+
+/* JADX INFO: compiled from: ExpandGpio.kt */
+/* JADX INFO: loaded from: classes.dex */
+public final class ExpandGpio {
+    public static final Companion Companion = new Companion(null);
+    private boolean isExist;
+
+    private final native int open(String str);
+
+    public final native EepromData readEeprom(int i);
+
+    public final native boolean readIo(int i, int i2);
+
+    public final native boolean recognizeModule();
+
+    public final native boolean setPower(int i, boolean z);
+
+    public final native boolean writeEeprom(int i, EepromData eepromData);
+
+    public final native boolean writeIo(int i, int i2, boolean z);
+
+    /* JADX INFO: compiled from: ExpandGpio.kt */
+    public static final class Companion {
+        public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
+            this();
+        }
+
+        private Companion() {
+        }
+    }
+
+    public ExpandGpio() {
+        System.loadLibrary("jni_freeme_expand");
+        if (open("/dev/expand") >= 0) {
+            this.isExist = true;
+        }
+    }
+
+    /* JADX INFO: compiled from: ExpandGpio.kt */
+    public static final class EepromData {
+        private final byte[] sn;
+        private final int type;
+        private final int version;
+
+        public String toString() {
+            return "EepromData(sn=" + Arrays.toString(this.sn) + ", version=" + this.version + ", type=" + this.type + ")";
+        }
+
+        public EepromData(byte[] sn, int i, int i2) {
+            Intrinsics.checkNotNullParameter(sn, "sn");
+            this.sn = sn;
+            this.version = i;
+            this.type = i2;
+        }
+
+        public final byte[] getSn() {
+            return this.sn;
+        }
+
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (!Intrinsics.areEqual(EepromData.class, obj != null ? obj.getClass() : null)) {
+                return false;
+            }
+            Intrinsics.checkNotNull(obj, "null cannot be cast to non-null type com.freeme.factory.cradle.ExpandGpio.EepromData");
+            EepromData eepromData = (EepromData) obj;
+            return Arrays.equals(this.sn, eepromData.sn) && this.version == eepromData.version && this.type == eepromData.type;
+        }
+
+        public int hashCode() {
+            return (((Arrays.hashCode(this.sn) * 31) + this.version) * 31) + this.type;
+        }
+    }
+}
