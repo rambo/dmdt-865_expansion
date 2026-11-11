@@ -140,3 +140,12 @@ match using the manufacturer's `LPS / 1eYWX` marking table. The paired `KN`
 transistors are candidate **2SK3018-family MOSFETs**; exact manufacturer and
 signal connections remain unverified. U1 has five pins, correcting the
 initial impression from the wider photo.
+
+## Contact relocation adapter (2026-11-11)
+
+[Adapter photos and assessment](reports/EXPANSION-ADAPTER-2026-11-11.txt) show
+a passive-looking flex between two 2 x 6 contact arrays, with pogo contacts
+at one end and flat lands at the other. User reports four mounting screws
+at one end and two at the other. Flex text includes `MDT65-barometer-FPC`
+and `JFHD-MDT865`; the presumed phone association is unconfirmed.
+No contact mapping or mechanical dimensions have been derived from the photos.

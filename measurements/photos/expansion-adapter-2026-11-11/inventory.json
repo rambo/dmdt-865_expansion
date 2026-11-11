@@ -1,0 +1,42 @@
+[
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/IMG20261111202302.heic",
+    "sha256": "9d0c96551dc8c06ad7588083ce6de87ae568c818b83cd28eb43b1d74786d4500",
+    "bytes": 1962571
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111202302.jpg",
+    "sha256": "34c68033dfa80db3e9b4b8109c127f97cea3ca9ec88d6a6bfa0a734d807e3455",
+    "bytes": 822204
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/IMG20261111202258.heic",
+    "sha256": "50b0543e961e1f71a64239347c30d5f2ed300a473fbcd67fa4e08294ee9e2b86",
+    "bytes": 2013452
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111202258.jpg",
+    "sha256": "76405e69494c109b72203b90dda02d62d11ccb849725d6db8f7bac5ba644d5b4",
+    "bytes": 847126
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/IMG20261111202251.heic",
+    "sha256": "e9bf7d216cdda3543899af6c3da5e6aeed7fba38eb670abfe35acf49aff7bf13",
+    "bytes": 1081095
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111202251.jpg",
+    "sha256": "fb3e63413f9267e35d366c299cb1cbd54d7aeb201ade3a1fa83b63777c9657a1",
+    "bytes": 497136
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/IMG20261111201131.heic",
+    "sha256": "7fa28144361cb4178f3a58b535781774587d09770e01817f860a2a89425a7db6",
+    "bytes": 1292918
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111201131.jpg",
+    "sha256": "b95920a5d61644f93eddbe4443e07aeb3f263bbaf16d90b412e12aee8d9fc80f",
+    "bytes": 547639
+  }
+]

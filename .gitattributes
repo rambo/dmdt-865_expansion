@@ -131,3 +131,7 @@ measurements/photos/lora-teardown-2026-11-11/IMG20261111193432.heic filter=lfs d
 measurements/photos/lora-teardown-2026-11-11/IMG20261111193346.heic filter=lfs diff=lfs merge=lfs -text
 measurements/photos/lora-teardown-2026-11-11/IMG20261111192600.heic filter=lfs diff=lfs merge=lfs -text
 measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111192600.jpg filter=lfs diff=lfs merge=lfs -text
+measurements/photos/expansion-adapter-2026-11-11/IMG20261111202302.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/expansion-adapter-2026-11-11/IMG20261111202258.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/expansion-adapter-2026-11-11/IMG20261111202251.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/expansion-adapter-2026-11-11/IMG20261111201131.heic filter=lfs diff=lfs merge=lfs -text
