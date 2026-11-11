@@ -135,3 +135,6 @@ measurements/photos/expansion-adapter-2026-11-11/IMG20261111202302.heic filter=l
 measurements/photos/expansion-adapter-2026-11-11/IMG20261111202258.heic filter=lfs diff=lfs merge=lfs -text
 measurements/photos/expansion-adapter-2026-11-11/IMG20261111202251.heic filter=lfs diff=lfs merge=lfs -text
 measurements/photos/expansion-adapter-2026-11-11/IMG20261111201131.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/expansion-adapter-2026-11-11/IMG20261111204318.heic filter=lfs diff=lfs merge=lfs -text
+measurements/photos/expansion-adapter-2026-11-11/IMG20261111204245.heic filter=lfs diff=lfs merge=lfs -text
+references/lora-teardown/E220-900T30S.pdf filter=lfs diff=lfs merge=lfs -text

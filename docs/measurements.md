@@ -149,3 +149,13 @@ at one end and flat lands at the other. User reports four mounting screws
 at one end and two at the other. Flex text includes `MDT65-barometer-FPC`
 and `JFHD-MDT865`; the presumed phone association is unconfirmed.
 No contact mapping or mechanical dimensions have been derived from the photos.
+
+Caliper photos now record the FPC pogo block's black body as **18.67 x 6.67 mm**
+(length x width). Body height, pin protrusion/travel, corner radii and flex-exit
+clearance remain unmeasured; printer fit allowance is separate from these dimensions.
+
+The [unpowered radio PCB probing plan](reports/RADIO-PCB-PROBE-PLAN-2026-11-11.txt)
+prioritizes ground, supply paths, enables/mode pins, UART and EEPROM mapping
+before the connector side becomes inaccessible. Pin 2 as switched supply
+is a working hypothesis from the wider FPC trace and earlier voltage decay,
+not a confirmed electrical assignment.

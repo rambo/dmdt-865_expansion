@@ -42,3 +42,15 @@ of each mating face when numbering: changing faces can mirror the layout.
 
 The photos do not establish pitch, screw spacing, contact assignments, current
 rating, or end-to-end electrical continuity. No CAD dimensions are updated.
+
+Additional mechanical measurements, 2026-11-11:
+- IMG20261111204318: black pogo connector body long dimension = 18.67 mm.
+- IMG20261111204245: body short dimension = 6.67 mm.
+These are observed caliper readings, not guaranteed manufacturing tolerances.
+Use 18.67 x 6.67 mm as the measured body envelope for later adapter design;
+printed pocket clearance is separate. Previously inferred contact pitch is
+3 mm, giving a 15 x 3 mm contact-centre rectangle. If centred in this body,
+that implies 1.835 mm centre-to-body-edge margins, a derived assumption.
+Still needed before final CAD: body height, free pin protrusion, intended
+compression/working travel, flex exit clearance and corner shape/radius.
+No CAD geometry or nominal screw pattern was changed.

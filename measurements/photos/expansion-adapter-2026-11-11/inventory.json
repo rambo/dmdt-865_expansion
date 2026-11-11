@@ -38,5 +38,25 @@
     "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111201131.jpg",
     "sha256": "b95920a5d61644f93eddbe4443e07aeb3f263bbaf16d90b412e12aee8d9fc80f",
     "bytes": 547639
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/IMG20261111204318.heic",
+    "sha256": "b32d05c25caf7d6f40e6336ac0354f42700ee00b40cb6e5c6e77c509646bae00",
+    "bytes": 2391908
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111204318.jpg",
+    "sha256": "d94516327f35f3f87d3217343f02f739c8e6d46e69f407c24bc33478fb28fcf0",
+    "bytes": 944841
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/IMG20261111204245.heic",
+    "sha256": "3f867743c21cd2ed1550f95d992fb6d29b7c774b4f84d4d8ac06a982037f4c18",
+    "bytes": 2473967
+  },
+  {
+    "file": "measurements/photos/expansion-adapter-2026-11-11/previews/IMG20261111204245.jpg",
+    "sha256": "ed0eaec2f5488e6c6e5cb01189fc26f4673d9858809fdbf143e9903d91eef30e",
+    "bytes": 996183
   }
 ]
