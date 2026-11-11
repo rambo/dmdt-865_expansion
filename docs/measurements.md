@@ -1,4 +1,4 @@
-# Current measurement index - 2026-11-07
+# Current measurement index - 2026-11-11
 
 This is the entry point for the electrical and mechanical measurements. Earlier
 reports preserve the sequence of observations and corrections; use the latest
@@ -122,3 +122,21 @@ duplicates of the versioned bundles; this preserves bundle/script references.
 [evidence-manifest.json](evidence-manifest.json) records source groups, repository
 paths, byte sizes and SHA-256 hashes for supplementary imported evidence. It does
 not enumerate the application files already preserved in their Git histories.
+
+## LoRa module teardown (2026-11-11)
+
+[Disassembly analysis](reports/LORA-MODULE-TEARDOWN-2026-11-11.txt) identifies
+the shielded module as **EBYTE E220-900T30S** and U2 as an **AT24C02C** EEPROM.
+The `ADRS / 883` power-stage IC is a high-confidence **MP2155GQ buck-boost**
+match (manufacturer top mark `ADR`, ten-pad package, adjacent `3R3` inductor).
+Its output voltage and enable wiring remain unmeasured. The EEPROM's `0x56`
+board label likely denotes its I2C address; no contents were read.
+[Original photos and previews](../measurements/photos/lora-teardown-2026-11-11/)
+preserve the evidence. These photos do not yet establish a carrier schematic
+or prove the absence of an MCU.
+
+Follow-up close-ups identify U1 as a strong **LP3987H-33B5F (3.3 V LDO)**
+match using the manufacturer's `LPS / 1eYWX` marking table. The paired `KN`
+transistors are candidate **2SK3018-family MOSFETs**; exact manufacturer and
+signal connections remain unverified. U1 has five pins, correcting the
+initial impression from the wider photo.

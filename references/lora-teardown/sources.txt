@@ -1,0 +1,4 @@
+LP3987H.pdf: manufacturer datasheet, revision 10 Sep 2022, retrieved 2026-11-11.
+Source: https://admin.lowpowersemi.com/storage/files/2026-04/e58e13cbb5f9c58580aceb91f943f14e.pdf
+SHA256: 87a2620a7574361cb0926b3471f6931f44faeb5e0cefd4e87a4441cd1c48e174
+PDF parser warned about truncated EOF marker, but extracted all 11 pages; marking and pin table are on pages 1-2.

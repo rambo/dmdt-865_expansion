@@ -1,0 +1,82 @@
+[
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111195406.heic",
+    "sha256": "556f5cc273de446556b7883552ec6788945c2e72497fc02c936c5e040dc470ce",
+    "bytes": 1005504
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111195406.jpg",
+    "sha256": "db246a48cbc88005a9115f82e5df5c8d89c327e052377a86929035555aafb975",
+    "bytes": 533444
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111195358.heic",
+    "sha256": "cefa21e5e906456fcab7bed3339506a458a8745a8d10215c92d617aab09cae5d",
+    "bytes": 887787
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111195358.jpg",
+    "sha256": "4c898f5fa3a37410568aaa04536ba26d102f371ebda638761446717fac8eb959",
+    "bytes": 451758
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111195254.heic",
+    "sha256": "6d71fee5fb44266383150722aa72605566665d8433efeb70cbf0806ae9766b18",
+    "bytes": 2081031
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111195254.jpg",
+    "sha256": "c682a1b0cfad0d73b6a0efb1d7afe653d49142012990b200afb706daeb178183",
+    "bytes": 893165
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111193432.heic",
+    "sha256": "fe97f2fdd20a07291ca38da6b3cce72f209b40af3360bd46fcfea91d2aa457f0",
+    "bytes": 1849965
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111193432.jpg",
+    "sha256": "01436db48f6eebb66343b71685716bc26a59cb3c7422ab75b55863e4b47e2623",
+    "bytes": 809752
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111193346.heic",
+    "sha256": "6fa9502ce8fe5957af02c1acc1c43649bafc4aecc64c8d829f83f72b369a0643",
+    "bytes": 2305897
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111193346.jpg",
+    "sha256": "338552769bad785da6d1f4ebd6bf31377e9644161316706a885bed55842fde39",
+    "bytes": 964625
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111192600.heic",
+    "sha256": "af3f711c12157ee5986853e880e2415fec6f1bdfb899788934254c213f676343",
+    "bytes": 2791669
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111192600.jpg",
+    "sha256": "e5440f1550bea6cab22b1bedf31f6d37ae3ddd1ac3b3171ecd8cb2daf5c10e9f",
+    "bytes": 1098648
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111200430.heic",
+    "sha256": "05053fb62a3a57258d57ee038927bc7c3ee13981e8817d85816d2b19ab85aaea",
+    "bytes": 934015
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111200430.jpg",
+    "sha256": "024b4d2bc7af8d8be07cd7a5314a5156f20d05915fcdd14a590219366ae3d6f4",
+    "bytes": 494354
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/IMG20261111200420.heic",
+    "sha256": "a725649001b190de9f51e681c2cd629bf67c3bec3ee1309a98d21a3025217abe",
+    "bytes": 964227
+  },
+  {
+    "file": "measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111200420.jpg",
+    "sha256": "71da871a1eed38e05119a01657d127b439a742a9e3d6fed26268b4c798fed9cb",
+    "bytes": 513025
+  }
+]
