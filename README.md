@@ -29,9 +29,20 @@ This repository has one Git root; the project directories are not submodules.
 
 The bench test established **tablet pin 11 = WK2 RX, pin 12 = WK2 TX**, with pin 1
 as the common ground reference, at 9600/8N1. See the
-[end-to-end evidence](docs/reports/UART-END-TO-END-2026-11-07.txt).
+[end-to-end evidence](docs/reports/UART-END-TO-END-2026-11-07.md).
 The LoRa radio itself was not attached or tested. Older reports are dated records;
 their descriptions of live device state are not a claim about the device now.
+
+## Documentation
+
+Authored documentation and worksheets use Markdown (`.md`), with Markdown tables
+and Mermaid diagrams. Raw logs, captured evidence, machine-readable inventories
+and original manufacturer PDFs retain their source formats.
+
+Start with the [measurement index](docs/measurements.md) or the
+[unpowered radio PCB worksheet](docs/reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md).
+The evidence manifest retains original imported-document hashes alongside the
+current Markdown paths and hashes. Historical reports describe their dated sessions.
 
 ## Build and use
 
@@ -72,4 +83,4 @@ CAD history is also retained. Commit IDs affected by the large-file conversion
 were rewritten before publishing the consolidated history. See
 [source history](docs/source-history.json),
 [evidence inventory](docs/evidence-manifest.json) and
-[consolidation checks](docs/consolidation-validation.txt).
+[consolidation checks](docs/consolidation-validation.md).

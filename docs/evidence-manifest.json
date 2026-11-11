@@ -2,72 +2,112 @@
   {
     "group": "published investigation outputs",
     "source_name": "DMD-LoRa-analysis.txt",
-    "repository_path": "docs/reports/DMD-LoRa-analysis.txt",
-    "bytes": 15284,
-    "sha256": "6aabe8fda04882d062193a14d9fe02a3cee843ae424add9fdeaf5c5873782215"
+    "repository_path": "docs/reports/DMD-LoRa-analysis.md",
+    "bytes": 15392,
+    "sha256": "cc10ceaec241e6de3b565fb04734bde095d75d94befa6bdd6a1b9b1d3c87dd8e",
+    "original_repository_path": "docs/reports/DMD-LoRa-analysis.txt",
+    "original_bytes": 15284,
+    "original_sha256": "6aabe8fda04882d062193a14d9fe02a3cee843ae424add9fdeaf5c5873782215",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "EXPAND-DRIVER-ANALYSIS.txt",
-    "repository_path": "docs/reports/EXPAND-DRIVER-ANALYSIS.txt",
-    "bytes": 9757,
-    "sha256": "a53256f47ef430e38aee27846bc88e29fd993be6721f3b3e3d227ae7fe27428f"
+    "repository_path": "docs/reports/EXPAND-DRIVER-ANALYSIS.md",
+    "bytes": 9863,
+    "sha256": "7dec75bd90928d35bb0853e0104038c58734490589a9b23d39372f2a829ff309",
+    "original_repository_path": "docs/reports/EXPAND-DRIVER-ANALYSIS.txt",
+    "original_bytes": 9757,
+    "original_sha256": "a53256f47ef430e38aee27846bc88e29fd993be6721f3b3e3d227ae7fe27428f",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "EXPANSION-PIN-BASELINE-2026-11-07.txt",
-    "repository_path": "docs/reports/EXPANSION-PIN-BASELINE-2026-11-07.txt",
-    "bytes": 4448,
-    "sha256": "a83c5de668cd3f67b6d9eeb2ddbdd8fe3e79b4c94effa7c75b26b3f9115ba7cd"
+    "repository_path": "docs/reports/EXPANSION-PIN-BASELINE-2026-11-07.md",
+    "bytes": 4399,
+    "sha256": "b79b5c19a9dfb1d30642a6ab6e04d94187d02e3eac403eec23a8404f62c3ad39",
+    "original_repository_path": "docs/reports/EXPANSION-PIN-BASELINE-2026-11-07.txt",
+    "original_bytes": 4448,
+    "original_sha256": "a83c5de668cd3f67b6d9eeb2ddbdd8fe3e79b4c94effa7c75b26b3f9115ba7cd",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "EXPANSION-PIN-MAP-2026-11-07.txt",
-    "repository_path": "docs/reports/EXPANSION-PIN-MAP-2026-11-07.txt",
-    "bytes": 2759,
-    "sha256": "34ea11e9d6c56db2c18c3a74af551d6b0b845c99156f86dda960055231284db1"
+    "repository_path": "docs/reports/EXPANSION-PIN-MAP-2026-11-07.md",
+    "bytes": 2586,
+    "sha256": "80199fc78125e2744d7c3b9e645c84409ec47961fd0d4c1a228dd8265dfe0669",
+    "original_repository_path": "docs/reports/EXPANSION-PIN-MAP-2026-11-07.txt",
+    "original_bytes": 2759,
+    "original_sha256": "34ea11e9d6c56db2c18c3a74af551d6b0b845c99156f86dda960055231284db1",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "EXPANSION-PORT-HANDOFF.txt",
-    "repository_path": "docs/reports/EXPANSION-PORT-HANDOFF.txt",
-    "bytes": 37230,
-    "sha256": "0892f21a364f3101ad756c8dcc7b95d3edb6ce413e0a588fa86dbfd1f5f4da22"
+    "repository_path": "docs/reports/EXPANSION-PORT-HANDOFF.md",
+    "bytes": 37864,
+    "sha256": "8ee59a496a5a8823d9bbb6e5bd2bec6f1fb9e2abb2d2ebc4677b4bb1e7d06966",
+    "original_repository_path": "docs/reports/EXPANSION-PORT-HANDOFF.txt",
+    "original_bytes": 37230,
+    "original_sha256": "0892f21a364f3101ad756c8dcc7b95d3edb6ce413e0a588fa86dbfd1f5f4da22",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "PINS9-11-LORA-CYCLE-2026-11-07.txt",
-    "repository_path": "docs/reports/PINS9-11-LORA-CYCLE-2026-11-07.txt",
+    "repository_path": "docs/reports/PINS9-11-LORA-CYCLE-2026-11-07.md",
     "bytes": 3520,
-    "sha256": "eee25c7fbce598506344aecb5689c2cb96393d209f7e632be0427e37315bcf45"
+    "sha256": "38a428ac6f277bc41defe66c70e25be8200cb75ebe97a295e3cf9da60a4fefdd",
+    "original_repository_path": "docs/reports/PINS9-11-LORA-CYCLE-2026-11-07.txt",
+    "original_bytes": 3520,
+    "original_sha256": "eee25c7fbce598506344aecb5689c2cb96393d209f7e632be0427e37315bcf45",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "POST-UPDATE-INVESTIGATION-2026-11-07.txt",
-    "repository_path": "docs/reports/POST-UPDATE-INVESTIGATION-2026-11-07.txt",
-    "bytes": 12430,
-    "sha256": "17dcee059eef4603d8a3d46046cf4ec90644d491cac0a11030fd9c03945c0cf3"
+    "repository_path": "docs/reports/POST-UPDATE-INVESTIGATION-2026-11-07.md",
+    "bytes": 12565,
+    "sha256": "d688a108607d8813eb045ee84e155e48b018bb41e97f3f89df6cbcba78e08e80",
+    "original_repository_path": "docs/reports/POST-UPDATE-INVESTIGATION-2026-11-07.txt",
+    "original_bytes": 12430,
+    "original_sha256": "17dcee059eef4603d8a3d46046cf4ec90644d491cac0a11030fd9c03945c0cf3",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "REMAPPED-LORA-CYCLE-2026-11-07.txt",
-    "repository_path": "docs/reports/REMAPPED-LORA-CYCLE-2026-11-07.txt",
-    "bytes": 4341,
-    "sha256": "1280b6cd7502903b84f28076a3916a7e148a43fbda7d303de68195c53077c894"
+    "repository_path": "docs/reports/REMAPPED-LORA-CYCLE-2026-11-07.md",
+    "bytes": 4365,
+    "sha256": "86d6f8a11ac52ae3c5ba1e9b500acc7d23b629d5005f3947c692b5e43a9eefcf",
+    "original_repository_path": "docs/reports/REMAPPED-LORA-CYCLE-2026-11-07.txt",
+    "original_bytes": 4341,
+    "original_sha256": "1280b6cd7502903b84f28076a3916a7e148a43fbda7d303de68195c53077c894",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "REMAPPED-PIN-BASELINE-2026-11-07.txt",
-    "repository_path": "docs/reports/REMAPPED-PIN-BASELINE-2026-11-07.txt",
-    "bytes": 1801,
-    "sha256": "86939632f578e85f7c482585e7f7772d47497520826a6ff66219fd2aaa666636"
+    "repository_path": "docs/reports/REMAPPED-PIN-BASELINE-2026-11-07.md",
+    "bytes": 1796,
+    "sha256": "254f1bb63bd021f06da39aea124e90cfeb7194940c071400b3c9bb19c9deb846",
+    "original_repository_path": "docs/reports/REMAPPED-PIN-BASELINE-2026-11-07.txt",
+    "original_bytes": 1801,
+    "original_sha256": "86939632f578e85f7c482585e7f7772d47497520826a6ff66219fd2aaa666636",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "RX-PROBE-WIRING-2026-11-07.txt",
-    "repository_path": "docs/reports/RX-PROBE-WIRING-2026-11-07.txt",
-    "bytes": 4905,
-    "sha256": "9a76c9cd2985c9ce7f323b86d03f4693a5b9657ce16dc88e23846c09e86823e2"
+    "repository_path": "docs/reports/RX-PROBE-WIRING-2026-11-07.md",
+    "bytes": 5094,
+    "sha256": "61c1a1198913eff701694e9abaff08f2fc1b4a1989a8cae4320593dc7f9f7f47",
+    "original_repository_path": "docs/reports/RX-PROBE-WIRING-2026-11-07.txt",
+    "original_bytes": 4905,
+    "original_sha256": "9a76c9cd2985c9ce7f323b86d03f4693a5b9657ce16dc88e23846c09e86823e2",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
@@ -135,16 +175,24 @@
   {
     "group": "published investigation outputs",
     "source_name": "UART-END-TO-END-2026-11-07.txt",
-    "repository_path": "docs/reports/UART-END-TO-END-2026-11-07.txt",
-    "bytes": 2462,
-    "sha256": "4519f5032d6a93bf217e7ff73fadae58432e9946dd75f98d8f75215ae3b6950a"
+    "repository_path": "docs/reports/UART-END-TO-END-2026-11-07.md",
+    "bytes": 2502,
+    "sha256": "4a9bde5e3b4f84129567385fe53d8872b60ec3321abfd26c8e11d7815b07f432",
+    "original_repository_path": "docs/reports/UART-END-TO-END-2026-11-07.txt",
+    "original_bytes": 2462,
+    "original_sha256": "4519f5032d6a93bf217e7ff73fadae58432e9946dd75f98d8f75215ae3b6950a",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "published investigation outputs",
     "source_name": "UART-PIN12-RESULT-2026-11-07.txt",
-    "repository_path": "docs/reports/UART-PIN12-RESULT-2026-11-07.txt",
-    "bytes": 6563,
-    "sha256": "0e93c59a962c9817091c09806ed43e7fb476f2d4b362785f83a51d4e4d38aee3"
+    "repository_path": "docs/reports/UART-PIN12-RESULT-2026-11-07.md",
+    "bytes": 6688,
+    "sha256": "c1f67bd29379f42d6ddcd82a08e7efc280765dc3266ee21b96d56c0be26b953f",
+    "original_repository_path": "docs/reports/UART-PIN12-RESULT-2026-11-07.txt",
+    "original_bytes": 6563,
+    "original_sha256": "0e93c59a962c9817091c09806ed43e7fb476f2d4b362785f83a51d4e4d38aee3",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "scope workspace",
@@ -1836,9 +1884,13 @@
   {
     "group": "FCC-photo-sources",
     "source_name": "SOURCES.txt",
-    "repository_path": "references/fcc/SOURCES.txt",
-    "bytes": 1194,
-    "sha256": "d08f8a8e955d98cb48f9a6d1eecc2d361c29c0fa8865ac0b5dad7fdbcb0d4a45"
+    "repository_path": "references/fcc/SOURCES.md",
+    "bytes": 1196,
+    "sha256": "05b295c4289719437ff1db5acd2c5df45c6e4ab4c1e6cd90efa54b60f99e146e",
+    "original_repository_path": "references/fcc/SOURCES.txt",
+    "original_bytes": 1194,
+    "original_sha256": "d08f8a8e955d98cb48f9a6d1eecc2d361c29c0fa8865ac0b5dad7fdbcb0d4a45",
+    "transformation": "Authored documentation converted to Markdown; original provenance retained."
   },
   {
     "group": "FCC-photo-sources",

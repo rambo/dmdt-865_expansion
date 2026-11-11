@@ -10,7 +10,7 @@ their original authorship. The files' source groups and hashes are recorded in
   tablet connector's electrical ratings or the exact module output topology.
 * `uart-bridge/WK2124.pdf`: candidate bridge datasheet. A wk2xxx SPI driver is
   observed, but the tablet's exact UART-bridge silicon is not confirmed.
-* `fcc/`: FCC exhibits and their source URLs/hashes in `SOURCES.txt`.
+* `fcc/`: FCC exhibits and their source URLs/hashes in `SOURCES.md`.
   `inspection/` retains reviewed/extracted board images and Topicon module photos.
   No reviewed exhibit was established as a teardown of the complete Topicon LoRa
   accessory. The EByte exhibit is a different 433 MHz E220 variant.

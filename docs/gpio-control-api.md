@@ -181,8 +181,8 @@ The earlier scope capture decoded the six-byte configuration-mode command
 not establish M0/M1 wiring on this tablet.
 
 [Manager call sites](evidence/gpio-control-api/ExpandManager-call-sites.txt),
-[radio protocol analysis](reports/DMD-LoRa-analysis.txt),
-[captured runtime sequence](reports/POST-UPDATE-INVESTIGATION-2026-11-07.txt).
+[radio protocol analysis](reports/DMD-LoRa-analysis.md),
+[captured runtime sequence](reports/POST-UPDATE-INVESTIGATION-2026-11-07.md).
 
 ## 6. Other factory operations and remaining evidence needed
 

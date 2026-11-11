@@ -1,0 +1,19 @@
+# Consolidation validation, 2026-11-07 Europe/Helsinki
+
+Source comparison PASS: all original tracked project files byte-identical except updated README navigation and the root ignore-file placement.
+All 4 project histories imported without squashing; only one Git root, no submodules.
+Kotlin, JNI C, Arduino and CAD generator implementations were not modified during consolidation.
+
+T865PortProbe native checks: exit 0
+PASS: allowlist, metadata-only, read-only flags, errno, close-once, symlink/non-character rejection, no device reads, bounded report, six explicit SPI probes despite denied listing, no duplicate opens, SPI 0.0 excluded
+
+T865UartTx native checks: exit 0
+PASS: real PTY TX/RX bytes, empty nonblocking RX, raw 9600/8N1, errors, timeout, termios restoration
+
+Supplementary evidence manifest: 328 files verified by size and SHA-256.
+Full Android builds and physical hardware tests were not repeated; existing build/lint/device validation logs were preserved.
+
+History conversion: all four mapped source heads are ancestors of main.
+LFS integrity: 53 unique objects checked against every reachable historical pointer by SHA-256 and size.
+No reachable regular Git blobs exceed 1,000,000 bytes. All non-attribute working files preserved byte-for-byte during migration.
+Single Git root and no submodule/gitlink entries: PASS.

@@ -1,0 +1,209 @@
+# T865 /dev/expand driver investigation
+
+2026-11-06, Europe/Helsinki
+
+HISTORICAL BUILD: user upgraded to Android 16 on 2026-11-07. See
+[POST-UPDATE-INVESTIGATION-2026-11-07.md](POST-UPDATE-INVESTIGATION-2026-11-07.md) for kernel 6.6.102 and the newly loaded
+expand_module.ko driver. The built-in 4.14 driver below describes the old build.
+
+## RESULT AND CONFIDENCE
+
+The live kernel driver is named expand, a platform driver built into this
+tablet's kernel with CONFIG_EXPAND=y. It exposes /dev/expand as a misc character
+device. This identification is confirmed from the connected device, not guessed
+from a JNI library name. The actual kernel C source or binary implementation
+was NOT obtained. The additional inspection below concerns installed userspace
+clients of that driver, with their ioctl calls verified in ARM64 disassembly.
+
+It does more than expose a serial stream or a simple power switch. The installed
+factory-test interface also supports EEPROM identity data and module recognition.
+Exactly how the kernel implements power, identification, bus selection and any
+pin multiplexing remains unknown. No GPIO numbers or physical pins are established.
+
+## EXACT LIVE DRIVER BINDING
+
+Device: ro.product.device=mdt865; ro.board.platform=mt6768.
+Firmware: mdt865_14_ngms_2.8.6.
+Fingerprint:
+
+```text
+Topicon/mdt750_gms_lite/mdt750:14/mdt865_14_ngms_2.8.6/99926cfa46d:user/dev-keys
+```
+
+Kernel: Linux 4.14.186 #12 SMP PREEMPT Fri May 29 10:13:52 UTC 2026, aarch64.
+Kernel compiler: Android clang 11.0.1 (r383902), build user matthieu@build3.
+
+```text
+/dev/expand                    character 10:106, 0666 root:system
+/sys/class/misc/expand         -> devices/platform/odm/odm:expand@0/misc/expand
+.../odm:expand@0/driver        -> /sys/bus/platform/drivers/expand
+.../odm:expand@0/of_node       -> /sys/firmware/devicetree/base/odm/expand@0
+```
+
+The full config was retrieved via adb exec-out cat /proc/config.gz; its gzip
+signature and decompression were checked. See expand-kernel.config alongside
+this report. Relevant entries:
+
+```text
+CONFIG_EXPAND=y
+# CONFIG_ONBOARD_ELORA is not set
+CONFIG_EXPAND_BAROMETER=y
+CONFIG_SERIAL_WK21XX=y
+CONFIG_CRADLE_RS232_RS485_SUPPORT=y
+CONFIG_KALLSYMS=y
+# CONFIG_KALLSYMS_ALL is not set
+```
+
+There is no /sys/bus/platform/drivers/expand/module link, no /sys/module/expand,
+and no expand entry in /proc/modules or the visible /vendor/lib/modules list.
+Together with CONFIG_EXPAND=y this confirms built-in, rather than loadable .ko.
+A separate expand_baro platform driver and /sys/module/baro_expand are present;
+they must not be substituted for the driver bound to /dev/expand.
+
+## INSTALLED FACTORY CLIENT: NEW EVIDENCE
+
+Read-only pulls:
+
+```text
+/system/app/FreemeFactoryTest/FreemeFactoryTest.apk
+  package com.freeme.factory, versionName=14, versionCode=34
+/system/lib64/libjni_freeme_expand.so
+  ELF Build ID 42eda2f6c1eff8cf5fa531d0ab6f98a5
+```
+
+Exact file hashes are in expand-driver-evidence.txt.
+
+Factory class com.freeme.factory.cradle.ExpandGpio loads jni_freeme_expand and
+opens /dev/expand. ARM64 open() at 0x1040 passes O_RDWR (2). This is a userspace
+JNI library, NOT the kernel driver. It confirms the earlier DMD ioctl mapping
+and exposes three additional calls:
+
+| Request | Client operation | Observed ARM64 function entry |
+| --- | --- | --- |
+| 0xC01C5301 | setPower(position,bool) | factory 0x1250 |
+| 0xC01C5302 | writeIo(position,io,bool) factory 0x13E0 |  |
+| 0xC01C5303 | readIo(position,io) | factory 0x14B0 |
+| 0xC01C5304 | writeEeprom(position,obj) factory 0x1770 [NEW] |  |
+| 0xC01C5305 | readEeprom(position) | factory 0x1580 [NEW] |
+| 0xC01C5308 | recognizeModule() | factory 0x19B0 [NEW] |
+| 0xC01C5309 | getPosition(type) | factory native export 0x1190 |
+| 0xC01C530A | getType(position) | factory native export 0x1320 |
+| 0xC01C530B | reset() | DMD wrapper 0x1088 (earlier analysis) |
+
+These names describe caller intent, not independently verified kernel semantics.
+The ioctl encoding is read/write, type 0x53, size 28 bytes. The recovered factory
+caller uses a zero-initialized 28-byte buffer. Known relative offsets:
+
+```text
+0       32-bit I/O index
+4       32-bit module type
+8       32-bit state
+12      32-bit logical position
+16..23  8 serial-number bytes in the EEPROM operations
+24      8-bit serial-number length (8 in readEeprom)
+25      8-bit version
+26..27  zero-initialized tail; kernel interpretation unverified
+```
+
+This is a recovered caller layout, not an OEM header or a validated new client.
+Factory recognizeModule() submits a zeroed buffer and treats nonnegative ioctl
+return as success; its electrical side effects are not known.
+
+The Java EepromData object contains byte[] sn, int version, int type. Native
+readEeprom returns eight serial-number bytes, a version byte and module type.
+Factory ExpandTest.testEepromOpt(position) performs this sequence:
+
+```text
+generate random 8-byte serial number
+writeEeprom(position, EepromData(randomBytes, 1, 112))
+recognizeModule()
+readEeprom(position)
+compare returned serial bytes to generated bytes
+```
+
+Its UI calls this test I2c, providing evidence that the EEPROM test exercises
+the module's I2C path. Exact EEPROM address, protocol and chip remain unknown.
+The value 112 is a factory-test input, not an identified production module ID.
+EEPROM identity data is not evidence of a radio-firmware programming interface.
+Do not run this factory test as a non-destructive inspection: it writes identity.
+The factory app was never launched during this investigation.
+
+Factory ExpandTest also independently names /dev/ttysWK3 as left and WK2 as right,
+uses logical positions 1 and 2, and enumerates test GPIO indices {2,3,4,5}.
+Those logical indices are not contact numbers. The DMD writeIo(2,1,true) function
+is still not physically identified. Several factory coroutine methods failed
+normal JADX decompilation; conclusions here use readable methods and verified
+native instructions, not the failed methods' placeholder bodies.
+
+## WHAT REMAINS SPECIAL / UNKNOWN
+
+Existing DMD sequence: setPower(2,true), writeIo(2,1,true), wait 100 ms, open WK2
+at 9600/8N1. Installed SELinux policy appears to allow ordinary apps to use the
+control device; actual untrusted_app ioctl execution has not been tested.
+The driver's device-tree property names include i2c_bus, right_gpio, right_power,
+right_spi0_clk, right_spi0_csb, right_spi0_mi and right_spi0_mo. Their values are
+unreadable to shell. They do not prove that expand provides arbitrary SPI transfers.
+Neither inspected JNI interface exposes a generic raw-SPI transfer operation.
+
+We cannot yet establish:
+
+- whether open/release automatically changes power, or who owns power state;
+- electrical polarity, GPIO mappings, pinmux or bus-routing operations;
+- whether module recognition changes power/modes or gates UART availability;
+- EEPROM address/content validation and how type/position are cached;
+- all supported ioctl requests, payload validation or concurrency behavior.
+
+Do not infer that a request is inert merely because its caller name starts read.
+
+## WHY KERNEL IMPLEMENTATION INSPECTION STOPPED
+
+ADB shell receives Permission denied for /proc/kallsyms, the active boot block
+device (/dev/block/by-name/boot_a -> mmcblk0p24), DT compatible/property contents,
+platform modalias and /sys/kernel/notes. There is no /sys/kernel/btf/vmlinux.
+The actual boot read attempt requested only 16 bytes and returned zero bytes.
+No matching public Topicon kernel repository, source archive or downloadable
+firmware image was located in bounded searches for mdt865, CONFIG_EXPAND,
+CONFIG_EXPAND_BAROMETER and right_spi0_clk. GitHub repository searches for mdt865
+and topicon kernel returned zero; grep.app returned HTTP 429, not a no-match.
+Search results for BusyBox/Toybox CONFIG_EXPAND concern text utilities, not this
+kernel driver, and were discarded.
+
+The installed UpdateManager and RemoteControl APKs were also inspected for a
+firmware-image source. They provide updater logic but no matching static image
+URL. CheckServer uses a device-management checkActivate endpoint with device
+identifiers, not a public firmware listing. No management request was submitted,
+no service started and no update requested. Existing firmware caches were not
+readable/present at the checked locations. A firmware image was not obtained.
+
+## NEXT REQUIRED ARTIFACT
+
+For exact driver inspection, obtain either:
+
+  1. The CONFIG_EXPAND implementation (.c and ioctl .h), its Kconfig/Makefile and
+     the mdt865 expansion device-tree binding/node for this build; or
+  2. The matching signed firmware/OTA with boot.img (kernel) and DTB/DTBO, plus
+     vmlinux/System.map if available. Analyze it offline without flashing.
+An older/newer image may be useful for comparison but cannot establish the exact
+running implementation without matching evidence. No message to an OEM was sent.
+
+## OEM REQUEST DRAFT
+
+For mdt865_14_ngms_2.8.6, kernel 4.14.186 #12 built 2026-05-29, please provide the
+CONFIG_EXPAND platform driver source/header and DTS node odm/expand@0, or the
+matching firmware boot/DT images. We identified /dev/expand (misc 10:106), ioctls
+0xC01C5301-5305, 5308-530B in installed callers, and want to understand module
+power, identity EEPROM/recognition and GPIO mappings without changing firmware.
+
+## VALIDATION / SCOPE
+
+Read-only device metadata, config and APK/library pulls; static Java and ARM64
+inspection only. No expand opens, ioctls, EEPROM operations, serial configuration,
+UART writes, power changes, app starts, rooting, flashing or reboot performed.
+No Android app code changed or rebuilt for this documentation-only investigation.
+
+## RELATED PUBLIC CONTEXT
+
+DMD firmware changelog corroborates expansion-recognition and independent-I2C
+work across revisions, but supplies neither driver source nor pin assignments:
+
+- <https://docs.dmdnavigation.com/changelog>

@@ -1,0 +1,107 @@
+# T865 WK2 RX candidate probe with a 3.3 V ESP32 — 2026-11-07
+
+FOLLOW-UP: pin 11 is now confirmed WK2 RX by exact ESP32 GPIO26 payloads.
+
+The GPIO25 return path from tablet TX/pin 12 also received five exact frames.
+See ../../firmware/ESP32UartProbe/validation and the end-to-end report. Actual fitted
+resistor values and loaded voltage margins were not captured by these tests.
+
+## PURPOSE
+
+Confirm which expansion pad reaches /dev/ttysWK2 RX by receiving a unique known
+string in Android. The initial candidate was pad 11 (2.49 V idle), now confirmed WK2 RX.
+Pad 12 is confirmed tablet TX; leave it disconnected for this one-way test.
+Use the user's backside rowwise numbering, ground reference pad 1.
+
+## INITIAL BENCH CIRCUIT (all resistances in ohms; 1% parts preferred)
+
+```mermaid
+flowchart LR
+    TX["ESP32 TX"] --- R1["3.3 kΩ"]
+    R1 --- J(("Divider node"))
+    J --- R2["4.7 kΩ"]
+    R2 --- RX["Tablet pad 11 / RX"]
+    J --- R3["10 kΩ"]
+    R3 --- GND["Common ground"]
+    EG["ESP32 GND"] --- GND
+    GND --- P1["Tablet pad 1"]
+```
+
+The 3.3k and 10k form a divider. At a 3.3 V unloaded TX high:
+
+```text
+Vout = 3.3 * 10 / (3.3 + 10) = 2.481 V.
+```
+
+The final 4.7k is a probe-tip current limiter. Source resistance is approximately
+(3.3k || 10k) + 4.7k = 7.181k. In the simple resistor model, a driven-low pad
+would draw about 0.346 mA during TX high; a stiff 3.3 V pad would source about
+0.460 mA into this network during TX low. These figures reduce contention
+current; they do not guarantee that driving an unknown control pad is harmless.
+A series resistor alone does not lower an unloaded 3.3 V high.
+
+The target ~2.5 V comes from the measured tablet TX/nearby candidate idle levels,
+not from the E220 module's separate 3.3 V interface specification. A push-pull
+ESP32 UART can drive this divider directly; no open-drain conversion/pull-up is
+needed for this circuit. Do not borrow an unclassified bay pad as a power rail.
+
+## PROCEDURE
+
+1. Power the tablet and the ESP32 normally; keep DMD LoRa off. Connect the common
+   ground to pad 1. Use a free hardware-UART TX GPIO appropriate for the exact
+   ESP32 board, separate from USB console/boot messages. No ESP32 RX connection
+   is needed. Do not feed a signal into an unpowered tablet.
+2. Configure 9600/8N1, no flow control, normal polarity. Repeatedly send a unique
+   payload such as UUUU RX-PROBE 0001&lt;CR&gt;&lt;LF&gt;, increasing the counter once/second.
+3. With the tablet signal lead detached, scope the divider output and confirm
+   approximately 0 V low and 2.48 V high. Then connect through the final 4.7k
+   to pad 11 only. Scope the actual tablet-side pad: loading/internal bias may
+   change the voltage. At 9600 baud, bits are ~104.17 us; check clean transitions
+   with highs near 2.5 V and lows near 0 V.
+4. Use T865UartTx v1.2 in receive-only idle mode:
+
+   ```sh
+   adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez idle true
+   adb -d logcat -v threadtime -T 1 -s T865UartTx:I
+   ```
+
+   It reads available WK2 bytes and logs their exact hex/escaped ASCII. It sends
+   nothing in this mode. RX entries are chunks; one string may span entries.
+5. Matching your payload/counter in WK2 logs establishes a functional RX path at
+   the tested pad. Seeing the waveform on the scope alone does not establish RX.
+   If the pad stays stiff or fails to swing fully, disconnect and investigate;
+   do not simply force it harder. No received data with a valid waveform still
+   leaves pin selection, receiver routing, baud/configuration and hardware as
+   possible causes. Do not blindly scan supply/control pads.
+6. Normal stop restores the original serial settings and closes WK2:
+
+   ```sh
+   adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez stop true
+   ```
+
+## TECHNICAL BASIS / LIMITS
+
+WK2124 manufacturer datasheet v1.01, page 20, specifies at VCC=2.5 V:
+
+```text
+VIH min 1.8 V, VIL max 0.6 V, and high-level input range up to 5.0 V.
+```
+
+That bare chip could accept a 3.3 V input. The tablet exposes a wk2xxxspi driver,
+but the exact installed chip and any intervening buffers remain unverified;
+these ratings are not established connector ratings. The divider/current-limit
+network is a cautious initial bench choice, not a certified interface design.
+Source: https://atta.szlcsc.com/upload/public/pdf/source/20161119/1479540184933.pdf
+For a permanent interface, identify the actual input/rail and select a suitable
+fixed-direction translator or buffer; do not use a TX pad as a supply.
+
+Official ESP32 UART configuration/pin routing:
+https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-reference/peripherals/uart.html
+
+## STATUS
+
+App build/lint and native PTY TX/RX self-check passed. The app's receive-only
+mode is installed for the external test. An external ESP32 has now been connected and exact payloads received in both
+directions; see the follow-up above. The resistor network has not been assembled
+or electrically tested by the assistant. No tablet UART transmission, loopback,
+power/GPIO command or voltage injection was performed for this RX preparation.

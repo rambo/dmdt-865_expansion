@@ -8,14 +8,14 @@ confirmed statements here when interpreting those historical records.
 
 Looking at the tablet back with the camera toward the top and USB exiting right:
 
-```text
- 1   2
- 3   4
- 5   6
- 7   8
- 9  10
-11  12
-```
+| Left | Right |
+| --- | --- |
+| 1 | 2 |
+| 3 | 4 |
+| 5 | 6 |
+| 7 | 8 |
+| 9 | 10 |
+| 11 | 12 |
 
 Pin 1 is the user's ground reference. Pin 11 is /dev/ttysWK2 RX and pin 12 is
 /dev/ttysWK2 TX, physically verified with exact payloads in both directions
@@ -42,11 +42,11 @@ were sequential, so that difference does not establish a fixed ground offset.
 Low readings do not identify a ground pin, and measured high levels do not
 establish input tolerance, output current capability or a usable supply.
 
-See [pin map](reports/EXPANSION-PIN-MAP-2026-11-07.txt),
-[UART end-to-end test](reports/UART-END-TO-END-2026-11-07.txt),
-[probe wiring](reports/RX-PROBE-WIRING-2026-11-07.txt),
-[driver analysis](reports/EXPAND-DRIVER-ANALYSIS.txt) and
-[full handoff](reports/EXPANSION-PORT-HANDOFF.txt).
+See [pin map](reports/EXPANSION-PIN-MAP-2026-11-07.md),
+[UART end-to-end test](reports/UART-END-TO-END-2026-11-07.md),
+[probe wiring](reports/RX-PROBE-WIRING-2026-11-07.md),
+[driver analysis](reports/EXPAND-DRIVER-ANALYSIS.md) and
+[full handoff](reports/EXPANSION-PORT-HANDOFF.md).
 
 The [GpioControl API trace](gpio-control-api.md) identifies logical I/O indices
 used by the SDK/factory client. Position 2 / I/O 1 maps to kernel GPIO 566 in the
@@ -125,7 +125,7 @@ not enumerate the application files already preserved in their Git histories.
 
 ## LoRa module teardown (2026-11-11)
 
-[Disassembly analysis](reports/LORA-MODULE-TEARDOWN-2026-11-11.txt) identifies
+[Disassembly analysis](reports/LORA-MODULE-TEARDOWN-2026-11-11.md) identifies
 the shielded module as **EBYTE E220-900T30S** and U2 as an **AT24C02C** EEPROM.
 The `ADRS / 883` power-stage IC is a high-confidence **MP2155GQ buck-boost**
 match (manufacturer top mark `ADR`, ten-pad package, adjacent `3R3` inductor).
@@ -143,7 +143,7 @@ initial impression from the wider photo.
 
 ## Contact relocation adapter (2026-11-11)
 
-[Adapter photos and assessment](reports/EXPANSION-ADAPTER-2026-11-11.txt) show
+[Adapter photos and assessment](reports/EXPANSION-ADAPTER-2026-11-11.md) show
 a passive-looking flex between two 2 x 6 contact arrays, with pogo contacts
 at one end and flat lands at the other. User reports four mounting screws
 at one end and two at the other. Flex text includes `MDT65-barometer-FPC`
@@ -154,7 +154,7 @@ Caliper photos now record the FPC pogo block's black body as **18.67 x 6.67 mm**
 (length x width). Body height, pin protrusion/travel, corner radii and flex-exit
 clearance remain unmeasured; printer fit allowance is separate from these dimensions.
 
-The [unpowered radio PCB probing plan](reports/RADIO-PCB-PROBE-PLAN-2026-11-11.txt)
+The [unpowered radio PCB probing plan](reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md)
 prioritizes ground, supply paths, enables/mode pins, UART and EEPROM mapping
 before the connector side becomes inaccessible. Pin 2 as switched supply
 is a working hypothesis from the wider FPC trace and earlier voltage decay,

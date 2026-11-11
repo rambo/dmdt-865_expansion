@@ -26,7 +26,7 @@ Hold TX idle, keeping the descriptor open at 9600/8N1 while cancelling all repea
 adb -d shell am start -n dev.t865.uarttx/.MainActivity --ez idle true
 ```
 
-RX logs contain byte counts, hex and escaped ASCII. Chunks may split a received string. The screen has a Receive only / TX idle button. See [RX-PROBE-WIRING.txt](RX-PROBE-WIRING.txt) for the ESP32 probe circuit and procedure; pin 11 is now confirmed RX by the ESP32 GPIO26 test.
+RX logs contain byte counts, hex and escaped ASCII. Chunks may split a received string. The screen has a Receive only / TX idle button. See [RX-PROBE-WIRING.md](RX-PROBE-WIRING.md) for the ESP32 probe circuit and procedure; pin 11 is now confirmed RX by the ESP32 GPIO26 test.
 
 Start resumes transmission from idle hold. Stop restores termios and closes the descriptor. Idle hold also ends when the activity leaves the foreground.
 
