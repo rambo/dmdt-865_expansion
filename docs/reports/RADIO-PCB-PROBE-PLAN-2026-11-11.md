@@ -264,8 +264,10 @@ probing the mounted board.
 | P3 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P3 | P1 (GND) | ≈1 kΩ, red P1 / black P3 | Open, red P3 / black P1 | Later polarity-specific user measurement, 2026-11-13. |
 | P4 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P4 | One end of R30 | <1 Ω | Not reported | User measurement, 2026-11-13; R30 itself measures ≈1 kΩ. |
 | P5 | U2 pin 4 (GND) | <1 Ω | <1 Ω | User measurement, 2026-11-13; low resistance in both directions strongly supports a shared board ground. |
 | P6 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P6 | R33 (end unspecified) | Not supplied | Not reported | User reports connection, 2026-11-13; R33 itself measures ≈1 kΩ. |
 | P7 | U2 pin 4 (GND) | ≈640 Ω | Not reported | User measurement, 2026-11-13. |
 | P7 | U2 pin 5 (SDA) | ≈22 Ω | Not reported | User measurement, 2026-11-13; EEPROM I²C path identified. |
 | P8 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. |
@@ -432,8 +434,8 @@ No numerical continuity reading was supplied for these left-side connections.
 
 | Resistor position | Reported in-circuit resistance |
 | --- | --- |
-| Right side, upper | ≈46 kΩ |
-| Right side, lower | ≈46 kΩ |
+| Right side, upper | ≈46 kΩ; R31/R34 pair later measured in both directions |
+| Right side, lower | ≈46 kΩ; R31/R34 pair later measured in both directions |
 | Left side, lower | Clarified: ≈4 kΩ with red on shared middle; ≈7.4 kΩ reversed |
 | Left side, upper | Clarified: ≈4 kΩ with red on shared middle; ≈7.4 kΩ reversed |
 
@@ -680,3 +682,40 @@ remaining terminal functions and control inputs are still untraced. Next
 unpowered checks: each device's upper-right terminal to U2 pin 4 (ground),
 then trace the lower-right terminals toward connector contacts. No P3 control
 assignment is established.
+
+### Paired-device resistor junctions and P4/P6 paths (2026-11-13)
+
+Orientation remains pogo pins up. The user supplies these component designators
+and measurements:
+
+| Component | Reported in-circuit resistance |
+| --- | --- |
+| R31 | ≈46 kΩ in both probe directions |
+| R34 | ≈46 kΩ in both probe directions |
+| R30 (rotated 90° relative to adjacent R31) | ≈1 kΩ in both probe directions |
+| R33 (rotated 90° relative to adjacent R34) | ≈1 kΩ in both probe directions |
+
+The lower end of each R31/R34 connects to its corresponding Q1/Q2 terminal and
+to the corresponding 1 kΩ resistor. This extends the earlier lower-right-terminal
+trace: the other end of each 46 kΩ resistor reaches P1 ground. The final
+parenthetical “1k resistor (R31/34)” is interpreted as R30/R33, consistent with
+the component values explicitly given in the same report. Pair association
+R31/R30 and R34/R33 follows the user's corresponding-pair description.
+
+| Connection | Reported result |
+| --- | --- |
+| P4 to one end of R30 | <1 Ω |
+| P6 to R33 | Connection reported; exact resistance and end not specified |
+
+These identify P4 and P6 as candidate control inputs through the 1 kΩ
+resistors to the paired mode-connected devices. The endpoints selected for the
+connector checks were not explicitly identified relative to the transistor-side
+junctions, so the complete series paths still need endpoint confirmation.
+Do not record R33-to-P6 as below 1 Ω without a numerical reading.
+
+Next unpowered checks: P4 to its corresponding Q lower-right terminal and P6
+to its corresponding Q lower-right terminal. Approximately 1 kΩ would support
+placement of R30/R33 in series. Record whether each is the upper (M0-connected)
+or lower (M1-connected) device, then check the upper-right terminals to ground.
+The transistor terminal identities, P4/P6-to-M0/M1 assignment and switching
+polarity remain unverified; P3 remains unassigned.
