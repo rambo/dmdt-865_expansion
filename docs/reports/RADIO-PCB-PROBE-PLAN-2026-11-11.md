@@ -449,6 +449,21 @@ consistent and show no direct continuity at these points. Do not record this
 as a discrete 2.2 MΩ resistor or infer that all indirect P3 paths are excluded.
 The destinations of these resistor ends remain unknown.
 
-Next unpowered check: P3 to the upper-right terminal of each Q1/Q2, keeping
-pogo pins up. These terminals remain unmapped; record physical position rather
-than assigning gate/source/drain.
+Upper-right terminal checks, with pogo pins up (2026-11-13):
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| Q1 upper-right terminal | P3 | ≈19 kΩ |
+| Q2 upper-right terminal | P3 | ≈19 kΩ |
+| P3 | Q1 upper-right terminal | Several MΩ, slowly decreasing |
+| P3 | Q2 upper-right terminal | Several MΩ, slowly decreasing |
+
+No settled reverse value or observation duration was supplied. These readings
+do not establish direct continuity to P3 or a discrete 19 kΩ resistor. Polarity
+and time dependence are consistent with indirect semiconductor/charge-dependent
+paths, but the mechanism has not been isolated. Similar readings at both
+terminals do not establish that the terminals share a net.
+
+Next unpowered check: Q1 upper-right to Q2 upper-right directly. If below 1 Ω,
+trace that shared node to known rails (U1 pin 5 / EEPROM VCC, radio pin 6 VCC,
+and P2). Keep gate/source/drain unassigned until the terminal mapping is verified.
