@@ -551,7 +551,15 @@ ends it joins was not explicitly answered; the follow-up instead supplied the
 M1 and M0 terminal measurements above. Do not merge resistor nodes in a schematic
 until that physical junction is identified.
 
-Next unpowered checks on the shared middle junction identified by the user:
-continuity to U2 pin 8 (EEPROM VCC/U1 output) and U2 pin 4 (ground). Record both
-results and which resistor ends form that junction; this will test its rail
-connection without assuming pull-up or pull-down behaviour.
+| From | To | Reported resistance |
+| --- | --- | --- |
+| Shared middle resistor junction (user-identified) | P1 (ground) | ≈330 Ω |
+
+The user corrected the initial 300 Ω report to **330 Ω**. Probe polarity and
+settling behaviour were not supplied. This is an in-circuit resistance reading,
+not direct ground continuity or identification of a discrete 330 Ω resistor.
+The junction's rail assignment remains unknown.
+
+Next unpowered check: shared middle junction to U2 pin 8 (EEPROM VCC/U1 output).
+The exact resistor pair/ends forming the junction still need explicit identification
+before those nodes can be joined in the schematic.
