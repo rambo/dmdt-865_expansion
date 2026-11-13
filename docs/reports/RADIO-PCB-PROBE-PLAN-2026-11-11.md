@@ -214,24 +214,33 @@ pins suitable supply-voltage measurement points.
 | 9 | AGND |
 | 10 | FB |
 
-### EBYTE E220-900T30S
+### EBYTE E220-900T30S — user-confirmed 18-pad package
 
-Use the actual package drawing, not the earlier T22D manual or connector Pn.
-The [archived 2022-hosted T30S manual](../../references/lora-teardown/E220-900T30S.pdf)
-gives the following group on PDF pages 7–8 (printed pages 6–7).
-**Other T30S manual versions number this group differently.** Confirm package
-orientation and ground placement before applying these numbers; the checklist
-therefore names radio signals instead of relying on numbers.
+Use the [exact module manual supplied by the user](../../references/lora-teardown/E220-900T30S_UserManual_EN_v1.0.pdf),
+section 3, printed pages 6–7 (PDF pages 7–8). The package drawing and pin table
+confirm **radio pin 6 = VCC**. The older archived E220-900T30S.pdf describes a
+**different 24-pad layout** and is not the probing reference for this module.
+Radio pin numbers remain distinct from connector contacts P1–P12.
 
-| Module pin in archived drawing | Signal |
+| Radio pin | Signal |
 | --- | --- |
-| 1 | GND |
-| 2 | VCC |
-| 3 | AUX |
+| 1 | M0 |
+| 2 | M1 |
+| 3 | RXD |
 | 4 | TXD |
-| 5 | RXD |
-| 6 | M1 |
-| 7 | M0 |
+| 5 | AUX |
+| 6 | VCC |
+| 7 | GND |
+| 8 | NC |
+| 9 | GND |
+| 10–14 | NC |
+| 15–17 | GND |
+| 18 | ANT |
+
+In the manual's shield-side drawing, with the antenna connector at the lower
+left, pins 7 down to 1 run down the left edge; pins 8 through 14 run down the
+right edge. The opposite-side drawing is mirrored. Use the matching view when
+probing the mounted board.
 
 ## Minimal measurement worksheet (duplicate rows for multiple connections)
 
@@ -244,7 +253,7 @@ therefore names radio signals instead of relying on numbers.
 | P2 | U1 pin 1 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | U1 pin 5 (VOUT) | ≈570 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | U2 pin 8 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
-| P2 | Radio pin 6 (VCC, user-identified) | Open | Not reported | User measurement, 2026-11-13. |
+| P2 | Radio pin 6 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
 | P3 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P4 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P5 | U2 pin 4 (GND) | <1 Ω | <1 Ω | User measurement, 2026-11-13; low resistance in both directions strongly supports a shared board ground. |
@@ -288,18 +297,17 @@ establishes a low-resistance connection to U1 VIN; P3-to-U1 EN tracing remains o
 
 P2 to U1 pin 1 (VIN) measures below 1 Ω, establishing a low-resistance path
 from the connector to the LDO input. P2 to U1 pin 5 (VOUT) reads approximately
-570 Ω; P2 to U2 pin 8 (VCC) and to the user-identified radio pin 6 (VCC) read
+570 Ω; P2 to U2 pin 8 (VCC) and to the radio pin 6 (VCC) read
 open. Reverse-probe results and settling behaviour were not reported.
 These readings do not establish the applied supply voltage, whether the tablet
 switches P2, or which loads receive power through a regulator when enabled.
 The 570 Ω value is an in-circuit measurement, not an identified discrete resistor.
 
-**Radio pin-number clarification:** the user identifies the measured radio
-VCC pad as pin 6. Keep that board-side label distinct from the archived 2022
-manual's numbering (VCC pin 2; pin 6 M1). The earlier warning about differing
-manual pin numbers remains applicable; do not silently translate between them.
-A matched package drawing/orientation is still needed to reconcile the numbers.
+**Radio pin-number resolution:** on 2026-11-13 the user supplied the exact
+18-pad module manual. Its pin table confirms the measured radio VCC pad is pin 6.
+The previous discrepancy came from the archived manual for a different 24-pad
+layout; the reference table above now uses the correct 18-pad manual.
 
 Next unpowered measurements: U1 pin 5 (VOUT) to U2 pin 8 (VCC), then to the
-radio VCC pad identified by the user as pin 6. These will test which loads,
+radio pin 6 (VCC). These will test which loads,
 if any, share the LDO output directly.

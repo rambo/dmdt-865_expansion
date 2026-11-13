@@ -212,7 +212,7 @@ P11/P12 having equal readings does not establish continuity between them.
 | P2 | U1 pin 1 (VIN) | <1 Ω |
 | P2 | U1 pin 5 (VOUT) | ≈570 Ω |
 | P2 | U2 pin 8 (VCC) | Open |
-| P2 | Radio pin 6 (VCC, user-identified) | Open |
+| P2 | Radio pin 6 (VCC) | Open |
 
 **P2 has a low-resistance connection to U1 VIN.** Applied voltage, upstream
 switching and downstream supply routing remain unverified. Open readings from
@@ -220,7 +220,8 @@ P2 to load VCC pads do not rule out a power path through an enabled regulator.
 The 570 Ω reading is an in-circuit value, not a proven discrete resistor.
 Reverse-probe and settling results were not supplied.
 
-The user identifies the measured radio VCC pad as **radio pin 6**. This differs
-from the archived 2022 T30S manual's pin numbering; retain the user's label and
-signal name until the board orientation and matching package drawing reconcile
-them. No assignment in the archived reference table has been silently changed.
+The [exact module manual supplied by the user](../references/lora-teardown/E220-900T30S_UserManual_EN_v1.0.pdf)
+resolves the radio pin numbering: this is the **18-pad layout**, with **pin 6
+VCC**, pin 7 GND, pin 3 RXD, pin 4 TXD, pin 1 M0, pin 2 M1 and pin 5 AUX.
+The older archived manual describes a different **24-pad layout** and must not
+be used for this module's pin numbering. The worksheet now uses the correct manual.

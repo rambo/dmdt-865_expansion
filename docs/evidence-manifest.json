@@ -2430,5 +2430,14 @@
     "repository_path": "measurements/photos/previews/IMG20261107221926.jpg",
     "bytes": 2567362,
     "sha256": "4d0c5a4b1ef3e8989abbe4643eaa54d9eb3c3ee5be7d2d68aa9e193742f3c42f"
+  },
+  {
+    "group": "user-confirmed radio module reference",
+    "source_name": "E220-900T30S_UserManual_EN_v1.0.pdf",
+    "repository_path": "references/lora-teardown/E220-900T30S_UserManual_EN_v1.0.pdf",
+    "source_url": "https://www.f1depo.com/class/INNOVAEditor/assets/E220-900T30S_UserManual_EN_v1.0.pdf",
+    "retrieved": "2026-11-13",
+    "bytes": 1995491,
+    "sha256": "70feb45bad1afcb2470829c01a547fbe08653b265514481315d2a3cc49378375"
   }
 ]

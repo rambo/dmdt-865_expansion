@@ -3,8 +3,11 @@
 These are archived reference copies and sourcing leads, not verified tablet
 schematics or promises of present supplier stock. Manufacturer documents retain
 their original authorship. The files' source groups and hashes are recorded in
-`../docs/evidence-manifest.json`.
+`../docs/evidence-manifest.json` and [teardown source notes](lora-teardown/sources.md).
 
+* [E220-900T30S exact module manual](lora-teardown/E220-900T30S_UserManual_EN_v1.0.pdf):
+  user-confirmed 18-pad package, pin 6 VCC; use this for the radio-board probing.
+  The historical `lora-teardown/E220-900T30S.pdf` has a different 24-pad layout.
 * `radio-manuals/E220-900T22D_UserManual_EN_v1.0.pdf`: user-supplied E220 manual.
   The advertised radio uses nominal 3.3 V UART levels; this does not establish the
   tablet connector's electrical ratings or the exact module output topology.
