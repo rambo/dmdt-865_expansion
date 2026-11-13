@@ -644,3 +644,18 @@ placement of R30/R33 in series. Record whether each is the upper (M0-connected)
 or lower (M1-connected) device, then check the upper-right terminals to ground.
 The transistor terminal identities, P4/P6-to-M0/M1 assignment and switching
 polarity remain unverified; P3 remains unassigned.
+
+### Radio AUX-to-P10 check (2026-11-13)
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| P10 | Radio pin 5 (AUX) | ≈37 kΩ |
+| Radio pin 5 (AUX) | P10 | ≈40 kΩ |
+
+“blan on AUX” is interpreted as “black on AUX” from context. These in-circuit
+readings do not establish direct continuity or a discrete 37–40 kΩ resistor.
+Settling behaviour was not supplied. P10 remains unassigned, and AUX still has
+no identified direct pogo connection. An indirect path has not been ruled out.
+
+Next unpowered check: radio pin 5 (AUX) to P8, recording resistance and probe
+polarity. No AUX assignment is assumed.
