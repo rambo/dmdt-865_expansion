@@ -410,3 +410,16 @@ The measured paths are consistent with series resistance. Individual components
 and reverse-probe readings have not been supplied; these measurements alone do
 not establish a particular discrete 22 Ω resistor, complete UART conditioning
 circuit, or powered operation of the radio.
+
+### P3 I²C hypothesis (2026-11-13)
+
+The user proposes that P3 may be I²C-related. The carrier's identification
+EEPROM provides a concrete tracing target, but P3 has not been assigned to
+SDA, SCL or another EEPROM signal. Its diode-like ground path does not identify
+a bus function; no I²C traffic has been decoded on P3.
+
+Next unpowered checks, in order: **P3 to U2 pin 5 (SDA)**, then **P3 to U2
+pin 6 (SCL)**. Record actual resistance, probe polarity and any settling.
+Low resistance would support a direct or series-resistor path. Lack of direct
+continuity would leave possible intervening circuitry untested; trace that
+circuitry before ruling out an I²C-related function.
