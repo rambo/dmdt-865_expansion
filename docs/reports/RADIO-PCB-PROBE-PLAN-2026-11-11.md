@@ -326,4 +326,3 @@ P2-to-U2 pin 8 was open. With U1 pin 5 and U2 pin 8 now measuring below 1 Ω,
 repeat those two P2 measurements using the same probe polarity and comparable
 settling time, verifying pad contact. Preserve all reported values pending this
 check; contact, polarity or charging effects have not been distinguished.
-
