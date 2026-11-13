@@ -520,4 +520,18 @@ locations/values and powered bus traffic remain unmeasured. The approximately
 22 Ω paths are consistent with series resistance, but individual components
 and reverse-probe results have not been reported. P3 remains unassigned.
 
-Next unpowered tracing target: radio pin 5 (AUX) to P3. No connection is assumed.
+### Radio AUX-to-P3 check (2026-11-13)
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| Radio pin 5 (AUX) | P3 | ≈50 kΩ |
+| P3 | Radio pin 5 (AUX) | MΩ range; exact value not supplied |
+
+The polarity-dependent, high-resistance readings do not establish a direct
+AUX-to-P3 connection or identify a discrete 50 kΩ resistor. Settling behaviour
+was not reported. P3's function and AUX's connector routing remain unknown;
+an indirect path has not been ruled out.
+
+Next unpowered check: keep one probe on radio pin 5 (AUX) and check the
+remaining unassigned contacts P4, P6, P8 and P10 individually for a low-resistance
+path. Record actual resistance rather than inferring a connection from a beep.
