@@ -239,18 +239,38 @@ therefore names radio signals instead of relying on numbers.
 | P1 | U2 pin 4 (GND) | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P1 | U.FL shield | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P1 | U1 pin 2 (GND) | <1 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
-| P2 |  |  |  |  |
-| P3 |  |  |  |  |
-| P4 |  |  |  |  |
-| P5 |  |  |  |  |
-| P6 |  |  |  |  |
-| P7 |  |  |  |  |
-| P8 |  |  |  |  |
-| P9 |  |  |  |  |
-| P10 |  |  |  |  |
-| P11 |  |  |  |  |
-| P12 |  |  |  |  |
+| P2 | Board GND | ≈500 Ω | Not reported | User measurement, 2026-11-13. |
+| P3 | Board GND | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P4 | Board GND | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P5 | Board GND | <1 Ω | Not reported | User measurement, 2026-11-13. Ground candidate; mating-face numbering needs checking against earlier tablet P5 voltage. |
+| P6 | Board GND | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P7 | Board GND | ≈640 Ω | Not reported | User measurement, 2026-11-13. |
+| P8 | Board GND | Open | Not reported | User measurement, 2026-11-13. |
+| P9 | Board GND | ≈722 Ω | Not reported | User measurement, 2026-11-13. |
+| P10 | Board GND | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P11 | Board GND | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
+| P12 | Board GND | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
 
 Minimum useful completion: confirmed ground, P2's destination, P3's destination,
 UART endpoints, radio M0/M1/AUX routing, EEPROM SDA/SCL/VCC, and FPC map.
 Unresolved paths should remain marked unknown rather than guessed.
+
+### Ground survey interpretation (2026-11-13)
+
+The latest readings are recorded as connector Pn-to-ground measurements on the
+radio PCB in the ongoing unpowered probing session. The exact ground probe
+point was not restated. “Others open” is interpreted as P3, P4, P6 and P10;
+P1 already has the three ground-continuity measurements above. Meter range,
+settling behaviour, shorted-lead baseline and reverse-probe results were not supplied.
+“Open” records the reported meter indication, not proof that a contact has no circuit connection.
+
+P5 below 1 Ω is a candidate additional ground connection on the radio board.
+The earlier tablet-side P5 measured 1.5 V relative to P1; keep both observations
+and verify mating-face orientation/numbering before assigning a common physical
+contact. Next check P5 directly to U2 pin 4 and U1 pin 2, including reversed probes.
+
+The finite 500–833 Ω readings are in-circuit resistance observations. They do
+not identify discrete resistor values, supply voltage, input/output direction
+or powered current consumption. Equal P11/P12 readings do not establish that
+the two UART contacts are shorted together. P2-to-U1 VIN and P3-to-U1 EN tracing
+remain outstanding; these ground measurements do not substitute for those checks.

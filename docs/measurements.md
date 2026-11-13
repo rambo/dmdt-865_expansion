@@ -173,3 +173,31 @@ antenna connector shield. Shorted-lead/contact resistance and reverse-probe
 readings were not supplied; the values include lead/contact resistance.
 The [probing worksheet](reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md)
 records all three readings and the photo-based U1 pin orientation.
+
+### Connector-to-ground survey
+
+User readings, treated as radio-PCB connector contacts in the ongoing unpowered
+session; the exact ground probe point was not restated.
+
+| Contact | Resistance to board ground |
+| --- | --- |
+| P2 | ≈500 Ω |
+| P3 | Open |
+| P4 | Open |
+| P5 | <1 Ω |
+| P6 | Open |
+| P7 | ≈640 Ω |
+| P8 | Open |
+| P9 | ≈722 Ω |
+| P10 | Open |
+| P11 | ≈833 Ω |
+| P12 | ≈833 Ω |
+
+“Others open” supplies the P3/P4/P6/P10 entries. Reverse-probe readings, settling
+behaviour and lead baseline remain unreported. Open means the reported meter
+indication; finite readings include all in-circuit paths.
+
+**P5 is a ground candidate on the radio PCB**, pending a direct check to the
+known IC ground pins and verification of mating-face numbering. Earlier tablet
+P5 measured 1.5 V relative to P1; that apparent conflict remains unresolved.
+P11/P12 having equal readings does not establish continuity between them.
