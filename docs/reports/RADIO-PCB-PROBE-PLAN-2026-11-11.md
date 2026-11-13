@@ -553,3 +553,21 @@ establish that this is the same path.
 Next unpowered check: M0 to the lone left terminal of each Q1/Q2, with pogo
 pins up, looking for low-resistance continuity. This tests whether either
 paired device connects to radio mode control without assigning transistor pins.
+
+### Radio M1-to-ground check (2026-11-13)
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| P5 (board ground) | Radio pin 2 (M1) | ≈3.8 kΩ |
+| Radio pin 2 (M1) | P5 (board ground) | ≈7.5 kΩ |
+
+The compact report “black on M1->P53.8k, reversed 7.5” is interpreted as
+P5 / 3.8 kΩ, with the reversed value in kΩ as in the preceding M0 measurement.
+These are in-circuit readings, not direct continuity or identified resistor
+values. Settling behaviour was not supplied. Similarity to the earlier
+approximately 4 kΩ upper-left resistor reading is a tracing lead, not proof
+of a connection.
+
+The next direct-continuity checks remain M0 and M1 to the lone left terminals
+of Q1/Q2, using the pogo-pins-up orientation. Neither mode pin has yet been
+assigned to a particular transistor terminal by a low-resistance measurement.
