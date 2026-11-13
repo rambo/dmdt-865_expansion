@@ -352,8 +352,8 @@ No numerical continuity reading was supplied for these left-side connections.
 | --- | --- |
 | Right side, upper | ≈46 kΩ |
 | Right side, lower | ≈46 kΩ |
-| Left side, lower | ≈7.4 kΩ |
-| Left side, upper | ≈4 kΩ |
+| Left side, lower | Clarified: ≈4 kΩ with red on shared middle; ≈7.4 kΩ reversed |
+| Left side, upper | Clarified: ≈4 kΩ with red on shared middle; ≈7.4 kΩ reversed |
 
 The right-side values are recorded as approximately 46 kΩ each from the plural
 report. Upper/lower have not been assigned to Q1/Q2 reference designators.
@@ -566,9 +566,18 @@ the nominal 3.3 V variant by marking; actual powered rail voltage remains
 unmeasured. Which individual reference designator corresponds to upper versus
 lower has not been separately recorded.
 
-The user's description “4k resistors” is retained as a description, not a new
-isolated-value measurement. Earlier readings remain upper approximately 4 kΩ
-and lower approximately 7.4 kΩ in circuit; nominal values/markings are unconfirmed.
+The user clarifies that **both R29/R32 have the same polarity-dependent
+in-circuit readings**:
+
+| Resistors tested | Red probe | Black probe | Reported resistance |
+| --- | --- | --- | --- |
+| Both R29 and R32 | Shared middle junction (U1 output / U2 VCC) | Respective outer, mode-pin end | ≈4 kΩ each |
+| Both R29 and R32 | Respective outer, mode-pin end | Shared middle junction | ≈7.4 kΩ each |
+
+This supersedes the earlier apparent upper/lower value difference: it was a
+probe-polarity distinction in the reported readings, not evidence of different
+resistor values. These remain in-circuit measurements affected by the surrounding
+circuit; nominal resistor values and markings have not been established.
 
 The known mode-node wiring is shown below; the transistor boxes identify only
 measured terminal connections, not verified gate/source/drain assignments.
@@ -576,8 +585,8 @@ measured terminal connections, not verified gate/source/drain assignments.
 ```mermaid
 flowchart TB
     V["U1 pin 5 / U2 pin 8: common supply rail"] --- J["Shared R29/R32 junction"]
-    J --- RU["Upper pull-up: about 4 kΩ measured in circuit"]
-    J --- RL["Lower pull-up: about 7.4 kΩ measured in circuit"]
+    J --- RU["Upper pull-up: nominal value unconfirmed"]
+    J --- RL["Lower pull-up: nominal value unconfirmed"]
     RU --- M0["Radio pin 1: M0"]
     RL --- M1["Radio pin 2: M1"]
     M0 --- QU["Upper KN device: lone-left terminal"]
