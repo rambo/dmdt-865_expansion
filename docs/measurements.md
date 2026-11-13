@@ -452,3 +452,21 @@ an indirect path has not been ruled out.
 Next unpowered check: keep one probe on radio pin 5 (AUX) and check the
 remaining unassigned contacts P4, P6, P8 and P10 individually for a low-resistance
 path. Record actual resistance rather than inferring a connection from a beep.
+
+### Radio M0-to-ground check (2026-11-13)
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| P5 (board ground) | Radio pin 1 (M0) | ≈10 kΩ |
+| Radio pin 1 (M0) | P5 (board ground) | ≈7.5 kΩ |
+
+P5 previously measured below 1 Ω to U2 ground in both directions, so these
+readings characterize an M0-to-ground path. They establish neither direct
+continuity nor a discrete 10 kΩ/7.5 kΩ pull-down. The polarity dependence
+requires treating them as in-circuit readings; settling behaviour was not supplied.
+The resemblance to the earlier 7.4 kΩ lower-left resistor reading does not
+establish that this is the same path.
+
+Next unpowered check: M0 to the lone left terminal of each Q1/Q2, with pogo
+pins up, looking for low-resistance continuity. This tests whether either
+paired device connects to radio mode control without assigning transistor pins.
