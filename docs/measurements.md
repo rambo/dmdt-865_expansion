@@ -295,6 +295,8 @@ any upstream P2 switching remain unmeasured.
 | P3 to regulator EN pins and radio M0/M1 | No direct connection reported; individual resistance values not supplied |
 | Red on P1, black on P3 | ≈1 kΩ |
 | Red on P3, black on P1 | Open |
+| Diode mode: red P1, black P3 (assumed from “P#”) | 0.97 V |
+| Diode mode: red P3 (same assumption), black P1 | Open / OL |
 
 Both regulator EN pins join P2 alongside their VIN pins. This supports the
 interpretation that both stages enable when P2 is powered, rather than receiving
@@ -310,7 +312,12 @@ identifies neither a MOSFET nor a fixed 1 kΩ resistor. General references:
 and [TI on ground clamp diodes](https://www.ti.com/document-viewer/lit/html/SSZTCN0/GUID-540DB5B6-45A1-40EF-A3C7-A07EB772C47F).
 These explain candidate mechanisms, not identification of parts on this board.
 
-Next unpowered checks: record the diode-mode voltage with red on P1 and black
-on P3, then reverse. Trace P3 to terminals of the paired KN devices and nearby
-protection parts without assuming their pinouts. A diode drop alone will not
-distinguish a body diode from an ESD clamp.
+The subsequent diode-mode report is 0.97 V with red on P1 and black on the
+contact written as “P#”, and open in reverse. “P#” is interpreted as P3 from
+the immediately preceding test; that interpretation has not been separately
+confirmed. The result supports a diode-like path but does not identify a
+particular junction or establish a MOSFET body diode.
+
+Next unpowered check: trace P3 to terminals of the paired KN devices and nearby
+protection parts without assuming their pinouts. Record any low-resistance
+connection and which physical terminal it reaches.
