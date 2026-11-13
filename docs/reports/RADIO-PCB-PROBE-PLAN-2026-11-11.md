@@ -2,7 +2,8 @@
 
 Goal: recover the carrier's connector net map while its connector-side
 components are accessible. Later, use the FPC adapter for live connector
-measurements. This is a plan only: none of these measurements has been run.
+measurements. The original plan is dated 2026-11-11; user measurements from
+2026-11-13 are recorded in the worksheet and interpretation sections below.
 
 ## Preparation and notation
 
@@ -240,6 +241,10 @@ therefore names radio signals instead of relying on numbers.
 | P1 | U.FL shield | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P1 | U1 pin 2 (GND) | <1 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P2 | U2 pin 4 (GND) | ≈500 Ω | Not reported | User measurement, 2026-11-13. |
+| P2 | U1 pin 1 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
+| P2 | U1 pin 5 (VOUT) | ≈570 Ω | Not reported | User measurement, 2026-11-13. |
+| P2 | U2 pin 8 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
+| P2 | Radio pin 6 (VCC, user-identified) | Open | Not reported | User measurement, 2026-11-13. |
 | P3 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P4 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P5 | U2 pin 4 (GND) | <1 Ω | <1 Ω | User measurement, 2026-11-13; low resistance in both directions strongly supports a shared board ground. |
@@ -276,5 +281,25 @@ neither disproves the measured board ground nor proves a numbering error.
 The finite 500–833 Ω readings are in-circuit resistance observations. They do
 not identify discrete resistor values, supply voltage, input/output direction
 or powered current consumption. Equal P11/P12 readings do not establish that
-the two UART contacts are shorted together. P2-to-U1 VIN and P3-to-U1 EN tracing
-remain outstanding; these ground measurements do not substitute for those checks.
+the two UART contacts are shorted together. The subsequent P2 trace below
+establishes a low-resistance connection to U1 VIN; P3-to-U1 EN tracing remains outstanding.
+
+### P2 power-path trace (2026-11-13)
+
+P2 to U1 pin 1 (VIN) measures below 1 Ω, establishing a low-resistance path
+from the connector to the LDO input. P2 to U1 pin 5 (VOUT) reads approximately
+570 Ω; P2 to U2 pin 8 (VCC) and to the user-identified radio pin 6 (VCC) read
+open. Reverse-probe results and settling behaviour were not reported.
+These readings do not establish the applied supply voltage, whether the tablet
+switches P2, or which loads receive power through a regulator when enabled.
+The 570 Ω value is an in-circuit measurement, not an identified discrete resistor.
+
+**Radio pin-number clarification:** the user identifies the measured radio
+VCC pad as pin 6. Keep that board-side label distinct from the archived 2022
+manual's numbering (VCC pin 2; pin 6 M1). The earlier warning about differing
+manual pin numbers remains applicable; do not silently translate between them.
+A matched package drawing/orientation is still needed to reconcile the numbers.
+
+Next unpowered measurements: U1 pin 5 (VOUT) to U2 pin 8 (VCC), then to the
+radio VCC pad identified by the user as pin 6. These will test which loads,
+if any, share the LDO output directly.
