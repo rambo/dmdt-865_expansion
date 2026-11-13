@@ -401,3 +401,26 @@ particular junction or establish a MOSFET body diode.
 Next unpowered check: trace P3 to terminals of the paired KN devices and nearby
 protection parts without assuming their pinouts. Record any low-resistance
 connection and which physical terminal it reaches.
+
+### Q1/Q2 adjacent-resistor traces (2026-11-13)
+
+Orientation for these observations: **pogo pins are up**. The user calls the
+two devices Q1 and Q2; “lower-right” is a physical terminal position in this
+orientation, not an assigned semiconductor pin number.
+
+| From | To | Reported resistance |
+| --- | --- | --- |
+| Q1 lower-right terminal | Near end of its adjacent resistor | <1 Ω |
+| Other end of Q1-adjacent resistor | P1 (GND) | <1 Ω |
+| Q2 lower-right terminal | Near end of its adjacent resistor | <1 Ω |
+| Other end of Q2-adjacent resistor | P1 (GND) | <1 Ω |
+
+Each lower-right terminal therefore has a path through its adjacent resistor
+to ground. The resistor values themselves have not been measured or reported;
+the two low-resistance trace segments must not be mistaken for a below-1 Ω
+terminal-to-ground reading. Gate/source/drain assignments, exact device models,
+and any P3 connection to these devices remain unestablished.
+
+Next unpowered check: measure across each adjacent resistor, recording its
+marking and in-circuit resistance. Continue tracing P3 to the individual Q1/Q2
+terminals; retain physical position labels until the pinout is verified.
