@@ -355,6 +355,20 @@ Printed markings and isolated component values were not supplied; parallel
 board circuitry can affect these in-circuit readings. Gate/source/drain
 assignments, exact device models and any P3 connection remain unestablished.
 
-Next unpowered check: trace the far end of each left-side resistor, beginning
-with a continuity check to P3. Record whether the upper or lower resistor is
-involved; retain physical terminal labels until the device pinout is verified.
+Follow-up on the opposite ends of the left-side resistors (the ends away from
+the lone transistor terminals):
+
+| From | To | Resistance mode | Continuity mode |
+| --- | --- | --- | --- |
+| Upper left resistor, opposite end | P3 | ≈2.2 MΩ | Open |
+| Lower left resistor, opposite end | P3 | ≈2.2 MΩ | Open |
+
+Both entries follow the user's plural report; probe polarity was not supplied.
+The finite high-resistance reading and the open continuity indication are
+consistent and show no direct continuity at these points. Do not record this
+as a discrete 2.2 MΩ resistor or infer that all indirect P3 paths are excluded.
+The destinations of these resistor ends remain unknown.
+
+Next unpowered check: P3 to the upper-right terminal of each Q1/Q2, keeping
+pogo pins up. These terminals remain unmapped; record physical position rather
+than assigning gate/source/drain.
