@@ -211,6 +211,8 @@ P11/P12 having equal readings does not establish continuity between them.
 | --- | --- | --- |
 | P2 | U1 pin 1 (VIN) | <1 Ω |
 | P2 | Candidate MP2155 pin 5 (VIN) | <1 Ω |
+| P2 | Candidate MP2155 pin 6 (EN) | <1 Ω |
+| P2 | U1 pin 3 (EN) | <1 Ω |
 | P2 | U1 pin 5 (VOUT) | ≈570 Ω |
 | P2 | U2 pin 8 (VCC) | Open |
 | P2 | Radio pin 6 (VCC) | Open |
@@ -263,7 +265,7 @@ was not recorded, and a matched-polarity repeat using U2 pin 8 has not been
 reported, so retain both original observations. The direct low-resistance
 connections still establish P2-to-U1 VIN and U1 VOUT-to-EEPROM VCC.
 
-Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
+Subsequent regulator-enable results are recorded below.
 
 ### Shared regulator input and traced outputs
 
@@ -273,14 +275,42 @@ inputs, U1 VOUT connects to EEPROM VCC, and MP2155 VOUT connects to radio VCC.
 
 ```mermaid
 flowchart LR
-    P2["Connector P2"] -->|"less than 1 Ω"| U1["U1 LDO: VIN pin 1 → VOUT pin 5"]
-    P2 -->|"less than 1 Ω"| DC["Candidate MP2155: VIN pin 5 → VOUT pin 1"]
+    P2["Connector P2"] -->|"less than 1 Ω"| U1["U1 LDO: VIN 1 + EN 3 → VOUT 5"]
+    P2 -->|"less than 1 Ω"| DC["Candidate MP2155: VIN 5 + EN 6 → VOUT 1"]
     U1 -->|"less than 1 Ω"| EE["U2 EEPROM VCC: pin 8"]
     DC -->|"less than 1 Ω"| RF["Radio VCC: pin 6"]
 ```
 
 The external links represent measured low-resistance connections; the regulator
 blocks identify their input/output functions, not continuity through each IC.
-Actual powered voltages, enable routing and any upstream P2 switching remain
-unmeasured. Next unpowered checks: P3 to U1 pin 3 (EN) and candidate MP2155
-pin 6 (EN).
+Both EN pins also trace to P2, as detailed below. Actual powered voltages and
+any upstream P2 switching remain unmeasured.
+
+### Enable wiring and P3 polarity check (2026-11-13)
+
+| Connection / probe polarity | Reported result |
+| --- | --- |
+| Candidate MP2155 pin 6 (EN) to P2 | <1 Ω |
+| P2 to U1 pin 3 (EN) | <1 Ω |
+| P3 to regulator EN pins and radio M0/M1 | No direct connection reported; individual resistance values not supplied |
+| Red on P1, black on P3 | ≈1 kΩ |
+| Red on P3, black on P1 | Open |
+
+Both regulator EN pins join P2 alongside their VIN pins. This supports the
+interpretation that both stages enable when P2 is powered, rather than receiving
+separate direct enable signals from P3. Powered sequencing, input voltage and
+upstream switching of P2 remain unmeasured. No direct P3-to-EN or P3-to-M0/M1
+connection was found; this does not exclude indirect control through other parts.
+
+The P3 reading is polarity-dependent and supports a semiconductor-path hypothesis.
+The user suggests a MOSFET body diode. That is possible, but a ground-to-signal
+ESD clamp can give the same conduction polarity; the resistance reading alone
+identifies neither a MOSFET nor a fixed 1 kΩ resistor. General references:
+[Toshiba on MOSFET body diodes](https://toshiba.semicon-storage.com/eu/semiconductor/knowledge/faq/mosfet/i-heard-that-mosfets-have-a-diode-between-drain-and-sourcewhat-k.html)
+and [TI on ground clamp diodes](https://www.ti.com/document-viewer/lit/html/SSZTCN0/GUID-540DB5B6-45A1-40EF-A3C7-A07EB772C47F).
+These explain candidate mechanisms, not identification of parts on this board.
+
+Next unpowered checks: record the diode-mode voltage with red on P1 and black
+on P3, then reverse. Trace P3 to terminals of the paired KN devices and nearby
+protection parts without assuming their pinouts. A diode drop alone will not
+distinguish a body diode from an ESD clamp.

@@ -252,10 +252,13 @@ probing the mounted board.
 | P2 | U2 pin 4 (GND) | ≈500 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | U1 pin 1 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | Candidate MP2155 pin 5 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13; reported as MP2155p5 → P2. |
+| P2 | Candidate MP2155 pin 6 (EN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
+| P2 | U1 pin 3 (EN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | U1 pin 5 (VOUT) | ≈570 Ω, red on U1 pin 5 | Open or ≈1.2 kΩ on re-probing; stable while held, black on U1 pin 5 | User measurement, 2026-11-13; see polarity-check table below. |
 | P2 | U2 pin 8 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
 | P2 | Radio pin 6 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
 | P3 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
+| P3 | P1 (GND) | ≈1 kΩ, red P1 / black P3 | Open, red P3 / black P1 | Later polarity-specific user measurement, 2026-11-13. |
 | P4 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P5 | U2 pin 4 (GND) | <1 Ω | <1 Ω | User measurement, 2026-11-13; low resistance in both directions strongly supports a shared board ground. |
 | P6 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
@@ -292,7 +295,7 @@ The finite 500–833 Ω readings are in-circuit resistance observations. They do
 not identify discrete resistor values, supply voltage, input/output direction
 or powered current consumption. Equal P11/P12 readings do not establish that
 the two UART contacts are shorted together. The subsequent P2 trace below
-establishes a low-resistance connection to U1 VIN; P3-to-U1 EN tracing remains outstanding.
+establishes a low-resistance connection to U1 VIN. The later enable-wiring check is recorded below.
 
 ### P2 power-path trace (2026-11-13)
 
@@ -345,7 +348,7 @@ was not recorded, and a matched-polarity repeat using U2 pin 8 has not been
 reported, so retain both original observations. The direct low-resistance
 connections still establish P2-to-U1 VIN and U1 VOUT-to-EEPROM VCC.
 
-Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
+Subsequent regulator-enable results are recorded below.
 
 ### Shared regulator input (2026-11-13)
 
@@ -360,5 +363,34 @@ User subsequently reports candidate MP2155 pin 1 (VOUT) to radio pin 6 (VCC)
 complementing the U1-output-to-EEPROM-supply result. Reverse-probe results were
 not supplied. See the [supply-path diagram](../measurements.md#shared-regulator-input-and-traced-outputs).
 
-Next unpowered checks: P3 to U1 pin 3 (EN), then P3 to candidate MP2155
-pin 6 (EN). Actual rail voltages and enable routing remain unmeasured.
+The later EN trace places both enable inputs on P2 (below). Actual rail
+voltages remain unmeasured.
+
+### Enable wiring and P3 polarity check (2026-11-13)
+
+| Connection / probe polarity | Reported result |
+| --- | --- |
+| Candidate MP2155 pin 6 (EN) to P2 | <1 Ω |
+| P2 to U1 pin 3 (EN) | <1 Ω |
+| P3 to regulator EN pins and radio M0/M1 | No direct connection reported; individual resistance values not supplied |
+| Red on P1, black on P3 | ≈1 kΩ |
+| Red on P3, black on P1 | Open |
+
+Both regulator EN pins join P2 alongside their VIN pins. This supports the
+interpretation that both stages enable when P2 is powered, rather than receiving
+separate direct enable signals from P3. Powered sequencing, input voltage and
+upstream switching of P2 remain unmeasured. No direct P3-to-EN or P3-to-M0/M1
+connection was found; this does not exclude indirect control through other parts.
+
+The P3 reading is polarity-dependent and supports a semiconductor-path hypothesis.
+The user suggests a MOSFET body diode. That is possible, but a ground-to-signal
+ESD clamp can give the same conduction polarity; the resistance reading alone
+identifies neither a MOSFET nor a fixed 1 kΩ resistor. General references:
+[Toshiba on MOSFET body diodes](https://toshiba.semicon-storage.com/eu/semiconductor/knowledge/faq/mosfet/i-heard-that-mosfets-have-a-diode-between-drain-and-sourcewhat-k.html)
+and [TI on ground clamp diodes](https://www.ti.com/document-viewer/lit/html/SSZTCN0/GUID-540DB5B6-45A1-40EF-A3C7-A07EB772C47F).
+These explain candidate mechanisms, not identification of parts on this board.
+
+Next unpowered checks: record the diode-mode voltage with red on P1 and black
+on P3, then reverse. Trace P3 to terminals of the paired KN devices and nearby
+protection parts without assuming their pinouts. A diode drop alone will not
+distinguish a body diode from an ESD clamp.
