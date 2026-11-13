@@ -35,10 +35,10 @@
     ],
     "step_reimport_valid": true
   },
-  "spacer-3.60mm": {
+  "spacer-2.60mm": {
     "watertight": true,
     "connected_solids": 1,
-    "volume_mm3": 85.4506,
+    "volume_mm3": 61.7143,
     "bounds_mm": [
       [
         -2.99866,
@@ -48,7 +48,7 @@
       [
         3.0,
         2.99966,
-        3.6
+        2.6
       ]
     ],
     "step_reimport_valid": true
@@ -103,8 +103,8 @@
       17.470000000000002
     ],
     "measured_travel_mm": 1.0,
-    "nominal_retaining_height_mm": 5.3,
-    "required_standoff_mm": 4.0,
+    "nominal_retaining_height_mm": 4.3,
+    "required_standoff_mm": 3.0,
     "plate_thickness_mm": 2.9000000000000004,
     "pocket_mm": [
       7.07,

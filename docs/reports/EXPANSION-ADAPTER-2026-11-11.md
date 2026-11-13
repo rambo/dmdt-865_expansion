@@ -76,10 +76,15 @@ No CAD geometry or nominal screw pattern was changed.
 
 The user measured 2.27 mm housing thickness, 5.60 mm free tip-to-solder-top total
 height (correcting 5.25 mm) and 4.60 mm fully compressed tip-to-solder-top total
-height. This gives 1.00 mm measured travel. Working preload, tablet contact
-recess depth and the solder-top-to-housing-rim offset remain unverified.
+height. This gives 1.00 mm measured travel. The user subsequently reports the
+tablet contact plane is recessed approximately **1 mm** below the mounting
+surface. Working preload and the solder-top-to-housing-rim offset remain
+unverified.
 
 The FPC exits **left** in the mounted tablet-back orientation, despite pointing
 right in IMG20261111202302. A [parameterized retaining plate](../../cad/fpc-retainer/README.md)
 uses the selected P1 alignment, a top solder window, left flex underpass and
 removable spacers for height adjustment. Physical fit has not been tested.
+
+Retainer R2 accounts for that recess with a 3.00 mm nominal spacer stack
+(2.60 + 0.40 mm), replacing R1's 4.00 mm stack. The printable plate is unchanged.

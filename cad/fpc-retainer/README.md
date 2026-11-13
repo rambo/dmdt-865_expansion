@@ -1,4 +1,4 @@
-# T865 FPC connector retaining plate — R1
+# T865 FPC connector retaining plate — R2
 
 Printable retaining plate for the existing 2 × 6 pogo/FPC connector. It uses
 the selected P1 contact location and 32 × 40 mm mounting pattern. Looking at
@@ -7,11 +7,15 @@ side faces outward, exposed through a central window for wires and probing.
 
 ![Preview](preview.png)
 
+R2 lowers the spacer stack by 1.00 mm to account for the reported tablet contact
+recess. The retaining plate geometry is unchanged; an already printed R1 plate
+can be reused with the new spacers.
+
 ## Files to print
 
 - **T865-FPC-retainer-print.stl**: one plate already rotated with the flat outward
   face on the bed and underside pocket up. Keep that orientation.
-- **T865-FPC-spacer-kit.stl**: four 3.60 mm spacers, four 0.40 mm shims and four
+- **T865-FPC-spacer-kit.stl**: four 2.60 mm spacers, four 0.40 mm shims and four
   0.20 mm shims. Each is a separate solid. Thin shims are optional when adjusting.
 - Individual `spacer-*.stl` files are supplied for replacements.
 
@@ -45,8 +49,9 @@ The reference-assembly STEP includes dummy connector, FPC and spacer stacks;
 | Through window | 5.47 × 17.47 mm | Leaves nominal 0.60 mm overlap on housing rim |
 | Roof | 1.60 mm | Retaining thickness above pocket |
 | Left flex relief | 9.0 mm wide, 1.70 mm deep | Design allowance; 0.40 mm above nominal rim plane |
-| Initial standoff | 4.00 mm | 3.60 mm spacer + 0.40 mm shim at each screw |
-| Initial retaining plane | 5.30 mm above mounting surface | Standoff + pocket depth |
+| Contact plane recess | About 1.00 mm | User measurement, 2026-11-13 |
+| Initial standoff | 3.00 mm | 2.60 mm spacer + 0.40 mm shim at each screw |
+| Initial retaining plane | 4.30 mm above mounting surface | Standoff + pocket depth |
 
 Measured body dimensions are separate from print clearances. Housing centring,
 corner radii, flex width/thickness allowance and solder-pad diameter are inferred
@@ -57,11 +62,11 @@ retaining rim on a joint or wire.
 
 ## Height adjustment and assembly
 
-The default 5.30 mm retaining plane targets **0.30 mm compression** only under
-two explicit assumptions: the tablet contact plane is level with the mounting
-surface, and the measured solder-top plane coincides with the housing rim on
-which the retainer bears. Neither datum is verified. The tablet recess depth
-and solder projection can change the actual preload. This is a fit prototype,
+The default 4.30 mm retaining plane targets **0.30 mm compression** only under
+the reported approximately **1.00 mm contact recess**, and the assumption that
+the measured solder-top plane coincides with the housing rim on which the
+retainer bears. The recess measurement is approximate and the solder-to-rim
+offset remains unverified; both affect actual preload. This is a fit prototype,
 not a qualified connector compression stop.
 
 1. With the connector removed, check the plate's mounting holes and clearance
@@ -70,7 +75,7 @@ not a qualified connector compression stop.
 2. Feed the **FPC left** through the underside relief and the loose wires upward
    through the window. The connector inserts from the tablet-facing underside;
    the plate then overlaps the housing rim while the pogo tips face the tablet.
-3. Start with equal, taller spacer stacks, for example 3.60 + 0.40 + 0.20 mm at
+3. Start with equal, taller spacer stacks, for example 2.60 + 0.40 + 0.20 mm at
    all four screws. Check the connector can seat without flex/wire pinching.
 4. Reduce equal stacks only after inspecting the actual contact and housing
    position. Tighten gently to the spacers. The plate should remain flat; do not
@@ -80,17 +85,17 @@ not a qualified connector compression stop.
 
 | Equal spacer stack at all screws | Retaining plane | Nominal compression, before datum correction |
 | --- | --- | --- |
-| 3.60 + 0.40 + 0.20 = 4.20 mm | 5.50 mm | 0.10 mm |
-| 3.60 + 0.40 = 4.00 mm | 5.30 mm | 0.30 mm |
-| 3.60 + 0.20 = 3.80 mm | 5.10 mm | 0.50 mm |
-| 3.60 mm | 4.90 mm | 0.70 mm |
+| 2.60 + 0.40 + 0.20 = 3.20 mm | 4.50 mm | 0.10 mm |
+| 2.60 + 0.40 = 3.00 mm | 4.30 mm | 0.30 mm |
+| 2.60 + 0.20 = 2.80 mm | 4.10 mm | 0.50 mm |
+| 2.60 mm | 3.90 mm | 0.70 mm |
 
 These are adjustment options, not validated operating loads. Actual working
 travel must leave margin from the measured 4.60 mm fully compressed height.
 If the plate touches the solder joints, increase the window or change the
 retaining surface; do not push on them to achieve the listed height.
 
-The fasteners need to accommodate the plate plus spacer stack: **6.90 mm**
+The fasteners need to accommodate the plate plus spacer stack: **5.90 mm**
 before tablet thread engagement at the nominal setting. Measure available thread
 depth and choose screw length from that engagement requirement. Original screw
 length/engagement is unknown; no specific screw length is claimed to fit.
@@ -126,7 +131,8 @@ standoff_height = retaining_height - pocket_depth
 
 `contact_plane_recess` is positive when tablet contacts lie below the mounting
 surface. `solder_top_above_retaining_rim` is positive when solder projects above
-the rim. Both default to zero as explicit unknowns. Update the base spacer height
+the rim. The recess is set to 1.00 mm from the user measurement; the solder-to-rim
+offset defaults to zero as an explicit unknown. Update the base spacer height
 to preserve the intended 0.40 mm nominal shim stack when these parameters change;
 the generator checks the stack rather than silently exporting the wrong height.
 

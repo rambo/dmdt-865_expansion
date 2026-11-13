@@ -690,5 +690,9 @@ our standard orientation. IMG20261111202302 shows the solder side with the flex
 extending right; that photographed orientation is not the mounted orientation.
 The [P1-based retaining plate](../cad/fpc-retainer/README.md) includes an open
 solder window, left flex relief and adjustable spacer stacks. Its nominal
-0.30 mm compression assumes zero contact recess and zero solder-to-rim offset;
-physical compression and fit remain to be checked.
+0.30 mm compression now uses the user-reported **approximately 1 mm contact
+recess** and an unverified zero solder-to-rim offset. R2 lowers the nominal
+spacer stack from 4.0 to **3.0 mm** (2.60 mm spacer + 0.40 mm shim), placing the
+retaining plane at **4.30 mm above the mounting surface**. The plate geometry
+is unchanged; only spacers and assembly height change. Physical compression
+and fit remain to be checked. The earlier zero-recess R1 height is superseded.
