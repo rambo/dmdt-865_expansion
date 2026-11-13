@@ -91,5 +91,6 @@ Retainer R2 accounts for that recess with a 3.00 mm nominal spacer stack
 
 R3 accommodates the reported 8.5 mm screws with a 4.00 mm plate and 3.00 mm spacer
 stack: 1.50 mm target engagement, nominal 0.50 mm margin to the approximately
-2 mm thread depth. Length is interpreted under-head to tip. The housing retaining
+2 mm thread depth. The user confirms the supplied specification is M2×8.5,
+with nominal length excluding the head; the screw length was not measured. The housing retaining
 plane remains at 4.30 mm; see the current CAD README for screw-stack assumptions.

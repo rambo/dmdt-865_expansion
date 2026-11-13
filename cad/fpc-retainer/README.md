@@ -96,7 +96,9 @@ travel must leave margin from the measured 4.60 mm fully compressed height.
 If the plate touches the solder joints, increase the window or change the
 retaining surface; do not push on them to achieve the listed height.
 
-The supplied screws measure **8.50 mm long**. With **4.00 mm plate + 3.00 mm
+The supplied screws are specified as **M2×8.5**; the user confirms the nominal
+**8.50 mm length excludes the head**. This is a supplied specification, not a
+caliper measurement. With **4.00 mm plate + 3.00 mm
 spacer stack = 7.00 mm** under the screw head, nominal thread engagement is
 **1.50 mm**, leaving **0.50 mm** before the reported approximately 2 mm thread
 depth. Screw length here is the length from the head's bearing face to its tip;

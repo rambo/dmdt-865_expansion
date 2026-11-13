@@ -699,10 +699,10 @@ and fit remain to be checked. The earlier zero-recess R1 height is superseded.
 
 ### Supplied screws and retainer R3 (2026-11-13)
 
-The user reports supplied radio-module screws **8.5 mm long**, maximum threading
-depth approximately **2 mm**, and requests **1.5 mm engagement**. The design
-interprets length as under-head bearing face to tip; that reference is not yet
-explicitly confirmed. R3 derives plate thickness from screw length, target
+The user reports supplied radio-module screws specified as **M2×8.5**, maximum
+threading depth approximately **2 mm**, and requests **1.5 mm engagement**. The
+user confirms the nominal screw length excludes the head; it is the supplied
+specification, not a physical length measurement. R3 derives plate thickness from screw length, target
 engagement and spacer height: **8.5 - 1.5 - 3.0 = 4.0 mm**. With 3.0 mm nominal
 spacers, the 7.0 mm screw path leaves 1.5 mm engagement and nominal 0.5 mm bottom
 clearance. The retaining plane remains 4.30 mm above the mounting surface;
