@@ -506,3 +506,26 @@ resistor readings has not yielded a direct M1-to-lone-left connection.
 
 Next unpowered checks: M1 to the upper device's upper-right terminal, then
 its lower-right terminal, retaining physical position labels.
+
+### Upper-left resistor endpoints clarified (2026-11-13)
+
+With pogo pins up, label the upper-left resistor ends **A** (directly connected
+to the upper device's lone-left terminal) and **B** (the opposite end). These
+are local tracing labels, not transistor pin numbers.
+
+| Measurement | Reported result |
+| --- | --- |
+| Resistor end A to upper device lone-left terminal | Direct connection reported; numerical resistance not restated |
+| M1 to end A | ≈19 kΩ in clarification; earlier terminal readings 19.3/19.5 kΩ by polarity |
+| M1 to end B | ≈4 kΩ; probe polarity not supplied |
+| Across resistor A–B | ≈4 kΩ; user confirms this is the resistor reading |
+
+The clarification does not report a below-1 Ω M1 connection to either end.
+Keep the three resistance measurements separate: they do not support a simple
+M1-to-terminal series-resistor model by arithmetic. Readings were taken in
+circuit, and common polarity, settling conditions and contact repeatability
+across all three measurements have not been established. No additional resistor
+value or gate/source/drain assignment is inferred.
+
+Next unpowered check: end B to U2 pin 4 (known ground). This will determine
+whether the M1-to-B reading is another measurement of the M1-to-ground path.
