@@ -210,6 +210,7 @@ P11/P12 having equal readings does not establish continuity between them.
 | From | To | Reported resistance |
 | --- | --- | --- |
 | P2 | U1 pin 1 (VIN) | <1 Ω |
+| P2 | Candidate MP2155 pin 5 (VIN) | <1 Ω |
 | P2 | U1 pin 5 (VOUT) | ≈570 Ω |
 | P2 | U2 pin 8 (VCC) | Open |
 | P2 | Radio pin 6 (VCC) | Open |
@@ -263,3 +264,10 @@ reported, so retain both original observations. The direct low-resistance
 connections still establish P2-to-U1 VIN and U1 VOUT-to-EEPROM VCC.
 
 Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
+
+### Shared regulator input
+
+User reports MP2155 pin 5 to P2 **<1 Ω**. Assuming the candidate MP2155
+identification, **P2 feeds both U1 VIN and MP2155 VIN**. The converter's output
+routing and operating voltage remain unverified. Next unpowered power-path
+check: MP2155 pin 1 (VOUT) to radio pin 6 (VCC).

@@ -251,6 +251,7 @@ probing the mounted board.
 | P1 | U1 pin 2 (GND) | <1 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P2 | U2 pin 4 (GND) | ≈500 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | U1 pin 1 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
+| P2 | Candidate MP2155 pin 5 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13; reported as MP2155p5 → P2. |
 | P2 | U1 pin 5 (VOUT) | ≈570 Ω, red on U1 pin 5 | Open or ≈1.2 kΩ on re-probing; stable while held, black on U1 pin 5 | User measurement, 2026-11-13; see polarity-check table below. |
 | P2 | U2 pin 8 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
 | P2 | Radio pin 6 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
@@ -345,3 +346,14 @@ reported, so retain both original observations. The direct low-resistance
 connections still establish P2-to-U1 VIN and U1 VOUT-to-EEPROM VCC.
 
 Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
+
+### Shared regulator input (2026-11-13)
+
+User reports candidate MP2155 pin 5 (VIN) to P2 below 1 Ω. Together with the
+U1 pin 1 result, this places both regulator inputs on the P2 net, assuming the
+candidate MP2155 identification/pin numbering. The two stages therefore share
+an input; their output nets must be traced separately. This does not establish
+P2's operating voltage, upstream switching, or the converter's output voltage.
+
+Next power-path check: candidate MP2155 pin 1 (VOUT) to radio pin 6 (VCC),
+with the board unpowered. P3-to-regulator-EN tracing remains outstanding.
