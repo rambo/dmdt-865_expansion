@@ -251,7 +251,7 @@ probing the mounted board.
 | P1 | U1 pin 2 (GND) | <1 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P2 | U2 pin 4 (GND) | ≈500 Ω | Not reported | User measurement, 2026-11-13. |
 | P2 | U1 pin 1 (VIN) | <1 Ω | Not reported | User measurement, 2026-11-13. |
-| P2 | U1 pin 5 (VOUT) | ≈570 Ω | Not reported | User measurement, 2026-11-13. |
+| P2 | U1 pin 5 (VOUT) | ≈570 Ω, red on U1 pin 5 | Open / ≈1.2 kΩ intermittently, black on U1 pin 5 | User measurement, 2026-11-13; see polarity-check table below. |
 | P2 | U2 pin 8 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
 | P2 | Radio pin 6 (VCC) | Open | Not reported | User measurement, 2026-11-13. |
 | P3 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
@@ -321,8 +321,24 @@ voltage has been measured. The 650 Ω in-circuit reading does not establish a
 shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing
 remains unresolved. Reverse-probe readings and settling behaviour were not reported.
 
-Consistency check: earlier P2-to-U1 pin 5 was approximately 570 Ω, while
-P2-to-U2 pin 8 was open. With U1 pin 5 and U2 pin 8 now measuring below 1 Ω,
-repeat those two P2 measurements using the same probe polarity and comparable
-settling time, verifying pad contact. Preserve all reported values pending this
-check; contact, polarity or charging effects have not been distinguished.
+### U1 input/output probe-polarity check (2026-11-13)
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| U1 pin 5 (VOUT) | P2 (connected to U1 VIN) | ≈570 Ω |
+| P2 (connected to U1 VIN) | U1 pin 5 (VOUT) | Alternates between open and ≈1.2 kΩ |
+
+The user now reports polarity-dependent readings between the LDO input and
+output nets. This is consistent with semiconductor paths in the unpowered
+circuit; it does not identify a fixed 570 Ω resistor or a particular internal
+diode. The reverse reading's intermittency could involve charging, meter
+range changes or contact; its cause has not been isolated.
+
+Polarity dependence provides a plausible explanation for the earlier 570 Ω
+P2-to-U1 pin 5 reading versus the open P2-to-U2 pin 8 reading, despite the
+below-1 Ω connection between U1 pin 5 and U2 pin 8. The earlier probe polarity
+was not recorded, and a matched-polarity repeat using U2 pin 8 has not been
+reported, so retain both original observations. The direct low-resistance
+connections still establish P2-to-U1 VIN and U1 VOUT-to-EEPROM VCC.
+
+Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
