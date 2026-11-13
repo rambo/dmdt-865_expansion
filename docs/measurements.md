@@ -613,7 +613,11 @@ and measurements:
 
 The lower end of each R31/R34 connects to its corresponding Q1/Q2 terminal and
 to the corresponding 1 kΩ resistor. This extends the earlier lower-right-terminal
-trace: the other end of each 46 kΩ resistor reaches P1 ground. The final
+trace: the user now explicitly confirms the other ends of **R31 and R34**
+each connect to **P1 at below 1 Ω**. Thus these are approximately 46 kΩ
+pull-down branches on the respective Q/1 kΩ resistor junctions; the Q terminal
+functions remain unassigned. Probe polarities for the ground-continuity checks
+were not supplied. The final
 parenthetical “1k resistor (R31/34)” is interpreted as R30/R33, consistent with
 the component values explicitly given in the same report. Pair association
 R31/R30 and R34/R33 follows the user's corresponding-pair description.
@@ -622,6 +626,8 @@ R31/R30 and R34/R33 follows the user's corresponding-pair description.
 | --- | --- |
 | P4 to one end of R30 | <1 Ω |
 | P6 to R33 | Connection reported; exact resistance and end not specified |
+| R31 end opposite the Q/R30 junction | P1 ground: <1 Ω |
+| R34 end opposite the Q/R33 junction | P1 ground: <1 Ω |
 
 These identify P4 and P6 as candidate control inputs through the 1 kΩ
 resistors to the paired mode-connected devices. The endpoints selected for the
