@@ -1,4 +1,4 @@
-# T865 FPC connector retaining plate — R2
+# T865 FPC connector retaining plate — R3
 
 Printable retaining plate for the existing 2 × 6 pogo/FPC connector. It uses
 the selected P1 contact location and 32 × 40 mm mounting pattern. Looking at
@@ -7,9 +7,10 @@ side faces outward, exposed through a central window for wires and probing.
 
 ![Preview](preview.png)
 
-R2 lowers the spacer stack by 1.00 mm to account for the reported tablet contact
-recess. The retaining plate geometry is unchanged; an already printed R1 plate
-can be reused with the new spacers.
+R3 sizes the plate for the supplied **8.5 mm screws** and **1.5 mm target thread
+engagement**. The plate is now **4.00 mm thick**, with the same 3.00 mm nominal
+spacer stack and 4.30 mm retaining plane. The 1 mm contact recess remains included.
+Reprint the R3 plate; the R2 spacers can be reused.
 
 ## Files to print
 
@@ -44,10 +45,10 @@ The reference-assembly STEP includes dummy connector, FPC and spacer stacks;
 | Body centre | X 7.000, Y 19.867 mm | Assumes housing centred around contact grid |
 | Mount pattern | 32 × 40 mm | Same working baseline as selected P1 gauge |
 | Mount clearance holes | 2.40 mm | For M2 fasteners; no countersinks |
-| Plate envelope | 40 × 48 × 2.90 mm | Matches prior gauge footprint |
+| Plate envelope | 40 × 48 × 4.00 mm | Matches prior gauge footprint |
 | Underside pocket | 7.07 × 19.07 mm, 1.30 mm deep | 0.20 mm clearance per side |
 | Through window | 5.47 × 17.47 mm | Leaves nominal 0.60 mm overlap on housing rim |
-| Roof | 1.60 mm | Retaining thickness above pocket |
+| Roof | 2.70 mm | Retaining thickness above pocket |
 | Left flex relief | 9.0 mm wide, 1.70 mm deep | Design allowance; 0.40 mm above nominal rim plane |
 | Contact plane recess | About 1.00 mm | User measurement, 2026-11-13 |
 | Initial standoff | 3.00 mm | 2.60 mm spacer + 0.40 mm shim at each screw |
@@ -95,10 +96,22 @@ travel must leave margin from the measured 4.60 mm fully compressed height.
 If the plate touches the solder joints, increase the window or change the
 retaining surface; do not push on them to achieve the listed height.
 
-The fasteners need to accommodate the plate plus spacer stack: **5.90 mm**
-before tablet thread engagement at the nominal setting. Measure available thread
-depth and choose screw length from that engagement requirement. Original screw
-length/engagement is unknown; no specific screw length is claimed to fit.
+The supplied screws measure **8.50 mm long**. With **4.00 mm plate + 3.00 mm
+spacer stack = 7.00 mm** under the screw head, nominal thread engagement is
+**1.50 mm**, leaving **0.50 mm** before the reported approximately 2 mm thread
+depth. Screw length here is the length from the head's bearing face to its tip;
+this plate uses flat bearing faces and no countersinks. Any cap strap or washer
+under a head changes that screw's engagement and must be included in its stack.
+
+| Spacer stack | Plate + spacers | Nominal engagement with 8.50 mm screw |
+| --- | --- | --- |
+| 3.20 mm | 7.20 mm | 1.30 mm |
+| 3.00 mm | 7.00 mm | 1.50 mm |
+| 2.80 mm | 6.80 mm | 1.70 mm |
+| 2.60 mm | 6.60 mm | 1.90 mm |
+
+The lower stacks leave less bottoming margin. Do not tighten against the end of
+the threaded hole. Engagement and preload remain physical fit checks.
 
 ## Editable CAD and regeneration
 
@@ -127,6 +140,8 @@ For height calibration, parameters use:
 retaining_height = free_tip_to_solder_top - target_compression
                    - contact_plane_recess - solder_top_above_retaining_rim
 standoff_height = retaining_height - pocket_depth
+plate_thickness = screw_length - target_thread_engagement - standoff_height
+roof_thickness = plate_thickness - pocket_depth
 ```
 
 `contact_plane_recess` is positive when tablet contacts lie below the mounting
@@ -135,6 +150,8 @@ the rim. The recess is set to 1.00 mm from the user measurement; the solder-to-r
 offset defaults to zero as an explicit unknown. Update the base spacer height
 to preserve the intended 0.40 mm nominal shim stack when these parameters change;
 the generator checks the stack rather than silently exporting the wrong height.
+Plate thickness is derived from screw length and engagement; a minimum roof
+thickness check rejects a combination that makes the retaining roof too thin.
 
 ## Validation and limits
 

@@ -88,3 +88,8 @@ removable spacers for height adjustment. Physical fit has not been tested.
 
 Retainer R2 accounts for that recess with a 3.00 mm nominal spacer stack
 (2.60 + 0.40 mm), replacing R1's 4.00 mm stack. The printable plate is unchanged.
+
+R3 accommodates the reported 8.5 mm screws with a 4.00 mm plate and 3.00 mm spacer
+stack: 1.50 mm target engagement, nominal 0.50 mm margin to the approximately
+2 mm thread depth. Length is interpreted under-head to tip. The housing retaining
+plane remains at 4.30 mm; see the current CAD README for screw-stack assumptions.

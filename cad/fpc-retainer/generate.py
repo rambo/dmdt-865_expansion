@@ -25,7 +25,12 @@ def build(p):
     assert 0 < p['target_compression'] < travel
     sx,sy=p['mount_spacing']; x11,y11=p['pin11']; pitch=p['contact_pitch']
     cx,cy=x11+pitch/2,y11+5*pitch/2
-    t=p['pocket_depth']+p['roof_thickness']
+    lip=(p['free_tip_to_solder_top']-p['target_compression']-
+         p['contact_plane_recess']-p['solder_top_above_retaining_rim'])
+    standoff=lip-p['pocket_depth']
+    t=p['screw_length']-p['target_thread_engagement']-standoff
+    assert standoff>0 and t-p['pocket_depth']>=p['min_roof_thickness']
+    assert 0<p['target_thread_engagement']<p['max_thread_depth']
     pw=p['body_short']+2*p['pocket_side_clearance']
     ph=p['body_long']+2*p['pocket_side_clearance']
     ww=p['body_short']-2*p['rim_overlap']
@@ -104,6 +109,16 @@ def main():
         'nominal_retaining_height_mm':lip,'required_standoff_mm':standoff,
         'plate_thickness_mm':t,'pocket_mm':[p['body_short']+2*p['pocket_side_clearance'],p['body_long']+2*p['pocket_side_clearance']]}
     assert abs(standoff-(p['base_spacer_height']+.4))<1e-6, 'Update spacer stack after changing Z parameters'
+    engagement=p['screw_length']-(t+standoff)
+    assert abs(engagement-p['target_thread_engagement'])<1e-6
+    assert engagement<p['max_thread_depth']
+    report['screw_fit']={'screw_length_mm':p['screw_length'],
+        'plate_and_spacer_mm':t+standoff,'thread_engagement_mm':engagement,
+        'nominal_bottom_clearance_mm':p['max_thread_depth']-engagement,
+        'roof_thickness_mm':t-p['pocket_depth']}
+    for x,y in mounts:
+        bore=cq.Workplane('XY').circle(p['mount_hole_diameter']/2-.01).extrude(t+.2).translate((x,y,-.1))
+        assert plate.intersect(bore).val().Volume()<1e-6
     # Check assembly volumes: body mock-up fits pocket and roof avoids central pads.
     body=rounded_box(p['body_short'],p['body_long'],p['body_thickness'],cx,cy,
                      lip-p['body_thickness'],0.7)

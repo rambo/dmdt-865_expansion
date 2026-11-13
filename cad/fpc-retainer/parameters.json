@@ -19,7 +19,6 @@
   "solder_top_above_retaining_rim": 0.0,
   "pocket_side_clearance": 0.2,
   "rim_overlap": 0.6,
-  "roof_thickness": 1.6,
   "pocket_depth": 1.3,
   "edge_margin": 4.0,
   "corner_radius": 2.0,
@@ -31,5 +30,9 @@
   "shim_heights": [
     0.2,
     0.4
-  ]
+  ],
+  "screw_length": 8.5,
+  "target_thread_engagement": 1.5,
+  "max_thread_depth": 2.0,
+  "min_roof_thickness": 1.6
 }

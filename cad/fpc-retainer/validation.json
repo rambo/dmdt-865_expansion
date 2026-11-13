@@ -2,7 +2,7 @@
   "T865-FPC-retainer-assembly-coordinates": {
     "watertight": true,
     "connected_solids": 1,
-    "volume_mm3": 5055.6909,
+    "volume_mm3": 7037.8785,
     "bounds_mm": [
       [
         -4.0,
@@ -12,7 +12,7 @@
       [
         36.0,
         44.0,
-        2.9
+        4.0
       ]
     ],
     "step_reimport_valid": true
@@ -20,7 +20,7 @@
   "T865-FPC-retainer-print": {
     "watertight": true,
     "connected_solids": 1,
-    "volume_mm3": 5055.6909,
+    "volume_mm3": 7037.8785,
     "bounds_mm": [
       [
         -36.0,
@@ -30,7 +30,7 @@
       [
         4.0,
         44.0,
-        2.9
+        4.0
       ]
     ],
     "step_reimport_valid": true
@@ -105,11 +105,18 @@
     "measured_travel_mm": 1.0,
     "nominal_retaining_height_mm": 4.3,
     "required_standoff_mm": 3.0,
-    "plate_thickness_mm": 2.9000000000000004,
+    "plate_thickness_mm": 4.0,
     "pocket_mm": [
       7.07,
       19.07
     ]
+  },
+  "screw_fit": {
+    "screw_length_mm": 8.5,
+    "plate_and_spacer_mm": 7.0,
+    "thread_engagement_mm": 1.5,
+    "nominal_bottom_clearance_mm": 0.5,
+    "roof_thickness_mm": 2.7
   },
   "parameter_change_check": "body_short +0.20 mm recomputes; original retained",
   "mock_body_intersection_mm3": 0.0,

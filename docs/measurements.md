@@ -696,3 +696,16 @@ spacer stack from 4.0 to **3.0 mm** (2.60 mm spacer + 0.40 mm shim), placing the
 retaining plane at **4.30 mm above the mounting surface**. The plate geometry
 is unchanged; only spacers and assembly height change. Physical compression
 and fit remain to be checked. The earlier zero-recess R1 height is superseded.
+
+### Supplied screws and retainer R3 (2026-11-13)
+
+The user reports supplied radio-module screws **8.5 mm long**, maximum threading
+depth approximately **2 mm**, and requests **1.5 mm engagement**. The design
+interprets length as under-head bearing face to tip; that reference is not yet
+explicitly confirmed. R3 derives plate thickness from screw length, target
+engagement and spacer height: **8.5 - 1.5 - 3.0 = 4.0 mm**. With 3.0 mm nominal
+spacers, the 7.0 mm screw path leaves 1.5 mm engagement and nominal 0.5 mm bottom
+clearance. The retaining plane remains 4.30 mm above the mounting surface;
+added plate material is on the outward side. R2 spacers remain usable with R3.
+Actual thread depth, any cap strap/washer stack and printed dimensions still
+need checking during assembly.
