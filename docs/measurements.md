@@ -1,4 +1,4 @@
-# Current measurement index - 2026-11-11
+# Current measurement index - 2026-11-13
 
 This is the entry point for the electrical and mechanical measurements. Earlier
 reports preserve the sequence of observations and corrections; use the latest
@@ -159,3 +159,17 @@ prioritizes ground, supply paths, enables/mode pins, UART and EEPROM mapping
 before the connector side becomes inaccessible. Pin 2 as switched supply
 is a working hypothesis from the wider FPC trace and earlier voltage decay,
 not a confirmed electrical assignment.
+
+## Radio PCB resistance measurements (2026-11-13)
+
+| From | To | Reported resistance |
+| --- | --- | --- |
+| P1 | U2 EEPROM pin 4 (GND) | 0.8 Ω |
+| P1 | U.FL shield | 0.8 Ω |
+
+These user readings support P1 sharing ground with the EEPROM and antenna
+connector shield. Shorted-lead/contact resistance and reverse-probe readings
+were not supplied, so 0.8 Ω is the measured total, not an isolated PCB resistance.
+The [probing worksheet](reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md)
+records both readings and the photo-based U1 pin orientation. U1 continuity
+has not yet been reported.

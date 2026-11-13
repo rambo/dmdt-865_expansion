@@ -157,6 +157,26 @@ See [LP3987H datasheet](../../references/lora-teardown/LP3987H.pdf), pages 1–2
 | 4 | NC |
 | 5 | VOUT |
 
+### U1 orientation in the PCB close-up
+
+In [IMG20261111200420](../../measurements/photos/lora-teardown-2026-11-11/previews/IMG20261111200420.jpg),
+viewed from the component side with the `3R3` inductor below U1, the three-lead
+side is on the left and the two-lead side is on the right. The small dot beside
+the upper-left lead marks pin 1. This matches the manufacturer's top-view
+package drawing on page 2 of the archived LP3987H datasheet.
+
+| Position in that photograph | U1 pin | Signal |
+| --- | --- | --- |
+| Upper left, beside dot | 1 | VIN |
+| Middle left | 2 | GND |
+| Lower left, nearest inductor | 3 | EN |
+| Lower right, nearest inductor | 4 | NC |
+| Upper right | 5 | VOUT |
+
+Next unpowered check: P1 to U1 pin 2 (middle lead on the three-lead side).
+The two reported 0.8 Ω readings below support a common ground connection;
+shorted-lead/contact resistance and reverse-probe readings remain unreported.
+
 ### U2: AT24C02C, eight-pin package
 
 See the [Microchip datasheet](https://ww1.microchip.com/downloads/en/DeviceDoc/AT24C01C-AT24C02C-I2C-Compatible-Two-Wire-Serial-EEPROM-1Kbit-2Kbit-20006111A.pdf).
@@ -215,7 +235,8 @@ therefore names radio signals instead of relying on numbers.
 
 | Connector | Endpoint/component pad | Ohms | Reversed probes | Notes |
 | --- | --- | --- | --- | --- |
-| P1 |  |  |  |  |
+| P1 | U2 pin 4 (GND) | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
+| P1 | U.FL shield | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P2 |  |  |  |  |
 | P3 |  |  |  |  |
 | P4 |  |  |  |  |
