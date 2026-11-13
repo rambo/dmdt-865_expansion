@@ -568,9 +568,9 @@ values. Settling behaviour was not supplied. Similarity to the earlier
 approximately 4 kΩ upper-left resistor reading is a tracing lead, not proof
 of a connection.
 
-The subsequent M1-to-upper-device lone-left check is recorded below. Neither
-mode pin has yet been assigned to a transistor terminal by a low-resistance
-measurement.
+The subsequent M1-to-upper-device lone-left check is recorded below. Later
+direct-continuity results identify M1 with the lower device and M0 with the
+upper device, as recorded in the mode-pin mapping section.
 
 ### M1 to upper device lone-left terminal (2026-11-13)
 
@@ -612,3 +612,29 @@ value or gate/source/drain assignment is inferred.
 
 Next unpowered check: end B to U2 pin 4 (known ground). This will determine
 whether the M1-to-B reading is another measurement of the M1-to-ground path.
+
+### Radio mode pins mapped to paired devices (2026-11-13)
+
+Orientation: **pogo pins up**. Upper/lower are physical device positions;
+Q1/Q2 designator correspondence and gate/source/drain identities remain unassigned.
+
+| Radio endpoint | Device terminal | Reported resistance |
+| --- | --- | --- |
+| Radio pin 1 (M0) | Upper device, lone-left terminal | <1 Ω |
+| Radio pin 2 (M1) | Lower device, lone-left terminal | <1 Ω |
+
+These direct-continuity measurements connect the paired KN devices to the
+radio's mode signals. They do not yet establish how the devices are driven,
+which semiconductor terminals these are, or any P3-to-mode control path.
+Probe polarities were not supplied for these below-1 Ω readings.
+
+The user also reports that “the two resistors are connected in the middle”.
+The shared junction is recorded as an observation, but which resistor pair and
+ends it joins was not explicitly answered; the follow-up instead supplied the
+M1 and M0 terminal measurements above. Do not merge resistor nodes in a schematic
+until that physical junction is identified.
+
+Next unpowered checks on the shared middle junction identified by the user:
+continuity to U2 pin 8 (EEPROM VCC/U1 output) and U2 pin 4 (ground). Record both
+results and which resistor ends form that junction; this will test its rail
+connection without assuming pull-up or pull-down behaviour.
