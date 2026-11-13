@@ -94,10 +94,9 @@ Expected endpoint pairing if this carrier uses that same UART:
 - P11 -> radio TXD (radio output into tablet RX).
 - P12 -> radio RXD (tablet output into radio RX).
 
-The later radio-board measurements below report radio RXD to P11 and TXD to
-P12 at approximately 22 Ω. Reconciliation of board and tablet contact labels
-is pending; the expected pairing above is not a claim that this carrier was
-measured that way.
+The corrected radio-board measurements below confirm these endpoint pairings:
+radio RXD pin 3 to P12 and TXD pin 4 to P11, approximately 22 Ω each. The user
+corrected the initial pogo-contact count; the earlier discrepancy is resolved.
 
 Check direct resistance first. If there is no direct connection, work inward
 from each endpoint through nearby resistors and the two KN devices. On a photo,
@@ -272,9 +271,9 @@ probing the mounted board.
 | P9 | U2 pin 4 (GND) | ≈722 Ω | Not reported | User measurement, 2026-11-13. |
 | P10 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P11 | U2 pin 4 (GND) | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
-| P11 (reported board label) | Radio pin 3 (RXD) | ≈22 Ω | Not reported | User measurement, 2026-11-13; conflicts with expected tablet UART pairing, see discrepancy below. |
+| P11 (tablet RX) | Radio pin 4 (TXD) | ≈22 Ω | Not reported | User-confirmed corrected pogo-contact count, 2026-11-13. |
 | P12 | U2 pin 4 (GND) | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
-| P12 (reported board label) | Radio pin 4 (TXD) | ≈22 Ω | Not reported | User measurement, 2026-11-13; conflicts with expected tablet UART pairing, see discrepancy below. |
+| P12 (tablet TX) | Radio pin 3 (RXD) | ≈22 Ω | Not reported | User-confirmed corrected pogo-contact count, 2026-11-13. |
 
 Minimum useful completion: confirmed ground, P2's destination, P3's destination,
 UART endpoints, radio M0/M1/AUX routing, EEPROM SDA/SCL/VCC, and FPC map.
@@ -477,21 +476,18 @@ and P2). Keep gate/source/drain unassigned until the terminal mapping is verifie
 
 ### Radio UART-to-connector resistance (2026-11-13)
 
-| Radio endpoint | Connector label reported by user | Resistance |
+| Radio endpoint | Connector contact | Reported resistance |
 | --- | --- | --- |
-| Radio pin 3 (RXD in the matched 18-pad manual) | P11 | ≈22 Ω |
-| Radio pin 4 (TXD in the matched 18-pad manual) | P12 | ≈22 Ω |
+| Radio pin 3 (RXD) | P12 (tablet TX) | ≈22 Ω |
+| Radio pin 4 (TXD) | P11 (tablet RX) | ≈22 Ω |
 
-These readings establish low-resistance paths at the reported endpoints,
-consistent with series resistance. Individual series components and reverse-probe
-readings were not supplied; do not assert a particular 22 Ω resistor or exclude
-all intervening circuitry from these measurements alone.
+The user corrected the initial pogo-contact count: radio pin 3 connects to P12,
+not P11, and explicitly confirmed radio pin 4 connects to P11. The intermediate
+P4 mention was withdrawn. The corrected readings match the earlier powered
+ESP32 bench identification of tablet P11 RX and P12 TX; the reported RX/TX
+pairing discrepancy is resolved.
 
-**UART numbering discrepancy remains unresolved.** The earlier powered ESP32
-bench test established tablet P11 as RX and P12 as TX. Normal direction pairing
-would therefore connect radio TXD (pin 4) to tablet P11, and radio RXD (pin 3)
-to tablet P12. The new board-side labels report the opposite pairing. Preserve
-both observations; do not silently swap labels or interpret TX-to-TX as verified
-working wiring. Clarification requested: do these board P11/P12 labels name the
-contacts that mate with tablet P11/P12, or were they counted in the PCB view?
-No answer or corrected mapping has yet been recorded.
+The measured paths are consistent with series resistance. Individual components
+and reverse-probe readings have not been supplied; these measurements alone do
+not establish a particular discrete 22 Ω resistor, complete UART conditioning
+circuit, or powered operation of the radio.

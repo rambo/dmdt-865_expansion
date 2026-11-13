@@ -23,10 +23,10 @@ using ESP32 GPIO26 TX and GPIO25 RX, at 9600/8N1. No new /dev/expand enable
 command was used in that bench test; cold-boot behaviour without preceding DMD
 enable cycles is untested. The radio module was not fitted.
 
-The later [radio-board UART resistance readings](#radio-uart-to-connector-resistance-2026-11-13)
-report the opposite RX/TX pairing under the supplied connector labels. The
-relationship between those board labels and the tablet labels is unresolved;
-retain the earlier powered bench result pending reconciliation.
+The corrected [radio-board UART resistance readings](#radio-uart-to-connector-resistance-2026-11-13)
+match these tablet assignments: radio RXD pin 3 connects to P12 and radio TXD
+pin 4 connects to P11, each at approximately 22 Ω. The user corrected the
+initial pogo-contact count; the apparent RX/TX pairing discrepancy is resolved.
 
 | Pin | User's sequential multimeter reading relative to pin 1 |
 | --- | --- |
@@ -395,21 +395,18 @@ and P2). Keep gate/source/drain unassigned until the terminal mapping is verifie
 
 ### Radio UART-to-connector resistance (2026-11-13)
 
-| Radio endpoint | Connector label reported by user | Resistance |
+| Radio endpoint | Connector contact | Reported resistance |
 | --- | --- | --- |
-| Radio pin 3 (RXD in the matched 18-pad manual) | P11 | ≈22 Ω |
-| Radio pin 4 (TXD in the matched 18-pad manual) | P12 | ≈22 Ω |
+| Radio pin 3 (RXD) | P12 (tablet TX) | ≈22 Ω |
+| Radio pin 4 (TXD) | P11 (tablet RX) | ≈22 Ω |
 
-These readings establish low-resistance paths at the reported endpoints,
-consistent with series resistance. Individual series components and reverse-probe
-readings were not supplied; do not assert a particular 22 Ω resistor or exclude
-all intervening circuitry from these measurements alone.
+The user corrected the initial pogo-contact count: radio pin 3 connects to P12,
+not P11, and explicitly confirmed radio pin 4 connects to P11. The intermediate
+P4 mention was withdrawn. The corrected readings match the earlier powered
+ESP32 bench identification of tablet P11 RX and P12 TX; the reported RX/TX
+pairing discrepancy is resolved.
 
-**UART numbering discrepancy remains unresolved.** The earlier powered ESP32
-bench test established tablet P11 as RX and P12 as TX. Normal direction pairing
-would therefore connect radio TXD (pin 4) to tablet P11, and radio RXD (pin 3)
-to tablet P12. The new board-side labels report the opposite pairing. Preserve
-both observations; do not silently swap labels or interpret TX-to-TX as verified
-working wiring. Clarification requested: do these board P11/P12 labels name the
-contacts that mate with tablet P11/P12, or were they counted in the PCB view?
-No answer or corrected mapping has yet been recorded.
+The measured paths are consistent with series resistance. Individual components
+and reverse-probe readings have not been supplied; these measurements alone do
+not establish a particular discrete 22 Ω resistor, complete UART conditioning
+circuit, or powered operation of the radio.
