@@ -233,12 +233,12 @@ be used for this module's pin numbering. The worksheet now uses the correct manu
 | --- | --- | --- |
 | U1 pin 5 (VOUT) | U2 pin 8 (VCC) | <1 Ω |
 | U1 pin 5 (VOUT) | Radio pin 6 (VCC) | ≈650 Ω |
+| Candidate MP2155 pin 1 (VOUT) | Radio pin 6 (VCC) | <1 Ω |
 
 The low-resistance connection establishes that U2 EEPROM VCC shares U1's output
 net. U1's marking identifies the nominal 3.3 V LDO variant; no powered output
 voltage has been measured. The 650 Ω in-circuit reading does not establish a
-shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing
-remains unresolved. Reverse-probe readings and settling behaviour were not reported.
+shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing was subsequently traced to candidate MP2155 VOUT (below). Reverse-probe readings and settling behaviour were not reported.
 
 ### U1 input/output probe-polarity check (2026-11-13)
 
@@ -265,9 +265,22 @@ connections still establish P2-to-U1 VIN and U1 VOUT-to-EEPROM VCC.
 
 Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
 
-### Shared regulator input
+### Shared regulator input and traced outputs
 
-User reports MP2155 pin 5 to P2 **<1 Ω**. Assuming the candidate MP2155
-identification, **P2 feeds both U1 VIN and MP2155 VIN**. The converter's output
-routing and operating voltage remain unverified. Next unpowered power-path
-check: MP2155 pin 1 (VOUT) to radio pin 6 (VCC).
+User reports MP2155 pin 5 to P2 **<1 Ω**, and MP2155 pin 1 to radio pin 6
+**<1 Ω**. Assuming the candidate MP2155 identification, P2 feeds both regulator
+inputs, U1 VOUT connects to EEPROM VCC, and MP2155 VOUT connects to radio VCC.
+
+```mermaid
+flowchart LR
+    P2["Connector P2"] -->|"less than 1 Ω"| U1["U1 LDO: VIN pin 1 → VOUT pin 5"]
+    P2 -->|"less than 1 Ω"| DC["Candidate MP2155: VIN pin 5 → VOUT pin 1"]
+    U1 -->|"less than 1 Ω"| EE["U2 EEPROM VCC: pin 8"]
+    DC -->|"less than 1 Ω"| RF["Radio VCC: pin 6"]
+```
+
+The external links represent measured low-resistance connections; the regulator
+blocks identify their input/output functions, not continuity through each IC.
+Actual powered voltages, enable routing and any upstream P2 switching remain
+unmeasured. Next unpowered checks: P3 to U1 pin 3 (EN) and candidate MP2155
+pin 6 (EN).

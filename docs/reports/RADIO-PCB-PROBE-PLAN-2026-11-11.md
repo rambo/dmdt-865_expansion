@@ -315,12 +315,12 @@ layout; the reference table above now uses the correct 18-pad manual.
 | --- | --- | --- |
 | U1 pin 5 (VOUT) | U2 pin 8 (VCC) | <1 Ω |
 | U1 pin 5 (VOUT) | Radio pin 6 (VCC) | ≈650 Ω |
+| Candidate MP2155 pin 1 (VOUT) | Radio pin 6 (VCC) | <1 Ω |
 
 The low-resistance connection establishes that U2 EEPROM VCC shares U1's output
 net. U1's marking identifies the nominal 3.3 V LDO variant; no powered output
 voltage has been measured. The 650 Ω in-circuit reading does not establish a
-shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing
-remains unresolved. Reverse-probe readings and settling behaviour were not reported.
+shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing was subsequently traced to candidate MP2155 VOUT (below). Reverse-probe readings and settling behaviour were not reported.
 
 ### U1 input/output probe-polarity check (2026-11-13)
 
@@ -352,8 +352,13 @@ Next tracing target: P3 to U1 pin 3 (EN), with the board unpowered.
 User reports candidate MP2155 pin 5 (VIN) to P2 below 1 Ω. Together with the
 U1 pin 1 result, this places both regulator inputs on the P2 net, assuming the
 candidate MP2155 identification/pin numbering. The two stages therefore share
-an input; their output nets must be traced separately. This does not establish
+an input. The output trace below identifies their respective loads. This does not establish
 P2's operating voltage, upstream switching, or the converter's output voltage.
 
-Next power-path check: candidate MP2155 pin 1 (VOUT) to radio pin 6 (VCC),
-with the board unpowered. P3-to-regulator-EN tracing remains outstanding.
+User subsequently reports candidate MP2155 pin 1 (VOUT) to radio pin 6 (VCC)
+**<1 Ω**. This establishes the converter-output-to-radio-supply connection,
+complementing the U1-output-to-EEPROM-supply result. Reverse-probe results were
+not supplied. See the [supply-path diagram](../measurements.md#shared-regulator-input-and-traced-outputs).
+
+Next unpowered checks: P3 to U1 pin 3 (EN), then P3 to candidate MP2155
+pin 6 (EN). Actual rail voltages and enable routing remain unmeasured.
