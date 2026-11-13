@@ -267,8 +267,10 @@ probing the mounted board.
 | P5 | U2 pin 4 (GND) | <1 Ω | <1 Ω | User measurement, 2026-11-13; low resistance in both directions strongly supports a shared board ground. |
 | P6 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P7 | U2 pin 4 (GND) | ≈640 Ω | Not reported | User measurement, 2026-11-13. |
+| P7 | U2 pin 5 (SDA) | ≈22 Ω | Not reported | User measurement, 2026-11-13; EEPROM I²C path identified. |
 | P8 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. |
 | P9 | U2 pin 4 (GND) | ≈722 Ω | Not reported | User measurement, 2026-11-13. |
+| P9 | U2 pin 6 (SCL) | ≈22 Ω | Not reported | User measurement, 2026-11-13; EEPROM I²C path identified. |
 | P10 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P11 | U2 pin 4 (GND) | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
 | P11 (tablet RX) | Radio pin 4 (TXD) | ≈22 Ω | Not reported | User-confirmed corrected pogo-contact count, 2026-11-13. |
@@ -504,5 +506,18 @@ I²C pin: U2 pin 5 (SDA) or pin 6 (SCL). Numerical resistance, meter mode and
 probe polarity were not supplied. P3 remains unassigned; no direct SDA/SCL
 connection was found, while indirect circuitry remains untraced.
 
-The user will next locate the connector contacts connected to U2 pin 5 (SDA)
-and pin 6 (SCL). No connector assignment for either signal has yet been reported.
+### EEPROM I²C connector mapping (2026-11-13)
+
+| EEPROM endpoint | Connector contact | Reported resistance |
+| --- | --- | --- |
+| U2 pin 5 (SDA) | P7 | ≈22 Ω |
+| U2 pin 6 (SCL) | P9 | ≈22 Ω |
+
+These user measurements identify P7 as the EEPROM SDA path and P9 as SCL.
+The earlier approximately 3.3 V readings on these contacts are compatible with
+idle I²C levels; they must not be treated as identified supply outputs. Pull-up
+locations/values and powered bus traffic remain unmeasured. The approximately
+22 Ω paths are consistent with series resistance, but individual components
+and reverse-probe results have not been reported. P3 remains unassigned.
+
+Next unpowered tracing target: radio pin 5 (AUX) to P3. No connection is assumed.

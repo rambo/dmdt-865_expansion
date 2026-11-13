@@ -35,9 +35,9 @@ initial pogo-contact count; the apparent RX/TX pairing discrepancy is resolved.
 | 4 | 1.79 V |
 | 5 | 1.5 V |
 | 6 | 36 mV |
-| 7 | 3.3 V |
+| 7 | 3.3 V; later traced to EEPROM SDA via ≈22 Ω |
 | 8 | 1 mV; not established as ground |
-| 9 | 3.3 V |
+| 9 | 3.3 V; later traced to EEPROM SCL via ≈22 Ω |
 | 10 | 39 mV |
 | 11 | 2.49 V; confirmed UART RX |
 | 12 | About 2.5 V idle; confirmed UART TX |
@@ -423,5 +423,18 @@ I²C pin: U2 pin 5 (SDA) or pin 6 (SCL). Numerical resistance, meter mode and
 probe polarity were not supplied. P3 remains unassigned; no direct SDA/SCL
 connection was found, while indirect circuitry remains untraced.
 
-The user will next locate the connector contacts connected to U2 pin 5 (SDA)
-and pin 6 (SCL). No connector assignment for either signal has yet been reported.
+### EEPROM I²C connector mapping (2026-11-13)
+
+| EEPROM endpoint | Connector contact | Reported resistance |
+| --- | --- | --- |
+| U2 pin 5 (SDA) | P7 | ≈22 Ω |
+| U2 pin 6 (SCL) | P9 | ≈22 Ω |
+
+These user measurements identify P7 as the EEPROM SDA path and P9 as SCL.
+The earlier approximately 3.3 V readings on these contacts are compatible with
+idle I²C levels; they must not be treated as identified supply outputs. Pull-up
+locations/values and powered bus traffic remain unmeasured. The approximately
+22 Ω paths are consistent with series resistance, but individual components
+and reverse-probe results have not been reported. P3 remains unassigned.
+
+Next unpowered tracing target: radio pin 5 (AUX) to P3. No connection is assumed.
