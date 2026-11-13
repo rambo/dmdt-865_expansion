@@ -499,8 +499,10 @@ EEPROM provides a concrete tracing target, but P3 has not been assigned to
 SDA, SCL or another EEPROM signal. Its diode-like ground path does not identify
 a bus function; no I²C traffic has been decoded on P3.
 
-Next unpowered checks, in order: **P3 to U2 pin 5 (SDA)**, then **P3 to U2
-pin 6 (SCL)**. Record actual resistance, probe polarity and any settling.
-Low resistance would support a direct or series-resistor path. Lack of direct
-continuity would leave possible intervening circuitry untested; trace that
-circuitry before ruling out an I²C-related function.
+The user subsequently reports no direct connection from P3 to either EEPROM
+I²C pin: U2 pin 5 (SDA) or pin 6 (SCL). Numerical resistance, meter mode and
+probe polarity were not supplied. P3 remains unassigned; no direct SDA/SCL
+connection was found, while indirect circuitry remains untraced.
+
+The user will next locate the connector contacts connected to U2 pin 5 (SDA)
+and pin 6 (SCL). No connector assignment for either signal has yet been reported.
