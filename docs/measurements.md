@@ -283,6 +283,7 @@ flowchart LR
     P2["Connector P2"] -->|"less than 1 Ω"| U1["U1 LDO: VIN 1 + EN 3 → VOUT 5"]
     P2 -->|"less than 1 Ω"| DC["Candidate MP2155: VIN 5 + EN 6 → VOUT 1"]
     U1 -->|"less than 1 Ω"| EE["U2 EEPROM VCC: pin 8"]
+    EE ---|"less than 1 Ω"| PU["Shared R29/R32 mode pull-up junction"]
     DC -->|"less than 1 Ω"| RF["Radio VCC: pin 6"]
 ```
 
@@ -527,8 +528,8 @@ circuit, and common polarity, settling conditions and contact repeatability
 across all three measurements have not been established. No additional resistor
 value or gate/source/drain assignment is inferred.
 
-Next unpowered check: end B to U2 pin 4 (known ground). This will determine
-whether the M1-to-B reading is another measurement of the M1-to-ground path.
+The later R29/R32 junction trace below identifies the shared resistor ends
+with U2 VCC, resolving the supply-side junction.
 
 ### Radio mode pins mapped to paired devices (2026-11-13)
 
@@ -545,21 +546,46 @@ radio's mode signals. They do not yet establish how the devices are driven,
 which semiconductor terminals these are, or any P3-to-mode control path.
 Probe polarities were not supplied for these below-1 Ω readings.
 
-The user also reports that “the two resistors are connected in the middle”.
-The shared junction is recorded as an observation, but which resistor pair and
-ends it joins was not explicitly answered; the follow-up instead supplied the
-M1 and M0 terminal measurements above. Do not merge resistor nodes in a schematic
-until that physical junction is identified.
+The user identifies the shared middle junction as the connection between
+**R29 and R32** and corrects “U8” to **U2 pin 8** for the following measurement.
 
 | From | To | Reported resistance |
 | --- | --- | --- |
-| Shared middle resistor junction (user-identified) | P1 (ground) | ≈330 Ω |
+| Shared R29/R32 middle junction | P1 (ground) | ≈330 Ω |
+| U2 pin 8 (EEPROM VCC) | Shared R29/R32 middle junction | <1 Ω |
 
-The user corrected the initial 300 Ω report to **330 Ω**. Probe polarity and
-settling behaviour were not supplied. This is an in-circuit resistance reading,
-not direct ground continuity or identification of a discrete 330 Ω resistor.
-The junction's rail assignment remains unknown.
+The 330 Ω value supersedes the initial 300 Ω report. The below-1 Ω connection
+places the shared junction on **U1 VOUT / EEPROM VCC**. Thus 330 Ω is an
+in-circuit rail-to-ground reading, not a discrete grounding resistor. Probe
+polarity and settling behaviour were not supplied.
 
-Next unpowered check: shared middle junction to U2 pin 8 (EEPROM VCC/U1 output).
-The exact resistor pair/ends forming the junction still need explicit identification
-before those nodes can be joined in the schematic.
+Together with the outer-end connections to the lone-left terminals and the
+M0/M1 continuity results, this identifies **R29/R32 as mode-pin pull-ups** to
+the LDO output rail. The user explicitly confirms that interpretation. U1 is
+the nominal 3.3 V variant by marking; actual powered rail voltage remains
+unmeasured. Which individual reference designator corresponds to upper versus
+lower has not been separately recorded.
+
+The user's description “4k resistors” is retained as a description, not a new
+isolated-value measurement. Earlier readings remain upper approximately 4 kΩ
+and lower approximately 7.4 kΩ in circuit; nominal values/markings are unconfirmed.
+
+The known mode-node wiring is shown below; the transistor boxes identify only
+measured terminal connections, not verified gate/source/drain assignments.
+
+```mermaid
+flowchart TB
+    V["U1 pin 5 / U2 pin 8: common supply rail"] --- J["Shared R29/R32 junction"]
+    J --- RU["Upper pull-up: about 4 kΩ measured in circuit"]
+    J --- RL["Lower pull-up: about 7.4 kΩ measured in circuit"]
+    RU --- M0["Radio pin 1: M0"]
+    RL --- M1["Radio pin 2: M1"]
+    M0 --- QU["Upper KN device: lone-left terminal"]
+    M1 --- QL["Lower KN device: lone-left terminal"]
+```
+
+The paired devices may provide a way to pull the mode signals low, but their
+remaining terminal functions and control inputs are still untraced. Next
+unpowered checks: each device's upper-right terminal to U2 pin 4 (ground),
+then trace the lower-right terminals toward connector contacts. No P3 control
+assignment is established.
