@@ -748,3 +748,15 @@ result. P8 remains unassigned.
 No direct AUX path has been established on P3, P8 or P10. These checks do not
 prove that AUX is unconnected everywhere on the carrier or exclude indirect
 circuitry. No new pogo assignment follows from this result.
+
+### Radio AUX-to-P3 repeat check (2026-11-13)
+
+The user explicitly confirmed that “P#” in this repeat measurement means P3.
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| Radio pin 5 (AUX) | P3 | ≈49 kΩ |
+| P3 | Radio pin 5 (AUX) | Megaohms; exact value unspecified |
+
+This agrees with the earlier ≈50 kΩ / megaohm reading. It does not establish
+direct continuity or identify the intervening circuit; P3 remains unassigned.
