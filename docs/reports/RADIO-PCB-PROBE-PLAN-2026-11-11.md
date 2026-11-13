@@ -173,9 +173,10 @@ package drawing on page 2 of the archived LP3987H datasheet.
 | Lower right, nearest inductor | 4 | NC |
 | Upper right | 5 | VOUT |
 
-Next unpowered check: P1 to U1 pin 2 (middle lead on the three-lead side).
-The two reported 0.8 Ω readings below support a common ground connection;
-shorted-lead/contact resistance and reverse-probe readings remain unreported.
+User reports P1 to U1 pin 2 (middle lead on the three-lead side) below 1 Ω
+on 2026-11-13. Together with the two 0.8 Ω readings below, this supports a
+common ground connection between P1, U1 GND, U2 GND and the U.FL shield.
+Shorted-lead/contact resistance and reverse-probe readings remain unreported.
 
 ### U2: AT24C02C, eight-pin package
 
@@ -237,6 +238,7 @@ therefore names radio signals instead of relying on numbers.
 | --- | --- | --- | --- | --- |
 | P1 | U2 pin 4 (GND) | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P1 | U.FL shield | 0.8 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
+| P1 | U1 pin 2 (GND) | <1 Ω | Not reported | User measurement, 2026-11-13; shorted-lead baseline not yet reported. |
 | P2 |  |  |  |  |
 | P3 |  |  |  |  |
 | P4 |  |  |  |  |

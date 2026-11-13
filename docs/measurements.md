@@ -166,10 +166,10 @@ not a confirmed electrical assignment.
 | --- | --- | --- |
 | P1 | U2 EEPROM pin 4 (GND) | 0.8 Ω |
 | P1 | U.FL shield | 0.8 Ω |
+| P1 | U1 pin 2 (GND) | <1 Ω |
 
-These user readings support P1 sharing ground with the EEPROM and antenna
-connector shield. Shorted-lead/contact resistance and reverse-probe readings
-were not supplied, so 0.8 Ω is the measured total, not an isolated PCB resistance.
+These user readings support P1 sharing ground with U1, the EEPROM and the
+antenna connector shield. Shorted-lead/contact resistance and reverse-probe
+readings were not supplied; the values include lead/contact resistance.
 The [probing worksheet](reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md)
-records both readings and the photo-based U1 pin orientation. U1 continuity
-has not yet been reported.
+records all three readings and the photo-based U1 pin orientation.
