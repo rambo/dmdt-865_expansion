@@ -335,12 +335,26 @@ orientation, not an assigned semiconductor pin number.
 | Q2 lower-right terminal | Near end of its adjacent resistor | <1 Ω |
 | Other end of Q2-adjacent resistor | P1 (GND) | <1 Ω |
 
-Each lower-right terminal therefore has a path through its adjacent resistor
-to ground. The resistor values themselves have not been measured or reported;
-the two low-resistance trace segments must not be mistaken for a below-1 Ω
-terminal-to-ground reading. Gate/source/drain assignments, exact device models,
-and any P3 connection to these devices remain unestablished.
+Each lower-right terminal has a path through its adjacent resistor to ground.
+The two below-1 Ω trace segments are not a below-1 Ω terminal-to-ground reading.
+The user's follow-up gives the resistor measurements below, using the same
+pogo-pins-up orientation. Both left-side resistors connect to their respective
+device's lone left terminal; the far ends of those resistors remain untraced.
+No numerical continuity reading was supplied for these left-side connections.
 
-Next unpowered check: measure across each adjacent resistor, recording its
-marking and in-circuit resistance. Continue tracing P3 to the individual Q1/Q2
-terminals; retain physical position labels until the pinout is verified.
+| Resistor position | Reported in-circuit resistance |
+| --- | --- |
+| Right side, upper | ≈46 kΩ |
+| Right side, lower | ≈46 kΩ |
+| Left side, lower | ≈7.4 kΩ |
+| Left side, upper | ≈4 kΩ |
+
+The right-side values are recorded as approximately 46 kΩ each from the plural
+report. Upper/lower have not been assigned to Q1/Q2 reference designators.
+Printed markings and isolated component values were not supplied; parallel
+board circuitry can affect these in-circuit readings. Gate/source/drain
+assignments, exact device models and any P3 connection remain unestablished.
+
+Next unpowered check: trace the far end of each left-side resistor, beginning
+with a continuity check to P3. Record whether the upper or lower resistor is
+involved; retain physical terminal labels until the device pinout is verified.
