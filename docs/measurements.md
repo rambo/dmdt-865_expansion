@@ -176,15 +176,16 @@ records all three readings and the photo-based U1 pin orientation.
 
 ### Connector-to-ground survey
 
-User readings, treated as radio-PCB connector contacts in the ongoing unpowered
-session; the exact ground probe point was not restated.
+User readings on the radio PCB in the ongoing unpowered session. The user
+confirms **U2 pin 4 (GND)** was the accessible reference for the survey; pogo
+contacts are probed one at a time because they are difficult to contact reliably.
 
-| Contact | Resistance to board ground |
+| Contact | Resistance to U2 pin 4 (GND) |
 | --- | --- |
 | P2 | ≈500 Ω |
 | P3 | Open |
 | P4 | Open |
-| P5 | <1 Ω |
+| P5 | <1 Ω in both probe directions |
 | P6 | Open |
 | P7 | ≈640 Ω |
 | P8 | Open |
@@ -193,11 +194,13 @@ session; the exact ground probe point was not restated.
 | P11 | ≈833 Ω |
 | P12 | ≈833 Ω |
 
-“Others open” supplies the P3/P4/P6/P10 entries. Reverse-probe readings, settling
-behaviour and lead baseline remain unreported. Open means the reported meter
-indication; finite readings include all in-circuit paths.
+“Others open” supplies the P3/P4/P6/P10 entries. Reverse-probe readings for
+contacts other than P5, settling behaviour and lead baseline remain unreported.
+Open means the reported meter indication; finite readings include all in-circuit paths.
 
-**P5 is a ground candidate on the radio PCB**, pending a direct check to the
-known IC ground pins and verification of mating-face numbering. Earlier tablet
-P5 measured 1.5 V relative to P1; that apparent conflict remains unresolved.
+**P5 shares the radio PCB ground with strong continuity evidence:** below 1 Ω
+to U2 pin 4 in both directions. Earlier unloaded tablet-side P5 measured 1.5 V
+relative to P1. The user's proposed weak tablet-side pull-up could explain that
+reading, but no loaded-voltage test or circuit trace has established it. The
+board-ground measurement does not establish the tablet-side pin circuitry.
 P11/P12 having equal readings does not establish continuity between them.
