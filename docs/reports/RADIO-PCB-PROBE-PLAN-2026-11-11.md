@@ -308,6 +308,22 @@ The 570 Ω value is an in-circuit measurement, not an identified discrete resist
 The previous discrepancy came from the archived manual for a different 24-pad
 layout; the reference table above now uses the correct 18-pad manual.
 
-Next unpowered measurements: U1 pin 5 (VOUT) to U2 pin 8 (VCC), then to the
-radio pin 6 (VCC). These will test which loads,
-if any, share the LDO output directly.
+### U1 output trace (2026-11-13)
+
+| From | To | Reported resistance |
+| --- | --- | --- |
+| U1 pin 5 (VOUT) | U2 pin 8 (VCC) | <1 Ω |
+| U1 pin 5 (VOUT) | Radio pin 6 (VCC) | ≈650 Ω |
+
+The low-resistance connection establishes that U2 EEPROM VCC shares U1's output
+net. U1's marking identifies the nominal 3.3 V LDO variant; no powered output
+voltage has been measured. The 650 Ω in-circuit reading does not establish a
+shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing
+remains unresolved. Reverse-probe readings and settling behaviour were not reported.
+
+Consistency check: earlier P2-to-U1 pin 5 was approximately 570 Ω, while
+P2-to-U2 pin 8 was open. With U1 pin 5 and U2 pin 8 now measuring below 1 Ω,
+repeat those two P2 measurements using the same probe polarity and comparable
+settling time, verifying pad contact. Preserve all reported values pending this
+check; contact, polarity or charging effects have not been distinguished.
+

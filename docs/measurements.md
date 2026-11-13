@@ -225,3 +225,22 @@ resolves the radio pin numbering: this is the **18-pad layout**, with **pin 6
 VCC**, pin 7 GND, pin 3 RXD, pin 4 TXD, pin 1 M0, pin 2 M1 and pin 5 AUX.
 The older archived manual describes a different **24-pad layout** and must not
 be used for this module's pin numbering. The worksheet now uses the correct manual.
+
+### U1 output trace
+
+| From | To | Reported resistance |
+| --- | --- | --- |
+| U1 pin 5 (VOUT) | U2 pin 8 (VCC) | <1 Ω |
+| U1 pin 5 (VOUT) | Radio pin 6 (VCC) | ≈650 Ω |
+
+The low-resistance connection establishes that U2 EEPROM VCC shares U1's output
+net. U1's marking identifies the nominal 3.3 V LDO variant; no powered output
+voltage has been measured. The 650 Ω in-circuit reading does not establish a
+shared rail with radio VCC or a discrete 650 Ω resistor. Radio supply routing
+remains unresolved. Reverse-probe readings and settling behaviour were not reported.
+
+Consistency check: earlier P2-to-U1 pin 5 was approximately 570 Ω, while
+P2-to-U2 pin 8 was open. With U1 pin 5 and U2 pin 8 now measuring below 1 Ω,
+repeat those two P2 measurements using the same probe polarity and comparable
+settling time, verifying pad contact. Preserve all reported values pending this
+check; contact, polarity or charging effects have not been distinguished.
