@@ -676,3 +676,19 @@ The user explicitly confirmed that “P#” in this repeat measurement means P3.
 
 This agrees with the earlier ≈50 kΩ / megaohm reading. It does not establish
 direct continuity or identify the intervening circuit; P3 remains unassigned.
+
+### FPC connector height and retaining plate (2026-11-13)
+
+User measurements: housing thickness **2.27 mm**; total uncompressed pogo-tip
+to solder-top height **5.60 mm** (corrected from 5.25 mm); fully compressed
+tip-to-solder-top height **4.60 mm**. The difference gives **1.00 mm travel**.
+These total heights do not independently establish housing-rim-to-solder offset
+or tablet contact recess depth.
+
+The FPC exits **left** when mounted correctly, looking at the tablet back in
+our standard orientation. IMG20261111202302 shows the solder side with the flex
+extending right; that photographed orientation is not the mounted orientation.
+The [P1-based retaining plate](../cad/fpc-retainer/README.md) includes an open
+solder window, left flex relief and adjustable spacer stacks. Its nominal
+0.30 mm compression assumes zero contact recess and zero solder-to-rim offset;
+physical compression and fit remain to be checked.

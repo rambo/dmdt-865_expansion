@@ -19,6 +19,7 @@ This repository has one Git root; the project directories are not submodules.
 | [android/T865UartTx](android/T865UartTx/) | Kotlin UI and C/JNI WK2 UART transmitter and receive-only monitor; Android Studio project. |
 | [firmware/ESP32UartProbe](firmware/ESP32UartProbe/) | ESP32-PICO-D4 sketch, GPIO26 TX / GPIO25 RX, plus serial validation scripts and logs. |
 | [cad/fit-check](cad/fit-check/) | Four raised-label STL/DXF fit gauges, dimensions, generator and CAD validation. |
+| [cad/fpc-retainer](cad/fpc-retainer/) | P1-based FPC retainer with solder-access window, left flex exit, adjustable spacers, STL/STEP and parametric source. |
 | [docs/measurements.md](docs/measurements.md) | Current electrical and mechanical findings, assumptions and measurement references. |
 | [docs/gpio-control-api.md](docs/gpio-control-api.md) | GpioControl methods, ioctl trace, factory I/O indices, return semantics and mapping limits. |
 | [docs/reports](docs/reports/) | Driver/LoRa analysis, handoff, pin maps, scope summaries and app reports. |

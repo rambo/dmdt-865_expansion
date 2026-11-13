@@ -142,3 +142,7 @@ references/lora-teardown/E220-900T30S.pdf filter=lfs diff=lfs merge=lfs -text
 *.md text
 references/lora-teardown/E220-900T30S_UserManual_EN_v1.0.pdf filter=lfs diff=lfs merge=lfs -text
 references/lora-teardown/E22-900T30S-manufacturer-2022.pdf filter=lfs diff=lfs merge=lfs -text
+
+# CAD exchange files are generated; preserve exporter formatting and suppress noisy text diffs.
+cad/fpc-retainer/*.step binary
+cad/fpc-retainer/*.dxf binary

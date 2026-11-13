@@ -71,3 +71,15 @@ that implies 1.835 mm centre-to-body-edge margins, a derived assumption.
 Still needed before final CAD: body height, free pin protrusion, intended
 compression/working travel, flex exit clearance and corner shape/radius.
 No CAD geometry or nominal screw pattern was changed.
+
+## Height follow-up and retainer, 2026-11-13
+
+The user measured 2.27 mm housing thickness, 5.60 mm free tip-to-solder-top total
+height (correcting 5.25 mm) and 4.60 mm fully compressed tip-to-solder-top total
+height. This gives 1.00 mm measured travel. Working preload, tablet contact
+recess depth and the solder-top-to-housing-rim offset remain unverified.
+
+The FPC exits **left** in the mounted tablet-back orientation, despite pointing
+right in IMG20261111202302. A [parameterized retaining plate](../../cad/fpc-retainer/README.md)
+uses the selected P1 alignment, a top solder window, left flex underpass and
+removable spacers for height adjustment. Physical fit has not been tested.

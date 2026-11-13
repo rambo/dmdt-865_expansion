@@ -1,0 +1,118 @@
+{
+  "T865-FPC-retainer-assembly-coordinates": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_mm3": 5055.6909,
+    "bounds_mm": [
+      [
+        -4.0,
+        -4.0,
+        0.0
+      ],
+      [
+        36.0,
+        44.0,
+        2.9
+      ]
+    ],
+    "step_reimport_valid": true
+  },
+  "T865-FPC-retainer-print": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_mm3": 5055.6909,
+    "bounds_mm": [
+      [
+        -36.0,
+        -4.0,
+        -0.0
+      ],
+      [
+        4.0,
+        44.0,
+        2.9
+      ]
+    ],
+    "step_reimport_valid": true
+  },
+  "spacer-3.60mm": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_mm3": 85.4506,
+    "bounds_mm": [
+      [
+        -2.99866,
+        -2.99966,
+        0.0
+      ],
+      [
+        3.0,
+        2.99966,
+        3.6
+      ]
+    ],
+    "step_reimport_valid": true
+  },
+  "spacer-0.20mm": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_mm3": 4.7473,
+    "bounds_mm": [
+      [
+        -2.99866,
+        -2.99966,
+        0.0
+      ],
+      [
+        3.0,
+        2.99966,
+        0.2
+      ]
+    ],
+    "step_reimport_valid": true
+  },
+  "spacer-0.40mm": {
+    "watertight": true,
+    "connected_solids": 1,
+    "volume_mm3": 9.4945,
+    "bounds_mm": [
+      [
+        -2.99866,
+        -2.99966,
+        0.0
+      ],
+      [
+        3.0,
+        2.99966,
+        0.4
+      ]
+    ],
+    "step_reimport_valid": true
+  },
+  "spacer_kit": {
+    "connected_solids": 12,
+    "watertight": true
+  },
+  "derived": {
+    "connector_center_mm": [
+      7.0,
+      19.867034
+    ],
+    "window_mm": [
+      5.47,
+      17.470000000000002
+    ],
+    "measured_travel_mm": 1.0,
+    "nominal_retaining_height_mm": 5.3,
+    "required_standoff_mm": 4.0,
+    "plate_thickness_mm": 2.9000000000000004,
+    "pocket_mm": [
+      7.07,
+      19.07
+    ]
+  },
+  "parameter_change_check": "body_short +0.20 mm recomputes; original retained",
+  "mock_body_intersection_mm3": 0.0,
+  "window_access_checks": 12,
+  "left_flex_intersection_mm3": 0
+}
