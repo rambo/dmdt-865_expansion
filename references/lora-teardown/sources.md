@@ -29,3 +29,22 @@ SHA256: 83281da9f72c585e2f1062602fc6962886048aafe2e44ce306757772d237d342
   Pin 18 ANT; pins 8, 10–14 NC.
 - Pinout and both package views visually checked. The older E220-900T30S.pdf
   has a 24-pad layout and different numbering; it remains historical evidence only.
+
+## E22 replacement candidate: separate manufacturer revision
+
+[E22-900T30S-manufacturer-2022.pdf](E22-900T30S-manufacturer-2022.pdf)
+
+- Source: [EBYTE-hosted manual](https://www.cdebyte.com/Uploadfiles/Files/2022-1-19/2022119174379296.pdf).
+- Retrieved: 2026-11-13; 1,388,857 bytes; 27 PDF pages.
+- SHA-256: `c057b2b2f92edf8d86d2f95a1eadff71201d565e78d6cb1b07acb60411577b98`.
+- Dimension drawing visually inspected on PDF page 9 (printed page 8).
+  It shows 18 physical pads with numbering through 24 and gaps.
+- This is not asserted byte-identical to the user's
+  [Hubtronics-hosted manual](https://hubtronics.in/docs/E22-900T30S-UserManual.pdf).
+  That copy's text was readable through web retrieval, but direct download returned
+  HTTP 403 and its drawing was unavailable for visual inspection.
+- Material revision difference: the Hubtronics pin table lists pads 21 and 24 as
+  NC; this OEM copy identifies +3.3 V and NRST respectively. Match the purchased
+  module revision before any replacement.
+- [Driver/replacement plan](../../docs/plans/EBYTE-RADIO-DRIVER.md) records the
+  signal-position comparison and remaining compatibility checks.

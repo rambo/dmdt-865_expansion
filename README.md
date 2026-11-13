@@ -41,6 +41,10 @@ and original manufacturer PDFs retain their source formats.
 
 Start with the [measurement index](docs/measurements.md) or the
 [unpowered radio PCB worksheet](docs/reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md).
+For planned software, see the [Rust Meshtastic routing plan](docs/plans/MESHTASTIC-RUST-PLAN.md)
+and [separate E220/E22 radio driver and replacement plan](docs/plans/EBYTE-RADIO-DRIVER.md).
+These distinguish native Meshtastic RF interoperability from an experimental EBYTE mesh.
+
 The evidence manifest retains original imported-document hashes alongside the
 current Markdown paths and hashes. Historical reports describe their dated sessions.
 
