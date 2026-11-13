@@ -741,5 +741,10 @@ readings do not establish direct continuity or a discrete 37–40 kΩ resistor.
 Settling behaviour was not supplied. P10 remains unassigned, and AUX still has
 no identified direct pogo connection. An indirect path has not been ruled out.
 
-Next unpowered check: radio pin 5 (AUX) to P8, recording resistance and probe
-polarity. No AUX assignment is assumed.
+Follow-up: the user reports **radio pin 5 (AUX) to P8: open**. Probe polarity
+and meter mode were not specified; do not treat this as a confirmed both-polarity
+result. P8 remains unassigned.
+
+No direct AUX path has been established on P3, P8 or P10. These checks do not
+prove that AUX is unconnected everywhere on the carrier or exclude indirect
+circuitry. No new pogo assignment follows from this result.
