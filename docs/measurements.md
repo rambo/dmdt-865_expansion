@@ -485,6 +485,24 @@ values. Settling behaviour was not supplied. Similarity to the earlier
 approximately 4 kΩ upper-left resistor reading is a tracing lead, not proof
 of a connection.
 
-The next direct-continuity checks remain M0 and M1 to the lone left terminals
-of Q1/Q2, using the pogo-pins-up orientation. Neither mode pin has yet been
-assigned to a particular transistor terminal by a low-resistance measurement.
+The subsequent M1-to-upper-device lone-left check is recorded below. Neither
+mode pin has yet been assigned to a transistor terminal by a low-resistance
+measurement.
+
+### M1 to upper device lone-left terminal (2026-11-13)
+
+Orientation remains pogo pins up. “Upper” names the physical device position;
+its Q1/Q2 reference-designator correspondence has not been established.
+
+| Red probe | Black probe | Reported resistance |
+| --- | --- | --- |
+| Radio pin 2 (M1) | Upper device, lone-left terminal | ≈19.3 kΩ |
+| Upper device, lone-left terminal | Radio pin 2 (M1) | ≈19.5 kΩ |
+
+The close readings in both polarities do not establish direct continuity or
+a specific discrete resistor. No settling or measurement-tolerance information
+was supplied. The earlier resemblance between M1-to-ground and upper-left
+resistor readings has not yielded a direct M1-to-lone-left connection.
+
+Next unpowered checks: M1 to the upper device's upper-right terminal, then
+its lower-right terminal, retaining physical position labels.
