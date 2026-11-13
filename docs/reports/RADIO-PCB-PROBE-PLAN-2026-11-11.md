@@ -440,7 +440,8 @@ No numerical continuity reading was supplied for these left-side connections.
 | Left side, upper | Clarified: ≈4 kΩ with red on shared middle; ≈7.4 kΩ reversed |
 
 The right-side values are recorded as approximately 46 kΩ each from the plural
-report. Upper/lower have not been assigned to Q1/Q2 reference designators.
+report. The later user identification assigns upper to Q2 and lower to Q1,
+with pogo pins up.
 Printed markings and isolated component values were not supplied; parallel
 board circuitry can affect these in-circuit readings. Gate/source/drain
 assignments, exact device models and any P3 connection remain unestablished.
@@ -577,7 +578,7 @@ upper device, as recorded in the mode-pin mapping section.
 ### M1 to upper device lone-left terminal (2026-11-13)
 
 Orientation remains pogo pins up. “Upper” names the physical device position;
-its Q1/Q2 reference-designator correspondence has not been established.
+it was subsequently identified by the user as Q2 (lower device: Q1).
 
 | Red probe | Black probe | Reported resistance |
 | --- | --- | --- |
@@ -617,18 +618,20 @@ with U2 VCC, resolving the supply-side junction.
 
 ### Radio mode pins mapped to paired devices (2026-11-13)
 
-Orientation: **pogo pins up**. Upper/lower are physical device positions;
-Q1/Q2 designator correspondence and gate/source/drain identities remain unassigned.
+Orientation: **pogo pins up**. The user explicitly identifies **upper = Q2**
+and **lower = Q1**. Gate/source/drain identities remain unassigned.
 
 | Radio endpoint | Device terminal | Reported resistance |
 | --- | --- | --- |
-| Radio pin 1 (M0) | Upper device, lone-left terminal | <1 Ω |
-| Radio pin 2 (M1) | Lower device, lone-left terminal | <1 Ω |
+| Radio pin 1 (M0) | Upper Q2, lone-left terminal | <1 Ω; red M0, black Q2 terminal |
+| Radio pin 2 (M1) | Lower Q1, lone-left terminal | <1 Ω; red M1, black Q1 terminal |
 
 These direct-continuity measurements connect the paired KN devices to the
 radio's mode signals. They do not yet establish how the devices are driven,
 which semiconductor terminals these are, or any P3-to-mode control path.
-Probe polarities were not supplied for these below-1 Ω readings.
+The latest user checks explicitly place red on the radio mode pin and black
+on the named Q terminal, confirming both the continuity and Q1/Q2 assignments.
+Reverse-polarity repeats were not reported for these below-1 Ω checks.
 
 The user identifies the shared middle junction as the connection between
 **R29 and R32** and corrects “U8” to **U2 pin 8** for the following measurement.
@@ -673,8 +676,8 @@ flowchart TB
     J --- RL["Lower pull-up: nominal value unconfirmed"]
     RU --- M0["Radio pin 1: M0"]
     RL --- M1["Radio pin 2: M1"]
-    M0 --- QU["Upper KN device: lone-left terminal"]
-    M1 --- QL["Lower KN device: lone-left terminal"]
+    M0 --- QU["Upper Q2: lone-left terminal"]
+    M1 --- QL["Lower Q1: lone-left terminal"]
 ```
 
 The paired devices may provide a way to pull the mode signals low, but their
