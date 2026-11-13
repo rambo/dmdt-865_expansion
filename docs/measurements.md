@@ -23,6 +23,11 @@ using ESP32 GPIO26 TX and GPIO25 RX, at 9600/8N1. No new /dev/expand enable
 command was used in that bench test; cold-boot behaviour without preceding DMD
 enable cycles is untested. The radio module was not fitted.
 
+The later [radio-board UART resistance readings](#radio-uart-to-connector-resistance-2026-11-13)
+report the opposite RX/TX pairing under the supplied connector labels. The
+relationship between those board labels and the tablet labels is unresolved;
+retain the earlier powered bench result pending reconciliation.
+
 | Pin | User's sequential multimeter reading relative to pin 1 |
 | --- | --- |
 | 2 | Initially about 2.5 V, falling; final level not established |
@@ -387,3 +392,24 @@ terminals do not establish that the terminals share a net.
 Next unpowered check: Q1 upper-right to Q2 upper-right directly. If below 1 Ω,
 trace that shared node to known rails (U1 pin 5 / EEPROM VCC, radio pin 6 VCC,
 and P2). Keep gate/source/drain unassigned until the terminal mapping is verified.
+
+### Radio UART-to-connector resistance (2026-11-13)
+
+| Radio endpoint | Connector label reported by user | Resistance |
+| --- | --- | --- |
+| Radio pin 3 (RXD in the matched 18-pad manual) | P11 | ≈22 Ω |
+| Radio pin 4 (TXD in the matched 18-pad manual) | P12 | ≈22 Ω |
+
+These readings establish low-resistance paths at the reported endpoints,
+consistent with series resistance. Individual series components and reverse-probe
+readings were not supplied; do not assert a particular 22 Ω resistor or exclude
+all intervening circuitry from these measurements alone.
+
+**UART numbering discrepancy remains unresolved.** The earlier powered ESP32
+bench test established tablet P11 as RX and P12 as TX. Normal direction pairing
+would therefore connect radio TXD (pin 4) to tablet P11, and radio RXD (pin 3)
+to tablet P12. The new board-side labels report the opposite pairing. Preserve
+both observations; do not silently swap labels or interpret TX-to-TX as verified
+working wiring. Clarification requested: do these board P11/P12 labels name the
+contacts that mate with tablet P11/P12, or were they counted in the PCB view?
+No answer or corrected mapping has yet been recorded.

@@ -94,6 +94,11 @@ Expected endpoint pairing if this carrier uses that same UART:
 - P11 -> radio TXD (radio output into tablet RX).
 - P12 -> radio RXD (tablet output into radio RX).
 
+The later radio-board measurements below report radio RXD to P11 and TXD to
+P12 at approximately 22 Ω. Reconciliation of board and tablet contact labels
+is pending; the expected pairing above is not a claim that this carrier was
+measured that way.
+
 Check direct resistance first. If there is no direct connection, work inward
 from each endpoint through nearby resistors and the two KN devices. On a photo,
 label their three terminals A/B/C until the transistor pinout is verified;
@@ -267,7 +272,9 @@ probing the mounted board.
 | P9 | U2 pin 4 (GND) | ≈722 Ω | Not reported | User measurement, 2026-11-13. |
 | P10 | U2 pin 4 (GND) | Open | Not reported | User measurement, 2026-11-13. From “others open”. |
 | P11 | U2 pin 4 (GND) | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
+| P11 (reported board label) | Radio pin 3 (RXD) | ≈22 Ω | Not reported | User measurement, 2026-11-13; conflicts with expected tablet UART pairing, see discrepancy below. |
 | P12 | U2 pin 4 (GND) | ≈833 Ω | Not reported | User measurement, 2026-11-13. |
+| P12 (reported board label) | Radio pin 4 (TXD) | ≈22 Ω | Not reported | User measurement, 2026-11-13; conflicts with expected tablet UART pairing, see discrepancy below. |
 
 Minimum useful completion: confirmed ground, P2's destination, P3's destination,
 UART endpoints, radio M0/M1/AUX routing, EEPROM SDA/SCL/VCC, and FPC map.
@@ -467,3 +474,24 @@ terminals do not establish that the terminals share a net.
 Next unpowered check: Q1 upper-right to Q2 upper-right directly. If below 1 Ω,
 trace that shared node to known rails (U1 pin 5 / EEPROM VCC, radio pin 6 VCC,
 and P2). Keep gate/source/drain unassigned until the terminal mapping is verified.
+
+### Radio UART-to-connector resistance (2026-11-13)
+
+| Radio endpoint | Connector label reported by user | Resistance |
+| --- | --- | --- |
+| Radio pin 3 (RXD in the matched 18-pad manual) | P11 | ≈22 Ω |
+| Radio pin 4 (TXD in the matched 18-pad manual) | P12 | ≈22 Ω |
+
+These readings establish low-resistance paths at the reported endpoints,
+consistent with series resistance. Individual series components and reverse-probe
+readings were not supplied; do not assert a particular 22 Ω resistor or exclude
+all intervening circuitry from these measurements alone.
+
+**UART numbering discrepancy remains unresolved.** The earlier powered ESP32
+bench test established tablet P11 as RX and P12 as TX. Normal direction pairing
+would therefore connect radio TXD (pin 4) to tablet P11, and radio RXD (pin 3)
+to tablet P12. The new board-side labels report the opposite pairing. Preserve
+both observations; do not silently swap labels or interpret TX-to-TX as verified
+working wiring. Clarification requested: do these board P11/P12 labels name the
+contacts that mate with tablet P11/P12, or were they counted in the PCB view?
+No answer or corrected mapping has yet been recorded.
