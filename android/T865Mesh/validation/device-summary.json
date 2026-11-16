@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-16",
+  "tablet": "865025220042",
+  "peer": "!f9b31230",
+  "firmware": "2.7.26.54e0d8d",
+  "checks": [
+    "installed final APK",
+    "rapid selftest/decode/connect lifecycle",
+    "native AES known-answer fixture",
+    "raw synthetic text decode",
+    "live config nonce handshake",
+    "official API self-addressed text routing ACK",
+    "foreground service while UI backgrounded",
+    "active wake lock",
+    "Stop removes service and releases wake lock"
+  ],
+  "native_e220_rf_tested": false,
+  "uart_power_gpio_tested": false
+}

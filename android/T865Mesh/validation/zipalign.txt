@@ -1,0 +1,17 @@
+Verifying alignment of work/t865-mesh-android/project/android/T865Mesh/app/build/outputs/apk/debug/app-debug.apk (4)...
+      87 META-INF/com/android/build/gradle/app-metadata.properties (OK - compressed)
+     181 classes.dex (OK - compressed)
+  831735 classes2.dex (OK - compressed)
+ 1607601 AndroidManifest.xml (OK - compressed)
+ 1608788 resources.arsc (OK)
+ 1608902 kotlin/annotation/annotation.kotlin_builtins (OK - compressed)
+ 1609511 kotlin/collections/collections.kotlin_builtins (OK - compressed)
+ 1611424 kotlin/concurrent/atomics/atomics.kotlin_builtins (OK - compressed)
+ 1612580 kotlin/coroutines/coroutines.kotlin_builtins (OK - compressed)
+ 1612766 kotlin/internal/internal.kotlin_builtins (OK - compressed)
+ 1613182 kotlin/kotlin.kotlin_builtins (OK - compressed)
+ 1618590 kotlin/ranges/ranges.kotlin_builtins (OK - compressed)
+ 1620012 kotlin/reflect/reflect.kotlin_builtins (OK - compressed)
+ 1622016 lib/arm64-v8a/libt865_mesh.so (OK)
+  832140 classes3.dex (OK - compressed)
+Verification succesful

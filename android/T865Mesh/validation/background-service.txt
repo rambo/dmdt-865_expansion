@@ -1,0 +1,36 @@
+ACTIVITY MANAGER SERVICES (dumpsys activity services)
+  User 0 active services:
+  * ServiceRecord{1f697de u0 dev.t865.mesh/.MeshService c:dev.t865.mesh}
+    intent={cmp=dev.t865.mesh/.MeshService}
+    packageName=dev.t865.mesh
+    processName=dev.t865.mesh
+    targetSdkVersion=36
+    baseDir=/data/app/~~0WtEKrzN3SCQjNb5IvupuA==/dev.t865.mesh-zSFzStPIvmYW1Q8quSTZEg==/base.apk
+    dataDir=/data/user/0/dev.t865.mesh
+    app=ProcessRecord{51bbf3b 1214:dev.t865.mesh/u0a205}
+    useNewWiuLogic_forCapabilities()=true
+    useNewWiuLogic_forStart()=true
+    useNewBfslLogic()=true
+    mAllowWiu_noBinding=PROC_STATE_TOP
+    mAllowWiu_inBindService=DENIED
+    mAllowWiu_byBindings=DENIED
+    getFgsAllowWiu_legacy=PROC_STATE_TOP
+    getFgsAllowWiu_new=PROC_STATE_TOP
+    getFgsAllowWiu_forStart=PROC_STATE_TOP
+    getFgsAllowWiu_forCapabilities=PROC_STATE_TOP
+    allowUiJobScheduling=true
+    recentCallingPackage=dev.t865.mesh
+    recentCallingUid=10205
+    mAllowStart_noBinding=PROC_STATE_TOP
+    mAllowStart_inBindService=DENIED
+    mAllowStart_byBindings=DENIED
+    getFgsAllowStart_legacy=PROC_STATE_TOP
+    getFgsAllowStart_new=PROC_STATE_TOP
+    getFgsAllowStart=PROC_STATE_TOP
+    startForegroundCount=1
+    infoAllowStartForeground=[callingPackage: dev.t865.mesh; callingUid: 10205; uidState: TOP ; uidBFSL: [BFSL]; intent: Intent { xflg=0x4 cmp=dev.t865.mesh/.MeshService (has extras) }; code:PROC_STATE_TOP; tempAllowListReason:<null>; allowWiu:12; targetSdkVersion:36; callerTargetSdkVersion:36; startForegroundCount:0; bindFromPackage:null: isBindService:false]
+    isForeground=true foregroundId=1 types=0x00000010 foregroundNoti=Notification(channel=mesh_connection shortcut=null contentView=null vibrate=null sound=null defaults=0 flags=ONGOING_EVENT|FOREGROUND_SERVICE color=0x00000000 actions=1 vis=PRIVATE)
+    createTime=-4s826ms startingBgTimeout=--
+    lastActivity=-1s418ms restartTime=-4s823ms createdFromFg=true
+    startRequested=true delayedStop=false stopIfKilled=true callStart=true lastStartId=4
+ startCommandResult=2

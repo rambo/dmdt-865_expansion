@@ -1,6 +1,6 @@
 # DMD T865/T865X expansion-port investigation
 
-Android Kotlin/C/JNI tools, an ESP32 UART probe, measurements, driver research,
+Android Kotlin/C/JNI and Rust mesh-bench tools, an ESP32 UART probe, measurements, driver research,
 reference documents and printable connector fit gauges in one Git repository.
 
 ```sh
@@ -17,6 +17,9 @@ This repository has one Git root; the project directories are not submodules.
 | --- | --- |
 | [android/T865PortProbe](android/T865PortProbe/) | Kotlin UI and C/JNI metadata/read-only open probe for serial and SPI devices; Android Studio project. |
 | [android/T865UartTx](android/T865UartTx/) | Kotlin UI and C/JNI WK2 UART transmitter and receive-only monitor; Android Studio project. |
+| [android/T865Mesh](android/T865Mesh/) | Rust/JNI + Kotlin mesh bench, official USB-node client, and E220 UART capture; native E220 RF interoperability remains unqualified. |
+| [rust](rust/) | Protocol codec, channel crypto, synthetic routing tests and explicit compatibility record. |
+| [tools/meshtastic_usb_bridge.py](tools/meshtastic_usb_bridge.py) | Local serial bridge for the computer-connected official node. |
 | [firmware/ESP32UartProbe](firmware/ESP32UartProbe/) | ESP32-PICO-D4 sketch, GPIO26 TX / GPIO25 RX, plus serial validation scripts and logs. |
 | [cad/fit-check](cad/fit-check/) | Four raised-label STL/DXF fit gauges, dimensions, generator and CAD validation. |
 | [cad/fpc-retainer](cad/fpc-retainer/) | P1-based FPC retainer with solder-access window, left flex exit, adjustable spacers, STL/STEP and parametric source. |
@@ -26,12 +29,14 @@ This repository has one Git root; the project directories are not submodules.
 | [android/T865PortProbe/analysis](android/T865PortProbe/analysis/) | Versioned original measurement bundles, raw scope channels, capture/decoding scripts, logcat, UI snapshots and earlier investigation evidence. |
 | [measurements](measurements/) | Additional original scope workspace, SELinux/driver discovery, validation captures and measurement photos. |
 | [references](references/) | Radio/connector datasheets, FCC photos, sourcing catalogues and reviewed reference images. |
-| [releases](releases/) | Previously validated debug APKs for the two Android apps. |
+| [releases](releases/) | Validated debug APKs, including the T865 Mesh Bench app. |
 
 The bench test established **tablet pin 11 = WK2 RX, pin 12 = WK2 TX**, with pin 1
 as the common ground reference, at 9600/8N1. See the
 [end-to-end evidence](docs/reports/UART-END-TO-END-2026-11-07.md).
-The LoRa radio itself was not attached or tested. Older reports are dated records;
+The radio was not attached in that earlier UART session. The original E220 is now
+attached per the user; [2026-11-16 validation](android/T865Mesh/VALIDATION.md)
+qualifies USB client tests separately from unverified native E220 RF. Older reports are dated records;
 their descriptions of live device state are not a claim about the device now.
 
 ## Documentation
@@ -42,7 +47,8 @@ and original manufacturer PDFs retain their source formats.
 
 Start with the [measurement index](docs/measurements.md) or the
 [unpowered radio PCB worksheet](docs/reports/RADIO-PCB-PROBE-PLAN-2026-11-11.md).
-For planned software, see the [Rust Meshtastic routing plan](docs/plans/MESHTASTIC-RUST-PLAN.md)
+For current software, see the [Android mesh bench](android/T865Mesh/) and
+[compatibility record](rust/COMPATIBILITY.md). For the wider roadmap, see the [Rust Meshtastic routing plan](docs/plans/MESHTASTIC-RUST-PLAN.md)
 and [separate E220/E22 radio driver and replacement plan](docs/plans/EBYTE-RADIO-DRIVER.md).
 These distinguish native Meshtastic RF interoperability from an experimental EBYTE mesh.
 
@@ -51,7 +57,7 @@ current Markdown paths and hashes. Historical reports describe their dated sessi
 
 ## Build and use
 
-Open either Android project directory directly in Android Studio. Its README and
+Open an Android project directory directly in Android Studio. Its README and
 `VALIDATION.md` describe the pinned JDK/SDK/NDK/Gradle versions and completed checks.
 The projects include their Gradle wrappers. Machine-specific `local.properties`,
 Gradle/NDK caches and build output are ignored.

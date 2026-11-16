@@ -1,0 +1,27 @@
+[package]
+name = "t865-mesh"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.88"
+license = "GPL-3.0-only"
+
+[lib]
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+aes = "=0.8.4"
+ctr = "=0.9.2"
+prost = "=0.14.6"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.154"
+libc = "=0.2.191"
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = "=0.21.1"
+
+[build-dependencies]
+prost-build = "=0.14.6"
+protoc-bin-vendored = "=3.3.0"
+
+[profile.release]
+lto = "thin"

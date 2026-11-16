@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-16",
+  "apk_bytes": 2387136,
+  "apk_sha256": "a77811d939d15b7686d6f1bf3e3bde1aba42bd231a698d3cee9b794dbf7c32ee",
+  "lint_errors": 0,
+  "lint_warnings": [
+    {
+      "id": "AndroidGradlePluginVersion",
+      "message": "A newer version of Gradle than 8.13 is available: 8.14.7"
+    },
+    {
+      "id": "ChromeOsAbiSupport",
+      "message": "Missing x86_64 ABI support for ChromeOS"
+    },
+    {
+      "id": "DataExtractionRules",
+      "message": "The attribute `android:allowBackup` is deprecated from Android 12 and higher and may be removed in future versions. Consider adding the attribute `android:dataExtractionRules` specifying an `@xml` resource which configures cloud backups and device transfers on Android 12 and higher."
+    },
+    {
+      "id": "WakelockTimeout",
+      "message": "Provide a timeout when requesting a wakelock with `PowerManager.Wakelock.acquire(long timeout)`. This will ensure the OS will cleanup any wakelocks that last longer than you intend, and will save your user's battery."
+    },
+    {
+      "id": "SetTextI18n",
+      "message": "String literal in `setText` can not be translated. Use Android resources instead."
+    },
+    {
+      "id": "SetTextI18n",
+      "message": "String literal in `setText` can not be translated. Use Android resources instead."
+    }
+  ],
+  "rust_tests_passed": 10,
+  "native_abi": "arm64-v8a",
+  "elf_load_alignment": 16384
+}

@@ -10,3 +10,7 @@ local.properties
 *.keystore
 *.jks
 *.zip
+
+# Generated Rust and Android JNI outputs
+rust/target/
+android/T865Mesh/app/src/main/jniLibs/

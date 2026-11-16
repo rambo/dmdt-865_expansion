@@ -1,5 +1,9 @@
 # Rust Meshtastic implementation plan
 
+> Implementation update, 2026-11-16: [Android/Rust mesh bench](../../android/T865Mesh/)
+> now exists. See [implemented scope and remaining gates](../../rust/COMPATIBILITY.md);
+> this earlier plan is not a claim that every stage is complete.
+
 Date: 2026-11-13. Status: design and research; no Rust implementation or RF
 interoperability test has been performed. Live electrical measurements await the
 user's FPC adapter. This plan does not change the tablet or radio configuration.

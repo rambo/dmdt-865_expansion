@@ -1,0 +1,25 @@
+--------- beginning of main
+11-16 17:49:22.041  1214  1289 I T865Mesh: 2026-11-16T15:49:22.039198Z SELFTEST {"checks":["RF header","AES-CTR known-answer vector","delayed relay","deduplication","split API frames"],"ok":true,"rf_sent":false,"synthetic_frame_hex":"ffffffff785634122a000000630800789db4f0fc307cd0bf81698bfad51b"}
+11-16 17:49:22.047  1214  1289 I T865Mesh: 2026-11-16T15:49:22.047116Z CAPABILITIES {"backend":"E220-900T30S UART (firmware not identified)","blockers":["OpaqueAirFraming","UnknownSyncWord","NoVerifiedFrameBoundaries"],"cad":"unknown","documented_vendor_mtu":200,"mode_gpio_mapping":"unverified","native_rf_tx":false,"ok":true,"snr":null}
+11-16 17:49:22.049  1214  1289 I T865Mesh: 2026-11-16T15:49:22.049646Z RAW_FRAME {"channel_hash":8,"from":305419896,"hops":3,"id":42,"ok":true,"payload_hex":"543836352062656e6368","port":1,"text":"T865 bench","to":4294967295}
+11-16 17:49:22.050  1214  1289 I T865Mesh: 2026-11-16T15:49:22.050669Z Connecting to computer USB bridge at 127.0.0.1:4403. Routing runs on the official node in this mode.
+11-16 17:49:22.980  1214  1289 I T865Mesh: 2026-11-16T15:49:22.980087Z PEER {"kind":"rebooted","value":true}
+11-16 17:49:24.442  1214  1289 I T865Mesh: 2026-11-16T15:49:24.442099Z PEER {"kind":"my_info","node":"!f9b31230"}
+11-16 17:49:24.477  1214  1289 I T865Mesh: 2026-11-16T15:49:24.477278Z PEER {"kind":"node","name":"rambo-ttgo-1","node":"!f9b31230"}
+11-16 17:49:24.478  1214  1289 I T865Mesh: 2026-11-16T15:49:24.478358Z PEER {"firmware":"2.7.26.54e0d8d","hardware":3,"kind":"metadata"}
+11-16 17:49:24.479  1214  1289 I T865Mesh: 2026-11-16T15:49:24.479199Z PEER {"index":0,"kind":"channel","name":"","role":1}
+11-16 17:49:24.480  1214  1289 I T865Mesh: 2026-11-16T15:49:24.479976Z PEER {"index":1,"kind":"channel","name":"","role":0}
+11-16 17:49:24.480  1214  1289 I T865Mesh: 2026-11-16T15:49:24.480690Z PEER {"index":2,"kind":"channel","name":"","role":0}
+11-16 17:49:24.481  1214  1289 I T865Mesh: 2026-11-16T15:49:24.481352Z PEER {"index":3,"kind":"channel","name":"","role":0}
+11-16 17:49:24.482  1214  1289 I T865Mesh: 2026-11-16T15:49:24.482170Z PEER {"index":4,"kind":"channel","name":"","role":0}
+11-16 17:49:24.482  1214  1289 I T865Mesh: 2026-11-16T15:49:24.482814Z PEER {"index":5,"kind":"channel","name":"","role":0}
+11-16 17:49:24.483  1214  1289 I T865Mesh: 2026-11-16T15:49:24.483325Z PEER {"index":6,"kind":"channel","name":"","role":0}
+11-16 17:49:24.483  1214  1289 I T865Mesh: 2026-11-16T15:49:24.483796Z PEER {"index":7,"kind":"channel","name":"","role":0}
+11-16 17:49:24.514  1214  1289 I T865Mesh: 2026-11-16T15:49:24.514680Z PEER {"bandwidth":250,"channel_num":0,"cr":5,"frequency_override":0,"kind":"lora","preset":0,"region":3,"sf":11,"tx_enabled":true,"use_preset":true}
+11-16 17:49:24.715  1214  1289 I T865Mesh: 2026-11-16T15:49:24.715028Z PEER {"kind":"node","name":"rambo-ttgo-3","node":"!f9b24e98"}
+11-16 17:49:24.740  1214  1289 I T865Mesh: 2026-11-16T15:49:24.740768Z PEER {"kind":"node","name":"rambo-ttgo-2","node":"!f9b05aa4"}
+11-16 17:49:24.900  1214  1289 I T865Mesh: 2026-11-16T15:49:24.900036Z PEER {"kind":"config_complete","matched":true,"nonce":1044244718}
+11-16 17:49:24.901  1214  1289 I T865Mesh: 2026-11-16T15:49:24.900977Z PEER {"free":16,"id":0,"kind":"queue_status","result":0}
+11-16 17:49:25.412  1214  1289 I T865Mesh: 2026-11-16T15:49:25.412237Z SEND accepted by USB stream; official firmware allocates the packet ID. Awaiting peer queue/routing status; this is not delivery confirmation.
+11-16 17:49:25.973  1214  1289 I T865Mesh: 2026-11-16T15:49:25.973075Z PEER {"free":16,"id":3721096796,"kind":"queue_status","result":0}
+11-16 17:49:26.276  1214  1289 I T865Mesh: 2026-11-16T15:49:26.275898Z PEER {"channel":0,"from":"!f9b31230","hop_limit":3,"hop_start":0,"id":3467862621,"kind":"packet","port":5,"request_id":3721096796,"routing":"Some(ErrorReason(None))","rssi":0,"snr":0,"to":"!f9b31230","via_mqtt":false}

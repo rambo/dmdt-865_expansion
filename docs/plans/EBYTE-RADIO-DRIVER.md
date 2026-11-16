@@ -1,5 +1,9 @@
 # E220/E22 radio abstraction and T865 board driver plan
 
+> Implementation update, 2026-11-16: [Android/Rust mesh bench](../../android/T865Mesh/)
+> now exists. See [implemented scope and remaining gates](../../rust/COMPATIBILITY.md);
+> this earlier plan is not a claim that every stage is complete.
+
 Date: 2026-11-13. Companion to the [Rust routing plan](MESHTASTIC-RUST-PLAN.md).
 This is a proposed implementation and test plan, not a claim of tested RF access.
 
