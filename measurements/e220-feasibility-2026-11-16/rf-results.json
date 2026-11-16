@@ -1,0 +1,642 @@
+[
+  {
+    "profile": "ShortFast",
+    "e220_rate_index": 2,
+    "packet_id": 1948446268,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1948446268,
+        "from": 4189262384,
+        "rssi": -38,
+        "snr": 9.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortFast",
+    "e220_rate_index": 3,
+    "packet_id": 822472253,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 822472253,
+        "from": 4189262384,
+        "rssi": -38,
+        "snr": 10.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortFast",
+    "e220_rate_index": 4,
+    "packet_id": 359946814,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 359946814,
+        "from": 4189262384,
+        "rssi": -39,
+        "snr": 9.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortFast",
+    "e220_rate_index": 5,
+    "packet_id": 1310566975,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1310566975,
+        "from": 4189262384,
+        "rssi": -40,
+        "snr": 10.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortFast",
+    "e220_rate_index": 6,
+    "packet_id": 2224001600,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2224001600,
+        "from": 4189262384,
+        "rssi": -40,
+        "snr": 10.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortFast",
+    "e220_rate_index": 7,
+    "packet_id": 96012865,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 96012865,
+        "from": 4189262384,
+        "rssi": -39,
+        "snr": 9.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortSlow",
+    "e220_rate_index": 2,
+    "packet_id": 3016899445,
+    "control_received": false,
+    "control_packets": [],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortSlow",
+    "e220_rate_index": 3,
+    "packet_id": 2716568438,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2716568438,
+        "from": 4189262384,
+        "rssi": -41,
+        "snr": 12.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortSlow",
+    "e220_rate_index": 4,
+    "packet_id": 1752873847,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1752873847,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 12.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortSlow",
+    "e220_rate_index": 5,
+    "packet_id": 2624903032,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2624903032,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 12.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortSlow",
+    "e220_rate_index": 6,
+    "packet_id": 3321885561,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3321885561,
+        "from": 4189262384,
+        "rssi": -41,
+        "snr": 12.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "ShortSlow",
+    "e220_rate_index": 7,
+    "packet_id": 2168285050,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2168285050,
+        "from": 4189262384,
+        "rssi": -41,
+        "snr": 12.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumFast",
+    "e220_rate_index": 2,
+    "packet_id": 3784924373,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3784924373,
+        "from": 4189262384,
+        "rssi": -41,
+        "snr": 14.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumFast",
+    "e220_rate_index": 3,
+    "packet_id": 4107403478,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 4107403478,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumFast",
+    "e220_rate_index": 4,
+    "packet_id": 2749464791,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2749464791,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumFast",
+    "e220_rate_index": 5,
+    "packet_id": 4023261400,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 4023261400,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 14.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumFast",
+    "e220_rate_index": 6,
+    "packet_id": 1805945049,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1805945049,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 14.25,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumFast",
+    "e220_rate_index": 7,
+    "packet_id": 1634088154,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1634088154,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumSlow",
+    "e220_rate_index": 2,
+    "packet_id": 1403446787,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1403446787,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 13.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumSlow",
+    "e220_rate_index": 3,
+    "packet_id": 924808708,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 924808708,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 14.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumSlow",
+    "e220_rate_index": 4,
+    "packet_id": 3376674309,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3376674309,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 12.25,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumSlow",
+    "e220_rate_index": 5,
+    "packet_id": 3999034886,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3999034886,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 13.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumSlow",
+    "e220_rate_index": 6,
+    "packet_id": 863089159,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 863089159,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 12.25,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "MediumSlow",
+    "e220_rate_index": 7,
+    "packet_id": 989441544,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 989441544,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 13.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 2,
+    "packet_id": 2388837310,
+    "control_received": false,
+    "control_packets": [],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 3,
+    "packet_id": 2007558079,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2007558079,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 13.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 4,
+    "packet_id": 3509071808,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3509071808,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 5,
+    "packet_id": 3458952129,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3458952129,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 6,
+    "packet_id": 3794400194,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3794400194,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 7,
+    "packet_id": 1080028099,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1080028099,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 13.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF8BW125",
+    "e220_rate_index": 2,
+    "packet_id": 2492770922,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2492770922,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 12.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF8BW125",
+    "e220_rate_index": 3,
+    "packet_id": 2842324587,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2842324587,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 12.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF8BW125",
+    "e220_rate_index": 4,
+    "packet_id": 1283465836,
+    "control_received": false,
+    "control_packets": [],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF8BW125",
+    "e220_rate_index": 5,
+    "packet_id": 3468683885,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3468683885,
+        "from": 4189262384,
+        "rssi": -43,
+        "snr": 12.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF8BW125",
+    "e220_rate_index": 6,
+    "packet_id": 4172019310,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 4172019310,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 12.25,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF8BW125",
+    "e220_rate_index": 7,
+    "packet_id": 3569842799,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3569842799,
+        "from": 4189262384,
+        "rssi": -44,
+        "snr": 12.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF7BW125",
+    "e220_rate_index": 2,
+    "packet_id": 1670339065,
+    "control_received": false,
+    "control_packets": [],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF7BW125",
+    "e220_rate_index": 3,
+    "packet_id": 318461434,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 318461434,
+        "from": 4189262384,
+        "rssi": -41,
+        "snr": 9.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF7BW125",
+    "e220_rate_index": 4,
+    "packet_id": 2669737467,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2669737467,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 9.75,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF7BW125",
+    "e220_rate_index": 5,
+    "packet_id": 2086083068,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2086083068,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 10.25,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF7BW125",
+    "e220_rate_index": 6,
+    "packet_id": 2526694909,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 2526694909,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 10.0,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF7BW125",
+    "e220_rate_index": 7,
+    "packet_id": 1746447870,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 1746447870,
+        "from": 4189262384,
+        "rssi": -42,
+        "snr": 9.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  }
+]

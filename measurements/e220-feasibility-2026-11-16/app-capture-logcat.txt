@@ -1,0 +1,6 @@
+--------- beginning of main
+11-16 18:24:18.225  1214  2499 I T865Mesh: 2026-11-16T16:24:18.225487Z Opening WK2 at 9600/8N1 for RX capture. No UART writes. Read chunks are not RF packets.
+11-16 18:24:18.346  1214  2499 I T865Mesh: 2026-11-16T16:24:18.346426Z POWER {"io":1,"mode_controls":"unverified","ok":true,"position":2,"state":"owned_power_on"}; accepted ioctl does not prove voltage
+11-16 18:24:18.407  1214  2499 I T865Mesh: 2026-11-16T16:24:18.407392Z UART {"ok":true,"state":"uart_capture","writes":false}
+11-16 18:24:48.111  1214  2499 I T865Mesh: 2026-11-16T16:24:48.111330Z UART {"ok":true,"state":"stopped"}
+11-16 18:24:48.113  1214  2499 I T865Mesh: 2026-11-16T16:24:48.113097Z POWER {"ok":true,"state":"power_off"}

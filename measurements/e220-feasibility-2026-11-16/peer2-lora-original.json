@@ -1,0 +1,10 @@
+{
+  "use_preset": true,
+  "bandwidth": 250,
+  "spread_factor": 11,
+  "coding_rate": 5,
+  "region": "EU_868",
+  "tx_enabled": true,
+  "tx_power": 27,
+  "ignore_mqtt": true
+}

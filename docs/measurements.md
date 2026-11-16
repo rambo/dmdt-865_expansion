@@ -1,4 +1,4 @@
-# Current measurement index - 2026-11-13
+# Current measurement index - 2026-11-16
 
 This is the entry point for the electrical and mechanical measurements. Earlier
 reports preserve the sequence of observations and corrections; use the latest
@@ -21,7 +21,9 @@ Pin 1 is the user's ground reference. Pin 11 is /dev/ttysWK2 RX and pin 12 is
 /dev/ttysWK2 TX, physically verified with exact payloads in both directions
 using ESP32 GPIO26 TX and GPIO25 RX, at 9600/8N1. No new /dev/expand enable
 command was used in that bench test; cold-boot behaviour without preceding DMD
-enable cycles is untested. The radio module was not fitted.
+enable cycles is untested. The radio module was not fitted in that earlier UART test. The attached-radio
+[2026-11-16 test](reports/E220-MESHTASTIC-FEASIBILITY-2026-11-16.md) now confirms
+direct rootless expansion power/enable, software-mode commands and UART access.
 
 The corrected [radio-board UART resistance readings](#radio-uart-to-connector-resistance-2026-11-13)
 match these tablet assignments: radio RXD pin 3 connects to P12 and radio TXD
@@ -709,3 +711,32 @@ clearance. The retaining plane remains 4.30 mm above the mounting surface;
 added plate material is on the outward side. R2 spacers remain usable with R3.
 Actual thread depth, any cap strap/washer stack and printed dimensions still
 need checking during assembly.
+
+
+## Attached E220 feasibility — 2026-11-16
+
+The original carrier now responds to direct UART commands without root or a
+DMD API. Firmware is **7463-0-17**; saved register response is
+`C1 00 09 00 00 62 24 12 10 00 00 10` (9600/8N1, air rate 2.4 kb/s, channel
+18 / 868.125 MHz). Position-2 power and logical I/O 1, plus normal/configuration
+UART commands, worked. Ordinary app UID 10205 in `untrusted_app` independently
+succeeded at power, UART open, normal close/restore and power off. This does
+not assign new physical GPIO/pogo mappings or measure loaded logic voltages.
+
+**RF result: zero E220 payloads from 86 submitted official Meshtastic packets;
+79 exact packets were independently decoded by a second official node.**
+Seven SF/BW tuples were each swept across all six E220 air-rate indices, then
+repeated with a temporary zero vendor key. A focused long-packet control showed
+E220 channel RSSI rising from −74 to −28 dBm while the official receiver decoded
+the exact packet; the E220 still produced no payload. Tested SF/BW/CR/sync-word
+query forms were rejected. This supports replacing the vendor UART module with
+a supported MCU/radio running official Meshtastic firmware; it is not a proof
+that no undocumented firmware extension could ever work.
+
+Both official-node configs were restored/read back after every phase. The
+E220 was power-cycled and its readable registers matched the initial snapshot;
+no persistent radio-register writes were issued. DMD remained LoRa OFF / Open
+Mode ON, as initially observed.
+
+See the [full report](reports/E220-MESHTASTIC-FEASIBILITY-2026-11-16.md) and
+[raw measurements and executed tools](../measurements/e220-feasibility-2026-11-16/README.md).

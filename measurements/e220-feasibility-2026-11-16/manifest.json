@@ -1,0 +1,130 @@
+{
+  "README.md": {
+    "bytes": 4301,
+    "sha256": "80375fea8df615bfe2ed74a03cd16412b3164677b83bd245acbf7aece081cd97"
+  },
+  "app-capture-logcat.txt": {
+    "bytes": 730,
+    "sha256": "87b1948d693de2fca91e8e89e4a09a1e272687f845c54832c8dd609b2adc0b78"
+  },
+  "app-context.txt": {
+    "bytes": 161,
+    "sha256": "a64cef56529b1c5104ade7394032d438d44ddf60083a224494809c7b558e9926"
+  },
+  "baseline-ui.xml": {
+    "bytes": 14290,
+    "sha256": "8a3a768a5eefa6b75bc0985e8bc51316fe76d8fa404ad3a9f2d970488e0b9ce1"
+  },
+  "e220-probe-arm64": {
+    "bytes": 13312,
+    "sha256": "0c02462e38bec1baae07326209c1e249ef4b63dc21b096df2ea4441775014707"
+  },
+  "e220-probe.c": {
+    "bytes": 5816,
+    "sha256": "2e3d71c03ee274c38c06cb44c2e4847a7daf10d5deb2d53775961686df283c64"
+  },
+  "final-restoration-probe.jsonl": {
+    "bytes": 1570,
+    "sha256": "2f0ce809e52508d73ea9b3733411603442a55a557e1ed5d06bac797944e2393a"
+  },
+  "final-ui.xml": {
+    "bytes": 14699,
+    "sha256": "afa6be7d13e619d1da197392212e20a752c710cf0886b89d7b408db593b95900"
+  },
+  "initial-probe.jsonl": {
+    "bytes": 1570,
+    "sha256": "08a75c3c3125b65d6fe7a4708880c8026b9240c42c886f1571500e1f4274414f"
+  },
+  "initial-probe.script": {
+    "bytes": 145,
+    "sha256": "2a67d05e76b7570b5cb543f3512051c778d0bdfca222bc09974dc8fafe95659d"
+  },
+  "peer-lora-original.json": {
+    "bytes": 225,
+    "sha256": "f5f70cc9bb94122a4c1cd52cdcb93117df890591fe1916fdd141c8c5be2e7308"
+  },
+  "peer-lora-original.pb": {
+    "bytes": 22,
+    "sha256": "d27f54ba9962d1303148eb6fac975eb99350add4f0ffca347a0d47f5e8529272"
+  },
+  "peer2-lora-original.json": {
+    "bytes": 173,
+    "sha256": "7031505993de4042812e7d9d69f5d5146e0c6e8fa77eaf9c86381cc07d515a01"
+  },
+  "peer2-lora-original.pb": {
+    "bytes": 18,
+    "sha256": "07a432d4b4772206d711b2b98a1f5f4c6062abb75e5544873b93c78be022fc83"
+  },
+  "post-probe.jsonl": {
+    "bytes": 1785,
+    "sha256": "20b5f0df6179de94a4b1e8472c1fde13c73c2b7039c84ed9541b9ce6ed90831f"
+  },
+  "post-probe.script": {
+    "bytes": 191,
+    "sha256": "9c861ee26a0439ce9508977ae484b5e022aef410215cc7a010d83210675261f4"
+  },
+  "query-capabilities.jsonl": {
+    "bytes": 5158,
+    "sha256": "a77d7a01125154f7bbcbd04a36d2da77d5becba1878855988b9b34833f5e1416"
+  },
+  "query-capabilities.script": {
+    "bytes": 729,
+    "sha256": "e472693d6e0a5b1b0dc1005b23a20e39c68c1f7d99aeda01e126d631f9b06b3f"
+  },
+  "query-labels.json": {
+    "bytes": 426,
+    "sha256": "d10971548b404dddcb3fd89ade63700e10e854c6af4f5ce0d609787030299f62"
+  },
+  "rf-experiment.jsonl": {
+    "bytes": 18191,
+    "sha256": "de3b77c71f3080eb7bd027f63416ed34eeb6f90efe6c0a4ee7a0e1ac4d720798"
+  },
+  "rf-results.json": {
+    "bytes": 12870,
+    "sha256": "b6b2bc0117a9215e5fcd391a5a2abb2684cc583a6c5eeac9a2702451c2cca83b"
+  },
+  "rf-tablet-uart.jsonl": {
+    "bytes": 36911,
+    "sha256": "984b314772dc2897cfcaaba2be2df6c9c85b00c1f870833ad77953263634ecfe"
+  },
+  "rf2-experiment.jsonl": {
+    "bytes": 18670,
+    "sha256": "8bf4f75c613941007fac5cee5a0d55f0749fe02321811c0f44418f4ae36f2c60"
+  },
+  "rf2-results.json": {
+    "bytes": 13382,
+    "sha256": "d1f0cec372d728acd82cf4b47cac60201fdf295b5c26c2c7d38a798383f56256"
+  },
+  "rf2-tablet-uart.jsonl": {
+    "bytes": 40521,
+    "sha256": "763cfe7b394826c8cea704ccc6a37dd6cb80cd8bbb26ec62d080bf70f4900270"
+  },
+  "rf3-experiment.jsonl": {
+    "bytes": 3083,
+    "sha256": "f21d206bb086d018cb978aa3fb1a8387776fe8da88f4f1dca1c6b1a0de66efb1"
+  },
+  "rf3-results.json": {
+    "bytes": 1324,
+    "sha256": "50628d1b80628466952934f2405a11d1c3db3e05943048fa3d547e87da55829e"
+  },
+  "rf3-tablet-uart.jsonl": {
+    "bytes": 10521,
+    "sha256": "fe7903b02d7a4ac4322ac6efde66bf87e9d328579789c7ff8a679299fbdfb78d"
+  },
+  "rf_test.py": {
+    "bytes": 6978,
+    "sha256": "d701507f66c08f3dafb9fe9c9c9ddccb998a2302bafda29a0393f6668c9c0b98"
+  },
+  "rf_test_keyzero.py": {
+    "bytes": 7903,
+    "sha256": "598aa24c79e43601c88337a2bddf0aa022324a6dd5149578ab7178d94d61fd0b"
+  },
+  "rssi_control_test.py": {
+    "bytes": 7765,
+    "sha256": "03590db284df9ebb0941226479200c0df5e9f43939e4709d90f8b5a20b702b49"
+  },
+  "summary.json": {
+    "bytes": 2894,
+    "sha256": "3d575cca127e9314ce5d82ebb8ff9d4cc0a6c05770f836fe175f260d496e45d8"
+  }
+}

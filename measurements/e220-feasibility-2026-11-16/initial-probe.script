@@ -1,0 +1,5 @@
+WAIT 500
+TX mode_config c0c1c2c30203 700
+TX fwcode 41542b4657434f44453d3f0d0a 2200
+TX read_registers c10009 1000
+TX mode_normal c0c1c2c30200 700

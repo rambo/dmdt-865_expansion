@@ -1,5 +1,9 @@
 # Validation — 2026-11-16
 
+> Later attached-radio follow-up: [E220 RF feasibility report](../../docs/reports/E220-MESHTASTIC-FEASIBILITY-2026-11-16.md).
+> It separately confirms ordinary app power/UART access and records negative RF
+> interoperability tests. The table below preserves the earlier app-build validation.
+
 This is validation of an Android mesh **bench implementation** and official
 USB-node client. It does not qualify the E220 as a Meshtastic RF backend.
 

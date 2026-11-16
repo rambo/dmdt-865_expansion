@@ -1,0 +1,6 @@
+WAIT 250
+TX mode_config c0c1c2c30203 300
+TX switch_query 41542b5357495443483d3f0d0a 600
+TX key_query 41542b4b45593d3f0d0a 600
+TX mode_normal c0c1c2c30200 300
+TX ambient_rssi c0c1c2c30002 700

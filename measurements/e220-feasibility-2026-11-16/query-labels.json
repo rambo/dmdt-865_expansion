@@ -1,0 +1,21 @@
+{
+  "q00": "AT+FWCODE=?",
+  "q01": "AT+ADDR=?",
+  "q02": "AT+UART=?",
+  "q03": "AT+RATE=?",
+  "q04": "AT+CHANNEL=?",
+  "q05": "AT+POWER=?",
+  "q06": "AT+PACKET=?",
+  "q07": "AT+TRANS=?",
+  "q08": "AT+LBT=?",
+  "q09": "AT+DRSSI=?",
+  "q10": "AT+URXT=?",
+  "q11": "AT+UAUX=?",
+  "q12": "AT+HELP",
+  "q13": "AT+SF=?",
+  "q14": "AT+BW=?",
+  "q15": "AT+CR=?",
+  "q16": "AT+SYNCWORD=?",
+  "q17": "AT+SYNC=?",
+  "q18": "AT+FREQ=?"
+}

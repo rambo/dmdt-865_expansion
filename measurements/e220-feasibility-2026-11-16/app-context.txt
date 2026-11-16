@@ -1,0 +1,3 @@
+UID 10205 (u0_a205), process dev.t865.mesh
+SELinux u:r:untrusted_app:s0:c205,c256,c512,c768
+Source: adb shell ps -AZ during the actual power/open capture check.

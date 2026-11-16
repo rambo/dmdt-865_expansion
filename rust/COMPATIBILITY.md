@@ -1,7 +1,7 @@
 # Compatibility record
 
 Updated 2026-11-16. This record separates implemented software, synthetic checks,
-USB client interoperability and unproven E220 RF behavior.
+USB client interoperability and the subsequently tested negative E220 RF result.
 
 ## Reference profile and actual peer
 
@@ -11,7 +11,7 @@ USB client interoperability and unproven E220 RF behavior.
 | Archived protobuf source | `cf0a84ede1e7a0b7479e90a5e496d30c5dfba707` under `rust/proto/` |
 | Actual USB peer | `!f9b31230`, `rambo-ttgo-1`, hardware enum 3, official firmware `2.7.26.54e0d8d` |
 | Actual peer baseline | EU868, LongFast, SF11, BW250 kHz, CR4/5, channel slot 0, no frequency override |
-| Tablet carrier | Original E220 installed, according to the user; actual radio firmware not identified by this implementation |
+| Tablet carrier | Attached E220-900T30S, firmware `7463-0-17`, read directly in the 2026-11-16 bench test |
 | Compiler/build | Rust 1.98.1; AGP 8.13.2, Kotlin 2.2.21, Gradle 8.13, NDK 27.2.12479018, SDK 36, JDK 17 |
 
 The actual peer is older than the algorithm reference. Its stable client API
@@ -68,18 +68,32 @@ MediumSlow and LongTurbo. This is **not a list of qualified UART-module presets*
 The chip excludes LongFast, LongModerate and LongSlow. Region-specific preset
 availability is another independent constraint.
 
-No peer preset was changed during this implementation's validation. The user
-has authorized temporary changes for subsequent RF experiments; snapshot/read
-back the full LoRa configuration and restore it afterward.
+### Attached-radio follow-up
 
-## Next acceptance work
+The [actual E220 bench test](../docs/reports/E220-MESHTASTIC-FEASIBILITY-2026-11-16.md)
+now establishes direct rootless power/enable, UART, software-mode acknowledgements
+and firmware `7463-0-17`. Normal app-domain power/open access also passed.
+The module rejected the tested SF/BW/CR/sync/frequency query forms. Two full
+RF sweeps, including a temporary zero vendor key, plus a focused RSSI test
+produced **0 E220 deliveries / 86 submissions**; a second official node decoded
+79 exact packets. The E220 detected RF energy (−74 to −28 dBm) without delivering
+the confirmed long packet. Its actual sync word/rejection stage remains unknown.
 
-Verify the carrier's power/mode controls and module firmware via the FPC adapter.
-Determine whether its UART firmware can meet the raw-frame/PHY gate. If it
-cannot, use a raw-radio coprocessor while keeping routing in Rust, or explicitly
-use the complete USB/BLE Meshtastic-node client architecture. Complete PKI,
-identity persistence, reference timing and router differential tests before
-calling the native engine a replacement for official node firmware.
+The peers were temporarily reconfigured for this follow-up and their complete
+original LoRa protobufs restored/read back after every phase. E220 C2 changes
+were temporary and discarded by power off; no saved-register write was made.
+
+## Current hardware decision
+
+The supplied UART firmware has not demonstrated a usable native Meshtastic
+path. Prefer a supported MCU + SX1262 running official Meshtastic and exposing
+the PROTO client API on UART. The existing client codec can then use WK2
+directly. A stock E22-T UART substitution would still need a raw-interface
+qualification; its SX1262 chip alone does not solve the controller boundary.
+
+Further native routing work for this E220 backend should await new firmware
+or raw-radio evidence. The Rust core remains a bench implementation with the
+PKI, persistence, timing and policy limits listed above.
 
 Sources: [implementation plan](../docs/plans/MESHTASTIC-RUST-PLAN.md),
 [radio driver plan](../docs/plans/EBYTE-RADIO-DRIVER.md),

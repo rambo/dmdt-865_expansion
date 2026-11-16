@@ -1,0 +1,67 @@
+[
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 3,
+    "packet_id": 4244663601,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 4244663601,
+        "from": 4189262384,
+        "rssi": -46,
+        "snr": 10.5,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": ""
+  },
+  {
+    "profile": "CustomSF9BW125",
+    "e220_rate_index": 2,
+    "packet_id": 3603817778,
+    "control_received": true,
+    "control_packets": [
+      {
+        "id": 3603817778,
+        "from": 4189262384,
+        "rssi": -46,
+        "snr": 10.25,
+        "port": "PRIVATE_APP"
+      }
+    ],
+    "e220_rx_hex": "",
+    "ambient_before_hex": "c10002b600",
+    "ambient_during_hex": [
+      "c10002b900",
+      "c10002bb00",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002e400",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bb00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bb00",
+      "c10002b200",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00",
+      "c10002bc00"
+    ]
+  }
+]

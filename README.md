@@ -39,6 +39,15 @@ attached per the user; [2026-11-16 validation](android/T865Mesh/VALIDATION.md)
 qualifies USB client tests separately from unverified native E220 RF. Older reports are dated records;
 their descriptions of live device state are not a claim about the device now.
 
+## E220 RF bench result — 2026-11-16
+
+The [attached-radio test](docs/reports/E220-MESHTASTIC-FEASIBILITY-2026-11-16.md)
+identified firmware **7463-0-17** and verified direct rootless control, but found
+**0 E220 payloads from 86 submissions**, with 79 exact packets decoded by an
+official control receiver. The E220 saw RF energy without decoding a packet.
+A supported MCU/radio with official Meshtastic and UART PROTO is the recommended
+hardware path; a stock E22-T swap remains unqualified.
+
 ## Documentation
 
 Authored documentation and worksheets use Markdown (`.md`), with Markdown tables

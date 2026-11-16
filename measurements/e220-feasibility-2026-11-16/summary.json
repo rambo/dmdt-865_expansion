@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-16",
+  "firmware": "7463-0-17",
+  "baseline_register_response": "c10009000062241210000010",
+  "phases": [
+    {
+      "phase": "rf",
+      "trials": 42,
+      "control_received": 38,
+      "e220_payloads": 0,
+      "by_profile": {
+        "ShortFast": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        },
+        "ShortSlow": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        },
+        "MediumFast": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        },
+        "MediumSlow": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        },
+        "CustomSF9BW125": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        },
+        "CustomSF8BW125": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        },
+        "CustomSF7BW125": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        }
+      }
+    },
+    {
+      "phase": "rf2",
+      "trials": 42,
+      "control_received": 39,
+      "e220_payloads": 0,
+      "by_profile": {
+        "ShortFast": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        },
+        "ShortSlow": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        },
+        "MediumFast": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        },
+        "MediumSlow": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        },
+        "CustomSF9BW125": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        },
+        "CustomSF8BW125": {
+          "trials": 6,
+          "control_received": 5,
+          "e220_payloads": 0
+        },
+        "CustomSF7BW125": {
+          "trials": 6,
+          "control_received": 6,
+          "e220_payloads": 0
+        }
+      }
+    },
+    {
+      "phase": "rf3",
+      "trials": 2,
+      "control_received": 2,
+      "e220_payloads": 0,
+      "by_profile": {
+        "CustomSF9BW125": {
+          "trials": 2,
+          "control_received": 2,
+          "e220_payloads": 0
+        }
+      }
+    }
+  ],
+  "total_trials": 86,
+  "total_control_received": 79,
+  "e220_payloads": 0,
+  "rssifocus": {
+    "before_dbm": -74,
+    "peak_dbm": -28,
+    "control_packet_id": 3603817778,
+    "control_rssi_dbm": -46,
+    "control_snr_db": 10.25
+  },
+  "both_peers_restored_after_each_phase": true,
+  "normal_app_capture_power_open_stop": true,
+  "normal_app_uid": 10205,
+  "normal_app_selinux": "u:r:untrusted_app:s0:c205,c256,c512,c768",
+  "final_e220_registers_match": true,
+  "final_lora_enabled": false,
+  "final_open_mode": true
+}
